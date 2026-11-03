@@ -1,0 +1,91 @@
+/* Photography is the centerpiece. The page is the paper around it. */
+html[data-route=album]{scroll-padding-top:calc(var(--header) + 20px)}
+.album-detail.photographic-album{max-width:none;padding:0 0 75px;color:var(--espresso);background:var(--cream)}
+.photo-shell{width:min(1200px,90%);margin-left:auto;margin-right:auto}
+.photographic-topline{display:flex;align-items:center;justify-content:space-between;gap:25px;border-bottom:1px solid #302a2830;padding:26px 0;font:10px/1.7 'Courier New',monospace;color:var(--ink)}
+.photographic-topline a{display:inline-flex;align-items:center;min-height:44px}
+.photographic-topline>span{letter-spacing:1px;font-size:8px}
+.photographic-preview{font:10px/1.7 'Courier New',monospace;padding:15px 0;border-bottom:1px solid #302a2830}
+.photographic-heading{display:grid;grid-template-columns:1.25fr 1fr;gap:9%;align-items:end;padding:51px 0 45px}
+.photographic-heading .eyebrow{font-size:8px;letter-spacing:1.8px;margin:0 0 22px;color:var(--ink)}
+.photographic-heading h1{font:400 clamp(66px,7.7vw,112px)/.98 Georgia,serif;letter-spacing:-4.8px;margin:0}
+.photographic-heading h1 em{font-weight:400}
+.photographic-introduction{padding-bottom:6px;max-width:360px}
+.photographic-lead{font:20px/1.6 Georgia,serif;margin:0 0 27px}
+.photographic-count{font:8px/1.7 'Courier New',monospace;letter-spacing:1px;color:var(--ink);margin:0 0 16px}
+.photographic-jumps{display:flex;gap:20px;flex-wrap:wrap;border-top:1px solid #302a2830;padding-top:9px}
+.photographic-jumps button{min-height:44px;padding:8px 0;background:none;border:0;font:10px/1.6 'Courier New',monospace;color:var(--ink)}
+.photographic-jumps button:hover{text-decoration:underline;text-underline-offset:5px}
+.editorial-photo{margin:0;min-width:0}
+.photographic-hero{margin-left:auto;margin-right:auto}
+.photo-open{display:block;width:100%;position:relative;background:#d9d9c8;border:0;padding:0;overflow:hidden;cursor:zoom-in;text-align:left}
+.photo-open>img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;transition:filter .3s}
+.photo-open:hover>img{filter:brightness(1.035)}
+.photo-open-cue{position:absolute;right:17px;bottom:17px;background:#f8f1e5eb;padding:9px 12px;color:var(--espresso);font:9px/1.5 'Courier New',monospace;opacity:0;transform:translateY(4px);transition:opacity .2s,transform .2s;pointer-events:none}
+.photo-open:hover .photo-open-cue,.photo-open:focus-visible .photo-open-cue{opacity:1;transform:none}
+.editorial-photo figcaption{display:flex;justify-content:space-between;align-items:start;gap:25px;padding:14px 0 0;font:10px/1.7 'Courier New',monospace;color:#6d6b5e}
+.editorial-photo figcaption .photo-folio{font-size:9px;letter-spacing:1px;flex-shrink:0}
+.photographic-chapter{padding-top:95px}
+.photographic-chapter-heading{display:grid;grid-template-columns:1.3fr 1fr;gap:10%;align-items:end;margin-bottom:38px;border-top:1px solid #302a282d;padding-top:28px}
+.photographic-chapter-heading .eyebrow{font-size:8px;letter-spacing:1.5px;color:var(--ink);margin:0 0 17px}
+.photographic-chapter-heading h2{font:400 clamp(31px,3.4vw,49px)/1.12 Georgia,serif;letter-spacing:-1.5px;max-width:550px;margin:0}
+.photographic-chapter-heading>p{font:13px/1.95 Arial,sans-serif;max-width:330px;margin:0 0 3px;color:#55584c}
+.photographic-pair{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:37px;align-items:start}
+.photographic-pair-offset{grid-template-columns:1.08fr .92fr;gap:8%;margin-top:50px}
+.photographic-pair-offset>.editorial-photo:last-child{margin-top:90px}
+.photographic-evening-feature{display:grid;grid-template-columns:minmax(0,720px) 1fr;gap:8%;align-items:center}
+.photographic-margin-note{padding:30px 0}
+.photographic-margin-note .eyebrow{font-size:8px;letter-spacing:1.5px;color:var(--ink)}
+.photographic-margin-note>p{font:italic 33px/1.15 Georgia,serif;max-width:230px;letter-spacing:-1px;margin:24px 0}
+.photographic-small-rule{display:block;width:40px;border-top:1px solid #302a2860}
+.photographic-all{padding-top:85px}
+.photographic-all-heading{display:flex;justify-content:space-between;align-items:center;gap:35px;border-top:1px solid #302a2830;padding-top:30px;margin-bottom:26px}
+.photographic-all-heading h2{font:italic 34px/1.2 Georgia,serif;margin:0;letter-spacing:-1px}
+.photographic-all-heading>p{font:10px/1.8 'Courier New',monospace;max-width:300px;color:#6d6b5e;margin:0}
+.photographic-contact-sheet{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 22px}
+.photographic-thumbnail figcaption{font-size:8px;line-height:1.8;padding-top:9px;gap:10px}
+.photographic-thumbnail figcaption .photo-folio{font-size:8px}
+.photographic-thumbnail .photo-open-cue{display:none}
+.photographic-end{border-top:1px solid #302a2830;margin-top:65px;padding-top:50px;text-align:center}
+.photographic-end>.eyebrow{font-size:8px;letter-spacing:1.4px;color:var(--ink)}
+.photographic-end h2{font:400 clamp(32px,3.7vw,54px)/1.12 Georgia,serif;letter-spacing:-1.7px;max-width:720px;margin:23px auto 28px}
+.photographic-end>.ink-button{font-size:12px}
+.photographic-return{display:block;width:fit-content;font:10px/1.7 'Courier New',monospace;min-height:44px;margin:14px auto 0;padding:12px 0;color:var(--ink)}
+.album-entry .album-photo-count{position:absolute;top:28px;right:18px;font:7px/1.6 'Courier New',monospace;letter-spacing:.4px;max-width:95px;text-align:right;border-bottom:1px solid #244a5040;padding-bottom:5px}
+/* A real image viewer: native modal focus, keyboard arrows, and a clear close. */
+.photograph-is-open{overflow:hidden}
+.photograph-viewer{border:0;background:#302a28;color:var(--cream);padding:0;width:min(1360px,calc(100vw - 40px));height:min(1000px,calc(100dvh - 40px));max-width:none;max-height:none;overflow:hidden;box-shadow:0 20px 80px #0005}
+.photograph-viewer::backdrop{background:#211d1be8;backdrop-filter:blur(5px)}
+.photograph-viewer[open]{display:grid;grid-template-rows:auto minmax(0,1fr) auto}
+.viewer-header{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:10px 24px;border-bottom:1px solid #f8f1e52b}
+.viewer-album{font:14px/1.5 Georgia,serif;margin:0}
+.viewer-close{border:0;background:none;color:var(--cream);font:11px/1.5 'Courier New',monospace;min-height:44px;padding:8px 0 8px 20px}
+.viewer-stage{display:grid;place-items:center;min-height:0;padding:15px 24px}
+.viewer-stage img{width:100%;height:100%;max-height:100%;min-height:0;object-fit:contain;display:block}
+.viewer-bottom{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:14px 24px 17px;border-top:1px solid #f8f1e52b}
+.viewer-caption{font:12px/1.7 Georgia,serif;margin:0 0 6px}
+.viewer-count{font:9px/1.6 'Courier New',monospace;letter-spacing:1.1px;opacity:.75}
+.viewer-controls{display:flex;gap:10px;flex-shrink:0}
+.viewer-controls button{border:1px solid #f8f1e56b;background:none;color:var(--cream);width:46px;height:44px;font:20px Georgia,serif}
+.viewer-controls button:hover{background:#f8f1e517}
+@media(max-width:900px){.photographic-heading{gap:6%;grid-template-columns:1.2fr 1fr}.photographic-heading h1{font-size:76px;letter-spacing:-3px}.photographic-lead{font-size:18px}.photographic-pair{gap:25px}.photographic-pair-offset{gap:6%}.photographic-contact-sheet{grid-template-columns:repeat(3,minmax(0,1fr))}.photographic-evening-feature{grid-template-columns:1.7fr .8fr;gap:6%}.photographic-margin-note>p{font-size:27px}.photographic-jumps{gap:16px}.photographic-jumps button{font-size:9px}}
+@media(max-width:720px){
+ .album-detail.photographic-album{padding-bottom:45px}.photo-shell{width:88%}
+ .photographic-topline{padding:14px 0;font-size:10px;gap:20px}.photographic-topline>span{font-size:7px;letter-spacing:.6px;text-align:right}
+ .photographic-heading{grid-template-columns:1fr;gap:25px;padding:32px 0 27px}.photographic-heading .eyebrow{font-size:7px;margin-bottom:18px;letter-spacing:1.4px}.photographic-heading h1{font-size:clamp(55px,13vw,84px);line-height:1.01;letter-spacing:-2.8px}.photographic-introduction{max-width:none;padding:0}.photographic-lead{font-size:17px;line-height:1.65;margin-bottom:20px;max-width:290px}.photographic-count{font-size:8px;letter-spacing:.5px;margin-bottom:8px}.photographic-jumps{gap:22px;padding-top:5px}.photographic-jumps button{font-size:10px;min-height:44px}
+ .photographic-hero{width:100%}.photographic-hero figcaption{padding-left:6%;padding-right:6%}
+ .editorial-photo figcaption{font-size:9px;line-height:1.8;gap:12px;padding-top:10px}.editorial-photo figcaption .photo-folio{font-size:8px}
+ .photo-open-cue{opacity:1;transform:none;right:10px;bottom:10px;font-size:8px;padding:6px 8px}
+ .photographic-chapter{padding-top:50px}.photographic-chapter-heading{grid-template-columns:1fr;gap:20px;padding-top:23px;margin-bottom:24px}.photographic-chapter-heading .eyebrow{font-size:8px;margin-bottom:16px}.photographic-chapter-heading h2{font-size:33px;letter-spacing:-1px;max-width:330px}.photographic-chapter-heading>p{font-size:12px;line-height:1.9;max-width:290px}
+ .photographic-pair,.photographic-pair-offset{grid-template-columns:1fr;gap:27px;margin-top:28px}.photographic-pair-offset>.editorial-photo:last-child{margin-top:0}.photographic-pair-offset>.editorial-photo:last-child{width:88%;margin-left:auto}
+ .photographic-evening-feature{grid-template-columns:1fr;gap:0}.photographic-margin-note{display:flex;align-items:center;gap:22px;justify-content:space-between;padding:22px 0 0}.photographic-margin-note .eyebrow{font-size:7px;flex-shrink:0;letter-spacing:.9px}.photographic-margin-note>p{font-size:24px;max-width:175px;margin:0;text-align:right}.photographic-small-rule{display:none}
+ .photographic-all{padding-top:50px}.photographic-all-heading{flex-direction:column;align-items:start;gap:12px;padding-top:24px}.photographic-all-heading h2{font-size:29px}.photographic-all-heading>p{font-size:10px;max-width:260px}.photographic-contact-sheet{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 15px}.photographic-thumbnail figcaption{font-size:8px;line-height:1.7}.photographic-thumbnail figcaption .photo-folio{display:none}
+ .photographic-end{margin-top:40px;padding-top:35px}.photographic-end h2{font-size:34px;letter-spacing:-1px;margin:20px 0 25px}.photographic-end>.ink-button{font-size:12px}
+ .album-entry .album-photo-count{font-size:6px;top:23px;right:13px;max-width:75px}
+ .photograph-viewer{width:100vw;height:100dvh;margin:0}.viewer-header{padding:10px 16px}.viewer-album{font-size:14px}.viewer-close{font-size:10px}.viewer-stage{padding:12px 0}.viewer-bottom{padding:14px 16px 22px;gap:18px;align-items:end}.viewer-caption{font-size:12px;line-height:1.65;max-width:220px}.viewer-count{font-size:9px}.viewer-controls{gap:8px}.viewer-controls button{width:44px}
+}
+@media(max-height:560px) and (min-width:721px){.photographic-heading{padding-top:28px}.photographic-heading h1{font-size:72px}.photograph-viewer{height:calc(100dvh - 20px);width:calc(100vw - 20px)}.viewer-header{padding:4px 15px}.viewer-bottom{padding:7px 15px}.viewer-caption{font-size:10px}.viewer-stage{padding:5px 12px}}
+@media(prefers-reduced-motion:reduce){.photo-open>img,.photo-open-cue{transition:none}}
+.calm .photo-open>img,.calm .photo-open-cue{transition:none}
+/* Keep the first photograph close to its title. */
+@media(min-width:721px){.photographic-topline{padding-top:10px;padding-bottom:10px}.photographic-heading{padding-top:35px;padding-bottom:33px}.photographic-heading h1{font-size:clamp(66px,7.3vw,105px)}}
