@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "photos-2026-11-03-black-tie",
+  "revision": "photos-2026-11-03-lower-form-and-mr-bears",
   "projects": [
     {
       "id": "collins-001",
@@ -593,10 +593,215 @@
       "approved": false,
       "town": "",
       "year": "",
-      "summary": "",
+      "summary": "A lower seat. A slower afternoon. Plenty of reasons to stay.",
       "services": [],
-      "coverId": null,
-      "photos": []
+      "coverId": "lower-form-of-leisure-6cf4d340e442f1fc",
+      "photos": [
+        {
+          "id": "lower-form-of-leisure-33fd92cee2fa8510",
+          "src": "assets/projects/lower-form-of-leisure/33fd92cee2fa8510.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Pool lights and floating lanterns at dusk.",
+          "alt": "Pool lights and floating lanterns at dusk.",
+          "sourceFile": "16906830-f761-4a45-976c-b1bf4e770641.jpg",
+          "sourceSha256": "33fd92cee2fa8510a233e969ce6a0fa5ee575cde78dadcaa701c336491af9df2"
+        },
+        {
+          "id": "lower-form-of-leisure-6cc0d821177d99af",
+          "src": "assets/projects/lower-form-of-leisure/6cc0d821177d99af.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The pool and paver path in evening light.",
+          "alt": "The pool and paver path in evening light.",
+          "sourceFile": "1be83266-476a-4505-868c-010597f37b92(1).jpg",
+          "sourceSha256": "6cc0d821177d99af5447aa8987fc1f231e2adacf7e4edb179a5ee88686c61808"
+        },
+        {
+          "id": "lower-form-of-leisure-c8754f2360f9d105",
+          "src": "assets/projects/lower-form-of-leisure/c8754f2360f9d105.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Pool, lawn and covered patio in daylight.",
+          "alt": "Pool, lawn and covered patio in daylight.",
+          "sourceFile": "1bf9a302-1b1a-4ddb-b01d-469f76f5ff6a.jpg",
+          "sourceSha256": "c8754f2360f9d105c20e10924b983f38d934985a156b46a3d48978a5caca2ae3"
+        },
+        {
+          "id": "lower-form-of-leisure-ec6df443aae9a460",
+          "src": "assets/projects/lower-form-of-leisure/ec6df443aae9a460.webp",
+          "width": 720,
+          "height": 1008,
+          "caption": "Brick fireplace and two chairs.",
+          "alt": "Brick fireplace and two chairs.",
+          "sourceFile": "1dbea6be-2fcd-4509-b8bc-c646032d0df9.jpg",
+          "sourceSha256": "ec6df443aae9a4608ae10aacba0ed85d5f0e85fe0bbc85008e7009d369b36561"
+        },
+        {
+          "id": "lower-form-of-leisure-2b6ddd9e362f736f",
+          "src": "assets/projects/lower-form-of-leisure/2b6ddd9e362f736f.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Paver paths beside the sunken seating area and putting green.",
+          "alt": "Paver paths beside the sunken seating area and putting green.",
+          "sourceFile": "4c5ddee2-cd27-419b-98b5-5440f0b7fdcb.jpg",
+          "sourceSha256": "2b6ddd9e362f736f38d15fc053ccd9f0d21cc43b9267161dab773b4d7981ed12"
+        },
+        {
+          "id": "lower-form-of-leisure-b506f80735307999",
+          "src": "assets/projects/lower-form-of-leisure/b506f80735307999.webp",
+          "width": 720,
+          "height": 1079,
+          "caption": "The sunken conversation pit after dark.",
+          "alt": "The sunken conversation pit after dark.",
+          "sourceFile": "57265ea2-4514-49ea-8e8d-d2a8be4e2f1e.jpg",
+          "sourceSha256": "b506f80735307999fee6085bc41d7b21f7d39aed7a9d2ff7947ca73d7725fb4f"
+        },
+        {
+          "id": "lower-form-of-leisure-3d8686a364480d8d",
+          "src": "assets/projects/lower-form-of-leisure/3d8686a364480d8d.webp",
+          "width": 1200,
+          "height": 801,
+          "caption": "Built-in seating beside the pool.",
+          "alt": "Built-in seating beside the pool.",
+          "sourceFile": "581bcc49-d4a2-494c-b7f8-dec5e5ed5948.jpg",
+          "sourceSha256": "3d8686a364480d8d3e6c7a5c4dde6f1cfddf1205fd21a65b037ec189f80bac4e"
+        },
+        {
+          "id": "lower-form-of-leisure-9996e579c7ef98ef",
+          "src": "assets/projects/lower-form-of-leisure/9996e579c7ef98ef.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The pool and sunken lounge in daylight.",
+          "alt": "The pool and sunken lounge in daylight.",
+          "sourceFile": "5ce4f8e7-b776-4fe2-b5c3-2e76a047aa83.jpg",
+          "sourceSha256": "9996e579c7ef98ef72cf1559f37819e00dad4488f835478b3313830cddd571ce"
+        },
+        {
+          "id": "lower-form-of-leisure-6cf4d340e442f1fc",
+          "src": "assets/projects/lower-form-of-leisure/6cf4d340e442f1fc.webp",
+          "width": 1200,
+          "height": 801,
+          "caption": "The pool, loungers and lit patio at blue hour.",
+          "alt": "The pool, loungers and lit patio at blue hour.",
+          "sourceFile": "79c3fb54-3518-43aa-9f35-aeeec14d2ad4.jpg",
+          "sourceSha256": "6cf4d340e442f1fc05c438c8957375ce7703efe470dc22d0177d665d0cc72b6d"
+        },
+        {
+          "id": "lower-form-of-leisure-ae7923b702c3be34",
+          "src": "assets/projects/lower-form-of-leisure/ae7923b702c3be34.webp",
+          "width": 720,
+          "height": 539,
+          "caption": "An overhead view of the pool and backyard.",
+          "alt": "An overhead view of the pool and backyard.",
+          "sourceFile": "899ad8a9-6502-4495-85bf-e8a1d3d520ac.jpg",
+          "sourceSha256": "ae7923b702c3be34c82befe0e67d21353a3cbedaa5b9ab8551ab4aa33da395dd"
+        },
+        {
+          "id": "lower-form-of-leisure-686a6c5d22c61f96",
+          "src": "assets/projects/lower-form-of-leisure/686a6c5d22c61f96.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Fire table and cushions in the sunken lounge.",
+          "alt": "Fire table and cushions in the sunken lounge.",
+          "sourceFile": "caf45249-f734-47ff-a2b6-2cc2b9b32431.jpg",
+          "sourceSha256": "686a6c5d22c61f96f1eaa5f37d6085e4d21be35f49c5d8b513870eb4f0b90d1c"
+        },
+        {
+          "id": "lower-form-of-leisure-efda52bb7a5b3318",
+          "src": "assets/projects/lower-form-of-leisure/efda52bb7a5b3318.webp",
+          "width": 1200,
+          "height": 801,
+          "caption": "A view along the covered patio toward the pool.",
+          "alt": "A view along the covered patio toward the pool.",
+          "sourceFile": "d7e125f6-6df7-4ef3-bd24-4eb1ae11d7ac.jpg",
+          "sourceSha256": "efda52bb7a5b3318f1523237ef3d98a4dd28c88d7a73b09a408f25a011613fd3"
+        },
+        {
+          "id": "lower-form-of-leisure-ae4dd8a665d4e550",
+          "src": "assets/projects/lower-form-of-leisure/ae4dd8a665d4e550.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Loungers facing the pool and scalloped umbrella.",
+          "alt": "Loungers facing the pool and scalloped umbrella.",
+          "sourceFile": "dddd70cf-728b-4862-aaae-9b287ed082ed.jpg",
+          "sourceSha256": "ae4dd8a665d4e5502e58b1fd4f042b7a36382284b216099e95d483ac78de40d0"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "sequenceLabel": "WATER / THE LOWER SEAT / AFTER HOURS",
+        "chapters": [
+          {
+            "label": "THE AFTERNOON",
+            "navigation": "The pool",
+            "title": "A good place to do very little.",
+            "description": "A scalloped umbrella, a path of pavers, and a rectangle of blue.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "lower-form-of-leisure-efda52bb7a5b3318"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "lower-form-of-leisure-ae4dd8a665d4e550",
+                  "lower-form-of-leisure-ae7923b702c3be34"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "A LOWER FORM OF LEISURE",
+            "navigation": "The lower seat",
+            "title": "Take the lower seat.",
+            "description": "A few steps down. A different place to settle in.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "lower-form-of-leisure-3d8686a364480d8d"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "lower-form-of-leisure-9996e579c7ef98ef",
+                  "lower-form-of-leisure-b506f80735307999"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "AFTER HOURS",
+            "navigation": "Evening",
+            "title": "Nobody\u2019s in a hurry.",
+            "description": "The lanterns come on. The conversation has somewhere to go.",
+            "blocks": [
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "lower-form-of-leisure-33fd92cee2fa8510",
+                  "lower-form-of-leisure-6cc0d821177d99af"
+                ]
+              },
+              {
+                "layout": "feature",
+                "photoIds": [
+                  "lower-form-of-leisure-ec6df443aae9a460"
+                ],
+                "note": {
+                  "label": "ONE MORE PLACE TO LAND",
+                  "text": "A pair of chairs. A small table. The fire doing its thing."
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "13 unique photographs supplied by the owner for Lower Form of Leisure. One duplicate fireplace portrait omitted. Location, date, scope and builder attribution not supplied."
     },
     {
       "id": "collins-005",
@@ -606,10 +811,87 @@
       "approved": false,
       "town": "",
       "year": "",
-      "summary": "",
+      "summary": "Straight lines. Soft skies. A pavilion worth staying for.",
       "services": [],
-      "coverId": null,
-      "photos": []
+      "coverId": "mr-bears-residence-e5050074673f3ad9",
+      "photos": [
+        {
+          "id": "mr-bears-residence-7cdf1d68c185fd46",
+          "src": "assets/projects/mr-bears-residence/7cdf1d68c185fd46.webp",
+          "width": 720,
+          "height": 404,
+          "caption": "An overhead view of the pool, spa and loungers.",
+          "alt": "Overhead photograph of a rectangular pool with entry steps, a separate square spa and loungers beside the pavilion.",
+          "sourceFile": "941ba523-276b-4ed4-8384-cc3fe199356c.webp",
+          "sourceSha256": "7cdf1d68c185fd46ef64d3462d38e3f7644888734ac7759f3bf39f44569c4740"
+        },
+        {
+          "id": "mr-bears-residence-21e4401e86ff9a72",
+          "src": "assets/projects/mr-bears-residence/21e4401e86ff9a72.webp",
+          "width": 720,
+          "height": 405,
+          "caption": "The pool and spa from above.",
+          "alt": "Aerial view of the rectangular pool, square spa, paired loungers and pavilion framed by lawn and mature trees.",
+          "sourceFile": "94c7dcfd-065c-4c62-9389-fad8479467d5.jpg",
+          "sourceSha256": "21e4401e86ff9a72d89818d3867f9f5f529a46515bf8561af5bd97224375255f"
+        },
+        {
+          "id": "mr-bears-residence-e5050074673f3ad9",
+          "src": "assets/projects/mr-bears-residence/e5050074673f3ad9.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The pavilion lights come on at dusk.",
+          "alt": "Rectangular pool leading toward a warmly lit pavilion beneath a pink and blue evening sky.",
+          "sourceFile": "998ab366-acb1-4a6d-ad05-5726e71d41db.jpg",
+          "sourceSha256": "e5050074673f3ad9e7af9752c19cf4b61d0ec3eb7ee22fb0d0288f3b534e05b0"
+        },
+        {
+          "id": "mr-bears-residence-ae8b7a426742be8b",
+          "src": "assets/projects/mr-bears-residence/ae8b7a426742be8b.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The spa, pool and house at sunset.",
+          "alt": "Square spa in the foreground, with the pool and illuminated house beyond beneath a pink sunset.",
+          "sourceFile": "b03026a6-b71e-4ca6-b67f-82bfc347d16b.jpg",
+          "sourceSha256": "ae8b7a426742be8b94da9355b75f32cefe9d1c294e7a66bc2bb28187ddf4387e"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "sequenceLabel": "FROM ABOVE / AFTER THE SUN",
+        "chapters": [
+          {
+            "label": "THE LAY OF THE LAND",
+            "navigation": "From above",
+            "title": "Everything in its place.",
+            "description": "A rectangle of water. A square of bubbles. Two ways to spend the afternoon.",
+            "blocks": [
+              {
+                "photoIds": [
+                  "mr-bears-residence-7cdf1d68c185fd46",
+                  "mr-bears-residence-21e4401e86ff9a72"
+                ],
+                "layout": "pair"
+              }
+            ]
+          },
+          {
+            "label": "EVENING AT THE RESIDENCE",
+            "navigation": "After the sun",
+            "title": "The lights have other plans.",
+            "description": "The sky takes its turn. The pavilion keeps the evening open.",
+            "blocks": [
+              {
+                "photoIds": [
+                  "mr-bears-residence-ae8b7a426742be8b"
+                ],
+                "layout": "wide"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "Four owner-supplied photographs. Location, date, construction scope and completed-work approval have not been supplied."
     },
     {
       "id": "collins-006",
