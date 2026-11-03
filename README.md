@@ -1,49 +1,23 @@
 # Collins Custom Pools & Backyards
 
-A small static holding page for testing the GitHub → Cloudflare Workers publishing connection. This is infrastructure preparation; the complete website and final art direction are still to be built.
+The Collins pool expedition and homeowner website. Canonical repository: finechina4004/collins-website. Existing Cloudflare Worker: collins-website.
 
-## Files
+## Development and deployment
 
-- `public/index.html`: responsive holding page; no external fonts, images, or scripts.
-- `public/404.html`: missing-page response.
-- `public/_headers`: preview indexing and response headers.
-- `wrangler.json`: Cloudflare Workers Static Assets configuration.
-- `package.json` and `package-lock.json`: deployment tooling.
+Buildless HTML, CSS and JavaScript live in public/. Cloudflare serves that directory using wrangler.json. The GitHub integration deploys main with npx wrangler deploy; the build command remains empty. Run npm ci --ignore-scripts and npm run check:deploy for a local packaging check. npm run build:site copies public/ into dist/ for local preview.
 
-Only `public/` is served to visitors. Keep credentials, customer inquiries, and account exports outside this repository. Repository visibility is managed separately in GitHub settings.
+The submarine guides visitors between five native-scroll chapters. The entrance can be skipped. Direct links include #home, #work, #work/a-minor-key, #build, #project and #studio.
 
-## Cloudflare dashboard setup
+## Current content and editing
 
-Use **Workers & Pages → Create application → Connect GitHub** (wording can vary), authorize access to this repository, and select `finechina4004/collins-website`.
+Eight named project records are in public/content/projects.json. They remain drafts with honest missing-photograph states. Edit confirmed contact details in public/site-config.js. No phone number or submission destination has been invented.
 
-| Setting | Value |
-| --- | --- |
-| Project / Worker name | `collins-website` |
-| Production branch | `main` |
-| Root directory | Repository root |
-| Build command | Leave empty |
-| Deploy command | `npx wrangler deploy` |
+The album studio at #studio saves drafts and images in this browser using IndexedDB, with JSON export/import and local preview. Cloudflare album publishing is disabled: no admin API or durable media storage has been connected. Do not describe local saving as a website update. The inquiry form prepares/downloads a brief; it does not send it.
 
-Cloudflare should install the locked npm development dependencies automatically. No framework build, database, paid add-on, or custom domain is needed for this test.
+Original illustrative assets are separate from completed-project photography. Outlined brand graphics were recovered from the supplied checkpoint; font-license paperwork still needs confirmation. noindex remains enabled while content is being prepared.
 
-After deploying, open the returned `workers.dev` address while signed out. Then change the preview number in `public/index.html`, commit it, and verify that the update appears at that same address. That second deployment proves automatic updates; a repository commit alone does not.
+## Continuity
 
-## Current scope and status
+Recovered checkpoint d9becda38117af01be1e5028499ef14543f8c576, branch design/collins-cloudflare-review. The portable backup retains the original Git bundle and detailed private handoff. Only runtime website assets, build configuration and relevant documentation belong in the publishing repository. The legacy ChatGPT Site identity is excluded.
 
-- Source files are ready for a hosting connection test.
-- Cloudflare account, repository authorization, and build settings must be checked in the owner's dashboard.
-- Public deployment and automatic updates are not yet verified.
-- No inquiry form or notification delivery has been configured.
-- The IONOS domain is not configured by these files. Audit existing website and email records before changing DNS.
-- This preview requests `noindex` using HTML metadata and response headers. It is not access protection. Remove both restrictions when the finished business website is ready for search engines.
-- The previous “Five more minutes” concept is retired. The new visual exploration draws from aquatic and cinematic references and uses original work and licensed assets, rather than copied movie branding.
-
-## Local checks
-
-Use a supported Node.js version, run `npm ci`, then `npm run check:deploy`. This packages the static assets without publishing and does not prove account authentication or a live deployment.
-
-## Updates and recovery
-
-Once Cloudflare is connected, commits to `main` can automatically update the test website. Review changes before committing. Use a separate preview branch for the full website design when branch previews are configured.
-
-To restore a prior website, use Cloudflare's deployment rollback and revert the corresponding source change in GitHub so the next deploy preserves the restored version. Customer inquiry records, when configured later, have a separate lifecycle.
+See docs/MIGRATION_QA.md for the actual verification and remaining gaps. Revert the migration commit in GitHub to return to the earlier holding page; Cloudflare also retains deployment versions.
