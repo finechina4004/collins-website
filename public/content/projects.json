@@ -134,7 +134,71 @@
       ],
       "editorial": {
         "layout": "photographic",
-        "heroId": "black-tie-08"
+        "heroId": "black-tie-08",
+        "sequenceLabel": "DAYLIGHT INTO EVENING",
+        "chapters": [
+          {
+            "label": "THE DAY",
+            "navigation": "Daylight",
+            "title": "A very good place to do nothing.",
+            "description": "A few chairs. A long stretch of deck. The woods just beyond the water.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "black-tie-03"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "black-tie-01",
+                  "black-tie-04"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "THE VIEW",
+            "navigation": "From above",
+            "title": "A little perspective.",
+            "description": "The pool, the porch, the places around them. A different view of the same afternoon.",
+            "blocks": [
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "black-tie-06",
+                  "black-tie-12"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "THE EVENING",
+            "navigation": "Evening",
+            "title": "Nobody said you had to go inside.",
+            "description": "The porch lights come on. The water glows. There\u2019s still time for one more conversation.",
+            "blocks": [
+              {
+                "layout": "feature",
+                "photoIds": [
+                  "black-tie-05"
+                ],
+                "note": {
+                  "label": "AFTER HOURS",
+                  "text": "Good shoes optional."
+                }
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "black-tie-10",
+                  "black-tie-11"
+                ]
+              }
+            ]
+          }
+        ]
       },
       "sourceNote": "Photographs supplied by the owner in Black Tie, Barefoot.zip. Location, date, construction scope and builder attribution not supplied."
     },
