@@ -6,7 +6,7 @@ The Collins pool expedition and homeowner website. Canonical repository: finechi
 
 Buildless HTML, CSS and JavaScript live in public/. Cloudflare serves that directory using wrangler.json. The GitHub integration deploys main with npx wrangler deploy; the build command remains empty. Run npm ci --ignore-scripts and npm run check:deploy for a local packaging check. npm run build:site copies public/ into dist/ for local preview.
 
-The submarine guides visitors between five native-scroll chapters. The entrance can be skipped. Direct links include #home, #work, #work/a-minor-key, #build, #project and #studio.
+The submarine guides visitors between five native-scroll chapters. The main website continues the world with a day/evening miniature, an interactive backyard study (Swim, Cook, Shade, Stay), cloth-style project albums, and a project-note form. Choices from the study carry into the locally prepared brief. The entrance can be skipped. Direct links include #home, #work, #work/a-minor-key, #build, #project and #studio.
 
 ## Current content and editing
 
@@ -21,3 +21,8 @@ Original illustrative assets are separate from completed-project photography. Ou
 Recovered checkpoint d9becda38117af01be1e5028499ef14543f8c576, branch design/collins-cloudflare-review. The portable backup retains the original Git bundle and detailed private handoff. Only runtime website assets, build configuration and relevant documentation belong in the publishing repository. The legacy ChatGPT Site identity is excluded.
 
 See docs/MIGRATION_QA.md for the actual verification and remaining gaps. Revert the migration commit in GitHub to return to the earlier holding page; Cloudflare also retains deployment versions.
+
+
+## Creative review
+
+The November 3 refinement and its before/after captures are documented in docs/CREATIVE_REVIEW.md. The GitHub/Cloudflare publishing integration remains the deployment route.
