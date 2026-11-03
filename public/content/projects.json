@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "photos-2026-11-03-lower-form-and-mr-bears",
+  "revision": "photos-2026-11-03-strictly-striped-affair",
   "projects": [
     {
       "id": "collins-001",
@@ -901,10 +901,227 @@
       "approved": false,
       "town": "",
       "year": "",
-      "summary": "",
+      "summary": "Four striped seats. Several friendly competitions. No fixed departure time.",
       "services": [],
-      "coverId": null,
-      "photos": []
+      "coverId": "strictly-striped-affair-cc51b565d1d7f3e5",
+      "photos": [
+        {
+          "id": "strictly-striped-affair-c0d13e2c766d7d2e",
+          "src": "assets/projects/strictly-striped-affair/c0d13e2c766d7d2e.webp",
+          "width": 1200,
+          "height": 899,
+          "caption": "The whole backyard, from above.",
+          "alt": "Overhead view of the pool, striped loungers, lawn games, covered dining area and rooftop seating.",
+          "sourceFile": "20e8e034-37cc-47d2-8750-93a24f4347d6 - Copy.jpg",
+          "sourceSha256": "c0d13e2c766d7d2e20a48bcae70bc6d7b13e02d9ed7bd9a1aec3664ac7e5ef75"
+        },
+        {
+          "id": "strictly-striped-affair-d12025f874e49421",
+          "src": "assets/projects/strictly-striped-affair/d12025f874e49421.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "The striped seats have the best view.",
+          "alt": "Rectangular pool facing four blue-and-white striped loungers, with dark chairs and lawn games along the sides.",
+          "sourceFile": "34720bcf-af8a-468f-997f-92190b4b069c - Copy.jpg",
+          "sourceSha256": "d12025f874e494216e04a17c31b7fc358e57600d9ff17153ad068d9f059c9f64"
+        },
+        {
+          "id": "strictly-striped-affair-ea9f2ecc77b7b0fb",
+          "src": "assets/projects/strictly-striped-affair/ea9f2ecc77b7b0fb.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Blue hour beside the pool.",
+          "alt": "Pool reflecting the blue evening sky, with striped loungers and illuminated windows beyond.",
+          "sourceFile": "4fe41417-6bf3-4c22-a035-493b97417d21 - Copy.jpg",
+          "sourceSha256": "ea9f2ecc77b7b0fbf5f06dd2fec4aca58b73485de4ecfa7bcf4da65f6da7efe7"
+        },
+        {
+          "id": "strictly-striped-affair-7e831fc53fd52843",
+          "src": "assets/projects/strictly-striped-affair/7e831fc53fd52843.webp",
+          "width": 720,
+          "height": 519,
+          "caption": "A little more daylight left.",
+          "alt": "Elevated view along the pool toward striped loungers beneath an orange sunset.",
+          "sourceFile": "573fdc4d-746d-4c5e-84a1-403d5efac57f - Copy.jpg",
+          "sourceSha256": "7e831fc53fd52843c7f89d8cd0d39b9116c2d2bd0a86eca46eeb66ff01ba6f23"
+        },
+        {
+          "id": "strictly-striped-affair-03ad3d101234d617",
+          "src": "assets/projects/strictly-striped-affair/03ad3d101234d617.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A seat by the fire table.",
+          "alt": "Pale blue outdoor sofa and chairs around a long rectangular fire table beside orange loungers.",
+          "sourceFile": "60d10f4c-35e1-4dc5-8044-a5e3aed58a18 - Copy.jpg",
+          "sourceSha256": "03ad3d101234d61785e2a61e3429eca41131953ce67b529799bc525207bd6232"
+        },
+        {
+          "id": "strictly-striped-affair-1f0f0c90b8e78724",
+          "src": "assets/projects/strictly-striped-affair/1f0f0c90b8e78724.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The house lights come on.",
+          "alt": "Pool facing the lit white house at dusk, with dark chairs and striped loungers beside the water.",
+          "sourceFile": "6570138e-93d4-4886-9aa1-3b97f77992eb - Copy.jpg",
+          "sourceSha256": "1f0f0c90b8e7872420f036cb8d23db8b52c269674ce3e1b595fdd3935b94f41a"
+        },
+        {
+          "id": "strictly-striped-affair-41ff784058feeb1e",
+          "src": "assets/projects/strictly-striped-affair/41ff784058feeb1e.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "Poolside, with games within reach.",
+          "alt": "Daylight view of the pool, dark chairs, striped loungers, cornhole boards and a blue bowling lane.",
+          "sourceFile": "75b13c67-3270-4fb1-b8eb-4855fcdaacee - Copy.jpg",
+          "sourceSha256": "41ff784058feeb1efdb9cfd2fd091ed2e6907659e823d4cd477d35c7f10d6129"
+        },
+        {
+          "id": "strictly-striped-affair-cc51b565d1d7f3e5",
+          "src": "assets/projects/strictly-striped-affair/cc51b565d1d7f3e5.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "Stripes, sunset and no particular hurry.",
+          "alt": "Orange loungers with blue-and-white striped cushions beside the pool beneath pink evening clouds.",
+          "sourceFile": "7b422bbe-5a84-425f-a5c5-a4f5f0011569 - Copy.jpg",
+          "sourceSha256": "cc51b565d1d7f3e5ed0abcef103aad2ad49acec42004c9c6372f716bfefc7687"
+        },
+        {
+          "id": "strictly-striped-affair-580e194d772175fd",
+          "src": "assets/projects/strictly-striped-affair/580e194d772175fd.webp",
+          "width": 720,
+          "height": 539,
+          "caption": "A pool with good company.",
+          "alt": "Overhead view of the rectangular pool surrounded by striped loungers, dark chairs and backyard games.",
+          "sourceFile": "94d07a0b-c76f-4aae-ada3-fcd9c34b4202 - Copy.jpg",
+          "sourceSha256": "580e194d772175fd91d794ae17be81a225e5060230eaafdaceeca0fa2c24e977"
+        },
+        {
+          "id": "strictly-striped-affair-154507a2b75b5982",
+          "src": "assets/projects/strictly-striped-affair/154507a2b75b5982.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "A table under the shade structure.",
+          "alt": "Outdoor dining table under a metal shade structure beside a blue sofa and the white house.",
+          "sourceFile": "98364f46-cdb0-4f0c-9fd4-09add1dad6b1 - Copy.jpg",
+          "sourceSha256": "154507a2b75b59820864e423956d5b7ed60c17f47f2041d40f1d251fc9b0becc"
+        },
+        {
+          "id": "strictly-striped-affair-42d9d4bc9a6e11b6",
+          "src": "assets/projects/strictly-striped-affair/42d9d4bc9a6e11b6.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "An afternoon at the pool.",
+          "alt": "Daylight view along the rectangular pool toward striped loungers and outdoor games.",
+          "sourceFile": "a2de7a69-e260-43ef-84e7-1976ff386e0c - Copy.jpg",
+          "sourceSha256": "42d9d4bc9a6e11b6c8ceedfbaba2edcd232f1ef5510edfe83526c7230a2a4516"
+        },
+        {
+          "id": "strictly-striped-affair-0f7a917c3870672e",
+          "src": "assets/projects/strictly-striped-affair/0f7a917c3870672e.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The side yard has a short game.",
+          "alt": "Narrow putting green alongside the house with flags, pool equipment and a dining area beyond.",
+          "sourceFile": "b4fdcdf5-85dc-4994-8756-10c048583eaf - Copy.jpg",
+          "sourceSha256": "0f7a917c3870672ea9698f06efdafea7ecf02ca9d327277e1601d466c5961125"
+        },
+        {
+          "id": "strictly-striped-affair-3329ccbadce04019",
+          "src": "assets/projects/strictly-striped-affair/3329ccbadce04019.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Room for another round.",
+          "alt": "Poolside cornhole boards, oversized four-in-a-row game and bowling lane in bright daylight.",
+          "sourceFile": "c6b49c9b-c9e7-43ca-bdcc-4612ba1c5f9d - Copy.jpg",
+          "sourceSha256": "3329ccbadce0401993d5221e4de2605b386e58616d56e2eb58ae21fdbab4ebb6"
+        },
+        {
+          "id": "strictly-striped-affair-19576c0fa80d7c81",
+          "src": "assets/projects/strictly-striped-affair/19576c0fa80d7c81.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "The grill, the table and somewhere to settle.",
+          "alt": "Outdoor grill counter beside a sofa, chairs, fire table and covered dining area.",
+          "sourceFile": "db0855d1-779a-42e5-a837-e9004dca3a9c - Copy.jpg",
+          "sourceSha256": "19576c0fa80d7c81923bae2a1e7907d0305f1638efef8e67896f546b7c28924f"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "sequenceLabel": "TAKE A SEAT / ONE MORE ROUND / AFTER HOURS",
+        "chapters": [
+          {
+            "label": "TAKE A SEAT",
+            "navigation": "Poolside",
+            "title": "An orderly arrangement of doing nothing.",
+            "description": "Blue-and-white stripes, orange frames, and a pool at the center of it all.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "strictly-striped-affair-580e194d772175fd"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "strictly-striped-affair-d12025f874e49421",
+                  "strictly-striped-affair-41ff784058feeb1e"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "ONE MORE ROUND",
+            "navigation": "Out back",
+            "title": "The afternoon has options.",
+            "description": "A game on the lawn. Something on the grill. A table waiting under the shade.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "strictly-striped-affair-19576c0fa80d7c81"
+                ]
+              },
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "strictly-striped-affair-03ad3d101234d617",
+                  "strictly-striped-affair-154507a2b75b5982"
+                ]
+              },
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "strictly-striped-affair-3329ccbadce04019"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "AFTER HOURS",
+            "navigation": "Evening",
+            "title": "Nobody called time.",
+            "description": "The games can wait. The sky has a few things to say.",
+            "blocks": [
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "strictly-striped-affair-ea9f2ecc77b7b0fb",
+                  "strictly-striped-affair-1f0f0c90b8e78724"
+                ]
+              },
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "strictly-striped-affair-7e831fc53fd52843"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "Fourteen owner-supplied photographs. Originals preserved; location, date, construction scope and completed-work approval have not been supplied."
     },
     {
       "id": "collins-007",
