@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "revision": "seed-2026-11-03",
+  "projects": [
+    {
+      "id": "collins-001",
+      "slug": "a-minor-key",
+      "title": "a Minor Key",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "",
+      "services": [],
+      "coverId": null,
+      "photos": []
+    },
+    {
+      "id": "collins-002",
+      "slug": "black-tie-barefoot",
+      "title": "Black Tie, Barefoot",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "",
+      "services": [],
+      "coverId": null,
+      "photos": []
+    },
+    {
+      "id": "collins-003",
+      "slug": "dallas-with-feeling",
+      "title": "Dallas, With Feeling",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "",
+      "services": [],
+      "coverId": null,
+      "photos": []
+    },
+    {
+      "id": "collins-004",
+      "slug": "lower-form-of-leisure",
+      "title": "Lower Form of Leisure",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "",
+      "services": [],
+      "coverId": null,
+      "photos": []
+    },
+    {
+      "id": "collins-005",
+      "slug": "mr-bears-residence",
+      "title": "Mr. Bears, Residence",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "",
+      "services": [],
+      "coverId": null,
+      "photos": []
+    },
+    {
+      "id": "collins-006",
+      "slug": "strictly-striped-affair",
+      "title": "Strictly Striped Affair",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "",
+      "services": [],
+      "coverId": null,
+      "photos": []
+    },
+    {
+      "id": "collins-007",
+      "slug": "the-sun-stayed-for-supper",
+      "title": "The Sun Stayed for Supper",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "",
+      "services": [],
+      "coverId": null,
+      "photos": []
+    },
+    {
+      "id": "collins-008",
+      "slug": "umpire-strikes-back",
+      "title": "Umpire Strikes Back",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "",
+      "services": [],
+      "coverId": null,
+      "photos": []
+    }
+  ]
+}

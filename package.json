@@ -2,10 +2,11 @@
   "name": "collins-website",
   "version": "0.1.0",
   "private": true,
-  "description": "Collins website hosting connection test",
+  "description": "Collins private pool expedition and homeowner website",
   "scripts": {
     "deploy": "wrangler deploy",
-    "check:deploy": "wrangler deploy --dry-run"
+    "check:deploy": "wrangler deploy --dry-run",
+    "build:site": "node scripts/prepare-static.mjs"
   },
   "devDependencies": {
     "wrangler": "4.156.2"
