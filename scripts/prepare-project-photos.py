@@ -59,6 +59,10 @@ def prepare(archives, catalog, output, quality=82, replace=False):
                     destination.parent.mkdir(parents=True, exist_ok=True)
                     image.save(destination, 'WEBP', quality=quality, method=6)
                     encoded = destination.read_bytes()
+                    if not encoded:
+                        raise ValueError(f"Image export is empty: {name.name}")
+                    with Image.open(destination) as check:
+                        check.load()
                     photo_id = project['slug']+'-'+source_hash[:16]
                     project['photos'].append({'id': photo_id, 'src': relative.as_posix(), 'width': image.width,
                         'height': image.height, 'caption': '', 'alt': '', 'sourceFile': name.name,
