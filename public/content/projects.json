@@ -10,10 +10,160 @@
       "approved": false,
       "town": "",
       "year": "",
-      "summary": "",
+      "summary": "Quiet water. Warm cedar. A good reason to let the evening run long.",
       "services": [],
-      "coverId": null,
-      "photos": []
+      "coverId": "a-minor-key-ddc8e9db9f666ae7",
+      "photos": [
+        {
+          "id": "a-minor-key-1cf1fc2862773c09",
+          "src": "assets/projects/a-minor-key/1cf1fc2862773c09.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The pool and house from above",
+          "alt": "The pool and house from above.",
+          "sourceFile": "Collins_09_01_Sunny_Backyard_Pool_Aerial.jpg",
+          "sourceSha256": "1cf1fc2862773c09c2addf04e097314ace0034bc767e1a69b27a8eb655a9ec18"
+        },
+        {
+          "id": "a-minor-key-a06d04803e6e6b67",
+          "src": "assets/projects/a-minor-key/a06d04803e6e6b67.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A ledge, two loungers, a little shade",
+          "alt": "A ledge, two loungers, a little shade.",
+          "sourceFile": "Collins_09_02_Pool_Ledge_and_Umbrellas.jpg",
+          "sourceSha256": "a06d04803e6e6b67e111922db09b2c5e55a16799de8f51f09b1fb495b3c1bcf1"
+        },
+        {
+          "id": "a-minor-key-e5d4f06c136281e2",
+          "src": "assets/projects/a-minor-key/e5d4f06c136281e2.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Daylight at the pool house",
+          "alt": "Daylight at the pool house.",
+          "sourceFile": "Collins_09_03_Daylight_Pool_and_Pool_House.jpg",
+          "sourceSha256": "e5d4f06c136281e28861386846bcd6689e2e4b25dd69cfdb065f9833337e01c3"
+        },
+        {
+          "id": "a-minor-key-ddc8e9db9f666ae7",
+          "src": "assets/projects/a-minor-key/ddc8e9db9f666ae7.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "Waterfalls along the pool",
+          "alt": "Waterfalls along the pool.",
+          "sourceFile": "Collins_09_04_Daylight_Pool_and_Waterfalls.jpg",
+          "sourceSha256": "ddc8e9db9f666ae7f150a6ea33152b37829fe3fc2d375e775100f7547fbd8fcb"
+        },
+        {
+          "id": "a-minor-key-fb0daa55b47d2949",
+          "src": "assets/projects/a-minor-key/fb0daa55b47d2949.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The fire wall at twilight",
+          "alt": "The fire wall at twilight.",
+          "sourceFile": "Collins_09_05_Twilight_Pool_and_Fire_Wall.jpg",
+          "sourceSha256": "fb0daa55b47d2949c636d1c6547431d6461cefb757e45bc17deb9b87e3d28ca5"
+        },
+        {
+          "id": "a-minor-key-1dbb3c509bc2b86d",
+          "src": "assets/projects/a-minor-key/1dbb3c509bc2b86d.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "An evening at the spa and bar",
+          "alt": "An evening at the spa and bar.",
+          "sourceFile": "Collins_09_06_Evening_Spa_and_Outdoor_Bar.jpg",
+          "sourceSha256": "1dbb3c509bc2b86da977da6fd489a1b177cf3b2641e1e7f7e9b81f426785508c"
+        },
+        {
+          "id": "a-minor-key-da772ad0df34c5d5",
+          "src": "assets/projects/a-minor-key/da772ad0df34c5d5.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Firelight across the shallow ledge",
+          "alt": "Firelight across the shallow ledge.",
+          "sourceFile": "Collins_09_07_Twilight_Fire_Wall_and_Pool_Ledge.jpg",
+          "sourceSha256": "da772ad0df34c5d5df61dc0e8aa30bc6b0edef2e5baf3cdf5b265c9c5df0d21b"
+        },
+        {
+          "id": "a-minor-key-9dcef3295b2e4e89",
+          "src": "assets/projects/a-minor-key/9dcef3295b2e4e89.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "Pool lights, waterfalls and fire after dark",
+          "alt": "Pool lights, waterfalls and fire after dark.",
+          "sourceFile": "Collins_09_08_Night_Pool_Fire_Wall_and_Waterfalls.jpg",
+          "sourceSha256": "9dcef3295b2e4e893e0ce5434763855f2c265d51ec42867d74e7f77728df5fdc"
+        },
+        {
+          "id": "a-minor-key-4344e12d5fb72856",
+          "src": "assets/projects/a-minor-key/4344e12d5fb72856.webp",
+          "width": 720,
+          "height": 471,
+          "caption": "A spa beneath the cedar ceiling",
+          "alt": "A spa beneath the cedar ceiling.",
+          "sourceFile": "Collins_09_09_Covered_Spa_and_Cedar_Ceiling.jpg",
+          "sourceSha256": "4344e12d5fb72856658f06c7fc498fb6bc77ceba0cca53b8de7e4c22083d0869"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "sequenceLabel": "DAYLIGHT INTO FIRELIGHT",
+        "heroId": "a-minor-key-ddc8e9db9f666ae7",
+        "chapters": [
+          {
+            "label": "THE QUIET PART",
+            "navigation": "The pool",
+            "title": "Nothing on the agenda.",
+            "description": "Loungers at the water\u2019s edge. Umbrellas overhead. A whole afternoon to fill\u2014or leave empty.",
+            "blocks": [
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "a-minor-key-a06d04803e6e6b67",
+                  "a-minor-key-e5d4f06c136281e2"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "UNDER COVER",
+            "navigation": "Under cover",
+            "title": "Somewhere to settle in.",
+            "description": "Cedar overhead, a spa beneath it, and a seat at the bar.",
+            "blocks": [
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "a-minor-key-1dbb3c509bc2b86d",
+                  "a-minor-key-4344e12d5fb72856"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "AFTER THE SUN",
+            "navigation": "Firelight",
+            "title": "One more minute becomes an hour.",
+            "description": "The fire wall glows. Color moves through the water. The evening can take its time.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "a-minor-key-9dcef3295b2e4e89"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "a-minor-key-fb0daa55b47d2949",
+                  "a-minor-key-da772ad0df34c5d5"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "Owner-supplied project photographs. Location, date, construction scope and builder attribution have not been supplied."
     },
     {
       "id": "collins-002",
@@ -134,7 +284,71 @@
       ],
       "editorial": {
         "layout": "photographic",
-        "heroId": "black-tie-08"
+        "heroId": "black-tie-08",
+        "sequenceLabel": "DAYLIGHT INTO EVENING",
+        "chapters": [
+          {
+            "label": "THE DAY",
+            "navigation": "Daylight",
+            "title": "A very good place to do nothing.",
+            "description": "A few chairs. A long stretch of deck. The woods just beyond the water.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "black-tie-03"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "black-tie-01",
+                  "black-tie-04"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "THE VIEW",
+            "navigation": "From above",
+            "title": "A little perspective.",
+            "description": "The pool, the porch, the places around them. A different view of the same afternoon.",
+            "blocks": [
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "black-tie-06",
+                  "black-tie-12"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "THE EVENING",
+            "navigation": "Evening",
+            "title": "Nobody said you had to go inside.",
+            "description": "The porch lights come on. The water glows. There\u2019s still time for one more conversation.",
+            "blocks": [
+              {
+                "layout": "feature",
+                "photoIds": [
+                  "black-tie-05"
+                ],
+                "note": {
+                  "label": "AFTER HOURS",
+                  "text": "Good shoes optional."
+                }
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "black-tie-10",
+                  "black-tie-11"
+                ]
+              }
+            ]
+          }
+        ]
       },
       "sourceNote": "Photographs supplied by the owner in Black Tie, Barefoot.zip. Location, date, construction scope and builder attribution not supplied."
     },
@@ -146,10 +360,230 @@
       "approved": false,
       "town": "",
       "year": "",
-      "summary": "",
+      "summary": "A little city. A little celebration. A backyard that knows how to host.",
       "services": [],
-      "coverId": null,
-      "photos": []
+      "coverId": "dallas-with-feeling-1be9be01746f74d2",
+      "photos": [
+        {
+          "id": "dallas-with-feeling-1be9be01746f74d2",
+          "src": "assets/projects/dallas-with-feeling/1be9be01746f74d2.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "Fire at the water\u2019s edge",
+          "alt": "Fire at the water\u2019s edge.",
+          "sourceFile": "Dallas_With_Feeling_01_Fire_Feature_and_Pool_at_Dusk.jpg",
+          "sourceSha256": "1be9be01746f74d22adf4c55b3c5a089fb83f036b0831c803e28fc6519d9833b"
+        },
+        {
+          "id": "dallas-with-feeling-f14f8da1e4d72258",
+          "src": "assets/projects/dallas-with-feeling/f14f8da1e4d72258.webp",
+          "width": 1200,
+          "height": 899,
+          "caption": "Blue hour at the waterfall wall",
+          "alt": "Blue hour at the waterfall wall.",
+          "sourceFile": "Dallas_With_Feeling_02_Blue_Hour_Pool_and_Waterfalls.jpg",
+          "sourceSha256": "f14f8da1e4d7225832333085b27c8c9cd6fd3f3f0b04e0737de2c0cab19444a2"
+        },
+        {
+          "id": "dallas-with-feeling-31bf49d3ef852318",
+          "src": "assets/projects/dallas-with-feeling/31bf49d3ef852318.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The house and fire feature after dark",
+          "alt": "The house and fire feature after dark.",
+          "sourceFile": "Dallas_With_Feeling_03_Night_Fire_Feature_and_House.jpg",
+          "sourceSha256": "31bf49d3ef8523186de321ac75a5fd9989c9dc70b0c3e7801365f8c9a6ada977"
+        },
+        {
+          "id": "dallas-with-feeling-085d9abba0503459",
+          "src": "assets/projects/dallas-with-feeling/085d9abba0503459.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The pool and spa from above",
+          "alt": "The pool and spa from above.",
+          "sourceFile": "Dallas_With_Feeling_04_Overhead_Pool_and_Spa.jpg",
+          "sourceSha256": "085d9abba050345944530176b8f429ad4b6e20abacf74476732fd0ac32c93213"
+        },
+        {
+          "id": "dallas-with-feeling-fda304655ea34472",
+          "src": "assets/projects/dallas-with-feeling/fda304655ea34472.webp",
+          "width": 720,
+          "height": 534,
+          "caption": "Evening along the pool",
+          "alt": "Evening along the pool.",
+          "sourceFile": "Dallas_With_Feeling_05_Evening_Pool_and_Waterfalls.jpg",
+          "sourceSha256": "fda304655ea34472a0204a7930c937cc65e964a4a0c77d360627c5e4b191b23c"
+        },
+        {
+          "id": "dallas-with-feeling-2a8d7a0f1c6ebe73",
+          "src": "assets/projects/dallas-with-feeling/2a8d7a0f1c6ebe73.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Pool, spa and bar at blue hour",
+          "alt": "Pool, spa and bar at blue hour.",
+          "sourceFile": "Dallas_With_Feeling_06_Blue_Hour_Pool_Spa_and_Bar.jpg",
+          "sourceSha256": "2a8d7a0f1c6ebe733efa4f073c76a0bee38c1c6b988336f5294675439e6ecdf4"
+        },
+        {
+          "id": "dallas-with-feeling-5a0bff402a892c47",
+          "src": "assets/projects/dallas-with-feeling/5a0bff402a892c47.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The view from the covered patio",
+          "alt": "The view from the covered patio.",
+          "sourceFile": "Dallas_With_Feeling_07_Pool_and_Grateful_Blessed_Patio.jpg",
+          "sourceSha256": "5a0bff402a892c47cedb8d73941db6366cc0453a1b5e11487a89e94ddbc593a4"
+        },
+        {
+          "id": "dallas-with-feeling-76712c0d04a93912",
+          "src": "assets/projects/dallas-with-feeling/76712c0d04a93912.webp",
+          "width": 1200,
+          "height": 801,
+          "caption": "The Pool Party bar, up close",
+          "alt": "The Pool Party bar, up close.",
+          "sourceFile": "Dallas_With_Feeling_08_Pool_Party_Bar_Detail.jpg",
+          "sourceSha256": "76712c0d04a939124d9011029f0157e5782d196a693282e92f02ad2d90cd71b0"
+        },
+        {
+          "id": "dallas-with-feeling-9ba2d50468aec28c",
+          "src": "assets/projects/dallas-with-feeling/9ba2d50468aec28c.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A poolside seat at the bar",
+          "alt": "A poolside seat at the bar.",
+          "sourceFile": "Dallas_With_Feeling_09_Pool_View_from_the_Bar.jpg",
+          "sourceSha256": "9ba2d50468aec28cbdf789f867cc7a989b9b140bae1478a2d2f2482a4915e71e"
+        },
+        {
+          "id": "dallas-with-feeling-b46be76b8ccf18d8",
+          "src": "assets/projects/dallas-with-feeling/b46be76b8ccf18d8.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Evening beneath the covered patio",
+          "alt": "Evening beneath the covered patio.",
+          "sourceFile": "Dallas_With_Feeling_10_Evening_Pool_and_Covered_Patio.jpg",
+          "sourceSha256": "b46be76b8ccf18d8179cc9e1160dd15c4a9443a6cfaf5a6d55d7e83deaa584c9"
+        },
+        {
+          "id": "dallas-with-feeling-f6441690bb54a3ed",
+          "src": "assets/projects/dallas-with-feeling/f6441690bb54a3ed.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The backyard bar after dark",
+          "alt": "The backyard bar after dark.",
+          "sourceFile": "Dallas_With_Feeling_11_Pool_Party_Backyard_Bar.jpg",
+          "sourceSha256": "f6441690bb54a3eda9e5cc1bf37c26feeda8f9d1ff4227cb9178cc76b8c9e034"
+        },
+        {
+          "id": "dallas-with-feeling-8c6f3d32f5daa7f9",
+          "src": "assets/projects/dallas-with-feeling/8c6f3d32f5daa7f9.webp",
+          "width": 1200,
+          "height": 801,
+          "caption": "Firelight, pool light and the house",
+          "alt": "Firelight, pool light and the house.",
+          "sourceFile": "Dallas_With_Feeling_12_Fire_Feature_Pool_and_House.jpg",
+          "sourceSha256": "8c6f3d32f5daa7f9bd9680526cbfc5809338e6e9318e8afe090f1e28fb7bea6e"
+        },
+        {
+          "id": "dallas-with-feeling-5c6a65a5b0c6ffab",
+          "src": "assets/projects/dallas-with-feeling/5c6a65a5b0c6ffab.webp",
+          "width": 1200,
+          "height": 801,
+          "caption": "The pool and house in daylight",
+          "alt": "The pool and house in daylight.",
+          "sourceFile": "Dallas_With_Feeling_13_Daylight_Pool_and_House.jpg",
+          "sourceSha256": "5c6a65a5b0c6ffabdef040cc4bd16ae7a05bb803b64951e3f3daceee69bbe514"
+        },
+        {
+          "id": "dallas-with-feeling-c5056ba381c57c23",
+          "src": "assets/projects/dallas-with-feeling/c5056ba381c57c23.webp",
+          "width": 720,
+          "height": 1080,
+          "caption": "Blue tile and the outdoor shower",
+          "alt": "Blue tile and the outdoor shower.",
+          "sourceFile": "Dallas_With_Feeling_14_Outdoor_Shower_and_Blue_Tile.jpg",
+          "sourceSha256": "c5056ba381c57c23980fdecbe1bb30fe36f50c8529d004dda32c560f8f0baa23"
+        },
+        {
+          "id": "dallas-with-feeling-25354cbadc2a4e31",
+          "src": "assets/projects/dallas-with-feeling/25354cbadc2a4e31.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A daytime view from the bar",
+          "alt": "A daytime view from the bar.",
+          "sourceFile": "Dallas_With_Feeling_15_Daylight_Pool_from_the_Bar.jpg",
+          "sourceSha256": "25354cbadc2a4e316362fdbe1a781eef8020a39d25627505475227794d4ea487"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "sequenceLabel": "POOLSIDE INTO AFTER HOURS",
+        "heroId": "dallas-with-feeling-1be9be01746f74d2",
+        "chapters": [
+          {
+            "label": "THE ARRANGEMENT",
+            "navigation": "The pool",
+            "title": "Room for company.",
+            "description": "Clear water, white loungers, a spa, and a different view from every seat.",
+            "blocks": [
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "dallas-with-feeling-5c6a65a5b0c6ffab",
+                  "dallas-with-feeling-085d9abba0503459"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "BEHIND THE BAR",
+            "navigation": "The bar",
+            "title": "The sign says it all.",
+            "description": "A tiled backdrop. Warm pendant lights. Two words: pool party.",
+            "blocks": [
+              {
+                "layout": "feature",
+                "photoIds": [
+                  "dallas-with-feeling-76712c0d04a93912"
+                ],
+                "note": {
+                  "label": "HOUSE RULE",
+                  "text": "Stay for another."
+                }
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "dallas-with-feeling-25354cbadc2a4e31",
+                  "dallas-with-feeling-9ba2d50468aec28c"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "BLUE HOUR",
+            "navigation": "After hours",
+            "title": "The city can wait.",
+            "description": "Fire along the water. Blue tile after dark. The whole backyard takes on a different mood.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "dallas-with-feeling-8c6f3d32f5daa7f9"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "dallas-with-feeling-f14f8da1e4d72258",
+                  "dallas-with-feeling-2a8d7a0f1c6ebe73"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "Owner-supplied project photographs. Location, date, construction scope and builder attribution have not been supplied."
     },
     {
       "id": "collins-004",
