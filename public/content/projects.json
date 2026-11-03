@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "seed-2026-11-03",
+  "revision": "photos-2026-11-03-black-tie",
   "projects": [
     {
       "id": "collins-001",
@@ -23,10 +23,120 @@
       "approved": false,
       "town": "",
       "year": "",
-      "summary": "",
+      "summary": "A pool at the treeline. A porch for the slow part of the day.",
       "services": [],
-      "coverId": null,
-      "photos": []
+      "coverId": "black-tie-08",
+      "photos": [
+        {
+          "id": "black-tie-01",
+          "src": "assets/projects/black-tie-barefoot/01.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Poolside seating, facing the woodland",
+          "alt": "Black poolside loungers beside a rectangular pool, with woods beyond the deck"
+        },
+        {
+          "id": "black-tie-02",
+          "src": "assets/projects/black-tie-barefoot/02.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The covered porch and pool",
+          "alt": "View from the covered porch toward the pool and surrounding woodland"
+        },
+        {
+          "id": "black-tie-03",
+          "src": "assets/projects/black-tie-barefoot/03.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "Daylight on the deck",
+          "alt": "Rectangular turquoise pool set into a broad gray deck beneath the covered porch"
+        },
+        {
+          "id": "black-tie-04",
+          "src": "assets/projects/black-tie-barefoot/04.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A seat at the treeline",
+          "alt": "Poolside loungers and a gray deck alongside the wooded edge of the property"
+        },
+        {
+          "id": "black-tie-05",
+          "src": "assets/projects/black-tie-barefoot/05.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "After dark, from above",
+          "alt": "Evening aerial view of the illuminated pool, poolside seating and circular fire-pit area"
+        },
+        {
+          "id": "black-tie-06",
+          "src": "assets/projects/black-tie-barefoot/06.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "The whole arrangement",
+          "alt": "Daylight aerial view showing the pool deck, covered porch and a separate hot tub"
+        },
+        {
+          "id": "black-tie-07",
+          "src": "assets/projects/black-tie-barefoot/07.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The last of the light",
+          "alt": "Sunset view across the pool and gray deck toward trees beneath a dramatic sky"
+        },
+        {
+          "id": "black-tie-08",
+          "src": "assets/projects/black-tie-barefoot/08.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "The porch lights come on",
+          "alt": "Sunset poolside view with black loungers, glowing pool water and the warmly lit porch"
+        },
+        {
+          "id": "black-tie-09",
+          "src": "assets/projects/black-tie-barefoot/09.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The deck from above",
+          "alt": "Daylight aerial view of the deck, pool, loungers and surrounding woods"
+        },
+        {
+          "id": "black-tie-10",
+          "src": "assets/projects/black-tie-barefoot/10.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A longer kind of evening",
+          "alt": "Sunset view along the pool deck toward the warmly lit cabin and covered porch"
+        },
+        {
+          "id": "black-tie-11",
+          "src": "assets/projects/black-tie-barefoot/11.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A little farther back",
+          "alt": "Wide sunset aerial view of the cabin, pool deck, lit windows and surrounding woodland"
+        },
+        {
+          "id": "black-tie-12",
+          "src": "assets/projects/black-tie-barefoot/12.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "At the treeline",
+          "alt": "Overhead view of the cabin, covered porch, separate hot tub and pool deck among trees"
+        },
+        {
+          "id": "black-tie-13",
+          "src": "assets/projects/black-tie-barefoot/13.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Evening settles in",
+          "alt": "Ground-level evening view of the cabin and deck, with lit windows and a fire-pit area in front"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "heroId": "black-tie-08"
+      },
+      "sourceNote": "Photographs supplied by the owner in Black Tie, Barefoot.zip. Location, date, construction scope and builder attribution not supplied."
     },
     {
       "id": "collins-003",

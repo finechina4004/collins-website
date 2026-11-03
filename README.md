@@ -10,7 +10,7 @@ The submarine guides visitors between five native-scroll chapters. The main webs
 
 ## Current content and editing
 
-Eight named project records are in public/content/projects.json. They remain drafts with honest missing-photograph states. Edit confirmed contact details in public/site-config.js. No phone number or submission destination has been invented.
+Eight named project records are in public/content/projects.json. Black Tie, Barefoot now includes 13 owner-supplied photographs in a dedicated photographic album; the other seven retain their missing-photograph states. Builder attribution, location, date and construction scope for the new photographs have not been supplied, so approval remains false and those details are omitted. Edit confirmed contact details in public/site-config.js. No phone number or submission destination has been invented.
 
 The album studio at #studio saves drafts and images in this browser using IndexedDB, with JSON export/import and local preview. Cloudflare album publishing is disabled: no admin API or durable media storage has been connected. Do not describe local saving as a website update. The inquiry form prepares/downloads a brief; it does not send it.
 
@@ -26,3 +26,5 @@ See docs/MIGRATION_QA.md for the actual verification and remaining gaps. Revert 
 ## Creative review
 
 The November 3 refinement and its before/after captures are documented in docs/CREATIVE_REVIEW.md. The GitHub/Cloudflare publishing integration remains the deployment route.
+
+Black Tie, Barefoot implementation and verification: docs/black-tie-barefoot/REVIEW.md. Photographs retain their original dimensions; no generated imagery or retouching was applied.
