@@ -1,4 +1,4 @@
-/* Each postcard has its own composition. Photographs remain original project evidence. */
+/* Consistent project covers. Photographs remain original project evidence. */
 (() => {
  'use strict';
  const palettes=[
@@ -19,9 +19,9 @@
   const photos=project.photos||[],cover=photos.find(p=>p.id===project.coverId)||photos[0];
   const img=(photo,cls)=>{const e=make('img',cls);e.src=photo.preview||photo.src;e.alt=photo.alt||photo.caption||project.title;e.width=photo.width;e.height=photo.height;e.loading='lazy';return e;};
   const picture=make('div','postcard-picture');if(cover)picture.append(img(cover,'postcard-photo'));
-  if(index===6&&photos.length>1){const second=photos.find(p=>p.id!==cover?.id&&/evening|fire|dusk/i.test(p.alt+' '+p.caption))||photos[1];picture.append(img(second,'postcard-second-photo'));}
+
   const title=make('h3','postcard-title',project.title),stamp=make('span','postcard-stamp','COLLINS'),number=make('span','postcard-number',String(index+1).padStart(2,'0'));
-  const meta=make('span','postcard-meta',photos.length+' photographs'),open=make('span','postcard-open','Open postcard ↗');
+  const meta=make('span','postcard-meta',photos.length+' photographs'),open=make('span','postcard-open','View project ↗');
   a.append(picture,title,stamp,number,meta,open);return a;
  }
  window.CollinsPostcards={card,apply};
