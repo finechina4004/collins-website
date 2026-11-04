@@ -1,5 +1,1 @@
-{
-  "build": "collins-continuous-world-recovery-01",
-  "sourceCheckpoint": "4ce724b99485192dbf5cc5b06709443e14681c2e",
-  "destination": "Cloudflare collins-website"
-}
+{"build":"collins-pool-stories-01","sourceCheckpoint":"efa3bb6f452d249336b4c494dedbca0a9c41f443","destination":"Cloudflare collins-website"}

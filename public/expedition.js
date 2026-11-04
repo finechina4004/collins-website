@@ -4,15 +4,15 @@
  const $$ = s => [...document.querySelectorAll(s)];
  const html=document.documentElement, pool=$('#pool'), journey=$('#journey'), viewport=$('.pool-window'), world=$('#world'), submarine=$('#submarine'), launch=window.CollinsLaunch;
  const scenes=$$('.scene'), stops=$$('[data-stop]');
- const labels=['Below the Steps','The Lost Property Office','The Light Alcove','At the Far Skimmer','The Next Chapter'];
+ const labels=['The Shallow End','An Unscheduled Arrival','The Unexpected Dive','The Evening Shift','Back at Poolside'];
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
- let manualCalm=false,calm=reduced.matches,selected=0,progress=0,remembered=0,width=innerWidth,height=innerHeight,range=1,raf=0,lastProgress=0,brief='',transitionTimer=0,dockTimer=0;
+ let pointerFocus=false,manualCalm=false,calm=reduced.matches,selected=0,progress=0,remembered=0,width=innerWidth,height=innerHeight,range=1,raf=0,lastProgress=0,brief='',transitionTimer=0,dockTimer=0;
  const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
  const inPool=()=>html.dataset.route==='pool';
  function storage(key,value){try{if(value===undefined)return sessionStorage.getItem(key);sessionStorage.setItem(key,value);}catch{}return null;}
  const restored=Number(storage('collins-expedition-stop'));if(Number.isInteger(restored)&&restored>=0&&restored<=4)remembered=restored;
  function announce(i){selected=i;stops.forEach((b,n)=>{if(i===n)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});scenes.forEach((s,n)=>{s.inert=n!==i;s.setAttribute('aria-hidden',String(n!==i));});$('#previous').disabled=i===0;$('#next').disabled=i===4;$('#expedition-status').textContent=`Discovery ${i+1} of 5: ${labels[i]}.`;storage('collins-expedition-stop',String(i));remembered=i;pool.dataset.stop=String(i);}
- function poses(){return innerWidth<=720?[[.61,.66],[.16,.84],[.79,.19],[.83,.86],[.53,.88]]:innerHeight<=560?[[.60,.74],[.58,.77],[.55,.78],[.55,.76],[.57,.78]]:[[.54,.69],[.69,.70],[.47,.76],[.52,.71],[.58,.68]];}
+ function poses(){return innerWidth<=720?[[.63,.72],[.80,.80],[.80,.66],[.83,.84],[.53,.88]]:innerHeight<=560?[[.56,.75],[.60,.80],[.79,.78],[.55,.79],[.57,.78]]:[[.51,.74],[.40,.77],[.86,.74],[.49,.75],[.58,.68]];}
  function render(){raf=0;if(!inPool())return;const previous=progress;progress=clamp(scrollY/range*4,0,4);const rendered=calm?Math.round(progress):progress;world.style.transform=`translate3d(${-rendered*width}px,0,0)`;$('#route-progress').style.transform=`scaleX(${progress/4})`;const nearest=Math.round(progress);if(nearest!==selected)announce(nearest);
  const points=poses(),a=Math.floor(rendered),b=Math.min(4,a+1),fraction=rendered-a;const pose=[points[a][0]+(points[b][0]-points[a][0])*fraction,points[a][1]+(points[b][1]-points[a][1])*fraction];
  const size=innerWidth<=720?(selected>0&&selected<4?110:151):innerHeight<=560?120:210;submarine.style.width=`${size}px`;const pitch=calm?0:clamp((progress-previous)*-60,-8,8);submarine.style.transform=`translate3d(${clamp(pose[0]*width-size/2,2,width-size-2)}px,${clamp(pose[1]*height-size/3,5,height-size*.67-6)}px,0) rotate(${pitch}deg)`;const moving=!calm&&Math.abs(progress-lastProgress)>.002;submarine.classList.toggle('underway',moving);clearTimeout(dockTimer);if(moving)dockTimer=setTimeout(()=>submarine.classList.remove('underway'),180);lastProgress=progress;
@@ -24,7 +24,8 @@
  function updateMotion(){calm=manualCalm||reduced.matches;html.classList.toggle('calm',calm);$('#motion-toggle').setAttribute('aria-pressed',String(calm));launch?.setCalm(calm);requestRender();}
  addEventListener('scroll',()=>{if(inPool())requestRender();},{passive:true});addEventListener('resize',()=>resize(),{passive:true});document.addEventListener('visibilitychange',()=>{if(!document.hidden)requestRender();});reduced.addEventListener('change',updateMotion);
  stops.forEach(b=>b.addEventListener('click',()=>setStop(Number(b.dataset.stop))));$('#previous').addEventListener('click',()=>setStop(selected-1));$('#next').addEventListener('click',()=>setStop(selected+1));$('#motion-toggle').addEventListener('click',()=>{manualCalm=!manualCalm;updateMotion();});
- pool.addEventListener('mousedown',e=>{const control=e.target.closest('button,a');if(control&&e.button===0){e.preventDefault();control.focus({preventScroll:true});}});
+ pool.addEventListener('mousedown',e=>{const control=e.target.closest('button,a');if(control&&e.button===0){e.preventDefault();pointerFocus=true;try{control.focus({preventScroll:true});}finally{pointerFocus=false;}}});
+ pool.addEventListener('focusin',e=>{const scene=e.target.closest('[data-scene]');if(pointerFocus||!scene||!inPool())return;const i=Number(scene.dataset.scene);scrollTo({top:range*i/4,behavior:'instant'});render();});
  pool.addEventListener('keydown',e=>{if(e.key==='Escape')location.hash='#home';if(e.target===pool&&['ArrowRight','ArrowLeft','Home','End'].includes(e.key)){e.preventDefault();setStop(e.key==='Home'?0:e.key==='End'?4:selected+(e.key==='ArrowRight'?1:-1));}});
  $('#evening-toggle').addEventListener('click',()=>{const on=pool.classList.toggle('is-evening');$('#evening-toggle').setAttribute('aria-pressed',String(on));$('#evening-toggle').innerHTML=on?'Back to daylight <span aria-hidden="true">◑</span>':'Evening light <span aria-hidden="true">◐</span>';});
   $('#goggles').addEventListener('click', () => {
