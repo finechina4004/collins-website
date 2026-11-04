@@ -1,0 +1,7 @@
+{
+  "origin": "https://collins-website.chasehess-hq.workers.dev/",
+  "attemptedRequests": 97,
+  "blockedRequests": 97,
+  "result": "Direct bulk HTTP verification returned 403 in this executor. This is an access limitation, not evidence of broken photo URLs. Browser route/viewer checks and source image decoding are recorded separately.",
+  "completeLivePhotoVerification": false
+}

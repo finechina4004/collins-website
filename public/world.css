@@ -172,3 +172,34 @@ html[data-route=site]{scroll-padding-top:calc(var(--header) + 12px)}
 .scene-light.light-on .light-switch,.scene-light.light-on .night-window{color:var(--ink)}
 .scene-copy:before{content:attr(data-chapter) / ''}
 @media(max-width:720px){.album-entry .album-title-art{display:none}.album-entry .album-readable-title{display:block;font:italic 22px/1.13 Georgia,serif;letter-spacing:-.5px}.album-entry small{font-size:9px;line-height:1.65}.album-entry>div{padding-top:12px;padding-bottom:25px}}
+
+/* The backyard desk uses the same painted scene as its entrances. */
+#backyard-desk .desk-study{display:flex;flex-direction:column;justify-content:center;padding:24px;gap:14px;background:#d9dbc8}
+.desk-art{position:relative;isolation:isolate;width:100%;aspect-ratio:1672/941;background:#d4d4b9;border:1px solid #8d997e;overflow:hidden}
+.desk-art>img{display:block;width:100%;height:100%;object-fit:contain}
+#backyard-desk .study-hotspots{inset:0;transform:none}
+#backyard-desk .study-hotspot{width:44px;height:44px;min-height:44px;border-radius:0;background:#f8f1e5f2;box-shadow:2px 3px 0 #234c502b;font:11px 'Courier New',monospace}
+#backyard-desk .study-hotspot[aria-pressed=true]{background:#ebcf8c;box-shadow:0 0 0 3px #f8f1e580,2px 3px 0 #234c5033}
+#backyard-desk .spot-swim{left:52%;top:78%}#backyard-desk .spot-cook{left:80%;top:53%}#backyard-desk .spot-shade{left:80%;top:26%}#backyard-desk .spot-stay{left:16%;top:50%}
+.desk-art-note{margin:0;width:100%;font:8px/1.7 'Courier New',monospace;letter-spacing:.5px;color:#34554a}
+.desk-art.has-error .study-hotspots,.desk-art.has-error>img{display:none}
+.desk-examples{display:flex;align-items:center;min-height:44px;padding:10px 0;font:12px/1.5 Georgia,serif;border-bottom:1px solid #71856e66}
+.desk-examples:hover{color:#a9583e}.desk-carry{margin-top:6px}
+.note-steps{display:flex;gap:12px;justify-content:space-between;list-style:none;margin:0 0 26px;padding:0;counter-reset:note-step;border-bottom:1px solid #9b9d8350;padding-bottom:18px}
+.note-steps li{counter-increment:note-step;font:10px/1.7 Georgia,serif;color:#395b50;max-width:32%}
+.note-steps li:before{content:'0' counter(note-step);display:block;font:8px/1.5 'Courier New',monospace;letter-spacing:1px;margin-bottom:6px;color:#7f765d}
+.draft-tools{display:flex;justify-content:space-between;gap:16px;align-items:center;border-top:1px solid #9b9d8350;margin-top:18px;padding-top:9px}
+.draft-status{font:10px/1.8 'Courier New',monospace!important;max-width:290px!important;margin:0!important}
+.draft-tools button{min-height:44px;padding:10px 0;border:0;border-bottom:1px solid #7e8f77;background:transparent;color:#34554a;white-space:nowrap;font:11px Georgia,serif;cursor:pointer}
+.draft-tools button[hidden]{display:none}.draft-tools button:hover{color:#a9583e}
+.brief-review{scroll-margin-top:16px}
+.brief-preview-label{font:8px/1.8 'Courier New',monospace!important;letter-spacing:.7px;margin:0 0 14px!important}
+#brief-review h3{font:400 30px/1.15 Georgia,serif;margin:0 0 22px;color:#234c50}
+#brief-review:focus-visible{outline:2px solid #a65b42;outline-offset:8px}
+@media(max-width:800px){.desk-examples{grid-column:1/-1}}
+@media(max-width:720px){
+ #backyard-desk .desk-study{padding:12px;gap:10px}.desk-art-note{font-size:7px;letter-spacing:.2px}
+ #backyard-desk .study-hotspot{font-size:10px}.desk-examples{font-size:13px}.note-steps{gap:10px;margin-bottom:22px;padding-bottom:15px}
+ .note-steps li{font-size:10px}.draft-tools{gap:12px;align-items:start}.draft-status{font-size:9px!important;max-width:185px!important;padding-top:10px!important}
+ .draft-tools button{font-size:11px}.brief-preview-label{font-size:7px!important}#brief-review h3{font-size:28px}
+}

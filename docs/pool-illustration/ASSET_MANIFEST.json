@@ -1,0 +1,54 @@
+{
+  "checkpoint": "collins-pool-art-ready-20261104",
+  "baseCommit": "ef45aa9f8da14c1e84a8f6e8f39f3a992941b261",
+  "branch": "design/living-backyard-cutaway",
+  "runtimeIntegrationStarted": true,
+  "assets": [
+    {
+      "path": "public/assets/backyard-day-illustrated.webp",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 220668,
+      "sha256": "43a1cc861107bc71b6f8f20a08347eb2e24564385cd70657b8e0a0870c0e6cde",
+      "integrated": true
+    },
+    {
+      "path": "public/assets/backyard-evening-illustrated.webp",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 288002,
+      "sha256": "3ce2a91f76f7b911a9c3900b86c75e537480ecd0031f9b84dec113307b2be10b",
+      "integrated": true
+    },
+    {
+      "path": "public/assets/pool-panorama-illustrated.webp",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGB",
+      "bytes": 218986,
+      "sha256": "60f1e5c28167ae5bd8f3447843a009e9e4d0f0b9a62858c419eb991dc73b90dd",
+      "integrated": true
+    },
+    {
+      "path": "public/assets/dog-illustrated.webp",
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "bytes": 180038,
+      "sha256": "58ec09d17df33216a8d5fe2bb07d8522bbae0f203b84f788c1e08a9d5b4d8208",
+      "integrated": true
+    },
+    {
+      "path": "public/assets/vessel-illustrated.webp",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "bytes": 231698,
+      "sha256": "be60cf76720fbf033e64e8c9e6ac90ee8f288c5705828635a52ad25adc72f7b3",
+      "integrated": true
+    }
+  ],
+  "integrationReview": "docs/pool-illustration/REVIEW.md"
+}

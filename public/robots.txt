@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /holding.html
+Sitemap: https://collins-website.chasehess-hq.workers.dev/sitemap.xml

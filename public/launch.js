@@ -55,13 +55,14 @@
   if (instant || calm || !viewport || !revealVessel.animate) { finish(); return; }
   const w = viewport.width, h = viewport.height;
   const port = Math.min(w * (w < 721 ? .77 : .65), w < 721 ? 400 : 720);
-  const startScale = port / 510;
-  const endWidth = w < 721 ? 151 : 210;
+  const startScale = port / 490;
+  const guide = callbacks.guide?.();
+  const endWidth = guide?.width || (w < 721 ? 151 : 210);
   const endScale = endWidth / 1536;
-  const startX = w * .5 - 1040 * startScale;
-  const startY = h * .46 - 640 * startScale;
-  const endX = w * (w < 721 ? .62 : .54) - endWidth * .5;
-  const endY = h * (w < 721 ? .65 : .69) - endWidth / 3;
+  const startX = w * .5 - 1100 * startScale;
+  const startY = h * .46 - 660 * startScale;
+  const endX = guide ? guide.left - viewport.left : w * .51 - endWidth * .5;
+  const endY = guide ? guide.top - viewport.top : h * .74 - endWidth / 3;
   const from = `translate3d(${startX}px,${startY}px,0) scale(${startScale})`;
   const to = `translate3d(${endX}px,${endY}px,0) scale(${endScale})`;
   revealVessel.style.transform = from;
@@ -80,7 +81,7 @@
   delay(() => reveal(), 3800);
  }
  board.addEventListener('click', start);
- launch.addEventListener('keydown', e => { if (e.key === 'Escape') location.hash = '#home'; });
+ launch.addEventListener('keydown', e => { if (e.key === 'Escape') location.hash = '#backyard'; });
  // Interrupted sequences settle at a usable scene rather than strand a visitor.
  addEventListener('resize', () => { if (running) { callbacks.reveal?.(); finish(); } });
  document.addEventListener('visibilitychange', () => { if (document.hidden && running) { callbacks.reveal?.(); finish(); } });

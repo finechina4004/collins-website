@@ -4,12 +4,9 @@
  const $ = selector => document.querySelector(selector);
  const html=document.documentElement, pool=$('#pool');
  function navigation(){
-  const route=html.dataset.route, link=$('.surface-link'), label=$('.surface-verb');
-  const beneath=route==='pool'||route==='launch';
-  link.href=beneath?'#home':'#launch';
-  label.textContent=route==='pool'?'Back to poolside':route==='launch'?'Poolside':'Explore the pool';
+  const hash=location.hash||'#backyard';
   document.querySelectorAll('.main-nav a').forEach(a=>{
-   const active=a.hash===location.hash;
+   const active=a.hash===hash||(a.hash==='#work'&&hash.startsWith('#work/'))||(a.hash==='#build'&&['#home','#about'].includes(hash));
    if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
   });
  }
@@ -17,8 +14,15 @@
  addEventListener('hashchange',navigation);navigation();
  function light(on){
   html.dataset.time=on?'evening':'day';
-  const sceneImage=on?'assets/pool-night.webp':'assets/pool-day.webp';
+  const sceneImage=on?'assets/backyard-evening-illustrated.webp':'assets/backyard-day-illustrated.webp';
+  document.documentElement.style.setProperty('--backyard-plate',`url('${sceneImage}')`);
+  const artwork=$('.backyard-art');artwork.src=sceneImage;
+  artwork.alt=`An imagined painted Collins backyard in ${on?'evening':'afternoon'} light: cream poolhouse, brick fireplace, striped pergola and cutaway pool.`;
+  $('#backyard-light').setAttribute('aria-pressed',String(on));
+  $('#backyard-light').textContent=on?'Afternoon light ◑':'Evening light ◐';
+  try{sessionStorage.setItem('collins-time',on?'evening':'day');}catch{}
   $('.launch-set').src=sceneImage;
+  $('#desk-art-image').src=sceneImage;
   $('#periscope-view img').src=sceneImage;
   $('#periscope-view img').alt=on?'The same illustrative backyard above water, after dark.':'The same illustrative backyard above water, in afternoon light.';
   pool.classList.toggle('is-evening',on);
@@ -35,12 +39,14 @@
   $('#scene-time').textContent=on?'THE LIGHTS ARE ON':'BACK AT POOLSIDE';
   $('#findings-count').textContent=on?'FIELD NOTE / THE EVENING STAYS WITH YOU':'COLLINS / A SMALL SURVEY OUT BACK';
   $('#findings-status').textContent=on?'Evening light across the pool and backyard.':'Afternoon light across the pool and backyard.';
-  $('#home-world .home-day').alt=on?'An imagined Collins miniature pool after dark.':'An original imagined Collins miniature pool in afternoon light.';
+  $('#home-world .home-day').alt=on?'The imagined painted Collins backyard in evening light.':'The imagined painted Collins backyard in afternoon light.';
  }
  $('#evening-toggle').addEventListener('click',()=>light(pool.classList.contains('is-evening')));
  $('#light-switch').addEventListener('click',()=>light($('.scene-light').classList.contains('light-on')));
  $('#world-light').addEventListener('click',()=>light($('#home-world').classList.contains('after-hours')));
- light(false);
+ $('#backyard-light').addEventListener('click',()=>light(html.dataset.time!=='evening'));
+ let savedTime='day';try{savedTime=sessionStorage.getItem('collins-time')||'day';}catch{}
+ light(savedTime==='evening');
  $('#goggles').addEventListener('click',()=>{
   const on=$('#goggles').getAttribute('aria-pressed')==='true';
   $('#found-note').hidden=!on;
