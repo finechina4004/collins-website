@@ -4,12 +4,9 @@
  const $ = selector => document.querySelector(selector);
  const html=document.documentElement, pool=$('#pool');
  function navigation(){
-  const route=html.dataset.route, link=$('.surface-link'), label=$('.surface-verb');
-  const beneath=route==='pool'||route==='launch';
-  link.href='#backyard';
-  label.textContent=route==='world'?'Services & about':'Back to artwork';
+  const hash=location.hash||'#backyard';
   document.querySelectorAll('.main-nav a').forEach(a=>{
-   const active=a.hash===location.hash;
+   const active=a.hash===hash||(a.hash==='#work'&&hash.startsWith('#work/'))||(a.hash==='#build'&&['#home','#about'].includes(hash));
    if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
   });
  }

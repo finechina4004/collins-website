@@ -1,0 +1,15 @@
+{
+  "albums": 8,
+  "decodedPhotos": 94,
+  "changedPhotos": [],
+  "catalogUnchanged": true,
+  "duplicateIDs": [],
+  "missingLocalReferences": [],
+  "illustrationBytes": {
+    "dog-illustrated.webp": 180038,
+    "backyard-day-illustrated.webp": 220668,
+    "backyard-evening-illustrated.webp": 288002,
+    "pool-panorama-illustrated.webp": 218986,
+    "vessel-illustrated.webp": 231698
+  }
+}

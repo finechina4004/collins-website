@@ -44,7 +44,6 @@
  function navigation(){
   syncArtwork();
   const world=html.dataset.route==='world';$('#backyard').inert=!world;
-  const link=$('.surface-link');link.href=world?'#home':'#backyard';$('.surface-verb').textContent=world?'Services & about':'Back to artwork';
   const still=html.classList.contains('calm');$('#world-motion').setAttribute('aria-pressed',String(still));$('#world-motion').textContent=still?'Motion off ◌':'Pause motion ◌';
  }
  new MutationObserver(navigation).observe(html,{attributes:true,attributeFilter:['data-route','class','data-time']});

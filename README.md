@@ -50,3 +50,7 @@ The continuation at `b5a620f` adds close views of the same painted backyard for 
 ## Services and project notes
 
 The services desk now uses the same painted backyard, with direct links from Swim/Cook/Shade/Stay to real examples and the project note. Its selected interest and the visitor's draft survive refresh in the same tab. Clear/undo, stale-review invalidation and the manual Messages handoff are verified; nothing is automatically submitted. New evidence: [docs/services-notes/REVIEW.md](docs/services-notes/REVIEW.md). The existing draft PR and production review boundary remain.
+
+## Rendered site audit and stable navigation
+
+The latest continuation inspects the actual production build separately from the illustrated review. Header links now keep consistent destinations, both wordmarks return to the artwork, and the legacy holding page has useful routes. Desktop/portrait journey checks, source/photo integrity checks, findings and explicit test limits are in [docs/site-audit/REVIEW.md](docs/site-audit/REVIEW.md). PR #14 remains the review destination; production awaits approval.

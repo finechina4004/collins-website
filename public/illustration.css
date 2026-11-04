@@ -105,3 +105,6 @@ html:not([data-route=pool]) .journey *,html.world-paused .journey *,html.world-p
 
 .pool[data-stop="3"] .evening-toggle{visibility:hidden}
 @media(max-height:560px) and (min-width:721px){.scene-evening .light-switch{left:46%;right:auto;bottom:10%}}
+
+/* Stable navigation keeps the same destinations throughout the illustrated journey. */
+@media(max-width:720px){.main-nav a{min-height:44px}.main-nav{gap:8px}}
