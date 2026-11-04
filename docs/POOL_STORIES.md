@@ -25,3 +25,5 @@ These are responsive browser frames, not physical phone tests. No OS-level reduc
 ## Preserved
 
 All eight/94 real albums; no invented project claims; confirmed call/text; visitor-reviewed Messages note and copy/download flow; noindex/custom-domain gap; local-only studio. Changes are confined to illustration, underwater story presentation, labels and focus handling.
+
+Final geometry cleanup: removed an incorrectly submerged rectangular skimmer from the generated set, retaining the flush circular light and ladder. No fixture is presented as a skimmer below the waterline.
