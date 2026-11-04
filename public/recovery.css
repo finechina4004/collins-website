@@ -125,3 +125,7 @@ html[data-time=evening] .scene-exit{background-image:linear-gradient(90deg,#183d
 }
 
 html.calm{scroll-behavior:auto!important}.calm *, .calm *:before, .calm *:after{scroll-behavior:auto!important}
+
+/* Final live review: a paper title card stays legible against the sage fence. */
+.launch[data-phase=ready] .launch-title{background:#f8f1e5ed;padding:18px 22px;border:1px solid #b3ac91;box-shadow:3px 5px 0 #234c501a;text-shadow:none;color:#234c50;right:3%;top:7%;transform:rotate(.5deg)}
+.launch-title p{font-size:clamp(28px,2.7vw,40px)}
