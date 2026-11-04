@@ -6,7 +6,7 @@
  addEventListener('hashchange',navigation);navigation();
  function light(on){
   html.dataset.time=on?'evening':'day';const file='assets/collins-cover.webp';html.style.setProperty('--backyard-plate',`url('${file}')`);
-  $('.backyard-art').src=file;$('.backyard-art').alt='A front-facing painted Collins backyard with a cream poolhouse, fireplace, pergola, kitchen and turquoise pool.';
+  $('.backyard-art').src=file;$('.backyard-art').alt='A vintage painted Italian villa backyard, with a standing diver on the board, vineyard hills, fireplace, outdoor kitchen and turquoise pool.';
   $('.launch-set').src=file;$('#desk-art-image').src=file;document.querySelectorAll('[data-plate="backyard"]').forEach(img=>img.src=file);
   $('#pool').classList.toggle('is-evening',on);$('#home-world').classList.toggle('after-hours',on);
   $('#backyard-light').setAttribute('aria-pressed',String(on));$('#backyard-light').setAttribute('aria-label',on?'Switch to daylight':'Switch to evening');$('#backyard-light .tool-label').textContent=on?'Night':'Day';
