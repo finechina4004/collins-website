@@ -128,3 +128,11 @@ html[data-time=evening] .world-portal>span{color:#f8f1e5;text-shadow:0 1px 4px #
 #backyard-desk .spot-swim{left:50%;top:69%}#backyard-desk .spot-cook{left:77%;top:36%}#backyard-desk .spot-shade{left:77%;top:23%}#backyard-desk .spot-stay{left:26%;top:33%}
 @media(max-width:720px){.world-vessel{left:62%;top:63%;width:10%}.launch-stage .vessel-carriage{top:61%}}
 @media(min-width:721px) and (max-height:600px){.world-composition{top:calc(135px + (100svh - 185px)/2);width:min(94vw,calc((100svh - 185px)*1.5))}}
+/* Keep both sides of the pool in frame: no cropped-off steps or ladder rails. */
+.pool-scene{width:100%;height:100%;aspect-ratio:auto}
+.pool-scene-art{width:100%;height:100%;object-fit:cover;object-position:center bottom;transform:none}
+.pool-dog{display:none}
+.dive-playing .submarine{animation:master-vessel-dive 2.8s ease-out both}
+@keyframes master-vessel-dive{from{translate:0 -110%;opacity:0}20%{opacity:1}to{translate:0 0;opacity:1}}
+@media(max-width:720px){.pool-scene{position:relative;left:auto;transform:none;width:100%;height:auto;aspect-ratio:3/2;max-height:100%}.pool-scene-art{object-fit:contain}.pool-scene .submarine{left:44%;top:66%}}
+@media(prefers-reduced-motion:reduce){.dive-playing .submarine{animation:none}}
