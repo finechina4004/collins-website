@@ -27,3 +27,15 @@ These are responsive browser frames, not physical phone tests. No OS-level reduc
 All eight/94 real albums; no invented project claims; confirmed call/text; visitor-reviewed Messages note and copy/download flow; noindex/custom-domain gap; local-only studio. Changes are confined to illustration, underwater story presentation, labels and focus handling.
 
 Final geometry cleanup: removed an incorrectly submerged rectangular skimmer from the generated set, retaining the flush circular light and ladder. No fixture is presented as a skimmer below the waterline.
+
+## Release 02 — depth and playback polish
+
+Brought the desktop dog fully inside the frame; split its existing transparent asset at the surface, applying a small SVG displacement/color filter only below water. No new raster image or altered project photo. The two dog layers follow the same animation and honor still scenes. Evening light dims both layers consistently.
+
+The phone now rotates onto the pool floor with a contact shadow and a brief settling plume. Repositioned the guide to the phone’s left so its headlamp faces the search area. Revised portrait layout keeps the title, replay control, guide and landed phone separate.
+
+Automatic stories wait until native scrolling finishes and the active chapter is actually docked; passing through a chapter no longer spends its one-time playback. Pending entry and animation callbacks cancel on route/chapter departure or hidden tab. A dog-asset loading/failure message preserves navigation if the artwork is unavailable.
+
+Reviewed rendered desktop and 390×844 / 844×390 responsive frames, automatic dog/phone arrival, replay, still mode, departure during playback and album navigation. Source parsing, IDs/references, unchanged catalog/94 photos and Wrangler dry-run verified. These checks do not claim physical-device testing, field performance or OS media-query emulation.
+
+Release-02 follow-up checks: a dist-only page requested a deliberately missing dog image. Verified the honest loading/error message, including manual still mode, and successful navigation to the next chapter. This fixture is not deployed. Interrupted replay now leaves a useful still composition and replay instruction instead of stale in-progress copy. Extended keyboard-focus protection to the sticky footer and evening control after a rendered test showed that focus could move the document. Landscape status text was raised clear of the scene caption and replay targets retain 44px height. Verified the two dog layers dim under the shared evening control.

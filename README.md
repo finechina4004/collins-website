@@ -32,3 +32,7 @@ Black Tie, Barefoot implementation and verification: docs/black-tie-barefoot/REV
 ## Continuous-world recovery
 
 Recovered from design/continuous-collins-world-handoff at 4ce724b. Five distinct scenes use the continuous illustrative panorama, retained physical vessel, native scroll and still-scene controls. Poolside, periscope and boarding share day/evening state. Real photographs remain separate and byte-unchanged. The logo returns to boarding; each album offers an explicit return to exploration. Version marker: collins-continuous-world-recovery-01. Public workers.dev hosting remains noindex until domain/search readiness is confirmed.
+
+## Underwater stories
+
+The miniature journey includes a dog/tennis-ball arrival and a dropped-phone/search-party moment. Events begin after the chapter docks, play once, and have replay and still-scene alternatives. The phone lands on the floor; the dog shares the surface’s water/lighting treatment. See docs/POOL_STORIES.md for the asset provenance, geometry and current review record. Build marker: collins-pool-stories-02.
