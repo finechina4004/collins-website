@@ -42,3 +42,7 @@ The miniature journey includes a dog/tennis-ball arrival and a dropped-phone/sea
 The review branch `design/living-backyard-cutaway` continues checkpoint `ef45aa9` and integrates the five supplied gouache illustrations. `#backyard` → `#launch` → `#pool` → `#experience/pools` → a complete `#work/<album>` → `#backyard` is implemented. Albums and the pool collection also resume the current submarine chapter. Day/evening lighting carries across the artwork, launch, cockpit, periscope and return. Eight albums and all 94 original photograph bytes are preserved.
 
 Current review, captures, checks and limits: [docs/pool-illustration/REVIEW.md](docs/pool-illustration/REVIEW.md). The supplied [illustration standard](docs/VISUAL_STANDARD.md) remains the drawing direction. Draft PR #14 is the review destination. Main and production remain unchanged; no new hosting destination was created. Older handoffs describe their dated checkpoints.
+
+## Illustrated collection entrances
+
+The continuation at `b5a620f` adds close views of the same painted backyard for Pool, Fire, Kitchen and Shade, followed by their existing real-photo collections. The pool's eight albums now sit in a compact comparison shelf. Returning from an album restores its selected card and collection scroll position. Feature-specific project-note links prefill only an empty note and keep the visitor's existing writing. Details and responsive captures: [docs/feature-entrances/REVIEW.md](docs/feature-entrances/REVIEW.md). PR #14 remains the review destination; main/production are unchanged.

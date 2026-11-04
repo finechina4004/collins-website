@@ -44,3 +44,7 @@ All 94 source photographs decode and match their checkpoint bytes; projects.json
 Implementation is complete for this pool journey and ready for the owner's visual review. No final artistic acceptance or release approval is inferred. Production is not changed. No physical-device, OS-level reduced-motion emulation, screen-reader audit or measured performance benchmark is claimed. Manual still scenes and the existing prefers-reduced-motion code paths are preserved; OS emulation was unavailable in this browser interface. Fire/kitchen/shade remain functional real-photo collections, not newly illustrated close-up worlds.
 
 The supplied STOPPING_POINT_2026-11-04.md records the earlier transfer; this review supersedes its statement that the five images are not integrated. Use this review and the actual branch source for current state.
+
+## Subsequent continuation
+
+The next pass adds illustrated entrances and more compact real-photo shelves to the four feature collections. It reuses close views of the supplied backyard plates; no new bespoke illustrated interiors are implied. Current continuation evidence: [../feature-entrances/REVIEW.md](../feature-entrances/REVIEW.md).
