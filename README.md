@@ -14,7 +14,7 @@ Eight named project records are in public/content/projects.json. All eight photo
 
 The album studio at #studio saves drafts and images in this browser using IndexedDB, with JSON export/import and local preview. Cloudflare album publishing is disabled: no admin API or durable media storage has been connected. Do not describe local saving as a website update. The inquiry form prepares a reviewable note, encodes it for native Messages, and offers copy/download fallbacks. The visitor must review and press Send in their messaging app; website code cannot confirm delivery.
 
-Original illustrative assets are separate from completed-project photography. Outlined brand graphics were recovered from the supplied checkpoint; font-license paperwork still needs confirmation. noindex remains enabled while content is being prepared.
+Original illustrative assets are separate from completed-project photography. Outlined brand graphics were recovered from the supplied checkpoint; font-license paperwork still needs confirmation. The public launch allows indexing and includes sharing metadata, robots.txt and a sitemap using the existing workers.dev address.
 
 ## Continuity
 
@@ -31,7 +31,7 @@ Black Tie, Barefoot implementation and verification: docs/black-tie-barefoot/REV
 
 ## Continuous-world recovery
 
-Recovered from design/continuous-collins-world-handoff at 4ce724b. Five distinct scenes use the continuous illustrative panorama, retained physical vessel, native scroll and still-scene controls. Poolside, periscope and boarding share day/evening state. Real photographs remain separate and byte-unchanged. The logo returns to boarding; each album offers an explicit return to exploration. Version marker: collins-continuous-world-recovery-01. Public workers.dev hosting remains noindex until domain/search readiness is confirmed.
+Recovered from design/continuous-collins-world-handoff at 4ce724b. Five distinct scenes use the continuous illustrative panorama, retained physical vessel, native scroll and still-scene controls. Poolside, periscope and boarding share day/evening state. Real photographs remain separate and byte-unchanged. The logo returns to boarding; each album offers an explicit return to exploration. Version marker: collins-continuous-world-recovery-01. The existing workers.dev address is the public launch destination; a custom-domain connection can follow.
 
 ## Underwater stories
 
@@ -54,3 +54,7 @@ The services desk now uses the same painted backyard, with direct links from Swi
 ## Rendered site audit and stable navigation
 
 The latest continuation inspects the actual production build separately from the illustrated review. Header links now keep consistent destinations, both wordmarks return to the artwork, and the legacy holding page has useful routes. Desktop/portrait journey checks, source/photo integrity checks, findings and explicit test limits are in [docs/site-audit/REVIEW.md](docs/site-audit/REVIEW.md). PR #14 remains the review destination; production awaits approval.
+
+## Public launch — November 4, 2026
+
+The owner authorized merging and publishing the existing illustrated release after launch checks. See docs/PUBLIC_LAUNCH.md for the inspected source, preflight evidence and verification limits. The version endpoint identifies this release as collins-public-launch-20261104. Earlier review-only/release-approval statements describe historical checkpoints.
