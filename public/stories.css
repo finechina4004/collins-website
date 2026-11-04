@@ -46,7 +46,7 @@
 .submarine.is-startled{animation:guide-duck .8s ease-out both}.submarine.is-searching .headlamp{opacity:1;width:290px;background:linear-gradient(90deg,#fff0b994,#fff0b900)}
 .scene-evening .scene-copy{top:12%;left:6%}.scene-evening .shade-control{left:6%;top:auto;bottom:13%;z-index:8}.scene-evening .light-switch{left:auto;right:7%;bottom:13%;min-height:46px}.scene-evening .periscope-view{right:7%;top:17%;width:38%;z-index:6}.scene-evening .night-window{right:8%;top:16%;width:31%;z-index:4}.scene-evening.shifted .night-window{display:none}
 .calm .diving-dog{opacity:1;transform:translateY(0) rotate(-4deg)}.calm .tennis-ball{opacity:1}.calm .sinking-phone{opacity:1}.calm .story-bubbles,.calm .phone-trail,.calm .splash-plume,.calm .splash-rings{display:none}
-@keyframes dog-arrival{0%{opacity:0;transform:translate(-100%,-100%) rotate(13deg)}8%{opacity:1}24%{opacity:1;transform:translate(-7%,35%) rotate(15deg)}44%{transform:translate(12%,0) rotate(-3deg);opacity:1}75%,100%{transform:translate(12%,0) rotate(-3deg);opacity:1}}
+@keyframes dog-arrival{0%{opacity:0;transform:translate(-100%,-100%) rotate(13deg)}8%{opacity:1}24%{opacity:1;transform:translate(-7%,35%) rotate(15deg)}44%{transform:translate(12%,0) rotate(-3deg);opacity:1}75%,100%{transform:translate(0,0) rotate(-3deg);opacity:1}}
 @keyframes ball-arrival{0%{transform:translate(-300px,-80px) rotate(0deg);opacity:0}15%{opacity:1;transform:translate(-60px,30px) rotate(120deg)}30%{transform:translate(0,0) rotate(190deg);opacity:1}60%{transform:translate(25px,4px) rotate(205deg);opacity:1}85%,100%{transform:translate(130px,-30px) rotate(240deg);opacity:0}}
 @keyframes splash-column{0%{opacity:0;transform:scale(.3,.1)}20%{opacity:.85;transform:scale(1,1)}100%{opacity:0;transform:translateY(18%) scale(1.3,.6)}}
 @keyframes splash-spread{0%{opacity:0;transform:scale(.2)}20%{opacity:.85}100%{opacity:0;transform:scale(1.7)}}
@@ -72,7 +72,7 @@
 }
 @media(prefers-reduced-motion:reduce){.diving-dog,.sinking-phone{opacity:1;animation:none!important}.splash-plume,.splash-rings,.story-bubbles,.phone-trail{display:none!important}}
 
-.scene-dog.story-settled .diving-dog{opacity:1;transform:translate(12%,0) rotate(-3deg)}.scene-dog.story-settled .tennis-ball{opacity:0}
+.scene-dog.story-settled .diving-dog{opacity:1;transform:rotate(-3deg)}.scene-dog.story-settled .tennis-ball{opacity:0}
 @media(max-width:720px){.scene-phone .sinking-phone{right:38%}}
 @media(max-width:720px){.scene-dog .diving-dog{width:88%;right:8%;top:1%}.scene-dog.story-settled .diving-dog{transform:rotate(-3deg)}}
 
