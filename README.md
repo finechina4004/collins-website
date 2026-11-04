@@ -10,7 +10,7 @@ The submarine guides visitors between five native-scroll chapters. The main webs
 
 ## Current content and editing
 
-Eight named project records are in public/content/projects.json. Seven photographic collections are open: a Minor Key (9), Black Tie, Barefoot (13), Dallas, With Feeling (15), Lower Form of Leisure (13), Mr. Bears, Residence (4), Strictly Striped Affair (14), and The Sun Stayed for Supper (15). Umpire Strikes Back awaits photographs. Location, dates, construction scope and builder attribution remain omitted where not supplied. Confirmed phone details belong in public/site-config.js; inquiry delivery and authenticated online album publishing remain unconnected.
+Eight named project records are in public/content/projects.json. All eight photographic collections are open: a Minor Key (9), Black Tie, Barefoot (13), Dallas, With Feeling (15), Lower Form of Leisure (13), Mr. Bears, Residence (4), Strictly Striped Affair (14), The Sun Stayed for Supper (15), and Umpire Strikes Back (11). The catalog now contains 94 photographs. Location, dates, construction scope and builder attribution remain omitted where not supplied. Confirmed phone details belong in public/site-config.js; inquiry delivery and authenticated online album publishing remain unconnected.
 
 The album studio at #studio saves drafts and images in this browser using IndexedDB, with JSON export/import and local preview. Cloudflare album publishing is disabled: no admin API or durable media storage has been connected. Do not describe local saving as a website update. The inquiry form prepares/downloads a brief; it does not send it.
 
