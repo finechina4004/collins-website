@@ -17,6 +17,10 @@
  addEventListener('hashchange',navigation);navigation();
  function light(on){
   html.dataset.time=on?'evening':'day';
+  const sceneImage=on?'assets/pool-night.webp':'assets/pool-day.webp';
+  $('.launch-set').src=sceneImage;
+  $('#periscope-view img').src=sceneImage;
+  $('#periscope-view img').alt=on?'The same illustrative backyard above water, after dark.':'The same illustrative backyard above water, in afternoon light.';
   pool.classList.toggle('is-evening',on);
   $('.scene-light').classList.toggle('light-on',on);
   $('#night-window').setAttribute('aria-hidden',String(!on));
@@ -30,6 +34,8 @@
   $('#scene-hour').textContent=on?'08:16':'04:37';
   $('#scene-time').textContent=on?'THE LIGHTS ARE ON':'BACK AT POOLSIDE';
   $('#findings-count').textContent=on?'FIELD NOTE / THE EVENING STAYS WITH YOU':'COLLINS / A SMALL SURVEY OUT BACK';
+  $('#findings-status').textContent=on?'Evening light across the pool and backyard.':'Afternoon light across the pool and backyard.';
+  $('#home-world .home-day').alt=on?'An imagined Collins miniature pool after dark.':'An original imagined Collins miniature pool in afternoon light.';
  }
  $('#evening-toggle').addEventListener('click',()=>light(pool.classList.contains('is-evening')));
  $('#light-switch').addEventListener('click',()=>light($('.scene-light').classList.contains('light-on')));
@@ -38,6 +44,7 @@
  $('#goggles').addEventListener('click',()=>{
   const on=$('#goggles').getAttribute('aria-pressed')==='true';
   $('#found-note').hidden=!on;
+  $('#goggles').setAttribute('aria-expanded',String(on));
   $('#findings-count').textContent=on?'FILE 007 / OWNER STILL UNACCOUNTED FOR':'COLLINS / THE LOST PROPERTY OFFICE';
   $('#findings-status').textContent=on?'Goggles inspected. A towel is waiting upstairs. Its owner has not been interviewed.':'Goggles returned to the lost property office.';
  });

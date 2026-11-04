@@ -103,3 +103,25 @@ html[data-time=evening] .scene-exit{background-image:linear-gradient(90deg,#183d
 @media(max-height:560px) and (min-width:721px){.scene .scene-copy{top:10%;padding:15px 20px;max-width:40%}.scene .scene-copy h1,.scene .scene-copy h2{font-size:33px;margin-bottom:10px}.scene .scene-copy>p:last-of-type{font-size:10px}.scene-above .above-plaque{display:none}.scene-above .shade-control{top:auto;bottom:17%}.scene-light .night-window{top:7%;width:28%}.scene-light .night-set-photo{height:100px}.scene-lost .goggles{bottom:20%;width:28%}.scene-lost .specimen-tag{top:8%;font-size:8px}.found-note{top:auto;bottom:8%;width:32%;padding:12px}.found-note p{font-size:18px}.periscope-view{top:9%;width:40%}.periscope-view img{height:140px}}
 @media(prefers-reduced-motion:reduce){.scene:after,.home-docked-vessel,.diving-ring,.goggles{transition:none!important}}
 .calm .scene:after,.calm .home-docked-vessel,.calm .diving-ring,.calm .goggles{transition:none!important}
+
+/* Reviewed compositions: give recovered objects breathing room, and keep mobile hiring visible. */
+.scene-lost{background-position:center,28% center}.scene-bench{display:none}
+.scene-lost .goggles{bottom:24%;right:10%;width:32%}.scene-lost .lost-ticket{bottom:7%}
+.launch[data-phase=ready] .launch-title{opacity:1;text-shadow:0 1px 8px #f8f1e5;max-width:390px}
+@media(max-width:720px){
+ .header-location>span:last-child{display:block!important;font-size:7px;line-height:1.4}.header-location{top:54px!important;text-align:center}
+ .scene-lost{background-position:center,28% center}.scene-lost .goggles{width:60%;bottom:26%;right:7%}
+ .scene-lost .lost-ticket{bottom:6%}.scene-lost .found-note{top:41%;width:43%}
+ .scene-above .scene-copy{padding-bottom:16px}.scene-above .shade-control{top:42%}
+}
+@media(max-height:560px) and (min-width:721px){
+ :root{--header:76px}.site-header{height:76px}.brand-art{width:155px}.journey .pool{height:calc(100svh - 76px)}
+ .scene .scene-copy{top:8%;padding:12px 18px;max-width:42%}.scene .scene-copy h1,.scene .scene-copy h2{font-size:28px;margin-bottom:7px}.scene .scene-copy .eyebrow{margin-bottom:6px}
+ .scene-light .night-window{width:26%;top:5%}.scene-light .night-set-photo{height:75px}.scene-light .light-switch{bottom:14%;right:9%;padding:10px}
+ .scene-lost .specimen-tag{padding:10px;width:28%;top:6%}.scene-lost .specimen-tag strong{font-size:20px}.scene-lost .goggles{width:26%;right:10%;bottom:18%}.scene-lost .diving-ring{width:65px;height:65px;bottom:13%}.scene-lost .lost-ticket{display:none}
+ .scene-above .shade-control{top:auto;bottom:14%}.periscope-view{top:5%;width:37%}.periscope-view img{height:110px}.periscope-view figcaption{padding:6px}
+ .found-note{left:5%;top:auto;bottom:9%;padding:10px;width:35%}.found-note p{font-size:16px;margin:6px 0}.found-note a{padding-top:6px;min-height:30px}
+ .scene-exit .scene-copy{max-width:51%}.scene .scene-copy .exit-button{margin-top:9px;min-height:40px;padding:8px 13px}
+}
+
+html.calm{scroll-behavior:auto!important}.calm *, .calm *:before, .calm *:after{scroll-behavior:auto!important}

@@ -1,3 +1,5 @@
+> This file preserves the incoming draft handoff. Current implementation and test evidence are in RECOVERY_REVIEW.md; older missing-content reports are historical.
+
 # Collins recovery handoff — November 4, 2026
 
 ## Read this before doing anything
