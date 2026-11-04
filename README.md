@@ -46,3 +46,7 @@ Current review, captures, checks and limits: [docs/pool-illustration/REVIEW.md](
 ## Illustrated collection entrances
 
 The continuation at `b5a620f` adds close views of the same painted backyard for Pool, Fire, Kitchen and Shade, followed by their existing real-photo collections. The pool's eight albums now sit in a compact comparison shelf. Returning from an album restores its selected card and collection scroll position. Feature-specific project-note links prefill only an empty note and keep the visitor's existing writing. Details and responsive captures: [docs/feature-entrances/REVIEW.md](docs/feature-entrances/REVIEW.md). PR #14 remains the review destination; main/production are unchanged.
+
+## Services and project notes
+
+The services desk now uses the same painted backyard, with direct links from Swim/Cook/Shade/Stay to real examples and the project note. Its selected interest and the visitor's draft survive refresh in the same tab. Clear/undo, stale-review invalidation and the manual Messages handoff are verified; nothing is automatically submitted. New evidence: [docs/services-notes/REVIEW.md](docs/services-notes/REVIEW.md). The existing draft PR and production review boundary remain.

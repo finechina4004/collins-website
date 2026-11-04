@@ -25,6 +25,7 @@
   $('#backyard-light').textContent=on?'Afternoon light ◑':'Evening light ◐';
   try{sessionStorage.setItem('collins-time',on?'evening':'day');}catch{}
   $('.launch-set').src=sceneImage;
+  $('#desk-art-image').src=sceneImage;
   $('#periscope-view img').src=sceneImage;
   $('#periscope-view img').alt=on?'The same illustrative backyard above water, after dark.':'The same illustrative backyard above water, in afternoon light.';
   pool.classList.toggle('is-evening',on);
@@ -41,7 +42,7 @@
   $('#scene-time').textContent=on?'THE LIGHTS ARE ON':'BACK AT POOLSIDE';
   $('#findings-count').textContent=on?'FIELD NOTE / THE EVENING STAYS WITH YOU':'COLLINS / A SMALL SURVEY OUT BACK';
   $('#findings-status').textContent=on?'Evening light across the pool and backyard.':'Afternoon light across the pool and backyard.';
-  $('#home-world .home-day').alt=on?'An imagined Collins miniature pool after dark.':'An original imagined Collins miniature pool in afternoon light.';
+  $('#home-world .home-day').alt=on?'The imagined painted Collins backyard in evening light.':'The imagined painted Collins backyard in afternoon light.';
  }
  $('#evening-toggle').addEventListener('click',()=>light(pool.classList.contains('is-evening')));
  $('#light-switch').addEventListener('click',()=>light($('.scene-light').classList.contains('light-on')));

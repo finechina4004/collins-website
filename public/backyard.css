@@ -118,7 +118,7 @@ html[data-route=feature] #website> :not(#feature-detail){display:none}
 .feature-corners{display:flex;align-items:center;gap:38px;padding:5px 0;border-top:1px solid #71856e66;border-bottom:3px double #71856e66}
 .feature-corners a{min-height:44px;display:inline-flex;align-items:center;font:12px Georgia,serif;border-bottom:2px solid transparent}
 .feature-corners a[aria-current=page]{border-bottom-color:currentColor}.feature-corners a:hover{color:#a9583f}
-.feature-shelf{padding-top:36px;scroll-margin-top:calc(var(--header) + 20px)}
+.feature-shelf{padding-top:36px;scroll-margin-top:16px}
 .feature-shelf-heading{display:flex;justify-content:space-between;align-items:end;gap:25px;padding:0 0 24px}
 .feature-shelf-heading h2{font:400 clamp(29px,3vw,43px)/1.1 Georgia,serif;letter-spacing:-1px;margin:0}
 .feature-shelf-heading p{font:10px/1.7 'Courier New',monospace;letter-spacing:.5px;margin:0;max-width:220px}

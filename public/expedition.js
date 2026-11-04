@@ -74,8 +74,10 @@
     $('#text-brief').href = `sms:${window.COLLINS_SITE_CONFIG.phone}?body=${encodeURIComponent(brief)}`;
     $('#delivery-status').textContent = 'Nothing has been sent. Review the message and tap Send in your messaging app. If the note does not fill in, use Copy note and paste it.';
     $('#brief-review').hidden = false;
-    $('#brief-review').scrollIntoView({ block: 'center', behavior: calm ? 'instant' : 'smooth' });
+    $('#brief-review').focus({preventScroll:true});
+    $('#brief-review').scrollIntoView({ block: 'start', behavior: calm ? 'instant' : 'smooth' });
   });
+  $('#project-form').addEventListener('reset',()=>{$('[name=phone]').setCustomValidity('');brief='';$('#brief-text').textContent='';$('#text-brief').removeAttribute('href');$('#brief-review').hidden=true;$('#brief-review-note').textContent='';});
   $('#download-brief').addEventListener('click', () => {
     if (!brief) return;
     const url = URL.createObjectURL(new Blob([brief], { type: 'text/plain;charset=utf-8' }));
