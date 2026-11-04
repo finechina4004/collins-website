@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "photos-2026-11-03-the-sun-stayed-for-supper",
+  "revision": "photos-2026-11-03-umpire-strikes-back",
   "projects": [
     {
       "id": "collins-001",
@@ -1369,10 +1369,191 @@
       "approved": false,
       "town": "",
       "year": "",
-      "summary": "",
+      "summary": "A few laps. A few innings. A very long afternoon.",
       "services": [],
-      "coverId": null,
-      "photos": []
+      "coverId": "umpire-strikes-back-f83032688c09eb36",
+      "photos": [
+        {
+          "id": "umpire-strikes-back-26e14d0bcb7ea618",
+          "src": "assets/projects/umpire-strikes-back/26e14d0bcb7ea618.webp",
+          "width": 1200,
+          "height": 805,
+          "caption": "The pool, with room for the whole afternoon.",
+          "alt": "Curved pool with an inset round seating area, rock waterfall, blue loungers and striped umbrellas beside the house.",
+          "sourceFile": "0d05cd09-bad2-448c-9c12-131fde548d4e - Copy.jpg",
+          "sourceSha256": "26e14d0bcb7ea618272b54290101c90bf00999fdc98c0be5741fdbc23018385b"
+        },
+        {
+          "id": "umpire-strikes-back-409dee22579bfda7",
+          "src": "assets/projects/umpire-strikes-back/409dee22579bfda7.webp",
+          "width": 720,
+          "height": 483,
+          "caption": "A short game along the fence.",
+          "alt": "Putting green with checkered flags and a basket of golf balls beside the wood fence and rock waterfall.",
+          "sourceFile": "366834a9-ce6c-4f75-b7e6-518649e3eb8b - Copy.jpg",
+          "sourceSha256": "409dee22579bfda7ad5d39c63074559cad4bcd67c929f22ee437cc59737bbe20"
+        },
+        {
+          "id": "umpire-strikes-back-8c09430029ecd73c",
+          "src": "assets/projects/umpire-strikes-back/8c09430029ecd73c.webp",
+          "width": 720,
+          "height": 483,
+          "caption": "Red chairs, string lights and a fire.",
+          "alt": "Red Adirondack chairs around a round fire pit beneath string lights, with the pool and pavilion beyond at dusk.",
+          "sourceFile": "75392036-8ac9-4ba0-8ef0-32480443a379 - Copy.jpg",
+          "sourceSha256": "8c09430029ecd73cea925620548c3a0827e00a7ba1c7ed083f4b9c4d3b3548ed"
+        },
+        {
+          "id": "umpire-strikes-back-8b553df39a7d3a63",
+          "src": "assets/projects/umpire-strikes-back/8b553df39a7d3a63.webp",
+          "width": 1600,
+          "height": 1059,
+          "caption": "The pavilion stays open after sunset.",
+          "alt": "Illuminated pavilion and wood playset beneath a golden evening sky, with orange lounge seats on the lawn.",
+          "sourceFile": "86f559ba-525f-49d8-b5fa-b1776df306bc - Copy.jpg",
+          "sourceSha256": "8b553df39a7d3a63096f27c95f2473a11473267a0a685397ed7f0b38fd52d8fa"
+        },
+        {
+          "id": "umpire-strikes-back-0c3a0e36c0d43e7a",
+          "src": "assets/projects/umpire-strikes-back/0c3a0e36c0d43e7a.webp",
+          "width": 720,
+          "height": 402,
+          "caption": "A place to play beside the pavilion.",
+          "alt": "Wood playset with swings and slides beside a pavilion with tables and a screen in daylight.",
+          "sourceFile": "8e11bc47-0675-405b-9dc7-3900e700727a - Copy.jpg",
+          "sourceSha256": "0c3a0e36c0d43e7a116f6fee652dd275f4dc97b2605fc9c12e6b4b7c1721f063"
+        },
+        {
+          "id": "umpire-strikes-back-134f6b4f6e1e5379",
+          "src": "assets/projects/umpire-strikes-back/134f6b4f6e1e5379.webp",
+          "width": 720,
+          "height": 402,
+          "caption": "Pool and court, side by side.",
+          "alt": "Overhead view of the curved pool, loungers, striped umbrellas and blue, orange and green sports court.",
+          "sourceFile": "a21f8411-3896-4ba3-a82d-e9e97cb8fb6c.jpg",
+          "sourceSha256": "134f6b4f6e1e537919f2bcc77539bf21a0bade14e96eba1bb193b29156f4836a"
+        },
+        {
+          "id": "umpire-strikes-back-028221f29e3ba1c1",
+          "src": "assets/projects/umpire-strikes-back/028221f29e3ba1c1.webp",
+          "width": 1200,
+          "height": 795,
+          "caption": "The water gets its evening colors.",
+          "alt": "Blue-lit curved pool and purple-lit round seating area beside the rock waterfall at dusk.",
+          "sourceFile": "afa50612-39d1-42d0-b0e9-129910b6c8b7 - Copy.jpg",
+          "sourceSha256": "028221f29e3ba1c15b85c0c3ee4fca14227c31787fab0cf85afa6248d484ec32"
+        },
+        {
+          "id": "umpire-strikes-back-47ab0d72904db5f9",
+          "src": "assets/projects/umpire-strikes-back/47ab0d72904db5f9.webp",
+          "width": 1200,
+          "height": 805,
+          "caption": "One more game before dark.",
+          "alt": "Blue, orange and green court with a low net and basketball hoop beneath a pink evening sky.",
+          "sourceFile": "cdad88e6-75ba-434a-9ec2-581e2e227d13 - Copy.jpg",
+          "sourceSha256": "47ab0d72904db5f93adefe6dfc1b66d6ab453f7de5379ad33612a3a6adb3cac5"
+        },
+        {
+          "id": "umpire-strikes-back-f46fa0d0e1d39ec7",
+          "src": "assets/projects/umpire-strikes-back/f46fa0d0e1d39ec7.webp",
+          "width": 720,
+          "height": 483,
+          "caption": "The backyard has a home plate.",
+          "alt": "Red baseball infield with white baselines, batter boxes, bats and a ball beneath a pink sunset.",
+          "sourceFile": "d998d3f1-8b37-4eb7-b4ae-731755a1749f - Copy.jpg",
+          "sourceSha256": "f46fa0d0e1d39ec7fd6fc6ac568de268c91cfd47101bb43e4956bfb12676681c"
+        },
+        {
+          "id": "umpire-strikes-back-f83032688c09eb36",
+          "src": "assets/projects/umpire-strikes-back/f83032688c09eb36.webp",
+          "width": 1600,
+          "height": 1066,
+          "caption": "The whole evening, seen from above.",
+          "alt": "Evening aerial view of the pool, court, pavilion, playset and illuminated house beneath a warm sunset.",
+          "sourceFile": "fa4c1434-2beb-4134-9837-d7e0f08d55f0 - Copy.jpg",
+          "sourceSha256": "f83032688c09eb36e5d23f4220b965ddacd827cd78bd367d515f78fc915744b5"
+        },
+        {
+          "id": "umpire-strikes-back-e678b5466d76eeae",
+          "src": "assets/projects/umpire-strikes-back/e678b5466d76eeae.webp",
+          "width": 1200,
+          "height": 670,
+          "caption": "A backyard with several ways to play.",
+          "alt": "Overhead photograph of the pool, sports court, baseball field, putting green, fire pit, pavilion and playset.",
+          "sourceFile": "ff61f022-88ac-4f7c-990f-405cd52629d5 (1).jpg",
+          "sourceSha256": "e678b5466d76eeaeae7101c621baf7b780a3438fa46a921901ebefe6b5783e6d"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "sequenceLabel": "THE WATER / THE NEXT GAME / UNDER THE LIGHTS",
+        "chapters": [
+          {
+            "label": "THE WATER",
+            "navigation": "The pool",
+            "title": "The swimming division.",
+            "description": "Curves of blue, a rock waterfall, and a row of seats for anyone taking a break.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "umpire-strikes-back-26e14d0bcb7ea618"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "umpire-strikes-back-134f6b4f6e1e5379",
+                  "umpire-strikes-back-028221f29e3ba1c1"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "THE NEXT GAME",
+            "navigation": "Play ball",
+            "title": "The yard has a home team.",
+            "description": "A home plate. A hoop. A few putting flags. Picking a game might take a minute.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "umpire-strikes-back-f46fa0d0e1d39ec7"
+                ]
+              },
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "umpire-strikes-back-47ab0d72904db5f9",
+                  "umpire-strikes-back-409dee22579bfda7"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "UNDER THE LIGHTS",
+            "navigation": "After the game",
+            "title": "Extra innings, by the fire.",
+            "description": "The pavilion lights come on. The red chairs are still available.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "umpire-strikes-back-8b553df39a7d3a63"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "umpire-strikes-back-0c3a0e36c0d43e7a",
+                  "umpire-strikes-back-8c09430029ecd73c"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "Eleven owner-supplied photographs. Originals preserved; location, date, construction scope and completed-work approval have not been supplied."
     }
   ]
 }
