@@ -11,7 +11,7 @@
 .scene-dog :is(.goggles,.specimen-tag,.diving-ring,.lost-ticket,.found-note,.scene-bench,.tiny-torpedo,.object-shelf),.scene-phone :is(.light-fixture,.light-note,.theatre-beam),.scene-evening .above-plaque{display:none!important}
 .scene-dog .scene-copy{top:22%;left:6%}.scene-phone .scene-copy{top:14%;left:6%}
 .dog-action,.phone-action{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden}
-.diving-dog{position:absolute;width:48%;max-width:640px;height:auto;right:3%;top:-13%;opacity:0;filter:drop-shadow(0 12px 16px #275d6425)}
+.diving-dog{position:absolute;width:48%;max-width:640px;height:auto;right:5%;top:0%;opacity:0;filter:drop-shadow(0 12px 16px #275d6425)}
 .tennis-ball{position:absolute;right:8%;top:13%;width:36px;height:36px;background:radial-gradient(circle at 30% 25%,#f1e382,#b3ac48 65%,#75733b);border-radius:50%;box-shadow:inset 0 0 5px #48492266;opacity:.9;transform:rotate(-30deg)}
 .tennis-ball:after{content:'';position:absolute;inset:4px -6px;border:2px solid #f6edd0b3;border-radius:50%}
 .splash-plume{position:absolute;right:20%;top:4%;width:29%;height:48%;opacity:0;filter:blur(3px);background:radial-gradient(ellipse at 50% 0%,#f2f9edcf,transparent 60%),radial-gradient(ellipse at 50% 10%,#b4e8e9a8,transparent 68%);clip-path:polygon(10% 0,90% 0,80% 50%,56% 100%,34% 65%)}
@@ -26,7 +26,7 @@
 .story-replay:hover{background:#ebcf8c}.story-replay:focus-visible{outline:3px solid #a85a46;outline-offset:4px}
 .story-controls p{font:11px/1.7 'Courier New',monospace;color:#214b51;margin:14px 0 0;max-width:330px;background:#f8f1e5b8;padding:8px 12px}
 .pool-floor-note{position:absolute;bottom:11%;right:8%;font:9px/1.8 'Courier New',monospace;color:#234c508a;letter-spacing:1px;transform:rotate(-2deg)}
-.sinking-phone{position:absolute;right:27%;top:49%;width:105px;height:198px;padding:5px;border-radius:17px;background:linear-gradient(110deg,#b5bcaa,#1e292b 14%,#142126 80%,#8fa7a2);box-shadow:5px 8px 0 #24495475,10px 20px 24px #245c6240;transform:rotate(17deg) skewY(-3deg);opacity:0}
+.sinking-phone{position:absolute;right:27%;top:auto;bottom:10%;width:105px;height:198px;padding:5px;border-radius:17px;background:linear-gradient(110deg,#b5bcaa,#1e292b 14%,#142126 80%,#8fa7a2);box-shadow:3px 4px 0 #1839407a;transform:perspective(600px) rotateX(58deg) rotateZ(-18deg);transform-origin:50% 85%;opacity:0}
 .phone-glass{position:relative;height:100%;overflow:hidden;border:1px solid #cad8d077;border-radius:12px;background:linear-gradient(145deg,#c2d9bc,#3e7d8580 55%,#163c57),linear-gradient(#d5c38b,#477780);color:#f8f1e5;text-align:center}
 .phone-glass:after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,transparent 20%,#ffffff30 30%,transparent 32% 70%,#ffffff1a 75%,transparent 80%);pointer-events:none}
 .phone-speaker{display:block;width:26px;height:5px;border-radius:4px;background:#0b2329;margin:5px auto 20px}.phone-time{display:block;font:30px/1 Georgia,serif;letter-spacing:-1px}.phone-date{display:block;font:5px/1.5 Arial,sans-serif;letter-spacing:.5px;margin:7px 0 18px}.phone-notification{margin:0 4px;padding:7px 5px;background:#e8f3e2b0;border:1px solid #f2f5d566;border-radius:5px;color:#21494c;text-align:left}.phone-notification>span{display:block;font:4px Arial;letter-spacing:1px}.phone-notification strong{display:block;font:7px/1.7 Arial;margin-top:3px}.phone-notification small{display:block;font:4px Arial;opacity:.7}.phone-home{position:absolute;bottom:5px;left:33%;width:34%;height:3px;background:#dce6d3c2;border-radius:3px}
@@ -51,7 +51,7 @@
 @keyframes splash-column{0%{opacity:0;transform:scale(.3,.1)}20%{opacity:.85;transform:scale(1,1)}100%{opacity:0;transform:translateY(18%) scale(1.3,.6)}}
 @keyframes splash-spread{0%{opacity:0;transform:scale(.2)}20%{opacity:.85}100%{opacity:0;transform:scale(1.7)}}
 @keyframes rise-and-clear{0%{opacity:0;transform:translateY(15%)}20%{opacity:.9}100%{opacity:0;transform:translateY(-25%)}}
-@keyframes phone-descent{0%{opacity:0;transform:translate(70px,-420px) rotate(-28deg) skewY(-3deg)}8%{opacity:1}35%{transform:translate(-25px,-180px) rotate(45deg) skewY(-3deg)}65%{transform:translate(20px,-50px) rotate(-12deg) skewY(-3deg)}100%{opacity:1;transform:translate(0,0) rotate(17deg) skewY(-3deg)}}
+@keyframes phone-descent{0%{opacity:0;transform:perspective(600px) translate(70px,-520px) rotateX(0deg) rotateZ(-28deg)}8%{opacity:1}35%{transform:perspective(600px) translate(-25px,-240px) rotateX(12deg) rotateZ(40deg)}65%{transform:perspective(600px) translate(10px,-75px) rotateX(20deg) rotateZ(-10deg)}90%{transform:perspective(600px) translate(0,-4px) rotateX(58deg) rotateZ(-18deg)}100%{opacity:1;transform:perspective(600px) translate(0,0) rotateX(58deg) rotateZ(-18deg)}}
 @keyframes search-light{0%,100%{opacity:.25}50%{opacity:1}}
 @keyframes guide-duck{0%,100%{translate:0 0}35%{translate:0 25px;rotate:-6deg}}
 @media(max-width:720px){
@@ -60,21 +60,54 @@
  .scene-dog .scene-copy{top:auto;bottom:27%}.scene-dog .scene-copy>p:last-of-type{display:none}
  .diving-dog{width:98%;max-width:none;right:0;top:0%}.tennis-ball{width:25px;height:25px;right:10%;top:15%}.splash-plume{right:6%;top:10%;width:75%;height:45%}.splash-rings{width:75%;right:4%;top:14%}
  .story-controls{left:5%;bottom:7%;width:90%;max-width:none}.story-controls p{font-size:9px;line-height:1.6;margin-top:10px;max-width:none}.story-replay{font-size:10px;min-height:44px;padding:12px 15px}
- .scene-phone .scene-copy{top:9%}.sinking-phone{width:78px;height:149px;top:45%;right:25%;border-radius:12px;padding:4px}.phone-glass{border-radius:8px}.phone-speaker{margin-bottom:12px}.phone-time{font-size:24px}.phone-date{font-size:4px;margin-bottom:12px}.phone-notification strong{font-size:6px}.phone-notification{padding:5px 3px}
+ .scene-phone .scene-copy{top:9%}.sinking-phone{width:78px;height:149px;top:auto;bottom:11%;right:13%;border-radius:12px;padding:4px}.phone-glass{border-radius:8px}.phone-speaker{margin-bottom:12px}.phone-time{font-size:24px}.phone-date{font-size:4px;margin-bottom:12px}.phone-notification strong{font-size:6px}.phone-notification{padding:5px 3px}
  .pool-floor-note{font-size:7px;right:8%;bottom:12%}
  .scene-evening .scene-copy{top:9%}.scene-evening .shade-control{left:5%;bottom:15%;top:auto;font-size:9px;padding:10px 12px;min-height:44px}.scene-evening .light-switch{right:5%;left:auto;bottom:6%;padding:11px 14px;font-size:9px;min-height:44px}.scene-evening .periscope-view{right:5%;top:43%;width:85%;border-width:6px}.scene-evening .periscope-view img{height:120px}.scene-evening .night-window{top:44%;right:6%;width:68%}.scene-evening .night-set-photo{height:105px!important}
 }
 @media(max-height:560px) and (min-width:721px){
  .scene .scene-copy,.scene-shallow .scene-copy{top:7%;max-width:40%;padding:12px 17px}.scene .scene-copy h1,.scene .scene-copy h2{font-size:27px;margin-bottom:7px}.scene .scene-copy>p:last-of-type{font-size:10px}.scene-dog .scene-copy>p:last-of-type,.scene-phone .scene-copy>p:last-of-type{display:none}
  .story-controls{bottom:8%;width:42%}.story-controls p{font-size:8px;margin-top:6px;padding:5px 8px}.story-replay{font-size:9px;min-height:40px;padding:9px 12px}
- .diving-dog{width:42%;right:2%;top:-25%}.tennis-ball{width:22px;height:22px}.sinking-phone{width:62px;height:120px;right:20%;top:35%;border-radius:10px;padding:3px}.phone-speaker{margin:4px auto 7px;width:15px;height:3px}.phone-time{font-size:19px}.phone-date{font-size:3px;margin:4px 0 9px}.phone-notification{padding:3px}.phone-notification strong{font-size:5px}.phone-notification small,.phone-notification>span{font-size:3px}
+ .diving-dog{width:42%;right:2%;top:-25%}.tennis-ball{width:22px;height:22px}.sinking-phone{width:62px;height:120px;right:20%;top:auto;bottom:10%;border-radius:10px;padding:3px}.phone-speaker{margin:4px auto 7px;width:15px;height:3px}.phone-time{font-size:19px}.phone-date{font-size:3px;margin:4px 0 9px}.phone-notification{padding:3px}.phone-notification strong{font-size:5px}.phone-notification small,.phone-notification>span{font-size:3px}
  .scene-evening .shade-control{bottom:10%;left:6%;min-height:40px;font-size:9px}.scene-evening .light-switch{bottom:10%;right:6%;min-height:40px;font-size:9px}.scene-evening .periscope-view{top:5%;width:37%;right:6%}.scene-evening .periscope-view img{height:85px}.scene-evening .night-window{top:4%;right:7%;width:27%}.scene-evening .night-set-photo{height:70px!important}.pool-floor-note{font-size:7px}
 }
 @media(prefers-reduced-motion:reduce){.diving-dog,.sinking-phone{opacity:1;animation:none!important}.splash-plume,.splash-rings,.story-bubbles,.phone-trail{display:none!important}}
 
 .scene-dog.story-settled .diving-dog{opacity:1;transform:rotate(-3deg)}.scene-dog.story-settled .tennis-ball{opacity:0}
-@media(max-width:720px){.scene-phone .sinking-phone{right:38%}}
+@media(max-width:720px){.scene-phone .sinking-phone{right:13%}}
 @media(max-width:720px){.scene-dog .diving-dog{width:88%;right:8%;top:1%}.scene-dog.story-settled .diving-dog{transform:rotate(-3deg)}}
 
 .diving-dog{filter:saturate(.86) contrast(.95) drop-shadow(0 12px 16px #275d6425)}
 @media(max-height:560px) and (min-width:721px){.scene-dog.story-settled .diving-dog{transform:translate(-5%,8%) rotate(-3deg)}}
+
+/* Split only the dog at the surface: the submerged fur shares its animation, with restrained refraction. */
+.water-optics{position:absolute;pointer-events:none;overflow:hidden}
+.dog-air-layer,.dog-underwater-layer{position:absolute;inset:0;pointer-events:none}
+.dog-air-layer{clip-path:inset(0 0 68% 0)}.dog-underwater-layer{clip-path:inset(32% 0 0 0)}
+.diving-dog-wet{filter:url('#dog-water-refraction') saturate(.78) contrast(.9)!important;opacity:.9}
+.dog-surface-film{position:absolute;right:5%;top:30%;width:48%;height:5%;opacity:0;background:linear-gradient(transparent,#d1f4ed66 45%,#7bc0cd35 60%,transparent);border-radius:50%;transform:skewX(-14deg)}
+.scene-dog.story-playing .dog-surface-film{animation:surface-wash 4.2s .9s ease-out both}.scene-dog.story-settled .dog-surface-film{opacity:.35}
+.phone-floor-shadow{position:absolute;right:25%;bottom:9%;width:145px;height:25px;border-radius:50%;background:radial-gradient(ellipse,#17424d70,transparent 70%);opacity:0;transform:rotate(-12deg)}
+.phone-bottom-silt{position:absolute;right:24%;bottom:8%;width:190px;height:45px;border-radius:50%;background:radial-gradient(ellipse,#d5e3c36b,transparent 70%);opacity:0;filter:blur(2px)}
+.scene-phone.story-playing .phone-floor-shadow{animation:phone-contact 5.1s ease-out both}.scene-phone.story-settled .phone-floor-shadow{opacity:.7}
+.scene-phone.story-playing .phone-bottom-silt{animation:floor-settle 1.6s 4.2s ease-out both}
+.pool[data-stop="2"] .submarine .headlamp{transform:translateY(-36%) rotate(12deg);transform-origin:0 50%}
+@keyframes surface-wash{0%,100%{opacity:0;scale:.7 1}25%{opacity:.8;scale:1.2 1.4}70%{opacity:.35;scale:1 1}}
+@keyframes phone-contact{0%,65%{opacity:0;scale:.4}90%,100%{opacity:.7;scale:1}}
+@keyframes floor-settle{0%{opacity:0;scale:.3}25%{opacity:.7}100%{opacity:0;scale:1.6}}
+@media(max-width:720px){
+ .scene-phone .scene-copy{width:53%;padding:15px 16px}.scene-phone .scene-copy h2{font-size:26px;overflow-wrap:anywhere}.scene-phone .scene-copy>p:last-of-type{display:none}
+ .scene-phone .story-controls{width:48%;bottom:16%}.scene-phone .story-controls p{font-size:8px;padding:7px 9px}.scene-phone .story-replay{font-size:9px;padding:10px 12px}
+ .phone-floor-shadow{right:10%;bottom:10%;width:100px;height:18px}.phone-bottom-silt{right:8%;bottom:9%;width:120px;height:30px}
+ .dog-surface-film{right:8%;top:30%;width:80%;height:4%}.pool[data-stop="2"] .submarine .headlamp{transform:translateY(-36%) rotate(35deg)}
+}
+@media(max-height:560px) and (min-width:721px){
+ .diving-dog{width:37%;right:7%;top:0}.scene-dog.story-settled .diving-dog{transform:rotate(-3deg)}
+ .phone-floor-shadow{width:85px;right:18%;height:16px}.phone-bottom-silt{width:100px;right:16%;height:25px}.dog-surface-film{right:6%;width:38%}
+}
+.calm .dog-surface-film,.calm .phone-floor-shadow{opacity:.4}.calm .phone-bottom-silt{display:none}
+@media(prefers-reduced-motion:reduce){.dog-surface-film,.phone-floor-shadow{opacity:.4}.phone-bottom-silt{display:none}}
+.pool.is-evening .dog-air-layer{filter:brightness(.72) saturate(.8)}
+.pool.is-evening .dog-underwater-layer{filter:brightness(.65) saturate(.82)}
+
+.asset-unavailable .dog-air-layer,.asset-unavailable .dog-underwater-layer{visibility:hidden}
+@media(max-height:560px) and (min-width:721px){.story-controls{bottom:15%}.story-replay{min-height:44px}}
