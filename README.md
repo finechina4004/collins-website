@@ -36,3 +36,7 @@ Recovered from design/continuous-collins-world-handoff at 4ce724b. Five distinct
 ## Underwater stories
 
 The miniature journey includes a dog/tennis-ball arrival and a dropped-phone/search-party moment. Events begin after the chapter docks, play once, and have replay and still-scene alternatives. The phone lands on the floor; the dog shares the surface’s water/lighting treatment. See docs/POOL_STORIES.md for the asset provenance, geometry and current review record. Build marker: collins-pool-stories-02.
+
+## Illustrated homepage review
+
+The current review branch adds `#backyard` as the first illustrated scene, with pool/fire/kitchen/shade entrances, restrained independent motion and direct routes to authentic photographs. The existing boarding and underwater journey remain. See [the locked illustration standard](docs/VISUAL_STANDARD.md) and [review evidence and limits](docs/living-backyard/REVIEW.md) before expanding the artwork or releasing this draft. Exact art acceptance awaits the second intended reference image; the retained underwater art still needs a later illustration pass.

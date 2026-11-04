@@ -1,0 +1,95 @@
+/* The illustrated Collins world. A separate entrance, retaining the existing expedition. */
+.backyard{display:none;background:#e8b997;min-height:calc(100svh - var(--header));color:#263b37}
+html[data-route=world] .backyard{display:flex;flex-direction:column}
+html[data-route=world] #website,html[data-route=world] .journey{display:none}
+html[data-route=world] .site-header{background:#f6eddc;border-bottom-color:#7c715c55}
+.backyard-topline{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 3.3%;font:9px/1.5 'Courier New',monospace;letter-spacing:1.3px;background:#f6eddc}
+.backyard-topline p{margin:0}.backyard-topline a{padding:8px 0;border-bottom:1px solid #263b3750;min-height:36px}
+.backyard-stage{position:relative;isolation:isolate;overflow:hidden;width:min(100%,calc((100svh - var(--header) - 120px)*1.777));margin:auto;flex-shrink:0;aspect-ratio:1672/941;background:#e8b997}
+.backyard-art{width:100%;height:100%;display:block;object-fit:contain;transition:transform .32s ease,filter .32s;transform-origin:var(--entrance-x,50%) var(--entrance-y,50%)}
+.world-composition{position:relative;width:100%;height:100%}
+.world-pan{display:none}
+.backyard-heading{position:absolute;left:3.2%;top:3.5%;margin:0;font:400 clamp(16px,1.8vw,29px)/1.28 Georgia,serif;letter-spacing:3px;color:#33493f;text-transform:uppercase;pointer-events:none}
+.backyard-heading span{display:block;font:8px/1.7 'Courier New',monospace;letter-spacing:1.5px;margin-top:10px}
+.world-portal{position:absolute;display:flex;align-items:flex-end;justify-content:center;border:1px solid transparent;z-index:3;min-width:44px;min-height:44px;outline-offset:3px;transition:background .2s,border-color .2s}
+.world-portal:before{content:'';position:absolute;inset:0;background:#f3dda50a;opacity:0;transition:opacity .2s}
+.world-portal:hover:before,.world-portal:focus-visible:before{opacity:1}
+.world-portal:hover,.world-portal:focus-visible{border-color:#f8f1e5b0;background:#f6e6bb0a}
+.world-portal>span{background:#f5ebd9f5;padding:10px 13px;font:10px/1.2 'Courier New',monospace;letter-spacing:.7px;box-shadow:2px 3px 0 #283b3738;white-space:nowrap;transition:transform .2s}
+.world-portal:hover>span,.world-portal:focus-visible>span{transform:translateY(-4px);background:#fff3d9}
+.portal-fire{left:6%;top:37%;width:22%;height:23%}
+.portal-kitchen{left:69%;top:43%;width:24%;height:17%}
+.portal-shade{left:64%;top:25%;width:34%;height:12%;align-items:flex-start}
+.portal-pool{left:33%;top:71%;width:45%;height:18%}
+.portal-pool>span{align-self:flex-start;margin-top:0}
+.portal-whole{left:38%;top:39%;width:17%;height:20%}
+.world-water{position:absolute;pointer-events:none;left:1%;right:1%;top:66%;bottom:4%;opacity:.1;mix-blend-mode:screen;background:repeating-radial-gradient(ellipse at 30% -120%,transparent 0 32px,#efe7c6 34px,transparent 39px 67px);animation:world-water 12s ease-in-out infinite alternate;transform-origin:center}
+.world-ember{position:absolute;pointer-events:none;left:13.1%;top:47.7%;width:5%;height:6%;background:#e8a038;mix-blend-mode:screen;opacity:.16;clip-path:polygon(0 100%,13% 41%,27% 69%,43% 0,59% 58%,75% 24%,100% 100%);animation:world-ember 2.6s steps(5,end) infinite alternate}
+.world-bubbles{position:absolute;left:59%;top:72%;width:5%;height:14%;pointer-events:none}
+.world-bubbles i{position:absolute;width:7px;height:7px;border:1px solid #f0e8c4;opacity:0;border-radius:50%;bottom:0;animation:world-bubble 6s ease-out infinite}
+.world-bubbles i:nth-child(2){left:16px;width:4px;height:4px;animation-delay:2.5s}
+.world-bubbles i:nth-child(3){left:25px;width:5px;height:5px;animation-delay:4s}
+.world-options{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#f6eddc;padding:12px 3.3%;margin-top:auto}
+.world-options p{font:9px/1.7 'Courier New',monospace;max-width:360px;margin:0;letter-spacing:.5px}
+.world-options nav{display:flex;gap:18px;align-items:center;font:11px Georgia,serif;flex-wrap:wrap}
+.world-options nav a{min-height:44px;display:inline-flex;align-items:center;border-bottom:1px solid #5f716950}
+.world-options button{border:1px solid #728174;background:transparent;font:9px 'Courier New',monospace;min-height:44px;padding:10px 12px;white-space:nowrap}
+html:not([data-route=world]) .backyard *,html.world-paused .backyard *{animation-play-state:paused!important}
+.backyard-stage.is-entering .backyard-art{transform:scale(1.075);filter:brightness(.86)}
+.backyard-stage.is-entering .world-portal{opacity:0;pointer-events:none}
+.world-load-status{position:absolute;left:30%;top:66%;padding:14px;background:#f6eddc;color:#263b37;font:12px/1.7 Arial;max-width:350px}
+.world-load-status a{text-decoration:underline}.backyard-stage.has-error .world-portal,.backyard-stage.has-error .world-water,.backyard-stage.has-error .world-ember{display:none}
+.pool-project-route{position:absolute;bottom:55px;left:3.3%;z-index:18;background:#f6eddc;color:#244a50;padding:12px 15px;min-height:44px;display:flex;align-items:center;font:11px Georgia,serif;border:1px solid #858b76}
+.feature-detail{max-width:1440px;margin:auto;padding:30px 5% 70px;min-height:calc(100svh - var(--header));color:#263b37}
+html[data-route=feature] #website> :not(#feature-detail){display:none}
+.feature-backline{display:flex;align-items:center;justify-content:space-between;gap:20px;font:10px/1.5 'Courier New',monospace;letter-spacing:.8px;padding-bottom:18px;border-bottom:1px solid #68735b60}
+.feature-backline a{min-height:44px;display:inline-flex;align-items:center}
+.feature-heading{display:grid;grid-template-columns:1.2fr 1fr;align-items:end;gap:40px;margin:36px 0}
+.feature-heading h1{font:400 clamp(42px,5vw,76px)/1.04 Georgia,serif;letter-spacing:-2px;margin:12px 0 0;max-width:650px}
+.feature-heading h1 em{font-weight:400}.feature-heading p{font:13px/1.8 Arial,sans-serif;max-width:420px;margin:10px 0}.feature-heading .eyebrow{font:9px/1.5 'Courier New',monospace}
+.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:42px 32px}
+.feature-card{display:block;min-width:0}
+.feature-card:first-child{grid-column:1/-1}.feature-card figure{margin:0}
+.feature-card img{width:100%;height:auto;display:block;aspect-ratio:auto;background:#b9b9a5;transition:filter .2s}
+.feature-card:hover img{filter:brightness(1.06)}
+.feature-card figcaption{display:grid;grid-template-columns:1fr auto;align-items:center;gap:14px;padding:18px 0;border-bottom:1px solid #68735b60}
+.feature-card strong{font:400 22px/1.2 Georgia;display:block}.feature-card small{display:block;font:10px/1.6 'Courier New',monospace;margin-top:9px;letter-spacing:.5px}.feature-card figcaption>span{font-size:25px}
+.feature-card .feature-photo-caption{font:12px/1.7 Arial;display:block;margin-top:7px}
+.feature-end{margin-top:55px;border-top:1px solid #68735b60;padding-top:30px;display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap}
+.feature-end p{font:italic 27px/1.2 Georgia;margin:0}.feature-end a{min-height:44px;display:flex;align-items:center}
+.feature-room-fire{background:#302c28;color:#f6eddc;max-width:none}.feature-room-fire .feature-backline,.feature-room-fire .feature-end,.feature-room-fire figcaption{border-color:#e7c79a55}
+.feature-room-fire .feature-card:first-child{max-width:1000px;width:100%;margin:auto}
+.feature-room-fire .feature-card:first-child img{border:12px solid #70483c;outline:1px solid #b18560;box-shadow:0 0 45px #ce812a20}
+.feature-room-fire .feature-heading .eyebrow{color:#e6bc7e}
+.feature-room-kitchen{background:#f0e3cc}.feature-room-kitchen .feature-heading{border-bottom:4px double #7b6e4f;padding-bottom:30px}
+.feature-room-kitchen .feature-card{padding:18px;background:#faf0dd;border:1px solid #a99b7c;box-shadow:4px 6px 0 #8c785e20}
+.feature-room-shade .feature-heading{background:repeating-linear-gradient(113deg,transparent 0 28px,#6d775710 29px 43px);padding:25px 18px;margin-left:-18px;margin-right:-18px}
+.feature-room-shade .feature-card:first-child img{border-top:12px solid #786447;border-bottom:12px solid #786447}
+.feature-room-pools .feature-heading .eyebrow{color:#517476}
+.album-feature-return{display:inline-flex!important;min-height:44px;align-items:center;gap:8px;border-bottom:1px solid;margin-bottom:20px;font:11px 'Courier New',monospace}
+@keyframes world-water{from{transform:scaleY(.97) translateX(-.2%)}to{transform:scaleY(1.02) translateX(.2%)}}
+@keyframes world-ember{from{opacity:.05;transform:scaleY(.91)}to{opacity:.22;transform:scaleY(1.04)}}
+@keyframes world-bubble{0%{opacity:0;transform:translateY(0)}15%{opacity:.6}75%,100%{opacity:0;transform:translate(10px,-55px)}}
+.calm .backyard *{animation:none!important;transition:none!important}.calm .backyard-stage.is-entering .backyard-art{transform:none;filter:none}
+@media(prefers-reduced-motion:reduce){.backyard *{animation:none!important;transition:none!important}.backyard-stage.is-entering .backyard-art{transform:none;filter:none}}
+@media(max-width:720px){
+ html[data-route=world]{--header:112px}
+ html[data-route=world] .site-header{height:112px;padding-top:10px}
+ html[data-route=world] .header-location{display:none}
+ .backyard{min-height:calc(100svh - var(--header));background:#f6eddc}
+ .backyard-topline{padding:8px 16px;font-size:8px;letter-spacing:.5px;align-items:center}.backyard-topline p{max-width:180px}.backyard-topline a{font-size:10px;letter-spacing:0;white-space:nowrap}
+ .backyard-stage{width:100%;aspect-ratio:1/1.13;margin:0;flex-shrink:0;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scroll-snap-type:x proximity;overscroll-behavior-x:contain}
+ .world-composition{position:relative;width:200%;height:100%;isolation:isolate}
+ .world-pan{display:flex;justify-content:space-between;gap:10px;padding:0 16px 10px;background:#f6eddc;font:9px 'Courier New',monospace}
+ .world-pan button{min-height:44px;padding:8px 12px;border:1px solid #5f716960;background:transparent}
+ .world-pan p{max-width:130px;line-height:1.5;text-align:center;margin:auto}
+ .backyard-art{object-fit:fill}.backyard-heading{left:3%;top:4%;font-size:19px;letter-spacing:1.5px}.backyard-heading span{font-size:7px;letter-spacing:.5px}
+ .world-portal>span{font-size:10px;padding:12px 10px}.world-portal{border:0!important}.portal-fire{top:39%;height:24%}.portal-kitchen{top:43%;height:20%}.portal-pool{top:70%;height:21%;left:36%;width:41%}.portal-shade{top:26%;height:13%}
+ .portal-whole{top:42%;height:21%;width:20%;left:36%}.world-options{padding:15px 16px;gap:10px;flex-wrap:wrap;align-items:start;margin-top:0}
+ .world-options p{max-width:none;width:100%;font-size:9px}.world-options nav{display:grid;grid-template-columns:repeat(3,1fr);width:100%;gap:3px 15px;font-size:12px}.world-options nav a{border-bottom-color:#5f716960;min-height:44px}
+ .world-options button{margin-top:5px}.world-load-status{left:27%;top:68%;width:40%;font-size:11px}
+ .feature-detail{padding:22px 6% 45px}.feature-backline{font-size:8px;gap:12px;letter-spacing:.3px}.feature-heading{grid-template-columns:1fr;gap:15px;margin:24px 0}.feature-heading h1{font-size:44px;letter-spacing:-1.5px}.feature-heading p{font-size:12px}
+ .feature-grid{grid-template-columns:1fr;gap:28px}.feature-card strong{font-size:22px}.feature-card:first-child{grid-column:auto}.feature-card figcaption{padding:15px 0}.feature-room-fire .feature-card:first-child img{border-width:6px}.feature-room-kitchen .feature-card{padding:10px}.feature-end{gap:18px;margin-top:35px}.feature-end p{font-size:24px;width:100%}.feature-end a{font-size:12px}
+ .pool-project-route{left:12px;bottom:52px;font-size:10px;padding:9px 12px;min-height:44px}
+}
+@media(max-height:560px) and (min-width:721px){.backyard-topline{padding-top:4px;padding-bottom:4px}.backyard-stage{width:100%;max-width:900px;aspect-ratio:1672/941}.backyard{min-height:0}.backyard-heading{font-size:18px}.world-options{margin-top:0}}
