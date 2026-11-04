@@ -6,8 +6,8 @@
  function navigation(){
   const route=html.dataset.route, link=$('.surface-link'), label=$('.surface-verb');
   const beneath=route==='pool'||route==='launch';
-  link.href=beneath?'#home':'#launch';
-  label.textContent=route==='pool'?'Back to poolside':route==='launch'?'Poolside':'Explore the pool';
+  link.href='#backyard';
+  label.textContent=route==='world'?'Services & about':'Back to artwork';
   document.querySelectorAll('.main-nav a').forEach(a=>{
    const active=a.hash===location.hash;
    if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
@@ -17,7 +17,13 @@
  addEventListener('hashchange',navigation);navigation();
  function light(on){
   html.dataset.time=on?'evening':'day';
-  const sceneImage=on?'assets/pool-night.webp':'assets/pool-day.webp';
+  const sceneImage=on?'assets/backyard-evening-illustrated.webp':'assets/backyard-day-illustrated.webp';
+  document.documentElement.style.setProperty('--backyard-plate',`url('${sceneImage}')`);
+  const artwork=$('.backyard-art');artwork.src=sceneImage;
+  artwork.alt=`An imagined painted Collins backyard in ${on?'evening':'afternoon'} light: cream poolhouse, brick fireplace, striped pergola and cutaway pool.`;
+  $('#backyard-light').setAttribute('aria-pressed',String(on));
+  $('#backyard-light').textContent=on?'Afternoon light ◑':'Evening light ◐';
+  try{sessionStorage.setItem('collins-time',on?'evening':'day');}catch{}
   $('.launch-set').src=sceneImage;
   $('#periscope-view img').src=sceneImage;
   $('#periscope-view img').alt=on?'The same illustrative backyard above water, after dark.':'The same illustrative backyard above water, in afternoon light.';
@@ -40,7 +46,9 @@
  $('#evening-toggle').addEventListener('click',()=>light(pool.classList.contains('is-evening')));
  $('#light-switch').addEventListener('click',()=>light($('.scene-light').classList.contains('light-on')));
  $('#world-light').addEventListener('click',()=>light($('#home-world').classList.contains('after-hours')));
- light(false);
+ $('#backyard-light').addEventListener('click',()=>light(html.dataset.time!=='evening'));
+ let savedTime='day';try{savedTime=sessionStorage.getItem('collins-time')||'day';}catch{}
+ light(savedTime==='evening');
  $('#goggles').addEventListener('click',()=>{
   const on=$('#goggles').getAttribute('aria-pressed')==='true';
   $('#found-note').hidden=!on;

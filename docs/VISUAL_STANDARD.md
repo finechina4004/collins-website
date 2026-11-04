@@ -17,9 +17,9 @@ The home screen is art. The art moves. The art is the navigation. Invent the wor
 - Supporting YouTube URL could not be retrieved. No claim is made to having watched or understood its unavailable contents.
 - The latest message refers to **two attached images**, but no new image attachments arrived with that message in this workspace. Do not invent a second attachment or claim an exact two-attachment acceptance check. Resolve that reference identity before final art acceptance.
 
-## Homepage review gate
+## Visual review and authorized continuation
 
-Finish one strong homepage composition before commissioning more illustrated interiors. Compare the rendered page directly with both intended reference images for drawing, grain, materials, perspective, architectural depth, characters, lighting, water and detail. Matching colors or including a submarine is insufficient. Ask: would the homepage belong in the same illustrated collection?
+The owner subsequently supplied five matching illustrations and explicitly authorized a complete homepage → boarding/dive → real album → home pass on this review branch. That instruction authorizes integrating those assets without reopening the historical missing-attachment question below. Assess drawing, grain, materials, perspective, architectural depth, characters, lighting, water and detail as a single collection. Main and production still await review/release authorization.
 
 The current working refinement preserves the selected favorite's architecture and proportions, adds louvered shutters, transom, cornice, small human details and the illustrated Collins submarine, and strengthens the water. It is a review draft, not an owner-approved final composition. Its more saturated peach sky and stronger water caustics are visible differences from the selected favorite and deserve explicit comparison with the second intended image.
 
@@ -27,6 +27,6 @@ The current working refinement preserves the selected favorite's architecture an
 
 The review branch adds a working illustrated homepage with object entrances, motion and direct navigation. Existing photograph collections remain intact. Feature photograph routes are useful functional paths; they are not proof that fully illustrated close-up worlds are complete.
 
-Do not expand the art into more scenes until the homepage clears the review above. The retained boarding and underwater journey still use earlier, more physical miniature imagery. A later approved pass must bring those close views into the locked illustrated language without losing their working navigation and stories.
+The authorized pool pass now brings boarding, the cockpit view, guide vessel, underwater panorama, dog, periscope and return into the supplied illustrated language. See pool-illustration/REVIEW.md for evidence. Fire, kitchen and shade continue to open real photograph collections; no additional illustrated interior worlds are claimed. The evidence about the earlier two-reference request above is historical, not an implementation blocker for this explicitly authorized continuation.
 
 Preserve GitHub `finechina4004/collins-website`, existing Cloudflare hosting, eight exact albums, 94 authentic photographs, confirmed call/text details and factual services. Never present illustrative artwork as completed Collins construction. No landscaping service; no invented project details or credentials.
