@@ -4,7 +4,7 @@
  const $$ = s => [...document.querySelectorAll(s)];
  const html=document.documentElement, pool=$('#pool'), journey=$('#journey'), viewport=$('.pool-window'), world=$('#world'), submarine=$('#submarine'), launch=window.CollinsLaunch;
  const scenes=$$('.scene'), stops=$$('[data-stop]');
- const labels=['The shallow end','Lost and found','The pool light','Life above the water','The way up'];
+ const labels=['Below the Steps','The Lost Property Office','The Light Alcove','At the Far Skimmer','The Next Chapter'];
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  let manualCalm=false,calm=reduced.matches,selected=0,progress=0,remembered=0,width=innerWidth,height=innerHeight,range=1,raf=0,lastProgress=0,brief='',transitionTimer=0,dockTimer=0;
  const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
@@ -12,7 +12,7 @@
  function storage(key,value){try{if(value===undefined)return sessionStorage.getItem(key);sessionStorage.setItem(key,value);}catch{}return null;}
  const restored=Number(storage('collins-expedition-stop'));if(Number.isInteger(restored)&&restored>=0&&restored<=4)remembered=restored;
  function announce(i){selected=i;stops.forEach((b,n)=>{if(i===n)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});scenes.forEach((s,n)=>{s.inert=n!==i;s.setAttribute('aria-hidden',String(n!==i));});$('#previous').disabled=i===0;$('#next').disabled=i===4;$('#expedition-status').textContent=`Discovery ${i+1} of 5: ${labels[i]}.`;storage('collins-expedition-stop',String(i));remembered=i;pool.dataset.stop=String(i);}
- function poses(){return innerWidth<=720?[[.61,.66],[.16,.84],[.79,.19],[.16,.83],[.53,.88]]:innerHeight<=560?[[.60,.74],[.58,.77],[.55,.78],[.55,.76],[.57,.78]]:[[.54,.69],[.69,.70],[.47,.76],[.52,.71],[.58,.68]];}
+ function poses(){return innerWidth<=720?[[.61,.66],[.16,.84],[.79,.19],[.83,.86],[.53,.88]]:innerHeight<=560?[[.60,.74],[.58,.77],[.55,.78],[.55,.76],[.57,.78]]:[[.54,.69],[.69,.70],[.47,.76],[.52,.71],[.58,.68]];}
  function render(){raf=0;if(!inPool())return;const previous=progress;progress=clamp(scrollY/range*4,0,4);const rendered=calm?Math.round(progress):progress;world.style.transform=`translate3d(${-rendered*width}px,0,0)`;$('#route-progress').style.transform=`scaleX(${progress/4})`;const nearest=Math.round(progress);if(nearest!==selected)announce(nearest);
  const points=poses(),a=Math.floor(rendered),b=Math.min(4,a+1),fraction=rendered-a;const pose=[points[a][0]+(points[b][0]-points[a][0])*fraction,points[a][1]+(points[b][1]-points[a][1])*fraction];
  const size=innerWidth<=720?(selected>0&&selected<4?110:151):innerHeight<=560?120:210;submarine.style.width=`${size}px`;const pitch=calm?0:clamp((progress-previous)*-60,-8,8);submarine.style.transform=`translate3d(${clamp(pose[0]*width-size/2,2,width-size-2)}px,${clamp(pose[1]*height-size/3,5,height-size*.67-6)}px,0) rotate(${pitch}deg)`;const moving=!calm&&Math.abs(progress-lastProgress)>.002;submarine.classList.toggle('underway',moving);clearTimeout(dockTimer);if(moving)dockTimer=setTimeout(()=>submarine.classList.remove('underway'),180);lastProgress=progress;
@@ -25,7 +25,7 @@
  addEventListener('scroll',()=>{if(inPool())requestRender();},{passive:true});addEventListener('resize',()=>resize(),{passive:true});document.addEventListener('visibilitychange',()=>{if(!document.hidden)requestRender();});reduced.addEventListener('change',updateMotion);
  stops.forEach(b=>b.addEventListener('click',()=>setStop(Number(b.dataset.stop))));$('#previous').addEventListener('click',()=>setStop(selected-1));$('#next').addEventListener('click',()=>setStop(selected+1));$('#motion-toggle').addEventListener('click',()=>{manualCalm=!manualCalm;updateMotion();});
  pool.addEventListener('mousedown',e=>{const control=e.target.closest('button,a');if(control&&e.button===0){e.preventDefault();control.focus({preventScroll:true});}});
- pool.addEventListener('keydown',e=>{if(e.key==='Escape')location.hash='#home';});
+ pool.addEventListener('keydown',e=>{if(e.key==='Escape')location.hash='#home';if(e.target===pool&&['ArrowRight','ArrowLeft','Home','End'].includes(e.key)){e.preventDefault();setStop(e.key==='Home'?0:e.key==='End'?4:selected+(e.key==='ArrowRight'?1:-1));}});
  $('#evening-toggle').addEventListener('click',()=>{const on=pool.classList.toggle('is-evening');$('#evening-toggle').setAttribute('aria-pressed',String(on));$('#evening-toggle').innerHTML=on?'Back to daylight <span aria-hidden="true">◑</span>':'Evening light <span aria-hidden="true">◐</span>';});
   $('#goggles').addEventListener('click', () => {
     const inspected = $('#goggles').classList.toggle('inspected');
@@ -46,7 +46,8 @@
   $('#shade-control').addEventListener('click', () => {
     const moved = $('.scene-above').classList.toggle('shifted');
     $('#shade-control').setAttribute('aria-pressed', String(moved));
-    $('#shade-control').textContent = moved ? 'Put the umbrella back ↙' : 'Move the umbrella ↗';
+    $('#shade-control').textContent = moved ? 'Lower the periscope ↓' : 'Raise the periscope ↑';
+    $('#periscope-view').hidden = !moved;
   });
 
 
@@ -54,14 +55,19 @@
  function showPool(focus=true,preserveLaunch=false,initialStop=remembered){document.title='Collins — A small backyard expedition';if(!preserveLaunch)launch?.cancel();clearTimeout(transitionTimer);$('#surface-transition').classList.remove('active');html.dataset.route='pool';pool.inert=preserveLaunch;$('#website').inert=true;progress=initialStop;resize(false);scrollTo({top:range*initialStop/4,behavior:'instant'});announce(initialStop);render();if(focus)pool.focus({preventScroll:true});}
  function showLaunch(focus=true){clearTimeout(transitionTimer);$('#surface-transition').classList.remove('active');html.dataset.route='launch';pool.inert=true;$('#website').inert=true;$('.surface-verb').textContent='View website';launch?.show(calm);scrollTo(0,0);if(focus)$('#launch').focus({preventScroll:true});}
  function showSpecial(kind,focus=true){launch?.cancel();$('.surface-verb').textContent='View website';document.title=kind==='studio'?'Album studio — Collins':'Project album — Collins';html.dataset.route=kind;pool.inert=true;$('#website').inert=false;$('#album-detail').hidden=kind!=='album';$('#studio').hidden=kind!=='studio';if(kind==='album')window.CollinsCatalog?.show(location.hash.split('/').slice(1).join('/'));if(kind==='studio')window.CollinsStudio?.show();requestAnimationFrame(()=>{scrollTo({top:0,behavior:'instant'});if(focus)$(kind==='album'?'#album-detail':'#studio').focus({preventScroll:true});});}
- function route(initial=false){const hash=location.hash;if(!hash||hash==='#launch'){showLaunch(!initial);return;}if(hash==='#pool'){showPool(!initial);return;}if(hash.startsWith('#work/')){showSpecial('album',!initial);return;}if(hash==='#studio'){showSpecial('studio',!initial);return;}if(inPool()&&!initial&&!calm){$('#surface-transition').classList.add('active');clearTimeout(transitionTimer);transitionTimer=setTimeout(()=>{showSite(hash);$('#surface-transition').classList.remove('active');},405);}else showSite(hash,!initial);}
+ function route(initial=false){clearTimeout(transitionTimer);$('#surface-transition').classList.remove('active');const hash=location.hash;if(!hash||hash==='#launch'){showLaunch(!initial);return;}if(hash==='#pool'){showPool(!initial);return;}if(hash.startsWith('#work/')){showSpecial('album',!initial);return;}if(hash==='#studio'){showSpecial('studio',!initial);return;}if(inPool()&&!initial&&!calm){$('#surface-transition').classList.add('active');clearTimeout(transitionTimer);transitionTimer=setTimeout(()=>{showSite(hash);$('#surface-transition').classList.remove('active');},405);}else showSite(hash,!initial);}
  document.addEventListener('click',e=>{const anchor=e.target.closest('a[href^="#"]');if(!anchor)return;if(anchor.dataset.interest)$('#interest').value=anchor.dataset.interest;if(anchor.hash===location.hash){e.preventDefault();route();}});
  addEventListener('hashchange',()=>route());addEventListener('popstate',()=>route());addEventListener('pageshow',e=>{if(e.persisted)route(true);});
   $('#project-form').addEventListener('submit', event => {
     event.preventDefault();
     const values = new FormData(event.currentTarget);
-    brief = ['COLLINS CUSTOM POOLS & BACKYARDS', 'PROJECT BRIEF — PREPARED ONLY, NOT SENT', '', `Name: ${values.get('name')}`, `Phone: ${values.get('phone')}`, `Town / neighborhood: ${values.get('location')}`, `Project: ${values.get('interest')}`, '', String(values.get('idea') || ''), '', 'This preview is not connected to Collins. No inquiry has been submitted.'].join('\n');
+    const phone = event.currentTarget.elements.phone;
+    phone.setCustomValidity(phone.value.replace(/\D/g,'').length >= 10 && phone.value.replace(/\D/g,'').length <= 15 ? '' : 'Enter a phone number with 10 to 15 digits.');
+    if (!event.currentTarget.reportValidity()) return;
+    brief = ['COLLINS CUSTOM POOLS & BACKYARDS', 'A NOTE ABOUT MY BACKYARD', '', `Name: ${values.get('name')}`, `Phone: ${values.get('phone')}`, `Town / neighborhood: ${values.get('location')}`, `Project: ${values.get('interest')}`, '', String(values.get('idea') || ''), '', 'Prepared on the Collins website. Please review and send this message.'].join('\n');
     $('#brief-text').textContent = brief;
+    $('#text-brief').href = `sms:${window.COLLINS_SITE_CONFIG.phone}?body=${encodeURIComponent(brief)}`;
+    $('#delivery-status').textContent = 'Nothing has been sent. Review the message and tap Send in your messaging app. If the note does not fill in, use Copy note and paste it.';
     $('#brief-review').hidden = false;
     $('#brief-review').scrollIntoView({ block: 'center', behavior: calm ? 'instant' : 'smooth' });
   });
@@ -80,6 +86,7 @@
  const configuration=window.COLLINS_SITE_CONFIG||{};
  if(typeof configuration.phone==='string'&&/^\+[1-9]\d{7,14}$/.test(configuration.phone)){$('#call-collins').href=`tel:${configuration.phone}`;$('#call-collins').textContent=`Call ${configuration.phoneLabel||'Collins'} ↗`;$('#text-collins').href=`sms:${configuration.phone}`;$('#contact-actions').hidden=false;$('#contact-pending').hidden=true;}
  $('#brief-fields').disabled=false;
+ $('[name=phone]').addEventListener('input',e=>e.target.setCustomValidity(''));
  launch?.configure({reveal:()=>{showPool(false,true,0);return viewport.getBoundingClientRect();},complete:()=>{if(location.hash!=='#pool')history.pushState({collins:'pool'},'','#pool');showPool(true,false,0);}});
  announce(remembered);updateMotion();route(true);const shot=new URLSearchParams(location.search).get('shot');if(['launch','boarding','cockpit','descent'].includes(shot)){showLaunch(false);launch?.inspectShot(shot);}window.COLLINS_READY=true;window.CollinsNavigation={refresh:()=>route(true)};
 })();

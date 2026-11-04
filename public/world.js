@@ -36,16 +36,6 @@
     $('#scene-time').textContent=evening?'NOBODY’S IN A HURRY':'THE AFTERNOON DEPARTMENT';
     $('#home-world .home-day').alt=evening?'An imagined Collins miniature pool after dark, with glowing pool light and a sage fence.':'An original imagined Collins miniature pool, with limestone coping, a sage fence and afternoon light';
   });
-  const findings=new Set();
-  const descriptions={goggles:'Goggles inspected',ring:'Diving ring recovered','light-switch':'Evening discovered','shade-control':'A little shade found'};
-  for(const [id,label] of Object.entries(descriptions)){
-    $('#'+id).addEventListener('click',()=>{
-      findings.add(id);
-      $('#findings-count').textContent=`${findings.size} / 4 LITTLE DISCOVERIES`;
-      $('#findings-status').textContent=`${label}. ${findings.size} of four discoveries found. Keep exploring or surface whenever you like.`;
-      $('#'+id).dataset.discovered='true';
-    });
-  }
   // Escape the drawing with its ordinary links; no wheel interception or cursor tricks.
   const form=$('#project-form');
   const invalidateBrief = () => {
