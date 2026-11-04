@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "photos-2026-11-03-strictly-striped-affair",
+  "revision": "photos-2026-11-03-the-sun-stayed-for-supper",
   "projects": [
     {
       "id": "collins-001",
@@ -1131,10 +1131,235 @@
       "approved": false,
       "town": "",
       "year": "",
-      "summary": "",
+      "summary": "A long swim. A shaded table. Very little reason to head inside.",
       "services": [],
-      "coverId": null,
-      "photos": []
+      "coverId": "the-sun-stayed-for-supper-7015ed67131d404e",
+      "photos": [
+        {
+          "id": "the-sun-stayed-for-supper-461e31a7bb97f3dc",
+          "src": "assets/projects/the-sun-stayed-for-supper/461e31a7bb97f3dc.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A quiet corner of the pool and spa.",
+          "alt": "Square tiled spa beside the pool, with gray coping, stepping stones and wood seating beyond.",
+          "sourceFile": "273a63f5-2a3f-439d-9085-419658ea2eae.jpg",
+          "sourceSha256": "461e31a7bb97f3dc50cd17a813b35b2b98da2cee23ecac263380fc2f6c8765bf"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-ca9dc81c4e070427",
+          "src": "assets/projects/the-sun-stayed-for-supper/ca9dc81c4e070427.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Water along the stepped wall.",
+          "alt": "Long rectangular pool below a stepped gray wall, with wood seating and a broad lawn in front.",
+          "sourceFile": "3d9b54ec-ff42-4e1e-b5b7-fbfcd552b178.jpg",
+          "sourceSha256": "ca9dc81c4e070427238058c758f0e6570e358e7ed26c72a0764c4da09075c896"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-fe5a1f186c6cd3b6",
+          "src": "assets/projects/the-sun-stayed-for-supper/fe5a1f186c6cd3b6.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "A long view across the water.",
+          "alt": "View along the rectangular pool toward the spa and house, with trees reflected in the water.",
+          "sourceFile": "5e3f18ba-c692-4f82-b84b-694b9050df23.jpg",
+          "sourceSha256": "fe5a1f186c6cd3b63fe59aea73b7f172f3a91ce3d3293174a9e62d0bb47fc117"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-aaeed8c6ddbbeba0",
+          "src": "assets/projects/the-sun-stayed-for-supper/aaeed8c6ddbbeba0.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "The view from the covered patio.",
+          "alt": "Outdoor sofa facing a built-in fireplace on the covered patio, with the lawn and pool beyond.",
+          "sourceFile": "728930b1-9a37-4df3-8422-932b0d904294.jpg",
+          "sourceSha256": "aaeed8c6ddbbeba0467ec020b41ca9d2fa36aa45f72ed8f2942563536a500715"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-259dc24008424140",
+          "src": "assets/projects/the-sun-stayed-for-supper/259dc24008424140.webp",
+          "width": 720,
+          "height": 540,
+          "caption": "The pool and picnic table from above.",
+          "alt": "Elevated view of the pool, spa, lawn, pergola, grill and wood picnic table.",
+          "sourceFile": "79fd9ebb-cd0c-4624-aa61-367194c05209.jpg",
+          "sourceSha256": "259dc24008424140afbb44116fe2244b25eebc9d2a4e5bd3ec454d4d31561102"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-2818b9071c28cf9d",
+          "src": "assets/projects/the-sun-stayed-for-supper/2818b9071c28cf9d.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The path around the house.",
+          "alt": "Gravel path around the gray house, passing wood gates and planting beds toward backyard steps.",
+          "sourceFile": "7ecf487d-b400-4910-b219-f80a9bea55ca.jpg",
+          "sourceSha256": "2818b9071c28cf9d1c1e3214478b9811a487d8283dbef167b7586876c181343c"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-350d699af84be8e5",
+          "src": "assets/projects/the-sun-stayed-for-supper/350d699af84be8e5.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The grill and table under the pergola.",
+          "alt": "Outdoor grill and wood picnic table beneath a pergola beside the lawn.",
+          "sourceFile": "9995c049-ff10-46cd-9277-2019440ecd3c.jpg",
+          "sourceSha256": "350d699af84be8e5731792c183ccea9bf1c8a7148b5f845c7c0496e69c5aa50a"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-db899880222ffbf4",
+          "src": "assets/projects/the-sun-stayed-for-supper/db899880222ffbf4.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "A lawn between the house and water.",
+          "alt": "Gray house facing the lawn and pool, with rectangular stepping stones along the windows.",
+          "sourceFile": "b8af38d1-b09f-49c9-91e1-88d548bb6aec.jpg",
+          "sourceSha256": "db899880222ffbf4b3028b89b0d42f9f7f5ce985a1ad9982c66fdc21ca0a73f9"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-dd13fdb48c66ee6f",
+          "src": "assets/projects/the-sun-stayed-for-supper/dd13fdb48c66ee6f.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "A small wood sauna among the trees.",
+          "alt": "Freestanding wood sauna with glass door and windows, surrounded by trees beside a concrete path.",
+          "sourceFile": "bfc93066-9f29-4938-9bc4-52e236298b0b.jpg",
+          "sourceSha256": "dd13fdb48c66ee6f11b4d979baffc3f3ec30327580d86c1a9ef588074f50706f"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-ee799962b9bafb55",
+          "src": "assets/projects/the-sun-stayed-for-supper/ee799962b9bafb55.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The backyard in afternoon light.",
+          "alt": "Wide view of the lawn, gray house and pool, bordered by stepped walls and a wood fence.",
+          "sourceFile": "c7e9dcf8-b9ed-4e17-9c8e-8e5c41d76f9b.jpg",
+          "sourceSha256": "ee799962b9bafb55e729abc004e0457de8efdd8cc626f0d3b59e3ed58ed32688"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-b14a08ab1029e97e",
+          "src": "assets/projects/the-sun-stayed-for-supper/b14a08ab1029e97e.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Steps back toward the table.",
+          "alt": "Wood steps with dark handrails leading up to the pergola and grill, with a trampoline beside the lower path.",
+          "sourceFile": "cf814fd9-e700-4b64-b8aa-8af37ed46e3a.jpg",
+          "sourceSha256": "b14a08ab1029e97e63b7e19313cfb4cf29f3120f5442899d128629ba8c973570"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-929dbfed556cf1de",
+          "src": "assets/projects/the-sun-stayed-for-supper/929dbfed556cf1de.webp",
+          "width": 1200,
+          "height": 900,
+          "caption": "The whole backyard from above.",
+          "alt": "Aerial view of the house, lawn, covered patio, rectangular pool and square spa.",
+          "sourceFile": "e4814e7e-49f3-4542-9ccd-a543393c25e1.jpg",
+          "sourceSha256": "929dbfed556cf1debac7ba87a1bcd9cc86c433bd71c84231f639cb995125fb54"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-7015ed67131d404e",
+          "src": "assets/projects/the-sun-stayed-for-supper/7015ed67131d404e.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "A table with room for the afternoon.",
+          "alt": "Wood picnic table and grill beneath a slatted pergola casting long striped shadows across the patio.",
+          "sourceFile": "e794e2a5-2686-489a-880c-2ae6c579d2fb.jpg",
+          "sourceSha256": "7015ed67131d404e8f05950c7abb7c4eb77bd41d454d94ee4a04e177b41c8242"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-7c3f6b4ee4b0d259",
+          "src": "assets/projects/the-sun-stayed-for-supper/7c3f6b4ee4b0d259.webp",
+          "width": 1200,
+          "height": 799,
+          "caption": "Pool, spa and a place to sit.",
+          "alt": "Rectangular pool and square spa framed by gray coping, stepping stones and wood benches.",
+          "sourceFile": "ee800ed3-4c38-450c-bea6-200fe25a262c.jpg",
+          "sourceSha256": "7c3f6b4ee4b0d259a4be812d2c7bf1ba93c7c6f01c33a945847cee494b95bf9c"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-ea48bf48ad73f7ab",
+          "src": "assets/projects/the-sun-stayed-for-supper/ea48bf48ad73f7ab.webp",
+          "width": 720,
+          "height": 540,
+          "caption": "The backyard plan, seen from above.",
+          "alt": "Overhead photograph of the rectangular pool and spa beside the lawn, house and pergola.",
+          "sourceFile": "feab9f17-1353-4305-ac52-fd35d71aa27c.jpg",
+          "sourceSha256": "ea48bf48ad73f7abee7afc80a71deb8f19b79f43a5b522bf698d6413902c2bfd"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "sequenceLabel": "THE WATER / THE TABLE / THE QUIET CORNERS",
+        "chapters": [
+          {
+            "label": "THE WATER",
+            "navigation": "The pool",
+            "title": "The long way to lunch.",
+            "description": "A length of water, a square spa, and somewhere to sit along the edge.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "the-sun-stayed-for-supper-7c3f6b4ee4b0d259"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "the-sun-stayed-for-supper-fe5a1f186c6cd3b6",
+                  "the-sun-stayed-for-supper-461e31a7bb97f3dc"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "THE TABLE",
+            "navigation": "Stay for supper",
+            "title": "The table can wait. So can everything else.",
+            "description": "A grill under the slats. A sofa in the shade. The afternoon has places to settle.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "the-sun-stayed-for-supper-aaeed8c6ddbbeba0"
+                ]
+              },
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "the-sun-stayed-for-supper-350d699af84be8e5",
+                  "the-sun-stayed-for-supper-259dc24008424140"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "THE QUIET CORNERS",
+            "navigation": "Around the corner",
+            "title": "A few more reasons to linger.",
+            "description": "Follow the steps. Take the side path. There is more to the yard than the view from the water.",
+            "blocks": [
+              {
+                "layout": "feature",
+                "photoIds": [
+                  "the-sun-stayed-for-supper-dd13fdb48c66ee6f"
+                ],
+                "note": {
+                  "label": "ANOTHER PACE ENTIRELY",
+                  "text": "A small wood sauna, tucked beside the path."
+                }
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "the-sun-stayed-for-supper-b14a08ab1029e97e",
+                  "the-sun-stayed-for-supper-2818b9071c28cf9d"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "Fifteen owner-supplied photographs. Originals preserved; location, date, construction scope and completed-work approval have not been supplied."
     },
     {
       "id": "collins-008",
