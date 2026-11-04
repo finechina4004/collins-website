@@ -3,16 +3,16 @@
  'use strict';
  const $=s=>document.querySelector(s),html=document.documentElement,stage=$('.backyard-stage');
  const roomDetails={
-  pools:{x:'50%',y:'50%',shelf:'Pick a backyard.',action:'Choose a real pool album ↓',inquiry:'Tell us about your pool idea ↗',idea:'I’d like to talk about a custom pool and the spaces around it.',caption:'THE SAME POOL. A SMALLER POINT OF VIEW.'},
-  fire:{x:'22%',y:'51%',shelf:'Evenings, photographed.',action:'See the real fire features ↓',inquiry:'Add a fire feature to my note ↗',idea:'I’m interested in a fire feature for my backyard.',caption:'01 / THERE IS A CHAIR BY THE FIRE.'},
-  kitchen:{x:'78%',y:'51%',shelf:'Something for supper.',action:'See the real cooking spaces ↓',inquiry:'Add an outdoor kitchen to my note ↗',idea:'I’m interested in an outdoor kitchen and a place to eat outside.',caption:'02 / SUPPER IS SOMEWHERE OUT HERE.'},
-  shade:{x:'77%',y:'37%',shelf:'Under a little cover.',action:'See the real shade structures ↓',inquiry:'Add some shade to my note ↗',idea:'I’m interested in a pergola or shade structure for my backyard.',caption:'03 / THE AFTERNOON CAN WAIT.'}
+  pools:{x:'50%',y:'50%',shelf:'Project postcards.',action:'Choose a real pool album ↓',inquiry:'Tell us about your pool idea ↗',idea:'I’d like to talk about a custom pool and the spaces around it.',caption:'POOLS & BACKYARDS'},
+  fire:{x:'27%',y:'60%',shelf:'Fire features in real projects.',action:'See the real fire features ↓',inquiry:'Add a fire feature to my note ↗',idea:'I’m interested in a fire feature for my backyard.',caption:'FIRE FEATURES'},
+  kitchen:{x:'75%',y:'60%',shelf:'Outdoor kitchen projects.',action:'See the real cooking spaces ↓',inquiry:'Add an outdoor kitchen to my note ↗',idea:'I’m interested in an outdoor kitchen and a place to eat outside.',caption:'OUTDOOR KITCHENS'},
+  shade:{x:'75%',y:'50%',shelf:'Shade and covered spaces.',action:'See the real shade structures ↓',inquiry:'Add some shade to my note ↗',idea:'I’m interested in a pergola or shade structure for my backyard.',caption:'SHADE & STRUCTURES'}
  };
  const rooms={
-  pools:{label:'THE POOL SURVEY',title:'A different point of view.',description:'From our painted pool to the real thing. Eight complete project albums, photographed in full. Choose a backyard and take a look around.',note:'Custom pools. Spas. Complete backyards.',items:null},
-  fire:{label:'THE EVENING DEPARTMENT',title:'Pull up a chair.',description:'A fireplace, a fire table, a little light at the water’s edge. The evening has several places to settle. These are photographs from our project albums.',note:'There is no hurry to go inside.',items:[['lower-form-of-leisure','lower-form-of-leisure-ec6df443aae9a460'],['the-sun-stayed-for-supper','the-sun-stayed-for-supper-aaeed8c6ddbbeba0'],['a-minor-key','a-minor-key-fb0daa55b47d2949'],['dallas-with-feeling','dallas-with-feeling-1be9be01746f74d2'],['umpire-strikes-back','umpire-strikes-back-8c09430029ecd73c']]},
-  kitchen:{label:'THE SUPPER SERVICE',title:'Dinner is somewhere out here.',description:'A grill under the slats. A table with a view. Follow these photographs into their complete backyard albums.',note:'Bring an appetite. And an idea.',items:[['the-sun-stayed-for-supper','the-sun-stayed-for-supper-350d699af84be8e5'],['strictly-striped-affair','strictly-striped-affair-19576c0fa80d7c81']]},
-  shade:{label:'THE SHADE STUDY',title:'A very good place to do very little.',description:'Pergolas, pavilions, and the spaces beneath them. Take a closer look at the real photographs, then open the full backyard album.',note:'A little shelter. A longer afternoon.',items:[['the-sun-stayed-for-supper','the-sun-stayed-for-supper-7015ed67131d404e'],['mr-bears-residence','mr-bears-residence-e5050074673f3ad9'],['umpire-strikes-back','umpire-strikes-back-8b553df39a7d3a63']]}
+  pools:{label:'POOLS & BACKYARDS',title:'Pools & backyards.',description:'Eight complete project albums.',note:'Custom pools. Spas. Complete backyards.',items:null},
+  fire:{label:'FIRE FEATURES',title:'Fire features.',description:'Fireplaces, fire pits and fire features from our project albums.',note:'Plan a fire feature for your backyard.',items:[['lower-form-of-leisure','lower-form-of-leisure-ec6df443aae9a460'],['the-sun-stayed-for-supper','the-sun-stayed-for-supper-aaeed8c6ddbbeba0'],['a-minor-key','a-minor-key-fb0daa55b47d2949'],['dallas-with-feeling','dallas-with-feeling-1be9be01746f74d2'],['umpire-strikes-back','umpire-strikes-back-8c09430029ecd73c']]},
+  kitchen:{label:'OUTDOOR KITCHENS',title:'Outdoor kitchens.',description:'Outdoor cooking and dining spaces. Open a postcard to see the complete project.',note:'Plan your outdoor kitchen.',items:[['the-sun-stayed-for-supper','the-sun-stayed-for-supper-350d699af84be8e5'],['strictly-striped-affair','strictly-striped-affair-19576c0fa80d7c81']]},
+  shade:{label:'SHADE & STRUCTURES',title:'Shade & structures.',description:'Pergolas, pavilions and covered spaces from our project albums.',note:'Plan a pergola or covered space.',items:[['the-sun-stayed-for-supper','the-sun-stayed-for-supper-7015ed67131d404e'],['mr-bears-residence','mr-bears-residence-e5050074673f3ad9'],['umpire-strikes-back','umpire-strikes-back-8b553df39a7d3a63']]}
  };
  let transition=0,pending='',lastEntrance='',generation=0;
  const roomPositions=new Map(),roomSelections=new Map();
@@ -39,12 +39,13 @@
  },true);
  function syncArtwork(){
   const image=$('.feature-plate[data-plate=backyard]');
-  if(image){const src=html.dataset.time==='evening'?'assets/backyard-evening-illustrated.webp':'assets/backyard-day-illustrated.webp';if(image.getAttribute('src')!==src)image.src=src;}
+  if(image){const src=html.dataset.time==='evening'?'assets/storybook-night.webp':'assets/storybook-day.webp';if(image.getAttribute('src')!==src)image.src=src;}
  }
+ let centered=false;
  function navigation(){
-  syncArtwork();
+  syncArtwork();if(!centered&&html.dataset.route==='world'&&innerWidth<=720){requestAnimationFrame(()=>{stage.scrollLeft=(stage.scrollWidth-stage.clientWidth)/2;});centered=true;}
   const world=html.dataset.route==='world';$('#backyard').inert=!world;
-  const still=html.classList.contains('calm');$('#world-motion').setAttribute('aria-pressed',String(still));$('#world-motion').textContent=still?'Motion off ◌':'Pause motion ◌';
+  const still=html.classList.contains('calm');$('#world-motion').setAttribute('aria-pressed',String(still));$('#world-motion').setAttribute('aria-label',still?'Resume motion':'Pause motion');$('#world-motion .tool-label').textContent=still?'Paused':'Motion';
  }
  new MutationObserver(navigation).observe(html,{attributes:true,attributeFilter:['data-route','class','data-time']});
  function visibility(){html.classList.toggle('world-paused',document.hidden);if(document.hidden&&pending){const hash=pending;stopTransition();location.hash=hash;}}
@@ -60,7 +61,7 @@
   const jump=make('button','feature-jump',detail.action);jump.type='button';jump.disabled=true;intro.append(jump);front.append(intro);
   const illustration=make('figure','feature-illustration'),plate=make('img','feature-plate');
   illustration.style.setProperty('--feature-x',detail.x);illustration.style.setProperty('--feature-y',detail.y);
-  plate.src=key==='pools'?'assets/pool-panorama-illustrated.webp':html.dataset.time==='evening'?'assets/backyard-evening-illustrated.webp':'assets/backyard-day-illustrated.webp';
+  plate.src=key==='pools'?'assets/storybook-pool.webp':html.dataset.time==='evening'?'assets/storybook-night.webp':'assets/storybook-day.webp';
   plate.width=key==='pools'?2172:1672;plate.height=key==='pools'?724:941;
   plate.alt=key==='pools'?'The illustrated turquoise pool, with solid tiled steps and warm reflections.':`A closer view of the ${key==='fire'?'brick fireplace and reading chairs':key==='kitchen'?'striped outdoor kitchen and supper table':'striped pergola'} in the imagined Collins backyard.`;
   if(key!=='pools')plate.dataset.plate='backyard';plate.decoding='async';plate.fetchPriority='high';
