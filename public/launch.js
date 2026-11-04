@@ -37,7 +37,7 @@
   launch.dataset.phase = 'ready';
   board.disabled = false;
   board.innerHTML = `${calm ? 'Enter the pool' : 'Step aboard'} <span aria-hidden="true">↗</span>`;
-  skip.textContent = 'Go straight to the pool →';
+  skip.textContent = 'Skip the boarding →';
   status.textContent = 'Vessel ready. Step aboard or go straight to the pool.';
  }
  function finish() {
@@ -65,7 +65,7 @@
   const from = `translate3d(${startX}px,${startY}px,0) scale(${startScale})`;
   const to = `translate3d(${endX}px,${endY}px,0) scale(${endScale})`;
   revealVessel.style.transform = from;
-  animation = revealVessel.animate([{transform:from},{transform:to}],{duration:1700,easing:'cubic-bezier(.55,.05,.2,1)',fill:'forwards'});
+  animation = revealVessel.animate([{transform:from},{transform:to}],{duration:1400,easing:'cubic-bezier(.55,.05,.2,1)',fill:'forwards'});
   animation.finished.then(() => { if (running) finish(); }).catch(() => {});
  }
  function start() {
@@ -75,9 +75,9 @@
   skip.textContent = 'Skip descent →';
   if (calm) { reveal(true); return; }
   say('boarding', 'Boarding vessel 01…');
-  delay(() => say('cockpit', 'Preparing to lower…'), 1100);
-  delay(() => say('descent', 'Lowering into the pool…'), 1600);
-  delay(() => reveal(), 4500);
+  delay(() => say('cockpit', 'Preparing to lower…'), 900);
+  delay(() => say('descent', 'Lowering into the pool…'), 1400);
+  delay(() => reveal(), 3800);
  }
  board.addEventListener('click', start);
  launch.addEventListener('keydown', e => { if (e.key === 'Escape') location.hash = '#home'; });

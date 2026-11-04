@@ -4,7 +4,7 @@
  const $$ = s => [...document.querySelectorAll(s)];
  const html=document.documentElement, pool=$('#pool'), journey=$('#journey'), viewport=$('.pool-window'), world=$('#world'), submarine=$('#submarine'), launch=window.CollinsLaunch;
  const scenes=$$('.scene'), stops=$$('[data-stop]');
- const labels=['The shallow end','Lost and found','The pool light','Life above the water','The way up'];
+ const labels=['Below the steps','Lost property','The light alcove','At the far skimmer','Back to poolside'];
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  let manualCalm=false,calm=reduced.matches,selected=0,progress=0,remembered=0,width=innerWidth,height=innerHeight,range=1,raf=0,lastProgress=0,brief='',transitionTimer=0,dockTimer=0;
  const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
@@ -46,7 +46,8 @@
   $('#shade-control').addEventListener('click', () => {
     const moved = $('.scene-above').classList.toggle('shifted');
     $('#shade-control').setAttribute('aria-pressed', String(moved));
-    $('#shade-control').textContent = moved ? 'Put the umbrella back ↙' : 'Move the umbrella ↗';
+    $('#shade-control').textContent = moved ? 'Lower the periscope ↓' : 'Raise the periscope ↑';
+    $('#periscope-view').hidden = !moved;
   });
 
 
@@ -54,14 +55,16 @@
  function showPool(focus=true,preserveLaunch=false,initialStop=remembered){document.title='Collins — A small backyard expedition';if(!preserveLaunch)launch?.cancel();clearTimeout(transitionTimer);$('#surface-transition').classList.remove('active');html.dataset.route='pool';pool.inert=preserveLaunch;$('#website').inert=true;progress=initialStop;resize(false);scrollTo({top:range*initialStop/4,behavior:'instant'});announce(initialStop);render();if(focus)pool.focus({preventScroll:true});}
  function showLaunch(focus=true){clearTimeout(transitionTimer);$('#surface-transition').classList.remove('active');html.dataset.route='launch';pool.inert=true;$('#website').inert=true;$('.surface-verb').textContent='View website';launch?.show(calm);scrollTo(0,0);if(focus)$('#launch').focus({preventScroll:true});}
  function showSpecial(kind,focus=true){launch?.cancel();$('.surface-verb').textContent='View website';document.title=kind==='studio'?'Album studio — Collins':'Project album — Collins';html.dataset.route=kind;pool.inert=true;$('#website').inert=false;$('#album-detail').hidden=kind!=='album';$('#studio').hidden=kind!=='studio';if(kind==='album')window.CollinsCatalog?.show(location.hash.split('/').slice(1).join('/'));if(kind==='studio')window.CollinsStudio?.show();requestAnimationFrame(()=>{scrollTo({top:0,behavior:'instant'});if(focus)$(kind==='album'?'#album-detail':'#studio').focus({preventScroll:true});});}
- function route(initial=false){const hash=location.hash;if(!hash||hash==='#launch'){showLaunch(!initial);return;}if(hash==='#pool'){showPool(!initial);return;}if(hash.startsWith('#work/')){showSpecial('album',!initial);return;}if(hash==='#studio'){showSpecial('studio',!initial);return;}if(inPool()&&!initial&&!calm){$('#surface-transition').classList.add('active');clearTimeout(transitionTimer);transitionTimer=setTimeout(()=>{showSite(hash);$('#surface-transition').classList.remove('active');},405);}else showSite(hash,!initial);}
+ function route(initial=false){clearTimeout(transitionTimer);const hash=location.hash;if(!hash||hash==='#launch'){showLaunch(!initial);return;}if(hash==='#pool'){showPool(!initial);return;}if(hash.startsWith('#work/')){showSpecial('album',!initial);return;}if(hash==='#studio'){showSpecial('studio',!initial);return;}if(inPool()&&!initial&&!calm){$('#surface-transition').classList.add('active');clearTimeout(transitionTimer);transitionTimer=setTimeout(()=>{showSite(hash);$('#surface-transition').classList.remove('active');},405);}else showSite(hash,!initial);}
  document.addEventListener('click',e=>{const anchor=e.target.closest('a[href^="#"]');if(!anchor)return;if(anchor.dataset.interest)$('#interest').value=anchor.dataset.interest;if(anchor.hash===location.hash){e.preventDefault();route();}});
  addEventListener('hashchange',()=>route());addEventListener('popstate',()=>route());addEventListener('pageshow',e=>{if(e.persisted)route(true);});
   $('#project-form').addEventListener('submit', event => {
     event.preventDefault();
     const values = new FormData(event.currentTarget);
-    brief = ['COLLINS CUSTOM POOLS & BACKYARDS', 'PROJECT BRIEF — PREPARED ONLY, NOT SENT', '', `Name: ${values.get('name')}`, `Phone: ${values.get('phone')}`, `Town / neighborhood: ${values.get('location')}`, `Project: ${values.get('interest')}`, '', String(values.get('idea') || ''), '', 'This preview is not connected to Collins. No inquiry has been submitted.'].join('\n');
+    brief = ['COLLINS CUSTOM POOLS & BACKYARDS', 'A NOTE ABOUT MY BACKYARD', '', `Name: ${values.get('name')}`, `Phone: ${values.get('phone')}`, `Town / neighborhood: ${values.get('location')}`, `Project: ${values.get('interest')}`, '', String(values.get('idea') || ''), '', 'Prepared on the Collins website. Please review and send this message.'].join('\n');
     $('#brief-text').textContent = brief;
+    $('#text-brief').href = `sms:${window.COLLINS_SITE_CONFIG.phone}?body=${encodeURIComponent(brief)}`;
+    $('#delivery-status').textContent = 'Nothing has been sent. Review the message and tap Send in your messaging app. If the note does not fill in, use Copy note and paste it.';
     $('#brief-review').hidden = false;
     $('#brief-review').scrollIntoView({ block: 'center', behavior: calm ? 'instant' : 'smooth' });
   });
