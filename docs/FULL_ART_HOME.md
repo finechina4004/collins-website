@@ -9,3 +9,11 @@ The new master was edited with the built-in image tool from the exact supplied s
 Services, real photographs, eight albums, contact note and confirmed phone remain unchanged. This Italian setting is imaginative artwork, not a completed Collins project or a change to the Texas service area.
 
 Validation: homepage and portrait/wide browser frames; navigation to project albums and services and back; source syntax and Wrangler dry-run. Browser frames are not physical devices. No native SMS/call was sent; no measured performance or screen-reader claim.
+
+Owner correction before publication: built-in pool stairs move to the RIGHT side, away from the LEFT diving board. The ordinary pool-entry ladder moves to the front-left corner, away from the board landing area. The diving board access ladder is retained. All routes still consume the same master asset.
+
+## Whole-site villa pass
+
+The owner asked to carry the villa identity through the entire site. villa.css now unifies service desk, real project shelf, all eight album themes, feature collections, about/service area, project-note form, footer, owner studio, boarding and cockpit: warm paper/sheet colors, muted green ink, terracotta links, antique brass rules, serif editorial navigation, consistent mounted photographs and readable form fields. Actual photography, factual copy and contact behavior remain intact. Left/right pool access correction uses one final master with RIGHT stairs and a LEFT-wall pool ladder; the diving board and upright diver remain left. Original final image output: generated_images/exec-362cf42c-f139-415b-b802-deff0751b2dd.png.
+
+Whole-site verification: desktop service desk, project shelf, Black Tie Barefoot album and viewer open/close; contact and album at 390px phone width; service hotspots realigned to new art; phone/contact details and photo catalog unchanged. Shared palette also covers static 404/holding fallbacks. No message sent.

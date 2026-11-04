@@ -1,0 +1,96 @@
+/* One Collins villa, from the painted cover to the photographic folios. */
+:root{--villa-paper:#f2e5c9;--villa-sheet:#fbf3e2;--villa-ink:#344d40;--villa-terra:#a75940;--villa-brass:#b59458;--villa-rule:#927c5147;--cream:var(--villa-paper);--ink:var(--villa-ink);--espresso:#352f27;--coral:var(--villa-terra);--survey-ink:var(--villa-ink);--survey-paper:var(--villa-paper);--survey-brass:var(--villa-brass)}
+html:not([data-route=world]),html:not([data-route=world]) body{background:var(--villa-paper);color:var(--villa-ink)}
+html:not([data-route=world]) .site-header{background:var(--villa-paper);border-bottom:3px double var(--villa-rule);padding-inline:4%;color:var(--villa-ink)}
+html:not([data-route=world]) .main-nav{font:14px Georgia,serif;gap:27px}
+html:not([data-route=world]) .main-nav .project-link{background:var(--villa-ink);border:1px solid var(--villa-ink);color:var(--villa-sheet);font-style:italic;padding:0 18px}
+html:not([data-route=world]) .main-nav a:hover{color:var(--villa-terra)}
+html:not([data-route=world]) .main-nav .project-link:hover{background:#52664a;color:var(--villa-sheet)}
+html:not([data-route=world]) .header-location{font:12px/1.5 Georgia,serif}
+html:not([data-route=world]) .header-location span:first-child{font:9px/1.5 Georgia,serif;letter-spacing:1.4px}
+html:not([data-route=world]) .eyebrow{font:10px/1.5 Georgia,serif;letter-spacing:1.5px;color:var(--villa-terra)}
+html:not([data-route=world]) .section-pad{padding-block:70px}
+html:not([data-route=world]) .section-intro{align-items:end;margin-bottom:42px;gap:48px}
+html:not([data-route=world]) .section-intro h2{font:400 clamp(43px,5.5vw,76px)/1.06 Georgia,serif;letter-spacing:-2px;color:var(--villa-ink)}
+html:not([data-route=world]) .section-intro>p{font:16px/1.8 Georgia,serif;max-width:400px}
+html:not([data-route=world]) .ink-button{background:var(--villa-ink);border-color:var(--villa-ink);color:var(--villa-sheet);font-family:Georgia,serif}
+html:not([data-route=world]) .ink-button:hover{background:var(--villa-terra);border-color:var(--villa-terra)}
+.build-section,.work-section,.about-section,.project-section,.studio-section{background:var(--villa-paper)!important;color:var(--villa-ink)}
+.backyard-desk{border:1px solid var(--villa-rule);background:var(--villa-sheet);box-shadow:0 6px 0 #b5945812}
+#backyard-desk .desk-study{background:var(--villa-sheet);padding:18px}
+#backyard-desk .desk-art{border:0;background:var(--villa-paper)}
+#backyard-desk .desk-notes{background:var(--villa-sheet);padding:35px}
+#backyard-desk .desk-selectors{border-color:var(--villa-rule)}
+#backyard-desk .desk-selectors button{font:13px Georgia,serif;min-height:46px;color:var(--villa-ink)}
+#backyard-desk .desk-selectors button[aria-pressed=true]{color:var(--villa-terra);border-color:var(--villa-terra)}
+#backyard-desk .desk-story h3{font:400 34px/1.14 Georgia,serif;color:var(--villa-ink)}
+#backyard-desk .desk-story p{font:15px/1.8 Georgia,serif}
+#backyard-desk .desk-story .desk-materials{font:10px/1.8 Georgia,serif;letter-spacing:.8px;color:#706b53}
+#backyard-desk .desk-examples,#backyard-desk .desk-carry{font:14px/1.5 Georgia,serif;color:var(--villa-ink)}
+.service-list{border-color:var(--villa-rule)}
+.service-list details{border-color:var(--villa-rule)}
+.service-list summary{font:22px/1.4 Georgia,serif;color:var(--villa-ink);min-height:65px}
+.service-list details>div{font:15px/1.8 Georgia,serif}.service-list details a{color:var(--villa-terra)}
+.album-index>.album-entry.postcard,.album-index>.album-entry.postcard:hover{background:var(--villa-sheet);color:var(--villa-ink);border:1px solid var(--villa-rule)}
+.album-index>.album-entry.postcard>.postcard-picture{inset:12px 12px 25%}
+.album-index>.album-entry.postcard .postcard-title{left:18px;right:18px;bottom:10%;font-size:clamp(24px,2.4vw,34px)}
+.album-index>.album-entry.postcard .postcard-meta{left:18px;bottom:4%;font:11px Georgia,serif;color:#766d57}
+.album-detail.photographic-album{--card-paper:var(--villa-paper)!important;--card-ink:var(--villa-ink)!important;--card-accent:var(--villa-brass)!important;background:var(--villa-paper)!important;color:var(--villa-ink)!important}
+.photographic-album .photographic-heading{padding-block:42px;border-bottom:3px double var(--villa-rule)!important}
+.photographic-album .photographic-heading h1{color:var(--villa-ink);font-size:clamp(52px,6.7vw,94px)}
+.photographic-album .photographic-topline,.photographic-album .photographic-count,.photographic-album .photographic-jumps button,.photographic-album figcaption{font-family:Georgia,serif;color:var(--villa-ink)}
+.photographic-album .photographic-topline{font-size:12px;border-color:var(--villa-rule)}
+.photographic-album .photo-open{padding:10px;background:var(--villa-sheet)!important;border:1px solid var(--villa-rule)}
+.photographic-album .editorial-photo figcaption{font:12px/1.6 Georgia,serif;padding-top:12px;color:#6b654f}
+.photographic-album .photographic-jumps button{font-size:13px}
+.photographic-album .photographic-all-heading,.photographic-album .photographic-chapter-heading{border-color:var(--villa-rule)}
+.photographic-album .photographic-album-end{border-color:var(--villa-rule)}
+.feature-detail{color:var(--villa-ink);background:var(--villa-paper)}
+.feature-backline,.feature-corners,.feature-end{border-color:var(--villa-rule);font-family:Georgia,serif}
+.feature-backline{font-size:12px;letter-spacing:0}
+.feature-description{font:16px/1.8 Georgia,serif}
+.feature-introduction h1{font:400 clamp(46px,5vw,74px)/1.05 Georgia,serif;color:var(--villa-ink)}
+.feature-card .feature-photo-mount{padding:10px;background:var(--villa-sheet);border:1px solid var(--villa-rule)}
+.feature-card figcaption{border-color:var(--villa-rule);padding:17px 0 22px}
+.feature-card strong{font:400 25px/1.2 Georgia,serif;color:var(--villa-ink)}
+.feature-card .feature-photo-caption{font:13px/1.6 Georgia,serif;color:#6b654f}
+.about-section{border-block:1px solid var(--villa-rule)}
+.about-section h2,.project-section h2{font-family:Georgia,serif;color:var(--villa-ink)}
+.about-section p,.project-section>div>p{font:16px/1.8 Georgia,serif;max-width:500px}
+.area-card{background:var(--villa-sheet);border:1px solid var(--villa-rule);color:var(--villa-ink);box-shadow:none;transform:none}
+.area-card .area-stamp{background:none;border:1px solid var(--villa-brass);color:var(--villa-ink)}
+#project-form{background:var(--villa-sheet);border:1px solid var(--villa-rule);box-shadow:0 6px 0 #b5945812;color:var(--villa-ink);transform:none}
+#project-form .brief-letterhead{font:11px Georgia,serif;letter-spacing:1.3px;border-bottom:3px double var(--villa-rule);color:var(--villa-terra)}
+#project-form label{font:13px/1.5 Georgia,serif;letter-spacing:0}
+#project-form input,#project-form select,#project-form textarea{font:16px/1.5 Georgia,serif;background:#fffaf0;border:1px solid #a59a7d;color:#352f27;border-radius:0;padding:12px;min-height:46px}
+#project-form input:focus,#project-form select:focus,#project-form textarea:focus{outline-color:var(--villa-terra)}
+#project-form .form-privacy,#project-form .draft-status{font:12px/1.65 Georgia,serif;color:#72694f}
+#project-form .note-steps{font:12px Georgia,serif;color:#766d57}
+#project-form .brief-review{background:var(--villa-paper);border-color:var(--villa-rule)}
+#project-form pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.8 Georgia,serif}
+.site-footer{border-top:3px double var(--villa-rule);background:var(--villa-sheet);color:var(--villa-ink);font-family:Georgia,serif}
+.site-footer small{font:11px/1.7 Georgia,serif;max-width:300px}
+.launch,.launch-stage,.launch-set,.pool-session .pool-window,.pool-session .pool-actions,.launch-footer{background:var(--villa-paper)}
+.launch-footer,.pool-actions{border-top:3px double var(--villa-rule);color:var(--villa-ink);font-family:Georgia,serif}
+.launch-instruction>span,.launch-footer>a{font-family:Georgia,serif}
+.board-button{background:var(--villa-ink);border-color:var(--villa-ink);font:italic 16px Georgia,serif;color:var(--villa-sheet)}
+.cockpit-enamel{background-color:var(--villa-paper);box-shadow:inset 0 0 50px #8f845355}
+.cockpit-rim{border-color:#c4a86f;box-shadow:0 0 0 2px #7f704d,0 0 0 6px #e3cf9c,inset 0 0 0 3px #83754f}
+.studio-section input,.studio-section textarea,.studio-section select{background:var(--villa-sheet);border:1px solid var(--villa-rule);font-family:Georgia,serif}
+@media(max-width:720px){
+ html:not([data-route=world]) .site-header{padding-inline:18px}
+ html:not([data-route=world]) .main-nav{font-size:12px;gap:15px}
+ html:not([data-route=world]) .main-nav .project-link{padding-inline:10px}
+ html:not([data-route=world]) .section-pad{padding-block:42px}
+ html:not([data-route=world]) .section-intro{gap:20px;margin-bottom:28px}
+ html:not([data-route=world]) .section-intro h2{font-size:43px}
+ #backyard-desk .desk-study{padding:10px}#backyard-desk .desk-notes{padding:23px}
+ .feature-introduction h1{font-size:43px}.feature-backline{font-size:11px}
+ .album-index>.album-entry.postcard .postcard-title{font-size:25px}
+ .photographic-album .photographic-heading h1{font-size:49px}
+ .photographic-album .photo-open{padding:5px}.photographic-album .photographic-topline{font-size:11px}
+ #project-form input,#project-form select,#project-form textarea{font-size:16px}
+}
+#backyard-desk .spot-swim{left:50%;top:81%}#backyard-desk .spot-cook{left:77%;top:65%}#backyard-desk .spot-shade{left:77%;top:53%}#backyard-desk .spot-stay{left:27%;top:62%}
+.photograph-viewer{background:#263b31;color:#f6ead0;border-color:var(--villa-brass)}
+.viewer-header,.viewer-bottom{border-color:#d2ba7b55}.viewer-count,.viewer-close{font-family:Georgia,serif}
