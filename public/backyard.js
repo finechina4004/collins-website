@@ -39,7 +39,7 @@
  },true);
  function syncArtwork(){
   const image=$('.feature-plate[data-plate=backyard]');
-  if(image){const src=html.dataset.time==='evening'?'assets/hacienda-night.webp':'assets/hacienda-day.webp';if(image.getAttribute('src')!==src)image.src=src;}
+  if(image){const src='assets/collins-cover.webp';if(image.getAttribute('src')!==src)image.src=src;}
  }
  let centered=false;
  function navigation(){
@@ -58,26 +58,7 @@
   if(!room){root.append(make('h1','','This corner is not available.'),make('p','','Return to the artwork or browse all eight albums.'));return;}
   const detail=roomDetails[key],front=make('section','feature-frontispiece'),intro=make('div','feature-introduction');
   intro.append(make('p','eyebrow',room.label),make('h1','',room.title),make('p','feature-description',room.description));
-  const jump=make('button','feature-jump',detail.action);jump.type='button';jump.disabled=true;intro.append(jump);front.append(intro);
-  const illustration=make('figure','feature-illustration'),plate=make('img','feature-plate');
-  illustration.style.setProperty('--feature-x',detail.x);illustration.style.setProperty('--feature-y',detail.y);
-  plate.src=key==='pools'?'assets/storybook-pool.webp':html.dataset.time==='evening'?'assets/hacienda-night.webp':'assets/hacienda-day.webp';
-  plate.width=key==='pools'?2172:1672;plate.height=key==='pools'?724:941;
-  plate.alt=key==='pools'?'The illustrated turquoise pool, with solid tiled steps and warm reflections.':`A closer view of the ${key==='fire'?'brick fireplace and reading chairs':key==='kitchen'?'striped outdoor kitchen and supper table':'striped pergola'} in the imagined Collins backyard.`;
-  if(key!=='pools')plate.dataset.plate='backyard';plate.decoding='async';plate.fetchPriority='high';
-  const artworkFallback=make('p','feature-art-fallback','The illustration could not load. The real project photographs are below.');artworkFallback.hidden=true;
-  plate.addEventListener('error',()=>{illustration.classList.add('has-error');artworkFallback.hidden=false;});
-  plate.addEventListener('load',()=>{illustration.classList.remove('has-error');artworkFallback.hidden=true;});
-  const caption=make('figcaption');caption.append(make('span','',detail.caption),make('small','','AN ILLUSTRATED COLLINS WORLD'));
-  illustration.append(plate,artworkFallback,caption);
-  if(key==='pools'){
-   const guide=make('a','feature-vessel');guide.href='#pool';guide.setAttribute('aria-label','Resume the submarine');
-   const vessel=make('img');vessel.src='assets/vessel-illustrated.webp';vessel.alt='';vessel.width=1536;vessel.height=1024;
-   vessel.addEventListener('error',()=>guide.classList.add('has-error'));
-   const name=make('img','hull-nameplate');name.src='assets/hull-nameplate.svg';name.alt='';name.width=480;name.height=100;
-   const guideArt=make('span','feature-guide-art');guideArt.append(vessel,name);guide.append(guideArt,make('span','feature-guide-label','RESUME THE SUBMARINE ↓'));illustration.append(guide);
-  }
-  front.append(illustration);root.append(front);
+  front.append(intro);root.append(front);
   const corners=make('nav','feature-corners');corners.setAttribute('aria-label','Explore another corner of the backyard');
   for(const [corner,label] of [['pools','Pool'],['fire','Fire'],['kitchen','Kitchen'],['shade','Shade']]){const a=make('a','',label);a.href=`#experience/${corner}`;if(corner===key)a.setAttribute('aria-current','page');corners.append(a);}root.append(corners);
   document.title=room.label.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase())+' — Collins';
@@ -94,7 +75,7 @@
   const total=valid.reduce((count,item)=>count+item.project.photos.length,0);
   shelfHeading.append(shelfTitle,make('p','',key==='pools'?`${valid.length} COMPLETE ALBUMS / ${total} PHOTOGRAPHS`:`${valid.length} ALBUMS / SELECTED PROJECT PHOTOGRAPHS`));
   shelf.append(shelfHeading);const grid=make('div','feature-grid');
-  jump.disabled=false;jump.addEventListener('click',()=>{shelf.scrollIntoView({block:'start',behavior:calm()?'instant':'smooth'});shelfTitle.focus({preventScroll:true});});
+
   valid.forEach(({project,photo},i)=>{const a=make('a','feature-card');a.href=`#work/${project.slug}`;a.setAttribute('aria-label',`Open complete album: ${project.title}`);a.dataset.album=project.slug;a.addEventListener('click',()=>{roomSelections.set(key,project.slug);try{sessionStorage.setItem('collins-feature-origin',key);}catch{}});
    const figure=make('figure'),image=make('img');image.src=photo.src;image.alt=photo.alt||photo.caption;image.width=photo.width;image.height=photo.height;image.loading=i?'lazy':'eager';image.decoding='async';
    const mount=make('div','feature-photo-mount');mount.append(image,make('span','feature-folio',`${String(i+1).padStart(2,'0')} / ${String(valid.length).padStart(2,'0')}`));

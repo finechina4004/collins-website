@@ -5,8 +5,8 @@
  function navigation(){const hash=location.hash||'#backyard';document.querySelectorAll('.main-nav a').forEach(a=>{const active=a.hash===hash||(a.hash==='#work'&&hash.startsWith('#work/'))||(a.hash==='#build'&&hash==='#about');if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});}
  addEventListener('hashchange',navigation);navigation();
  function light(on){
-  html.dataset.time=on?'evening':'day';const file=on?'assets/hacienda-night.webp':'assets/hacienda-day.webp';html.style.setProperty('--backyard-plate',`url('${file}')`);
-  $('.backyard-art').src=file;$('.backyard-art').alt=`The painted Collins backyard in ${on?'evening':'afternoon'} light, with an arched hacienda, checkerboard courtyard, tiled fireplace, outdoor kitchen, diving board and cutaway pool on a carved theatre base.`;
+  html.dataset.time=on?'evening':'day';const file='assets/collins-cover.webp';html.style.setProperty('--backyard-plate',`url('${file}')`);
+  $('.backyard-art').src=file;$('.backyard-art').alt='A front-facing painted Collins backyard with a cream poolhouse, fireplace, pergola, kitchen and turquoise pool.';
   $('.launch-set').src=file;$('#desk-art-image').src=file;document.querySelectorAll('[data-plate="backyard"]').forEach(img=>img.src=file);
   $('#pool').classList.toggle('is-evening',on);$('#home-world').classList.toggle('after-hours',on);
   $('#backyard-light').setAttribute('aria-pressed',String(on));$('#backyard-light').setAttribute('aria-label',on?'Switch to daylight':'Switch to evening');$('#backyard-light .tool-label').textContent=on?'Night':'Day';
