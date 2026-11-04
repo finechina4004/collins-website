@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="340" viewBox="0 0 1000 340" preserveAspectRatio="none">
+ <defs>
+  <filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".33" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".12"/></feComponentTransfer><feComposite in2="SourceAlpha" operator="in" result="grain"/><feBlend in="SourceGraphic" in2="grain" mode="multiply"/></filter>
+  <pattern id="checks" width="32" height="32" patternUnits="userSpaceOnUse"><path fill="#eee0b8" d="M0 0h32v32H0z"/><path fill="#637359" d="M0 0h16v16H0zM16 16h16v16H16z"/></pattern>
+ </defs>
+ <g stroke="#526750" stroke-width="2.4" fill="#f0dfb8" filter="url(#paper)">
+  <path d="M95 27Q169 30 186 17L207 7H793L814 17Q831 30 905 27L910 52Q941 50 951 70L976 76V263L952 271Q942 292 910 289L905 313Q831 309 814 323L793 333H207L186 323Q169 310 95 313L90 289Q58 292 48 271L24 263V76L49 70Q59 50 90 52Z"/>
+  <path d="M107 42H197L218 24H782L803 42H893L900 68L928 76L957 91V249L928 264L900 273L893 297H803L782 316H218L197 297H107L100 273L72 264L43 249V91L72 76L100 68Z" fill="none" stroke-width="1.2"/>
+ </g>
+ <path d="M238 26H762V36H238zM238 304H762V314H238z" fill="url(#checks)" opacity=".8"/>
+ <g fill="#9c6d41" stroke="#f8eac6" stroke-width="2"><circle cx="77" cy="170" r="5"/><circle cx="923" cy="170" r="5"/></g>
+ <g fill="none" stroke="#8a7959" stroke-width="1.5"><path d="M63 148q22 22 0 44M937 148q-22 22 0 44M138 60q18 8 36 0M826 60q18 8 36 0M138 280q18-8 36 0M826 280q18-8 36 0"/></g>
+</svg>

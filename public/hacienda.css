@@ -1,0 +1,70 @@
+/* The homepage masthead is a painted theatre sign; links are ceramic set pieces. */
+html[data-route=world] .site-header{
+ top:1.4%;left:50%;width:min(870px,72vw);transform:translateX(-50%);
+ height:auto;min-height:0;padding:40px 65px 30px;gap:9px;
+ background:transparent url('assets/hacienda-sign.svg') center/100% 100% no-repeat!important;
+ color:#294e43;filter:drop-shadow(0 4px 2px #564b2726);
+}
+html[data-route=world] .site-header .brand-art{width:clamp(350px,38vw,530px);max-width:100%;filter:none}
+html[data-route=world] .site-header .header-location{margin:0}
+html[data-route=world] .site-header .header-location span:first-child{font:10px/1.3 Georgia,serif;letter-spacing:1.5px}
+html[data-route=world] .site-header .main-nav{display:flex;position:static;gap:26px;width:auto;justify-content:center;flex-wrap:nowrap;font:18px/1.3 Georgia,serif}
+html[data-route=world] .site-header .main-nav a{font:inherit;min-height:44px;padding:2px 0;border:0;background:none;color:inherit}
+html[data-route=world] .site-header .main-nav a:hover{box-shadow:none;text-decoration:underline;text-decoration-color:#a35e3c;text-underline-offset:6px}
+html[data-route=world] .site-header .main-nav .project-link{font-style:italic}
+html[data-route=world] .site-header .main-nav a:focus-visible{outline:3px solid #9c4b2f;outline-offset:3px;border-radius:2px}
+.backyard{min-height:650px;background:#e9d3ab}
+.backyard-stage{position:relative;top:auto;height:100svh;min-height:650px;background:#e9d3ab;overflow:hidden}
+.world-composition{position:absolute;inset:auto;left:50%;top:50%;bottom:auto;width:min(100vw,max(975px,150svh));min-width:0;height:auto;aspect-ratio:3/2;transform:translate(-50%,-50%)}
+.backyard-art{object-fit:fill;object-position:center;mask-image:none}
+.world-portal{display:flex;align-items:center;justify-content:center;outline-offset:4px;z-index:12}
+.world-portal>span{position:relative;display:block;flex:none;width:max-content;max-width:none;padding:8px 15px;
+ background:#f0e4c4!important;color:#294a3e!important;font:700 16px/1.2 Georgia,serif;letter-spacing:.2px;
+ text-shadow:none!important;box-shadow:inset 0 0 0 2px #ede0bb,inset 0 0 0 3px #68806a,0 2px 2px #3f382544;
+ border:2px solid #4d6b57;border-radius:4px 10px 4px 10px;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.5' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.08' filter='url(%23n)'/%3E%3C/svg%3E")!important;
+ transition:translate .18s,box-shadow .18s;
+}
+.world-portal>span:before,.world-portal>span:after{content:'';display:block;position:absolute;top:50%;left:5px;width:3px;height:3px;border:0;border-radius:50%;margin:0;background:#8e7048;opacity:.8;transform:translateY(-50%)}
+.world-portal>span:after{left:auto;right:5px}
+.world-portal:hover>span{transform:none;translate:0 -2px;box-shadow:inset 0 0 0 2px #ede0bb,inset 0 0 0 3px #68806a,0 4px 2px #3f382544}
+.portal-fire{left:21%;top:51%;width:14%;height:17%}.portal-fire>span{rotate:-1deg}
+.portal-whole{left:39%;top:53%;width:22%;height:17%}.portal-whole>span{border-radius:45% 45% 4px 4px;padding:13px 17px 9px}
+.portal-shade{left:65%;top:47%;width:23%;height:11%}.portal-shade>span{rotate:.8deg}
+.portal-kitchen{left:66%;top:60%;width:23%;height:11%}.portal-kitchen>span{rotate:-.6deg}
+.portal-pool{left:42%;top:82%;width:19%;height:10%}.portal-pool>span{border-color:#9c6947;box-shadow:inset 0 0 0 2px #ede0bb,inset 0 0 0 3px #aa7451,0 2px 2px #3f382544}
+.world-vessel{left:61%;top:77%;width:10%}.home-diver{left:12%;top:54%;width:9%}
+.world-options{padding:8px 3%;bottom:0;min-height:60px;color:#294a3e;background:#efe1c3dd;border-top:1px solid #8b795b33}
+.world-options p{font:12px/1.4 Georgia,serif;max-width:340px}.world-options nav{font:15px Georgia,serif;gap:24px}
+.scene-tools{top:18px;right:18px;gap:8px}.scene-tool{width:50px;min-height:52px;border:1px solid #566b5066;background:#f3e6c8;color:#2d4f42;box-shadow:inset 0 0 0 3px #e3d1aa;font-size:10px}.tool-label{font-size:9px}
+html[data-time=evening][data-route=world] .site-header{color:#294e43}
+html[data-time=evening][data-route=world] .site-header .brand-art{filter:none}
+html[data-time=evening] .world-options{color:#f5e6c3;background:#163b3fdd;border-color:#c7bc8a44}
+html[data-time=evening] .scene-tool{background:#eeddb8;color:#2d4f42}
+@media(min-width:721px) and (max-width:1100px){
+ html[data-route=world] .site-header{width:740px;max-width:82vw;padding:36px 48px 25px}
+ html[data-route=world] .site-header .brand-art{width:430px}
+ html[data-route=world] .site-header .main-nav{gap:20px;font-size:17px}
+ .scene-tools{right:8px;top:8px;gap:4px}.scene-tool{width:44px;min-height:46px}
+}
+@media(min-width:721px) and (max-height:560px){
+ html[data-route=world] .site-header{top:58px;width:600px;max-width:82vw;padding:24px 44px 18px;gap:5px}
+ html[data-route=world] .site-header .brand-art{width:310px}
+ html[data-route=world] .site-header .main-nav{font-size:16px;gap:20px}
+}
+@media(max-width:720px){
+ .backyard{height:max(100svh,790px);min-height:790px}
+ html[data-route=world] .site-header{top:56px;width:calc(100% - 18px);max-width:480px;padding:30px 27px 25px;gap:9px}
+ html[data-route=world] .site-header .brand-art{width:min(76vw,340px);max-width:100%}
+ html[data-route=world] .site-header .header-location span:first-child{font-size:9px;letter-spacing:1px}
+ html[data-route=world] .site-header .main-nav{display:grid;grid-template-columns:auto auto;column-gap:27px;row-gap:0;font-size:17px;white-space:nowrap}
+ html[data-route=world] .site-header .main-nav a{min-height:44px;justify-content:center;padding:0}
+ .backyard-stage{position:absolute;top:282px;bottom:auto;height:410px;min-height:0;overflow-x:auto;overflow-y:hidden;touch-action:pan-x;scrollbar-width:thin;scrollbar-color:#657b5b88 transparent}
+ .world-composition{position:relative;inset:auto;top:-96px;left:0;width:780px;min-width:780px;height:520px;aspect-ratio:3/2;transform:none}
+ .backyard-art{object-fit:fill;mask-image:none}.world-portal>span{font-size:16px}
+ .world-options{bottom:0;min-height:108px;padding:8px 12px;gap:3px;justify-content:center;flex-direction:column}
+ .world-options p{font-size:12px;text-align:center;margin:0;max-width:none}.world-options p:after{content:'Swipe the set to explore';font-size:11px;margin-top:4px}
+ .world-options nav{font-size:14px;gap:22px;margin:0;min-height:44px;flex-wrap:nowrap}
+ .scene-tools{right:10px;top:7px;gap:7px}.scene-tool{width:44px;min-height:44px}.tool-icon{font-size:20px}.tool-label{font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){.world-portal>span{transition:none}}

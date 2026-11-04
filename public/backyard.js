@@ -39,7 +39,7 @@
  },true);
  function syncArtwork(){
   const image=$('.feature-plate[data-plate=backyard]');
-  if(image){const src=html.dataset.time==='evening'?'assets/storybook-night.webp':'assets/storybook-day.webp';if(image.getAttribute('src')!==src)image.src=src;}
+  if(image){const src=html.dataset.time==='evening'?'assets/hacienda-night.webp':'assets/hacienda-day.webp';if(image.getAttribute('src')!==src)image.src=src;}
  }
  let centered=false;
  function navigation(){
@@ -61,7 +61,7 @@
   const jump=make('button','feature-jump',detail.action);jump.type='button';jump.disabled=true;intro.append(jump);front.append(intro);
   const illustration=make('figure','feature-illustration'),plate=make('img','feature-plate');
   illustration.style.setProperty('--feature-x',detail.x);illustration.style.setProperty('--feature-y',detail.y);
-  plate.src=key==='pools'?'assets/storybook-pool.webp':html.dataset.time==='evening'?'assets/storybook-night.webp':'assets/storybook-day.webp';
+  plate.src=key==='pools'?'assets/storybook-pool.webp':html.dataset.time==='evening'?'assets/hacienda-night.webp':'assets/hacienda-day.webp';
   plate.width=key==='pools'?2172:1672;plate.height=key==='pools'?724:941;
   plate.alt=key==='pools'?'The illustrated turquoise pool, with solid tiled steps and warm reflections.':`A closer view of the ${key==='fire'?'brick fireplace and reading chairs':key==='kitchen'?'striped outdoor kitchen and supper table':'striped pergola'} in the imagined Collins backyard.`;
   if(key!=='pools')plate.dataset.plate='backyard';plate.decoding='async';plate.fetchPriority='high';
