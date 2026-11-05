@@ -44,7 +44,7 @@
     if(!idea.value.includes(note.idea)){const next=[idea.value.trim(),note.idea].filter(Boolean).join('\n');if(next.length<=idea.maxLength)idea.value=next;else $('#brief-review-note').textContent='Your note is already full. We kept what you wrote.';}
   });
   const drawing=$('#desk-art-image');
-  drawing.addEventListener('error',()=>{$('#desk-art').classList.add('has-error');$('#desk-art-note').textContent='The drawing could not load. Use Swim, Cook, Shade or Stay to explore.';});
+  drawing.addEventListener('error',()=>{$('#desk-art').classList.add('has-error');$('#desk-art-note').textContent='The photograph could not load. Use Pools, Kitchens, Shade or Fire to explore.';});
   drawing.addEventListener('load',()=>{$('#desk-art').classList.remove('has-error');/* Keep the selected real project credit. */});
   // Escape the drawing with its ordinary links; no wheel interception or cursor tricks.
   const form=$('#project-form');

@@ -2,11 +2,12 @@
   "name": "collins-website",
   "version": "0.1.0",
   "private": true,
-  "description": "Collins private pool expedition and homeowner website",
+  "description": "Collins custom pools and backyard portfolio website",
   "scripts": {
-    "deploy": "wrangler deploy",
-    "check:deploy": "wrangler deploy --dry-run",
-    "build:site": "node scripts/prepare-static.mjs"
+    "deploy": "node scripts/bundle-styles.mjs && wrangler deploy",
+    "check:deploy": "node scripts/bundle-styles.mjs --check && wrangler deploy --dry-run",
+    "build:site": "node scripts/bundle-styles.mjs && node scripts/prepare-static.mjs",
+    "build:assets": "node scripts/bundle-styles.mjs"
   },
   "devDependencies": {
     "wrangler": "4.156.2"

@@ -2,9 +2,9 @@
  'use strict';
  const $=s=>document.querySelector(s);let state=null,activeId=null,mounted=false,cloudReady=false,cloudRevision=null;
  const clone=v=>structuredClone(v);const uid=()=>crypto.randomUUID();const safeSlug=s=>s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||`album-${Date.now()}`;
- const db=new Promise((resolve,reject)=>{const request=indexedDB.open('collins-album-studio',1);request.onupgradeneeded=()=>request.result.createObjectStore('drafts');request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);});
- async function readLocal(){const base=await db;return new Promise((resolve,reject)=>{const r=base.transaction('drafts').objectStore('drafts').get('collection');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});}
- async function writeLocal(){const base=await db;return new Promise((resolve,reject)=>{const tx=base.transaction('drafts','readwrite');tx.objectStore('drafts').put(clone(state),'collection');tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});}
+ let database;function db(){return database||(database=new Promise((resolve,reject)=>{const request=indexedDB.open('collins-album-studio',1);request.onupgradeneeded=()=>request.result.createObjectStore('drafts');request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);}));}
+ async function readLocal(){const base=await db();return new Promise((resolve,reject)=>{const r=base.transaction('drafts').objectStore('drafts').get('collection');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});}
+ async function writeLocal(){const base=await db();return new Promise((resolve,reject)=>{const tx=base.transaction('drafts','readwrite');tx.objectStore('drafts').put(clone(state),'collection');tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});}
  function status(text){$('#studio-status').textContent=text;}
  function active(){return state.projects.find(p=>p.id===activeId);}
  function collect(){const p=active();if(!p)return;p.title=$('#edit-title').value.trim();p.town=$('#edit-town').value.trim();p.year=$('#edit-year').value.trim();p.summary=$('#edit-summary').value.trim();p.services=[...$('#edit-services').selectedOptions].map(o=>o.value);p.approved=$('#edit-approved').checked;if(!p.slug)p.slug=safeSlug(p.title);p.updatedAt=new Date().toISOString();}

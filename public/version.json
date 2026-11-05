@@ -1,1 +1,6 @@
-{"build":"collins-villa-interiors-03","sourceCheckpoint":"c5c3f33","destination":"Cloudflare collins-website","release":true}
+{
+  "build": "collins-launch-ready-02",
+  "sourceCheckpoint": "4d474a6",
+  "destination": "Cloudflare collins-website",
+  "release": true
+}
