@@ -9,10 +9,20 @@
     stay: { number:'04', title:'Patios & fire features.', description:'Patios, fireplaces, fire pits and complete outdoor living spaces.', materials:'FIRE FEATURES / PATIOS / COMPLETE BACKYARDS', action:'Put a gathering space in my brief', interest:'Complete backyard', idea:'I’d like to talk about a patio, fire feature, and room to gather.' }
   };
   const examples={swim:['#experience/pools','See the real pool albums ↗'],cook:['#experience/kitchen','Explore real outdoor kitchens ↗'],shade:['#experience/shade','Explore real shade structures ↗'],stay:['#experience/fire','Explore real fire features ↗']};
-  let active='swim';
+  let active='swim',photoRequest=0;
+  const references={swim:['a-minor-key',null],cook:['the-sun-stayed-for-supper','the-sun-stayed-for-supper-350d699af84be8e5'],shade:['mr-bears-residence','mr-bears-residence-e5050074673f3ad9'],stay:['dallas-with-feeling','dallas-with-feeling-1be9be01746f74d2']};
+  async function showProjectPhoto(key){
+    const request=++photoRequest,catalog=await window.CollinsCatalog.ready;
+    if(request!==photoRequest)return;
+    const [slug,id]=references[key],project=catalog.projects.find(p=>p.slug===slug),photo=project?.photos.find(p=>p.id===(id||project.coverId))||project?.photos[0];
+    if(!photo){$('#desk-art').classList.add('has-error');$('#desk-art-note').textContent='Project photographs could not load. Use the service links below.';return;}
+    $('#desk-art').classList.remove('has-error');
+    const image=$('#desk-art-image');image.src=photo.preview||photo.src;image.alt=photo.alt||photo.caption||project.title;image.width=photo.width;image.height=photo.height;
+    $('#desk-art-note').textContent='PROJECT PHOTOGRAPH / '+project.title;
+  }
   const choose = key => {
     if (!notes[key]) return;
-    active=key;
+    active=key;showProjectPhoto(key);
     try{sessionStorage.setItem('collins-desk-selection',key);}catch{}
     const note=notes[key];
     document.querySelectorAll('[data-backyard]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.backyard===key)));
@@ -35,9 +45,10 @@
   });
   const drawing=$('#desk-art-image');
   drawing.addEventListener('error',()=>{$('#desk-art').classList.add('has-error');$('#desk-art-note').textContent='The drawing could not load. Use Swim, Cook, Shade or Stay to explore.';});
-  drawing.addEventListener('load',()=>{$('#desk-art').classList.remove('has-error');$('#desk-art-note').textContent='AN ILLUSTRATED COLLINS BACKYARD / CHOOSE A PLACE TO BEGIN.';});
+  drawing.addEventListener('load',()=>{$('#desk-art').classList.remove('has-error');/* Keep the selected real project credit. */});
   // Escape the drawing with its ordinary links; no wheel interception or cursor tricks.
   const form=$('#project-form');
+  $('#write-project-note').addEventListener('click',()=>{form.querySelector('input').focus({preventScroll:true});form.scrollIntoView({block:'start',behavior:'instant'});});
   const invalidateBrief = () => {
     if(!$('#brief-review').hidden){$('#brief-review').hidden=true;$('#brief-review-note').textContent='Your notes changed. Review the brief again to update your copy.';}
   };
