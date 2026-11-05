@@ -27,7 +27,7 @@
   root.style.setProperty('--folio-accent',ordinal%2?'#946649':'#4c624b');
   const chapters=(project.editorial?.chapters||[]).map(c=>({...c,ids:(c.blocks||[]).flatMap(b=>b.photoIds||[])}));
   const shell=make('div','folio-shell'),topline=make('nav','folio-topline');topline.setAttribute('aria-label','Album navigation');
-  for(const [label,hash] of [['← All albums','#work'],['The backyard','#backyard'],['Resume the submarine ↓','#pool'],['Start a project ↗','#project']]){const a=make('a','',label);a.href=hash;topline.append(a);}shell.append(topline);
+  for(const [label,hash] of [['← All albums','#work'],['The backyard','#backyard'],['Services','#build'],['Start a project ↗','#project']]){const a=make('a','',label);a.href=hash;topline.append(a);}shell.append(topline);
   if(local)shell.append(make('p','photographic-preview','LOCAL DRAFT PREVIEW · WEBSITE CONTENT HAS NOT CHANGED'));
   const heading=make('header','folio-heading');heading.append(make('p','eyebrow',`COLLINS / ALBUM ${pad(ordinal+1)}`),make('h1','',project.title),make('p','folio-subtitle',`${photos.length} photographs. One backyard.`));shell.append(heading);
   const reader=make('section','folio-reader');reader.setAttribute('aria-label',`${project.title} photograph album`);

@@ -1,0 +1,48 @@
+/* Walkthrough repairs: stable routes, useful mobile scenes, legible night controls. */
+.water-optics{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+.world-pan-controls{display:none}
+.route-notice{padding:15px 18px;margin:0 0 25px;background:#fbf2dd;border:1px solid #b89c68;font:15px/1.6 Georgia,serif;color:#344d40}
+.album-retry{display:inline-flex;align-items:center;min-height:44px;padding:10px 17px;border:1px solid #8e7951;background:#f8edd5;color:#344d40;font:14px Georgia,serif}
+.catalog-error{grid-column:1/-1;font:16px/1.8 Georgia,serif;padding:25px;background:#fbf1da;border:1px solid #bba678}
+html[data-time=evening][data-route=world] .site-header{color:#fff0cf}
+html[data-time=evening][data-route=world] .site-header .brand{mix-blend-mode:normal}
+html[data-time=evening][data-route=world] .site-header .brand-print{filter:brightness(0) saturate(100%) invert(92%) sepia(19%) saturate(520%) hue-rotate(343deg);opacity:.96}
+html[data-time=evening][data-route=world] .site-header .main-nav,html[data-time=evening][data-route=world] .site-header .header-location{color:#fff0cf;text-shadow:0 1px 3px #2a352a}
+html[data-time=evening][data-route=world] .world-portal>span{color:#fff0cf;text-shadow:0 1px 3px #243a30}
+.site-footer .footer-phone{display:inline-flex;min-height:44px;align-items:center;font:16px/1.4 Georgia,serif;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:720px){
+ html[data-route=world] .site-header .world-pan-controls{display:flex;position:static;align-items:center;justify-content:center;gap:10px;pointer-events:auto;margin-top:0;width:100%;font:10px Georgia,serif;color:inherit}
+ .world-pan-controls button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:70px;padding:8px 5px;background:none;border:0;color:inherit;font:12px Georgia,serif}
+ .world-pan-controls button:disabled{opacity:.35}
+ html[data-route=world] .world-options{color:#344d40;text-shadow:none;padding:0 8px}
+ html[data-route=world] .world-options p,html[data-route=world] .world-options nav,html[data-route=world] .scene-tool{color:#344d40;text-shadow:none}
+ html[data-route=world] .world-options p{padding:3px 9px;background:#f7e7c9d9;border-radius:2px;font-size:11px}
+ html[data-route=world] .world-options nav{background:#f7e7c9ed;gap:17px;padding:0 7px;border-radius:2px}
+ html[data-route=world] .world-options nav a{min-width:34px;justify-content:center}
+ html[data-route=world] .scene-tools{background:#f7e7c9e8;left:12px;right:12px;gap:16px;border-radius:2px}
+ html[data-time=evening][data-route=world] .site-header .world-pan-controls{color:#fff0cf;text-shadow:0 1px 3px #243a30}
+ html[data-time=evening][data-route=world] .world-options,html[data-time=evening][data-route=world] .scene-tool{color:#344d40;text-shadow:none}
+
+}
+@media(max-width:720px) and (max-height:600px){
+ html[data-route=world] .site-header .brand-art{width:min(73vw,260px)}
+ html[data-route=world] .site-header{top:calc(var(--home-height)*.03);gap:0}
+ html[data-route=world] .site-header .world-pan-controls{font-size:9px;gap:7px}
+}
+@media(prefers-reduced-motion:reduce){.backyard-art{transition:none!important}}
+/* Keep the toy inside the illustrated water, above the optional pool entrance. */
+html[data-route=world] #submarine-toy{display:block;left:55%;top:75%;width:9%;min-width:58px;min-height:44px;z-index:8;pointer-events:auto;touch-action:none;cursor:grab;animation:none!important;user-select:none;-webkit-user-select:none;outline-offset:5px}
+#submarine-toy img{pointer-events:none;-webkit-user-drag:none}
+#submarine-toy.is-dragging{cursor:grabbing}
+#submarine-toy:focus-visible{outline:2px dashed #fff1cf;border-radius:30%}
+.toy-hint{position:absolute;left:50%;top:100%;transform:translateX(-50%);white-space:nowrap;font:italic 12px Georgia,serif;color:#fff1cf;text-shadow:0 1px 3px #123e38;opacity:0;pointer-events:none}
+#submarine-toy:hover .toy-hint,#submarine-toy:focus-visible .toy-hint{opacity:1}
+@media(max-width:720px){
+ html[data-route=world] .world-options p{display:none}
+ html[data-route=world] .world-options{bottom:52px}
+ html[data-route=world] .scene-tools{bottom:4px}
+}
+@media(max-width:360px){
+ html:not([data-route=world]) .main-nav{gap:10px}
+ html:not([data-route=world]) .main-nav .project-link{padding-inline:8px}
+}
