@@ -11,7 +11,7 @@
  const rooms={
   pools:{label:'POOLS & BACKYARDS',title:'Pools & backyards.',description:'Eight complete project albums.',note:'Custom pools. Spas. Complete backyards.',items:null},
   fire:{label:'FIRE FEATURES',title:'Fire features.',description:'Fireplaces, fire pits and fire features from our project albums.',note:'Plan a fire feature for your backyard.',items:[['lower-form-of-leisure','lower-form-of-leisure-ec6df443aae9a460'],['the-sun-stayed-for-supper','the-sun-stayed-for-supper-aaeed8c6ddbbeba0'],['a-minor-key','a-minor-key-fb0daa55b47d2949'],['dallas-with-feeling','dallas-with-feeling-1be9be01746f74d2'],['umpire-strikes-back','umpire-strikes-back-8c09430029ecd73c']]},
-  kitchen:{label:'OUTDOOR KITCHENS',title:'Outdoor kitchens.',description:'Outdoor cooking and dining spaces. Open a postcard to see the complete project.',note:'Plan your outdoor kitchen.',items:[['the-sun-stayed-for-supper','the-sun-stayed-for-supper-350d699af84be8e5'],['strictly-striped-affair','strictly-striped-affair-19576c0fa80d7c81']]},
+  kitchen:{label:'OUTDOOR KITCHENS',title:'Outdoor kitchens.',description:'Outdoor kitchens and dining spaces, planned around the way you cook and gather.',note:'Plan your outdoor kitchen.',items:[['the-sun-stayed-for-supper','the-sun-stayed-for-supper-350d699af84be8e5'],['strictly-striped-affair','strictly-striped-affair-19576c0fa80d7c81']]},
   shade:{label:'SHADE & STRUCTURES',title:'Shade & structures.',description:'Pergolas, pavilions and covered spaces from our project albums.',note:'Plan a pergola or covered space.',items:[['the-sun-stayed-for-supper','the-sun-stayed-for-supper-7015ed67131d404e'],['mr-bears-residence','mr-bears-residence-e5050074673f3ad9'],['umpire-strikes-back','umpire-strikes-back-8b553df39a7d3a63']]}
  };
  let transition=0,pending='',lastEntrance='',generation=0;
@@ -58,7 +58,9 @@
   if(!room){root.append(make('h1','','This corner is not available.'),make('p','','Return to the artwork or browse all eight albums.'));return;}
   const detail=roomDetails[key],front=make('section','feature-frontispiece'),intro=make('div','feature-introduction');
   intro.append(make('p','eyebrow',room.label),make('h1','',room.title),make('p','feature-description',room.description));
-  front.append(intro);root.append(front);
+  const actions=make('div','room-actions'),see=make('a','','See the real projects ↓'),plan=make('a','','Add to my project note ↗');see.href='#';see.addEventListener('click',e=>{e.preventDefault();const title=$('#feature-shelf-title');title?.focus({preventScroll:true});title?.scrollIntoView({block:'start',behavior:'instant'});});plan.href='#project';plan.dataset.interest=key==='pools'?'New custom pool':'Outdoor living project';plan.addEventListener('click',()=>{const idea=$('[name=idea]');if(idea&&!idea.value)idea.value=detail.idea;});actions.append(see,plan);intro.append(actions);
+  const scene=make('figure','room-vignette room-vignette-'+key),painting=make('div','room-painting');painting.setAttribute('role','img');painting.setAttribute('aria-label','A detail of the illustrated Collins '+(key==='pools'?'pool':key==='fire'?'fireplace':key==='kitchen'?'outdoor kitchen':'pergola')+'.');scene.append(painting,make('figcaption','','FROM THE ILLUSTRATED BACKYARD'));
+  front.append(intro,scene);root.append(front);
   const corners=make('nav','feature-corners');corners.setAttribute('aria-label','Explore another corner of the backyard');
   for(const [corner,label] of [['pools','Pool'],['fire','Fire'],['kitchen','Kitchen'],['shade','Shade']]){const a=make('a','',label);a.href=`#experience/${corner}`;if(corner===key)a.setAttribute('aria-current','page');corners.append(a);}root.append(corners);
   document.title=room.label.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase())+' — Collins';
@@ -74,7 +76,7 @@
   const shelfHeading=make('div','feature-shelf-heading'),shelfTitle=make('h2','',detail.shelf);shelfTitle.id='feature-shelf-title';shelfTitle.tabIndex=-1;
   const total=valid.reduce((count,item)=>count+item.project.photos.length,0);
   shelfHeading.append(shelfTitle,make('p','',key==='pools'?`${valid.length} COMPLETE ALBUMS / ${total} PHOTOGRAPHS`:`${valid.length} ALBUMS / SELECTED PROJECT PHOTOGRAPHS`));
-  shelf.append(shelfHeading);const grid=make('div','feature-grid');
+  shelf.append(shelfHeading);const grid=make('div','feature-grid');grid.dataset.count=String(valid.length);
 
   valid.forEach(({project,photo},i)=>{const a=make('a','feature-card');a.href=`#work/${project.slug}`;a.setAttribute('aria-label',`Open complete album: ${project.title}`);a.dataset.album=project.slug;a.addEventListener('click',()=>{roomSelections.set(key,project.slug);try{sessionStorage.setItem('collins-feature-origin',key);}catch{}});
    const figure=make('figure'),image=make('img');image.src=photo.src;image.alt=photo.alt||photo.caption;image.width=photo.width;image.height=photo.height;image.loading=i?'lazy':'eager';image.decoding='async';
