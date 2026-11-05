@@ -66,3 +66,25 @@ html[data-time=evening][data-route=world] .site-header{color:#244a50}
 html[data-time=evening][data-route=world] .site-header .brand-art{filter:none}
 html[data-route=world] .world-vessel{left:68%;top:74%;width:9%}
 html[data-route=world] .world-vessel{left:55%;top:74%;width:9%}
+
+/* Printed cover title: original outlines, warm ink, and the paper beneath it. */
+.site-header .brand-print{display:none}
+html[data-route=world] .site-header .brand-art:not(.brand-print){display:none}
+html[data-route=world] .site-header .brand-print{display:block}
+html[data-route=world] .site-header{top:calc(var(--home-height)*.095);gap:4px;color:#485039}
+html[data-route=world] .site-header .brand-art{width:clamp(300px,30vw,470px);filter:none}
+html[data-route=world] .site-header .brand{mix-blend-mode:multiply;opacity:.96}
+html[data-route=world] .site-header .header-location{gap:0}
+html[data-route=world] .site-header .header-location span:first-child{font-size:9px;letter-spacing:1.1px}
+html[data-route=world] .site-header .main-nav{gap:26px;font-size:14px;color:#485039}
+html[data-time=evening][data-route=world] .site-header{color:#485039}
+@media(max-width:720px){
+ html[data-route=world] .site-header{top:calc(var(--home-height)*.075);gap:4px}
+ html[data-route=world] .site-header .brand-art{width:min(86vw,340px)}
+ html[data-route=world] .site-header .main-nav{font-size:12px;gap:17px}
+ html[data-route=world] .site-header .header-location span:first-child{font-size:8px;letter-spacing:.8px}
+}
+@media(max-width:720px) and (max-height:700px){
+ html[data-route=world] .site-header{top:calc(var(--home-height)*.04);gap:2px}
+ html[data-route=world] .site-header .brand-art{width:min(80vw,300px)}
+}
