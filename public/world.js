@@ -17,7 +17,7 @@
     const note=notes[key];
     document.querySelectorAll('[data-backyard]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.backyard===key)));
     $('#backyard-desk').dataset.selection=key;
-    $('#desk-number').textContent=`FIELD NOTE ${note.number}`;
+    $('#desk-number').textContent=`BACKYARD / ${note.number}`;
     $('#desk-title').textContent=note.title;
     $('#desk-description').textContent=note.description;
     $('#desk-materials').textContent=note.materials;
