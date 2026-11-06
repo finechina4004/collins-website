@@ -29,7 +29,13 @@ Confirmed call/text number: **469-500-7713**, from `public/site-config.js`. Dire
 2. Run `npm run build:assets`. It fingerprints `public/site.css` and regenerates home, eight albums, 404 and sitemap. Commit generated output alongside source.
 3. Run `npm run check:deploy` for output freshness and Wrangler packaging checks. `npm run build:site` prepares `dist/` if needed.
 4. Use the existing GitHub main → Cloudflare integration, deploying committed `public/` with `npx wrangler deploy`.
-5. Confirm the successful build and live `version.json` marker `collins-browser-audit-01`; check public home, an album and contact.
+5. Confirm the successful build and live `version.json` marker `collins-public-domain-01`; check public home, an album and contact.
+
+## Public domain
+
+Primary URL: https://collinscustompools.com/ . Both it and www.collinscustompools.com were attached to the existing production Worker and opened successfully in Chrome. Wrangler retains these two custom-domain attachments. Canonical/share metadata, image URLs, robots.txt and the sitemap use the primary .com address. IONOS remains the registrar and email provider; authoritative DNS uses Cloudflare with the preserved mail records.
+
+The www-to-root permanent redirect uses a Cloudflare zone Redirect Rule, separately from this static repository. Configure it to match only www.collinscustompools.com, preserve path/query, and return HTTPS on collinscustompools.com. Its deployment requires dashboard access and must be verified independently; attaching both domains alone does not create the redirect. Worker static _redirects does not support hostname-based source rules. No Worker script or extra request billing is needed for this zone rule.
 
 Do not publish temporary QA frames or checkout-local preview configuration.
 
