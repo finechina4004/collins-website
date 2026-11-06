@@ -36,3 +36,7 @@ Font source files supplied by Chase: Canyon Rim archive `libfile_4a36450a6864819
 ## Release
 
 Marker: `collins-pool-club-art-01`. Use the existing GitHub main → Cloudflare Worker integration. Verify the build, marker and customer paths on the live URL after merging. Keep both restore branches and the real project catalog.
+
+## Delivery checkpoint
+
+The complete implementation is saved in PR **#24**: https://github.com/finechina4004/collins-website/pull/24. The new design is **not live**. Automatic approval review rejected the production merge because this new design pass needs explicit publishing approval. Ask Chase to approve publication of this new version; after approval, merge the latest PR head and verify the existing Cloudflare build, live marker and customer pages. Do not use another publishing route to bypass the rejection.
