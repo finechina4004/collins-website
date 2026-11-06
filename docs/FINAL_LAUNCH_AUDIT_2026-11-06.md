@@ -35,4 +35,14 @@ Native phone dialer / Messages launch and carrier delivery, physical touch swipi
 
 ## Release
 
-Release marker: `collins-launch-finished-01`. Publish the completed PR through the existing main → Cloudflare Worker integration. Publication is complete only after the build succeeds and the release marker / customer paths are verified on the public URL. Live verification will be recorded after release.
+Release marker: `collins-launch-finished-01`. Publish the completed PR through the existing main → Cloudflare Worker integration. Publication completed through PR #24, merged as `c5e2a176bdd43a39018480598a024c22eac6d0a4`. The production **Workers Builds: collins-website** check succeeded (build `61d512ac-3e5f-4065-89f0-1a95f833864c`; Worker version `0dde86bb-524e-45b6-b7a1-b01c33108855`). The public `version.json` reports `collins-launch-finished-01`.
+
+Post-publication browser verification:
+
+- All eight public album pages render their correct counts with no horizontal overflow. All 94 photo assets loaded successfully: 89 loaded during album traversal; the five remaining lazy images were opened directly and decoded successfully in the browser.
+- Live photo viewer Next / Escape / focus return, old album/contact/experience redirects, keyboard toy movement/reset, and the actual missing-page recovery link passed.
+- Published CSS and script fingerprints match the tested local release. Public call/text destinations are correct; no form or automatic submission exists. No call or text sent.
+- Live pages are accessible in the ordinary browser. Embedding the public page inside the local phone QA frame was refused, so phone-sized layout checks apply to the identical local release source, not a framed production page. No physical-phone claim.
+- No launch blocker found. Verdict: **ready to send to customers**, with direct call/text inquiries. Owner follow-through: test Call and Text on a real phone to confirm its native app handoff and receipt.
+
+Verified public home: https://collins-website.chasehess-hq.workers.dev/ . Customer-facing work and contact remain one click away. Existing restore branches remain available.

@@ -6,7 +6,7 @@ The site keeps a simple scrolling page and ordinary photo albums, with the origi
 
 The full creative website is preserved on **`archive/full-art-website-2026-11-06`**, at commit **`eba401005ee971ae149d6b58edcd8757e20db096`** (main before this change). It includes the villa interiors, feature collections, project-note form, owner studio, prior artwork and creative history. Do not resume that version over production unless Chase asks to bring it back. Start future creative work there while keeping this simple page live for customers.
 
-Current art-direction handoff: `docs/POOL_CLUB_ART_DIRECTION_2026-11-06.md`. The simpler landing-page release is preserved on `archive/simple-landing-2026-11-06` at `6be0e775551caf37d7745d50c06e4ad738b095cf`.
+Current launch handoff: `docs/FINAL_LAUNCH_AUDIT_2026-11-06.md`. Art-direction notes: `docs/POOL_CLUB_ART_DIRECTION_2026-11-06.md`. The simpler landing-page release is preserved on `archive/simple-landing-2026-11-06` at `6be0e775551caf37d7745d50c06e4ad738b095cf`.
 
 ## Customer experience
 
