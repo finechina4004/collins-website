@@ -1,6 +1,6 @@
 {
-  "build": "collins-public-domain-01",
-  "sourceCheckpoint": "3fb8b6afe0a0fa47378350e19613c9c708632148",
+  "build": "collins-customer-polish-01",
+  "sourceCheckpoint": "af5326c",
   "restoreBranch": "archive/full-art-website-2026-11-06",
   "destination": "Cloudflare collins-website",
   "release": true
