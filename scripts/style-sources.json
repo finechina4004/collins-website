@@ -1,16 +1,3 @@
 [
-  "styles.css",
-  "native-journey.css",
-  "world.css",
-  "photography.css",
-  "recovery.css",
-  "backyard.css",
-  "illustration.css",
-  "storybook.css",
-  "cover.css",
-  "fullscreen.css",
-  "villa.css",
-  "villa-rooms.css",
-  "interiors.css",
-  "audit-fixes.css"
+  "landing.css"
 ]

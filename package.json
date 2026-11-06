@@ -4,10 +4,10 @@
   "private": true,
   "description": "Collins custom pools and backyard portfolio website",
   "scripts": {
-    "deploy": "node scripts/bundle-styles.mjs && wrangler deploy",
-    "check:deploy": "node scripts/bundle-styles.mjs --check && wrangler deploy --dry-run",
-    "build:site": "node scripts/bundle-styles.mjs && node scripts/prepare-static.mjs",
-    "build:assets": "node scripts/bundle-styles.mjs"
+    "deploy": "npm run build:assets && wrangler deploy",
+    "check:deploy": "node scripts/bundle-styles.mjs --check && node scripts/render-landing.mjs --check && wrangler deploy --dry-run",
+    "build:site": "npm run build:assets && node scripts/prepare-static.mjs",
+    "build:assets": "node scripts/bundle-styles.mjs && node scripts/render-landing.mjs"
   },
   "devDependencies": {
     "wrangler": "4.156.2"
