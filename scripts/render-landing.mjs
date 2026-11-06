@@ -5,7 +5,7 @@ const projects=JSON.parse(readFileSync(new URL('content/projects.json',root),'ut
 const config=readFileSync(new URL('site-config.js',root),'utf8');
 const phone=config.match(/phone:\s*'([^']+)'/)[1],phoneLabel=config.match(/phoneLabel:\s*'([^']+)'/)[1];
 const cssHash=createHash('sha256').update(readFileSync(new URL('site.css',root))).digest('hex').slice(0,12);
-const base='https://collins-website.chasehess-hq.workers.dev/';
+const base='https://collinscustompools.com/';
 const assetVersion=name=>createHash('sha256').update(readFileSync(new URL(name,root))).digest('hex').slice(0,12);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cover=p=>p.photos.find(photo=>photo.id===p.coverId)||p.photos[0];

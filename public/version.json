@@ -1,6 +1,6 @@
 {
-  "build": "collins-browser-audit-01",
-  "sourceCheckpoint": "4016ed446c8bec1c30adf51eba8b415bc230333d",
+  "build": "collins-public-domain-01",
+  "sourceCheckpoint": "3fb8b6afe0a0fa47378350e19613c9c708632148",
   "restoreBranch": "archive/full-art-website-2026-11-06",
   "destination": "Cloudflare collins-website",
   "release": true
