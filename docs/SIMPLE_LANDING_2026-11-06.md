@@ -29,3 +29,7 @@ Before editing, created remote branch **`archive/full-art-website-2026-11-06`** 
 ## Publication
 
 Release marker **`collins-simple-landing-01`**. Publish via existing GitHub main → Cloudflare Worker. Confirm the Cloudflare build, live version marker, public home and album after merge. No new hosting project/domain.
+
+## Saved delivery state
+
+Implementation saved in PR **#23**: https://github.com/finechina4004/collins-website/pull/23. Automatic approval review rejected the production merge because the current request did not explicitly authorize a live-site update. **The PR is open; main and the live website remain unchanged.** Ask Chase for explicit publishing approval, then merge the PR and verify the existing Cloudflare build and live release marker. Do not deploy through another path to bypass the rejected merge.

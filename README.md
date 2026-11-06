@@ -1,6 +1,6 @@
 # Collins Custom Pools & Backyards
 
-Current public experience: one simple landing page with the original Italian villa artwork, eight real project albums, services, and direct call/text contact. Repository: `finechina4004/collins-website`. Worker: `collins-website`.
+This branch implements: one simple landing page with the original Italian villa artwork, eight real project albums, services, and direct call/text contact. Repository: `finechina4004/collins-website`. Worker: `collins-website`.
 
 ## Saved full website
 
