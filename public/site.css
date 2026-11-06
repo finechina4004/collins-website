@@ -226,6 +226,34 @@ html{scroll-behavior:smooth}
 .project-image{background:var(--card-paper)}
 .project-image img{object-fit:contain}
 
+/* Clear customer actions while keeping the purchased display fonts in the artwork. */
+.cover-brand .cover-promise{font:clamp(12px,1.1vw,17px)/1.4 Georgia,serif;letter-spacing:0;margin:8px auto 3px;max-width:30ch}
+.cover-links a,.site-nav nav a,.site-nav .nav-phone{font-family:Arial,sans-serif;font-size:16px;font-weight:600;letter-spacing:0;text-transform:none;font-style:normal}
+.cover-links{gap:24px;margin-top:4px}
+.site-nav nav a{padding-inline:4px}
+.contact-number{user-select:text}
+.copy-number{font:600 14px/1.4 Arial,sans-serif;background:transparent;color:var(--olive);border:1px solid var(--line);padding-inline:17px}
+.copy-number[hidden]{display:none}
+.contact-copy-status{font:14px/1.5 Arial,sans-serif;color:var(--olive);margin-top:10px}
+.contact-copy-status:empty{display:none}
+/* Preserve the resolution of the supplied photographs instead of enlarging pixels. */
+.photo-grid figure{width:100%;max-width:calc(var(--photo-width) + 32px);justify-self:center}
+.viewer-stage img{object-fit:scale-down}
+@media(max-width:600px){
+ .cover-brand .cover-promise{font-size:16px;max-width:27ch;margin-top:11px}
+ .cover-brand .cover-area{font-size:11px;margin-top:7px}
+ .cover-links{gap:22px;margin-top:10px}
+ .cover-links a{font-size:14px}
+ .site-nav{padding-inline:12px;gap:8px}
+ .site-nav nav{gap:6px}
+ .site-nav nav a,.site-nav .nav-phone{font-size:14px}
+ .site-nav .nav-phone{margin-left:0}
+ .contact-buttons{flex-direction:row;gap:10px}
+ .contact-buttons .button{width:auto;max-width:none;flex:1 1 100px;padding-inline:14px}
+ .contact-buttons .copy-number{flex-basis:100%;font-size:14px}
+ .photo-grid figure{max-width:calc(var(--photo-width) + 22px)}
+}
+
 /* Collins source: album-covers.css */
 /* A small series of photographic book jackets, printed in Collins colors. */
 .project-card[data-palette="a-minor-key"],.album-page[data-palette="a-minor-key"]{--card-paper:#d3cedf;--card-ink:#44394f;--cover-accent:#65516f;--cover-rule:#44394f33;--album-paper:#f0edf4}

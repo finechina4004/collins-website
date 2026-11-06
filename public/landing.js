@@ -14,6 +14,19 @@
   if (target) { location.replace(target); return; }
   if (hash && !document.getElementById(hash.slice(1))) location.replace('#backyard');
  }
+ const copyButton = document.querySelector('[data-copy-phone]');
+ if (copyButton) {
+  copyButton.hidden = false;
+  copyButton.addEventListener('click', async () => {
+   const status = document.querySelector('.contact-copy-status');
+   try {
+    await navigator.clipboard.writeText(copyButton.dataset.copyPhone);
+    status.textContent = 'Number copied. Talk soon.';
+   } catch {
+    status.textContent = 'Select and copy the number above: ' + copyButton.dataset.copyPhone;
+   }
+  });
+ }
  addEventListener('hashchange', recover);
  recover();
 })();
