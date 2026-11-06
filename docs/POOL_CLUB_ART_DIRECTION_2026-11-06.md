@@ -39,4 +39,4 @@ Marker: `collins-pool-club-art-01`. Use the existing GitHub main → Cloudflare 
 
 ## Delivery checkpoint
 
-The complete implementation is saved in PR **#24**: https://github.com/finechina4004/collins-website/pull/24. The new design is **not live**. Automatic approval review rejected the production merge because this new design pass needs explicit publishing approval. Ask Chase to approve publication of this new version; after approval, merge the latest PR head and verify the existing Cloudflare build, live marker and customer pages. Do not use another publishing route to bypass the rejection.
+The implementation was originally saved in PR **#24**: https://github.com/finechina4004/collins-website/pull/24. The prior production merge was rejected pending publishing approval. Chase’s November 6 launch request explicitly authorizes finishing, retesting and publishing the existing site, including unfinished changes. Final release checks and delivery state are recorded in `docs/FINAL_LAUNCH_AUDIT_2026-11-06.md`.

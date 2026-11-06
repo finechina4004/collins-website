@@ -28,6 +28,6 @@ Confirmed call/text number: **469-500-7713**, from `public/site-config.js`. Dire
 2. Run `npm run build:assets`. It fingerprints `public/site.css` and regenerates home, eight albums, 404 and sitemap. Commit generated output alongside source.
 3. Run `npm run check:deploy` for output freshness and Wrangler packaging checks. `npm run build:site` prepares `dist/` if needed.
 4. Use the existing GitHub main → Cloudflare integration, deploying committed `public/` with `npx wrangler deploy`.
-5. Confirm the successful build and live `version.json` marker `collins-pool-club-art-01`; check public home, an album and contact.
+5. Confirm the successful build and live `version.json` marker `collins-launch-finished-01`; check public home, an album and contact.
 
 Do not publish temporary QA frames or checkout-local preview configuration.
