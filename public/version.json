@@ -1,6 +1,7 @@
 {
-  "build": "collins-launch-ready-02",
-  "sourceCheckpoint": "4d474a6",
+  "build": "collins-simple-landing-01",
+  "sourceCheckpoint": "eba401005ee971ae149d6b58edcd8757e20db096",
+  "restoreBranch": "archive/full-art-website-2026-11-06",
   "destination": "Cloudflare collins-website",
   "release": true
 }
