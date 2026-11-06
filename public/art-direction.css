@@ -210,3 +210,7 @@ html{scroll-behavior:smooth}
  .viewer-controls button{padding-inline:12px;font-size:14px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project-card{transition:none}}
+
+/* Show the full aerial property photographs inside the album mats. */
+.project-image{background:var(--card-paper)}
+.project-image img{object-fit:contain}
