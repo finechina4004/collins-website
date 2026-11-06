@@ -1,7 +1,9 @@
 /* A small optional toy. No boarding, route changes, timers or inquiry collection. */
 (() => {
  'use strict';
- const toy=document.querySelector('#submarine-toy'),world=toy.parentElement;
+ const toy=document.querySelector('#submarine-toy');
+ if(!toy)return;
+ const world=toy.parentElement;
  const start={x:55,y:75};let position={...start},drag=null;
  const clamp=(value,min,max)=>Math.max(min,Math.min(max,value));
  function move(x,y){position={x:clamp(x,28,73),y:clamp(y,75,80)};toy.style.left=position.x+'%';toy.style.top=position.y+'%';}

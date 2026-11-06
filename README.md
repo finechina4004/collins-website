@@ -1,12 +1,12 @@
 # Collins Custom Pools & Backyards
 
-This branch implements: one simple landing page with the original Italian villa artwork, eight real project albums, services, and direct call/text contact. Repository: `finechina4004/collins-website`. Worker: `collins-website`.
+The site keeps a simple scrolling page and ordinary photo albums, with the original villa artwork, Collins typography, colored photographic postcards, a painted services spread, and correspondence-style contact. Repository: `finechina4004/collins-website`. Worker: `collins-website`.
 
 ## Saved full website
 
 The full creative website is preserved on **`archive/full-art-website-2026-11-06`**, at commit **`eba401005ee971ae149d6b58edcd8757e20db096`** (main before this change). It includes the villa interiors, feature collections, project-note form, owner studio, prior artwork and creative history. Do not resume that version over production unless Chase asks to bring it back. Start future creative work there while keeping this simple page live for customers.
 
-Current validation handoff: `docs/SIMPLE_LANDING_2026-11-06.md`.
+Current art-direction handoff: `docs/POOL_CLUB_ART_DIRECTION_2026-11-06.md`. The simpler landing-page release is preserved on `archive/simple-landing-2026-11-06` at `6be0e775551caf37d7745d50c06e4ad738b095cf`.
 
 ## Customer experience
 
@@ -22,12 +22,12 @@ Confirmed call/text number: **469-500-7713**, from `public/site-config.js`. Dire
 
 ## Editing and publishing
 
-`public/content/projects.json` remains the album source. Edit shared structure/copy in `scripts/render-landing.mjs`, and styles in `public/landing.css`. Historical runtime files stay in source but are not loaded by the landing page.
+`public/content/projects.json` remains the album source. Edit shared structure/copy in `scripts/render-landing.mjs`, and styles in `public/landing.css` plus `public/art-direction.css`. Original Canyon Rim and Parkly Soft web-font subsets live in `public/assets/fonts/`. Historical runtime files stay in source but are not loaded by the landing page.
 
 1. Install missing dependencies with `npm ci --ignore-scripts`.
 2. Run `npm run build:assets`. It fingerprints `public/site.css` and regenerates home, eight albums, 404 and sitemap. Commit generated output alongside source.
 3. Run `npm run check:deploy` for output freshness and Wrangler packaging checks. `npm run build:site` prepares `dist/` if needed.
 4. Use the existing GitHub main → Cloudflare integration, deploying committed `public/` with `npx wrangler deploy`.
-5. Confirm the successful build and live `version.json` marker `collins-simple-landing-01`; check public home, an album and contact.
+5. Confirm the successful build and live `version.json` marker `collins-launch-finished-01`; check public home, an album and contact.
 
 Do not publish temporary QA frames or checkout-local preview configuration.
