@@ -225,13 +225,82 @@ html{scroll-behavior:smooth}
 .project-image{background:var(--card-paper)}
 .project-image img{object-fit:contain}
 
-/* Each album has its own paper color, tied to its name and cover photograph. */
-.project-card[data-palette="a-minor-key"],.album-page[data-palette="a-minor-key"]{--card-paper:#cbc5da;--card-ink:#45404f;--album-paper:#f1eef5}
-.project-card[data-palette="black-tie-barefoot"],.album-page[data-palette="black-tie-barefoot"]{--card-paper:#393b36;--card-ink:#f8f1e5;--album-paper:#ecebe5}
-.project-card[data-palette="dallas-with-feeling"],.album-page[data-palette="dallas-with-feeling"]{--card-paper:#e8b9bf;--card-ink:#493a3a;--album-paper:#f7e9e9}
-.project-card[data-palette="lower-form-of-leisure"],.album-page[data-palette="lower-form-of-leisure"]{--card-paper:#a7bba9;--card-ink:#303e33;--album-paper:#edf1e8}
-.project-card[data-palette="mr-bears-residence"],.album-page[data-palette="mr-bears-residence"]{--card-paper:#d6b393;--card-ink:#4b392e;--album-paper:#f4ecdf}
-.project-card[data-palette="strictly-striped-affair"],.album-page[data-palette="strictly-striped-affair"]{--card-paper:#b6d9e8;--card-ink:#344c56;--album-paper:#eaf2f4}
-.project-card[data-palette="the-sun-stayed-for-supper"],.album-page[data-palette="the-sun-stayed-for-supper"]{--card-paper:#ebcf8c;--card-ink:#4f4430;--album-paper:#f7f0dc}
-.project-card[data-palette="umpire-strikes-back"],.album-page[data-palette="umpire-strikes-back"]{--card-paper:#cd947b;--card-ink:#3f302a;--album-paper:#f5e9df}
-.card-topline{opacity:1}
+/* Collins source: album-covers.css */
+/* A small series of photographic book jackets, printed in Collins colors. */
+.project-card[data-palette="a-minor-key"],.album-page[data-palette="a-minor-key"]{--card-paper:#d3cedf;--card-ink:#44394f;--cover-accent:#65516f;--cover-rule:#44394f33;--album-paper:#f0edf4}
+.project-card[data-palette="black-tie-barefoot"],.album-page[data-palette="black-tie-barefoot"]{--card-paper:#303731;--card-ink:#f8f1e5;--cover-accent:#e8d9bf;--cover-rule:#f8f1e54d;--album-paper:#eeeae0;--page-ink:#303731}
+.project-card[data-palette="dallas-with-feeling"],.album-page[data-palette="dallas-with-feeling"]{--card-paper:#e6b6b8;--card-ink:#623746;--cover-accent:#9b5960;--cover-rule:#62374633;--album-paper:#f7e9e7}
+.project-card[data-palette="lower-form-of-leisure"],.album-page[data-palette="lower-form-of-leisure"]{--card-paper:#b9c7af;--card-ink:#354938;--cover-accent:#63775a;--cover-rule:#35493833;--album-paper:#eef1e7}
+.project-card[data-palette="mr-bears-residence"],.album-page[data-palette="mr-bears-residence"]{--card-paper:#ddc39e;--card-ink:#553e2e;--cover-accent:#9b704d;--cover-rule:#553e2e33;--album-paper:#f5edde}
+.project-card[data-palette="strictly-striped-affair"],.album-page[data-palette="strictly-striped-affair"]{--card-paper:#bfd9dd;--card-ink:#2c4951;--cover-accent:#527782;--cover-rule:#2c495133;--album-paper:#edf3f2}
+.project-card[data-palette="the-sun-stayed-for-supper"],.album-page[data-palette="the-sun-stayed-for-supper"]{--card-paper:#f0d59a;--card-ink:#683f2d;--cover-accent:#ad6744;--cover-rule:#683f2d33;--album-paper:#f9f0dc}
+.project-card[data-palette="umpire-strikes-back"],.album-page[data-palette="umpire-strikes-back"]{--card-paper:#eee6d0;--card-ink:#294e3c;--cover-accent:#b2634f;--cover-rule:#294e3c33;--album-paper:#f3efe2}
+
+.project-grid{align-items:stretch;gap:clamp(30px,4.3vw,58px)}
+.project-card{isolation:isolate;overflow:hidden;padding:25px 25px 20px 34px;box-shadow:0 7px 20px #302a280c,0 1px 0 #302a280b}
+.project-card::before{content:"";position:absolute;z-index:-1;inset:0 auto 0 0;width:11px;background:var(--cover-accent);opacity:.6}
+.project-card:hover{box-shadow:0 10px 28px #302a281a,0 1px 0 #302a280b}
+.project-card:focus-visible{outline:3px solid var(--card-ink);outline-offset:5px}
+.project-card .card-topline{justify-content:space-between;align-items:center;padding:0 0 17px;opacity:1;min-height:34px}
+.project-card .card-number{font:12px/1.2 'Parkly Soft',Arial,sans-serif;letter-spacing:1.7px}
+.project-card .project-meta{flex:none;padding:0 0 25px;min-height:128px}
+.project-card .project-meta h3{font-size:clamp(24px,2.5vw,36px);line-height:1.12;color:var(--card-ink)}
+.project-meta h3>span,.project-meta h3>em{display:block}
+.project-card .project-meta h3>em{font-family:Georgia,serif;font-style:italic;font-size:1.2em;line-height:1.15;margin-top:2px}
+.project-card .project-image{background:#f8f1e5;aspect-ratio:3/2;padding:9px;border:0;box-shadow:0 1px 4px #302a2814}
+.project-card .project-image img{width:100%;height:100%;object-fit:contain}
+.jacket-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:18px;margin-top:auto;font-family:'Parkly Soft',Arial,sans-serif;color:var(--card-ink);font-size:13px;line-height:1.5}
+.jacket-footer>span:first-child{font-size:15px;border-bottom:1px solid var(--cover-rule);padding-bottom:2px}
+.jacket-footer>span:last-child{font-size:11px;letter-spacing:.7px}
+.project-card:hover .jacket-footer>span:first-child{text-decoration:underline;text-underline-offset:5px}
+
+/* Tiny printed signatures; none sits over a project photograph. */
+.cover-mark{position:relative;display:block;flex:0 0 42px;width:42px;height:19px;color:var(--cover-accent)}
+[data-palette="a-minor-key"] .cover-mark{border-bottom:1px solid currentColor;background:linear-gradient(90deg,transparent 10%,currentColor 10% 17%,transparent 17% 25%,currentColor 25% 32%,transparent 32% 53%,currentColor 53% 60%,transparent 60% 68%,currentColor 68% 75%,transparent 75% 82%,currentColor 82% 89%,transparent 89%) 0 0/100% 60% no-repeat,repeating-linear-gradient(90deg,currentColor 0 1px,transparent 1px 7px)}
+[data-palette="black-tie-barefoot"] .cover-mark::before,[data-palette="black-tie-barefoot"] .cover-mark::after{content:"";position:absolute;top:2px;width:16px;height:15px;background:currentColor}
+[data-palette="black-tie-barefoot"] .cover-mark::before{left:4px;clip-path:polygon(0 0,100% 50%,0 100%)}
+[data-palette="black-tie-barefoot"] .cover-mark::after{right:4px;clip-path:polygon(100% 0,0 50%,100% 100%)}
+[data-palette="dallas-with-feeling"] .cover-mark{background:linear-gradient(currentColor,currentColor) 7px bottom/6px 12px no-repeat,linear-gradient(currentColor,currentColor) 18px bottom/6px 19px no-repeat,linear-gradient(currentColor,currentColor) 29px bottom/6px 9px no-repeat}
+[data-palette="lower-form-of-leisure"] .cover-mark{background:linear-gradient(currentColor,currentColor) right bottom/42px 1px no-repeat,linear-gradient(currentColor,currentColor) right 9px/29px 1px no-repeat,linear-gradient(currentColor,currentColor) right top/16px 1px no-repeat}
+[data-palette="mr-bears-residence"] .cover-mark::before{content:"";position:absolute;left:12px;bottom:0;width:18px;height:17px;border:1px solid currentColor;border-radius:12px 12px 0 0}
+[data-palette="mr-bears-residence"] .cover-mark::after{content:"";position:absolute;left:18px;bottom:0;width:6px;height:10px;border:1px solid currentColor;border-bottom:0;border-radius:4px 4px 0 0}
+[data-palette="strictly-striped-affair"] .cover-mark{background:repeating-linear-gradient(90deg,currentColor 0 4px,transparent 4px 8px);height:16px}
+[data-palette="the-sun-stayed-for-supper"] .cover-mark::before{content:"";position:absolute;left:6px;bottom:0;width:30px;height:15px;border:1px solid currentColor;border-radius:30px 30px 0 0}
+[data-palette="the-sun-stayed-for-supper"] .cover-mark::after{content:"";position:absolute;left:0;right:0;bottom:0;border-bottom:1px solid currentColor}
+[data-palette="umpire-strikes-back"] .cover-mark{width:33px;flex-basis:33px;height:17px;border:1px solid currentColor;background:repeating-linear-gradient(90deg,transparent 0 7px,currentColor 7px 8px),repeating-linear-gradient(0deg,transparent 0 7px,currentColor 7px 8px)}
+
+/* Individual jacket details, held together by the same type and proportions. */
+.project-card[data-palette="a-minor-key"] .project-meta h3>em{letter-spacing:-1px}
+.project-card[data-palette="black-tie-barefoot"] .project-meta{border-bottom:1px solid var(--cover-rule);margin-bottom:20px;padding-bottom:19px;min-height:108px}
+.project-card[data-palette="black-tie-barefoot"]::before{background:var(--card-ink);opacity:.14}
+.project-card[data-palette="dallas-with-feeling"]::before{width:12px;background:linear-gradient(90deg,#974b57 0 35%,#ca7d7e 35% 65%,#f5d4c2 65%)}
+.project-card[data-palette="lower-form-of-leisure"] .project-image{padding:12px}
+.project-card[data-palette="mr-bears-residence"]::before{background:repeating-linear-gradient(90deg,#805d3d 0 1px,#b18e67 1px 4px);opacity:.5}
+.project-card[data-palette="strictly-striped-affair"]::before{background:repeating-linear-gradient(0deg,var(--cover-accent) 0 8px,#f8f1e5 8px 16px);opacity:.85}
+.project-card[data-palette="the-sun-stayed-for-supper"]::before{background:linear-gradient(90deg,#bd774e 0 35%,#dfaa63 35% 70%,#f7e6b8 70%);opacity:1}
+.project-card[data-palette="umpire-strikes-back"]::before{background:var(--card-ink);opacity:1}
+.project-card[data-palette="umpire-strikes-back"] .project-meta h3>span{letter-spacing:.3px!important}
+.project-card[data-palette="umpire-strikes-back"] .jacket-footer{border-top:1px solid var(--cover-accent);margin-top:19px;padding-top:13px}
+
+.album-page{--page-ink:var(--card-ink)}
+.album-page[data-palette="black-tie-barefoot"]{--page-ink:#303731}
+.album-page .album-imprint,.album-page .album-cover-heading h1{color:var(--page-ink)}
+.album-mark{margin:20px auto 0;color:var(--page-ink)}
+.album-page .album-cover-heading h1{margin-top:17px}
+@media(max-width:900px){.project-card .project-meta{min-height:111px}.project-card .project-meta h3{font-size:27px}.project-card[data-palette="black-tie-barefoot"] .project-meta{min-height:91px}}
+@media(max-width:600px){
+ .project-card{padding:20px 18px 18px 26px}
+ .project-card::before{width:8px}
+ .project-card .card-topline{padding-bottom:14px;min-height:30px}
+ .project-card .card-number{font-size:11px}
+ .project-card .project-meta{min-height:108px;padding-bottom:20px}
+ .project-card .project-meta h3{font-size:27px}
+ .project-card[data-palette="black-tie-barefoot"] .project-meta{min-height:88px;margin-bottom:20px;padding-bottom:15px}
+ .project-card .project-image{padding:7px}
+ .project-card[data-palette="lower-form-of-leisure"] .project-image{padding:9px}
+ .jacket-footer{padding-top:15px;font-size:12px;gap:10px}
+ .jacket-footer>span:first-child{font-size:14px}
+ .jacket-footer>span:last-child{font-size:10px}
+ .album-mark{margin-top:18px}
+}
+@media(max-width:360px){.project-card .project-meta h3{font-size:23px}.project-card .project-meta{min-height:96px}.project-card[data-palette="black-tie-barefoot"] .project-meta{min-height:76px}.project-card{padding-left:23px;padding-right:16px}}

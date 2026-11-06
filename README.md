@@ -1,6 +1,6 @@
 # Collins Custom Pools & Backyards
 
-The site keeps a simple scrolling page and ordinary photo albums, with the original villa artwork, Collins typography, colored photographic postcards, a painted services spread, and correspondence-style contact. Repository: `finechina4004/collins-website`. Worker: `collins-website`.
+The site keeps a simple scrolling page and ordinary photo albums, with the original villa artwork, Collins typography, individual photographic album jackets, a painted services spread, and correspondence-style contact. Repository: `finechina4004/collins-website`. Worker: `collins-website`.
 
 ## Saved full website
 
@@ -28,6 +28,8 @@ Confirmed call/text number: **469-500-7713**, from `public/site-config.js`. Dire
 2. Run `npm run build:assets`. It fingerprints `public/site.css` and regenerates home, eight albums, 404 and sitemap. Commit generated output alongside source.
 3. Run `npm run check:deploy` for output freshness and Wrangler packaging checks. `npm run build:site` prepares `dist/` if needed.
 4. Use the existing GitHub main → Cloudflare integration, deploying committed `public/` with `npx wrangler deploy`.
-5. Confirm the successful build and live `version.json` marker `collins-quiet-gallery-01`; check public home, an album and contact.
+5. Confirm the successful build and live `version.json` marker `collins-album-jackets-01`; check public home, an album and contact.
 
 Do not publish temporary QA frames or checkout-local preview configuration.
+
+Album jacket design and validation: `docs/ALBUM_JACKETS_2026-11-06.md`.

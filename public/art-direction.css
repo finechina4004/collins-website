@@ -205,14 +205,3 @@ html{scroll-behavior:smooth}
 /* Show the full aerial property photographs inside the album mats. */
 .project-image{background:var(--card-paper)}
 .project-image img{object-fit:contain}
-
-/* Each album has its own paper color, tied to its name and cover photograph. */
-.project-card[data-palette="a-minor-key"],.album-page[data-palette="a-minor-key"]{--card-paper:#cbc5da;--card-ink:#45404f;--album-paper:#f1eef5}
-.project-card[data-palette="black-tie-barefoot"],.album-page[data-palette="black-tie-barefoot"]{--card-paper:#393b36;--card-ink:#f8f1e5;--album-paper:#ecebe5}
-.project-card[data-palette="dallas-with-feeling"],.album-page[data-palette="dallas-with-feeling"]{--card-paper:#e8b9bf;--card-ink:#493a3a;--album-paper:#f7e9e9}
-.project-card[data-palette="lower-form-of-leisure"],.album-page[data-palette="lower-form-of-leisure"]{--card-paper:#a7bba9;--card-ink:#303e33;--album-paper:#edf1e8}
-.project-card[data-palette="mr-bears-residence"],.album-page[data-palette="mr-bears-residence"]{--card-paper:#d6b393;--card-ink:#4b392e;--album-paper:#f4ecdf}
-.project-card[data-palette="strictly-striped-affair"],.album-page[data-palette="strictly-striped-affair"]{--card-paper:#b6d9e8;--card-ink:#344c56;--album-paper:#eaf2f4}
-.project-card[data-palette="the-sun-stayed-for-supper"],.album-page[data-palette="the-sun-stayed-for-supper"]{--card-paper:#ebcf8c;--card-ink:#4f4430;--album-paper:#f7f0dc}
-.project-card[data-palette="umpire-strikes-back"],.album-page[data-palette="umpire-strikes-back"]{--card-paper:#cd947b;--card-ink:#3f302a;--album-paper:#f5e9df}
-.card-topline{opacity:1}
