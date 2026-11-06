@@ -30,6 +30,8 @@ Before editing, created remote branch **`archive/full-art-website-2026-11-06`** 
 
 Release marker **`collins-simple-landing-01`**. Publish via existing GitHub main → Cloudflare Worker. Confirm the Cloudflare build, live version marker, public home and album after merge. No new hosting project/domain.
 
-## Saved delivery state
+## Published delivery state
 
-Implementation saved in PR **#23**: https://github.com/finechina4004/collins-website/pull/23. Automatic approval review rejected the production merge because the current request did not explicitly authorize a live-site update. **The PR is open; main and the live website remain unchanged.** Ask Chase for explicit publishing approval, then merge the PR and verify the existing Cloudflare build and live release marker. Do not deploy through another path to bypass the rejected merge.
+Chase explicitly approved publication in the follow-up reply. PR **#23** was merged as **`0d5d5a2e25a55a2c614c3bb1227a648d3ba69746`**. The existing Cloudflare **Workers Builds: collins-website** check completed successfully, and the public landing page is live at https://collins-website.chasehess-hq.workers.dev/.
+
+Post-publication browser verification visited all eight real album pages and checked their exact photo counts (94 total), no horizontal page overflow, full-size viewer Next/Escape, and the live call/text destinations. The full creative restore branch remains unchanged at the pre-landing commit. No customer call or text was sent. Resume future work from this published landing page unless Chase requests the saved creative version.
