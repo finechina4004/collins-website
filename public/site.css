@@ -158,3 +158,74 @@ h1,h2,h3{font-family:'Canyon Rim',Georgia,serif;letter-spacing:0!important;font-
  .cover-links a{font-size:16px}
  .cover-painting{margin-top:0}
 }
+
+/* One warm paper surface; each photograph reads as a small work within it. */
+html{scroll-behavior:smooth}
+.site-nav{border-color:#46533c26;box-shadow:none}
+.portfolio-wrap{background:var(--cream);background-image:none;padding-bottom:0}
+.work{padding-top:clamp(48px,6vw,80px);padding-bottom:clamp(48px,6vw,80px)}
+.collection-heading{padding-left:0;border-left:0}
+.collection-heading:before{display:none}
+.work h2{font-size:clamp(34px,3.8vw,54px);line-height:1.2}
+.project-grid{gap:clamp(28px,4vw,52px)}
+.project-card{border:0;padding:18px 18px 0;box-shadow:0 5px 18px #302a2809;transition:box-shadow .25s}
+.project-card:hover{transform:none;box-shadow:0 8px 26px #302a2817}
+.card-topline{justify-content:flex-end;padding-bottom:12px;opacity:.75}
+.card-number{font-size:11px;letter-spacing:1.1px}
+.project-image{border:0}
+.project-meta{padding:20px 6px 0}
+.project-meta h3{font-size:clamp(22px,1.9vw,28px);line-height:1.4;max-width:none}
+.project-count{padding:0 6px 22px;font-size:12px}
+.collection-note{border-color:#46533c26;margin-top:42px}
+.services-wrap{background:var(--cream);color:var(--ink);padding-block:0}
+.services-wrap:before,.services-wrap:after{display:none}
+.services{padding-top:40px;padding-bottom:clamp(48px,6vw,80px)}
+.services-heading .eyebrow,.services-heading h2{color:var(--olive)}
+.service-illustration{border:12px solid #eee4cd;outline:0;margin-inline:0;box-shadow:0 5px 18px #302a280b}
+.service-illustration figcaption{background:#f8f1e5f2}
+.service-list-art{border:0;outline:0;padding:0 0 0 12px}
+.service{padding-left:0;border-color:#46533c26}
+.service-number{display:none}
+.service h3{font-size:25px;color:var(--olive)}
+.service p{color:#57584d}
+.services .text-link{color:var(--olive);border-color:#46533c55}
+.contact-wrap{background:var(--cream);background-image:none;padding-top:20px;padding-bottom:clamp(50px,6vw,80px)}
+.contact{background:#eaf0e9;border:0;outline:0;box-shadow:0 6px 24px #302a2809}
+.contact:before{display:none}
+.contact-details,.contact-from,.contact-number{border-color:#46533c26}
+.button{box-shadow:none;border-color:transparent}
+.button.secondary{background:#eac9c4}
+.site-footer{background:var(--cream);color:var(--olive);border-top:1px solid #46533c26}
+.site-footer .footer-logo{filter:none}
+.site-footer p{color:var(--olive)}
+.album-page{--album-paper:#f0f2e8;background:var(--cream)}
+.album-page[data-palette=rose]{--album-paper:#f8ede7}
+.album-page[data-palette=blue]{--album-paper:#eaf2f2}
+.album-page[data-palette=butter]{--album-paper:#f7efdc}
+.album-page main{border:0}
+.album-page .site-nav{border-color:#46533c26}
+.album-cover-heading:after{display:none}
+.photo-grid{gap:clamp(26px,4vw,46px)}
+.photo-grid figure{border:0;box-shadow:0 5px 18px #302a280b;padding:16px 16px 0}
+.photo-open{border:0}
+.album-end{border-color:#46533c26}
+.viewer-controls button{font-size:16px}
+@media(max-width:800px){.service-list-art{padding-left:0}}
+@media(max-width:600px){
+ .work{padding-inline:20px}
+ .project-card{padding:12px 12px 0}
+ .work h2{font-size:32px}
+ .project-meta{padding:17px 5px 0}
+ .project-meta h3{font-size:23px}
+ .project-count{padding:0 5px 18px}
+ .card-number{font-size:10px}
+ .services{padding-top:20px;gap:32px}
+ .service-illustration{border-width:9px}
+ .service-list-art{padding:0}
+ .contact-wrap{padding-top:10px}
+ .contact{padding:32px 25px;box-shadow:none}
+ .photo-grid figure{padding:11px 11px 0}
+ .viewer-controls{gap:6px}
+ .viewer-controls button{padding-inline:12px;font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project-card{transition:none}}
