@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+<title id="title">An afternoon, arranged</title><desc id="desc">An illustrative Collins backyard study: a rectangular blue pool and spa, limestone terrace, striped loungers, a timber pergola, outdoor kitchen and circular fire gathering. A concept drawing, not a completed project or construction plan.</desc>
+<defs>
+ <pattern id="paper" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#244a50" stroke-opacity=".065" stroke-width=".6"/></pattern>
+ <pattern id="paving" width="74" height="48" patternUnits="userSpaceOnUse"><rect width="74" height="48" fill="#e9ddc3"/><path d="M0 0H74V48H0Z" fill="none" stroke="#b7aa8e" stroke-width="1"/></pattern>
+ <pattern id="tiles" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#b6d9e8"/><path d="M0 0H20V20" fill="none" stroke="#719d9d" stroke-width=".7"/></pattern>
+ <pattern id="stripe" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#f8f1e5"/><rect width="8" height="16" fill="#e8b9bf"/></pattern>
+ <linearGradient id="water" x2=".8" y2="1"><stop stop-color="#d5eaed"/><stop offset=".5" stop-color="#9ac4cf"/><stop offset="1" stop-color="#73a6b4"/></linearGradient>
+ <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#c7cbb0"/><stop offset="1" stop-color="#a7bba9"/></linearGradient>
+ <linearGradient id="wood"><stop stop-color="#b58f68"/><stop offset=".5" stop-color="#dfc39b"/><stop offset="1" stop-color="#b18d64"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="10" dy="16" stdDeviation="7" flood-color="#302a28" flood-opacity=".14"/></filter>
+ <filter id="small"><feDropShadow dx="5" dy="6" stdDeviation="3" flood-color="#302a28" flood-opacity=".18"/></filter>
+</defs>
+<rect width="1000" height="650" fill="#f8f1e5"/><rect x="20" y="20" width="960" height="610" fill="url(#paper)" stroke="#244a50" stroke-opacity=".2"/>
+<g fill="#244a50" font-family="monospace" font-size="9" letter-spacing="1.7"><text x="45" y="53">COLLINS / BACKYARD STUDIES</text><text x="955" y="53" text-anchor="end">PLATE 001</text></g>
+<g transform="translate(130 85)" filter="url(#shadow)">
+ <path d="M0 45L500 0 740 170 240 215Z" fill="url(#wall)" stroke="#879c8d"/>
+ <path d="M0 45V76L240 246V215Z" fill="#869f90"/>
+ <path d="M0 76L500 31 740 201 240 246Z" fill="url(#paving)" stroke="#acb39d"/>
+ <path d="M240 246L740 201V223L240 268Z" fill="#c9baa0" stroke="#b6a68b"/>
+ <path d="M0 76L240 246V268L0 98Z" fill="#d4c5a8" stroke="#b6a68b"/>
+ <path d="M38 78L483 38M60 94L505 54M82 110L527 70M104 126L549 86M126 142L571 102M148 158L593 118M170 174L615 134M192 190L637 150M214 206L659 166M236 222L681 182" stroke="#b0b299" stroke-opacity=".3" fill="none"/>
+ <path d="M26 45L26 62M51 43L51 60M76 41L76 58M101 39L101 56M126 36L126 53M151 34L151 51M176 32L176 49M201 30L201 47M226 27L226 44M251 25L251 42M276 23L276 40M301 21L301 38M326 18L326 35M351 16L351 33M376 14L376 31M401 12L401 29M426 9L426 26M451 7L451 24M476 5L476 22" stroke="#758f80" stroke-width="1" opacity=".5"/>
+ <!-- Pool: cutaway coping, water plane and three shallow steps. -->
+ <path d="M100 102L394 76 565 197 271 224Z" fill="#f5ead0" stroke="#aa9e82" stroke-width="1.2"/>
+ <path d="M116 105L392 81 548 192 272 217Z" fill="#6f9eaa" stroke="#62868e"/>
+ <path d="M119 107L392 83 539 187 272 211Z" fill="url(#tiles)"/>
+ <path d="M119 107L392 83 539 187 272 211Z" fill="url(#water)" opacity=".8"/>
+ <g fill="none" stroke="#edf5e8" stroke-width="1.5" opacity=".7"><path d="M160 117Q210 102 250 112T340 108T430 129"/><path d="M210 151Q260 136 300 146T390 142T480 163"/><path d="M267 182Q317 167 357 177T447 173"/><path d="M170 139L430 115M221 176L482 153" opacity=".5"/></g>
+ <path d="M119 107L167 103 320 211 272 215Z" fill="#c2dddb" opacity=".7"/>
+ <path d="M136 119L181 115M151 130L197 126M167 141L213 137" stroke="#7faeb3" stroke-width="2" fill="none"/>
+ <!-- Spa at the quiet end. -->
+ <path d="M353 65L410 60 455 92 399 97Z" fill="#f5ead0" stroke="#b7a98c"/>
+ <path d="M363 68L409 64 444 89 399 93Z" fill="#8dbcc6" stroke="#719aa2"/>
+ <g fill="#e4f0df"><circle cx="392" cy="76" r="1.8"/><circle cx="408" cy="79" r="1.8"/><circle cx="416" cy="86" r="1.8"/><circle cx="398" cy="85" r="1.8"/></g>
+ <!-- Timber pergola with cast slat shadows and a real kitchen footprint. -->
+ <g fill="#244a50" opacity=".13"><path d="M461 86L570 78 641 128 532 137Z"/><path d="M470 89L480 88 541 132 531 133ZM487 87L497 86 558 130 548 131ZM504 85L514 84 575 128 565 129ZM521 83L531 82 592 126 582 127ZM538 81L548 80 609 124 599 125"/></g>
+ <g stroke="#8e7457" stroke-width="1"><path d="M468 73V14L474 13V74Z" fill="url(#wood)"/><path d="M566 64V5L572 4V65Z" fill="url(#wood)"/><path d="M527 116V57L533 56V117Z" fill="url(#wood)"/><path d="M625 107V48L631 47V108Z" fill="url(#wood)"/>
+ <path d="M457 12L568 2 641 51 529 62Z" fill="#cfb083"/>
+ <g fill="#e9cfaa"><path d="M458 8L467 7 540 56 531 57Z"/><path d="M477 6L486 5 559 54 550 55Z"/><path d="M496 4L505 3 578 52 569 53Z"/><path d="M515 2L524 1 597 50 588 51Z"/><path d="M534 0L543 -1 616 48 607 49Z"/><path d="M553 -2L562 -3 635 46 626 47Z"/></g></g>
+ <path d="M492 61L557 55 587 76 521 82Z" fill="#f6ecd8" stroke="#b6a68c"/><path d="M521 82L587 76V91L521 97Z" fill="#a7bba9" stroke="#849b8b"/><path d="M492 61L521 82V97L492 76Z" fill="#c4ccba" stroke="#849b8b"/>
+ <path d="M502 62L526 60 540 70 516 72Z" fill="#8e9790" stroke="#66756e"/><g stroke="#d7ddd1" stroke-width="1"><path d="M508 62L522 72M514 61L528 71M520 61L534 70"/></g><ellipse cx="556" cy="71" rx="8" ry="4" fill="#9aaba4" stroke="#6e8880"/>
+ <!-- Two striped loungers; empty seats are a story, never fabricated clients. -->
+ <g filter="url(#small)"><g transform="translate(70 77)"><path d="M0 0L25 -2 66 28 41 31Z" fill="url(#stripe)" stroke="#9d9580"/><path d="M0 0L25 -2 30 -20 5 -18Z" fill="url(#stripe)" stroke="#9d9580"/><path d="M4 2V10M43 31V38M63 29V36" stroke="#9a8b70" stroke-width="2"/></g><g transform="translate(129 71)"><path d="M0 0L25 -2 66 28 41 31Z" fill="url(#stripe)" stroke="#9d9580"/><path d="M0 0L25 -2 30 -20 5 -18Z" fill="url(#stripe)" stroke="#9d9580"/><path d="M4 2V10M43 31V38M63 29V36" stroke="#9a8b70" stroke-width="2"/></g></g>
+ <!-- Fire court, umbrella and the little red pool toy. -->
+ <ellipse cx="635" cy="164" rx="50" ry="25" fill="#e4cfa7" stroke="#baa584"/><ellipse cx="635" cy="164" rx="22" ry="11" fill="#8e8f7e" stroke="#65766f"/><ellipse cx="635" cy="160" rx="22" ry="11" fill="#efe5cf" stroke="#65766f"/><ellipse cx="635" cy="160" rx="14" ry="7" fill="#636e61"/><path d="M630 161Q635 145 639 160Q644 153 643 163" fill="#e0a268"/>
+ <path d="M587 143L603 138 615 146 598 151ZM654 185L671 180 683 188 666 193ZM670 144L687 139 699 147 682 152" fill="#e8b9bf" stroke="#9c9382"/>
+ <path d="M223 62V89" stroke="#95866b" stroke-width="2"/><ellipse cx="223" cy="63" rx="31" ry="18" fill="#ebcf8c" stroke="#ac9b79"/><path d="M223 45L223 81M192 63H254M201 50L246 76M202 76L245 50" fill="none" stroke="#f8f1e5" stroke-width="3"/>
+ <ellipse cx="375" cy="154" rx="12" ry="6" fill="none" stroke="#c7806f" stroke-width="4"/><path d="M375 147L375 143" stroke="#f3ead4"/>
+</g>
+<!-- Cabinet-of-curiosities annotations; reading order remains on the page. -->
+<g fill="none" stroke="#708b83" stroke-width=".8"><path d="M230 209L146 293H68"/><circle cx="230" cy="209" r="3" fill="#f8f1e5"/><path d="M713 159L822 118H930"/><circle cx="713" cy="159" r="3" fill="#f8f1e5"/><path d="M765 250L837 309H931"/><circle cx="765" cy="250" r="3" fill="#f8f1e5"/><path d="M452 286L452 371H319"/><circle cx="452" cy="286" r="3" fill="#f8f1e5"/></g>
+<g fill="#244a50" font-family="monospace" font-size="10" letter-spacing="1"><text x="68" y="310">01 / A LONG AFTERNOON</text><text x="930" y="110" text-anchor="end">02 / SUPPER OUTSIDE</text><text x="930" y="326" text-anchor="end">03 / STAY A LITTLE</text><text x="319" y="389">THE WATER IS THE BEGINNING.</text></g>
+<g transform="translate(62 478)"><text fill="#244a50" font-family="Georgia,serif" font-size="37" font-style="italic">An afternoon, arranged.</text><text y="30" fill="#637f77" font-family="monospace" font-size="9" letter-spacing="1">A COLLINS BACKYARD STUDY / ILLUSTRATIVE CONCEPT</text></g>
+<g transform="translate(790 465)" fill="none" stroke="#244a50" stroke-width="1"><circle r="31"/><path d="M0 -24V24M-24 0H24M0 -24L-4 -10H4Z"/><text y="-39" font-family="monospace" font-size="9" fill="#244a50" stroke="none" text-anchor="middle">OUT BACK</text></g>
+<path d="M45 566H955" stroke="#244a50" stroke-opacity=".25"/><g fill="#244a50" font-family="monospace" font-size="9" letter-spacing="1"><text x="45" y="590">CUSTOM POOLS / SPAS / OUTDOOR LIVING</text><text x="955" y="590" text-anchor="end">NOT A CONSTRUCTION PLAN · NOT TO SCALE</text><text x="45" y="614">DRAWN FOR THE POSSIBILITIES.</text><text x="955" y="614" text-anchor="end">COLLINS CUSTOM POOLS &amp; BACKYARDS</text></g>
+</svg>

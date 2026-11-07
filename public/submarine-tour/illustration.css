@@ -1,0 +1,110 @@
+/* One painted pool journey. The supplied plates keep their natural proportions. */
+:root{--backyard-plate:url('assets/backyard-day-illustrated.webp')}
+.world-vessel{position:absolute;left:61%;top:73%;width:16%;pointer-events:none;animation:painted-drift 6s ease-in-out infinite alternate;z-index:2;filter:drop-shadow(1px 5px 2px #183f3d22)}
+.world-vessel>img:first-child{width:100%;height:auto;display:block}
+.world-vessel .hull-nameplate,.vessel-carriage .hull-nameplate,.submarine .hull-nameplate,.home-docked-vessel .dock-name{left:30%;top:76%;width:22%!important;height:6%!important;transform:none;filter:none}
+.world-bubbles{left:60%;top:75%;height:12%}.portal-pool{left:36%;width:42%;top:70%;height:22%}
+.world-options{gap:16px;flex-wrap:wrap}.world-options nav{margin-left:auto}.world-options>button{flex-shrink:0}
+.backyard-stage.has-error .world-vessel{display:none}
+html[data-time=evening] .backyard{background:#46656b}html[data-time=evening] .backyard-heading{color:#f8e7bd}
+html[data-time=evening] .world-vessel{filter:brightness(.83) drop-shadow(1px 5px 2px #102e3b33)}
+.launch-stage{background:#416e67}.launch-set{object-fit:cover;object-position:50% 61%}
+.launch-stage:after{content:'AN ILLUSTRATED COLLINS WORLD / VESSEL 01'}
+.launch-rig{filter:drop-shadow(2px 3px 1px #233f3f20);opacity:.9}
+.launch-stage .vessel-carriage{width:min(47vw,650px);left:53%;top:56%;filter:drop-shadow(0 8px 2px #234c5026)}
+.lifting-strap{top:47%;height:30%;opacity:.75;border-radius:1px;background:#aa805a;box-shadow:none}
+.lifting-strap.left{left:28%}.lifting-strap.right{right:48%}
+.launch-plaque{box-shadow:2px 4px 0 #263e3726}.vessel-shadow{bottom:8%;filter:blur(3px)}
+.launch[data-phase=boarding] .vessel-carriage{transform:translate(-60%,-45%) scale(2.8)}
+.cockpit-enamel{background-color:#e6d9b9;background-image:linear-gradient(#f7e7c140,#9c9c7d22),url('assets/vessel-illustrated.webp');background-size:100% 100%,240%;background-position:center,25% 75%;background-blend-mode:normal,soft-light;box-shadow:inset 0 0 50px #7b806c55}
+.view-daylight{background-image:var(--backyard-plate);background-position:50% 50%;background-size:cover;filter:none}
+.cockpit .view-underwater{background-image:url('assets/pool-panorama-illustrated.webp');background-size:cover;background-position:0% center}
+.cockpit-rim{border-color:#e4d4ad;box-shadow:0 0 0 3px #9b875f,0 0 0 7px #cfbd91,3px 5px 0 #34576540,inset 0 0 0 3px #71816e}
+.underwater-lines{display:none}.window-reflection{opacity:.2}
+.scene:not(.scene-exit){background-image:url('assets/pool-panorama-illustrated.webp');background-size:cover;background-position:var(--bay,0%) center}
+.scene-shallow{--bay:0%}.scene-dog{--bay:40%}.scene-phone{--bay:58%}.scene-evening{--bay:100%}
+.scene-exit{background-image:var(--backyard-plate)!important;background-size:cover;background-position:center 65%}
+.scene-exit:after{display:none}.scene .depth-marker{display:none}
+.scene .scene-copy{box-shadow:2px 4px 0 #153c3d22;border-color:#a79b77;background:#f8efdbf2;padding:24px 27px;transform:rotate(-.4deg)}
+.scene .scene-copy h1,.scene .scene-copy h2{font-size:clamp(35px,3.7vw,55px)}
+.scene-shallow .scene-copy{left:7%;top:12%;max-width:420px}
+.scene-shallow .scene-copy>p:last-of-type{max-width:310px}
+.observation-invitation{display:inline-flex;align-items:center;min-height:44px;margin-top:15px;border-bottom:1px solid #647b6b;font:13px Georgia,serif}
+.observation-note{display:block;font:7px/1.8 'Courier New',monospace;letter-spacing:.6px;margin-top:10px}
+.illustrated-return{display:block;width:fit-content;min-height:44px;padding-top:18px;font:11px Georgia,serif}
+.submarine .propeller{display:none}.submarine .headlamp{left:74%;top:84%;filter:blur(2px);opacity:.22}
+.submarine .bubble-wake{left:10%;top:65%}.submarine>img:not(.hull-nameplate){aspect-ratio:3/2}
+.pool.is-evening .submarine{filter:brightness(.85)}
+.scene-dog .diving-dog{width:33%;right:15%;top:17%;max-width:510px;filter:none}
+.scene-dog .diving-dog-wet{filter:url('#dog-water-refraction')!important}
+.dog-air-layer{clip-path:inset(0 0 72% 0)}.dog-underwater-layer{clip-path:inset(28% 0 0 0)}
+.scene-dog .tennis-ball{right:16%;top:24%;width:23px;height:23px;background:#cfb342;box-shadow:inset 1px 1px 0 #f8e6a87a}
+.scene-dog .splash-plume{right:20%;top:24%;width:25%;height:23%;filter:blur(1px);opacity:.6}
+.scene-dog .splash-rings{right:15%;top:26%;width:35%;height:8%}.scene-dog .splash-rings i{box-shadow:none;border-color:#e7dfb788}
+.scene-dog .dog-surface-film{right:15%;top:27%;width:33%;height:3%}
+.story-bubbles i,.phone-trail i{box-shadow:none;border-color:#e3e7c8aa}
+.scene-dog .scene-copy{left:6%;top:12%;max-width:390px}
+.scene-phone .scene-copy{left:6%;top:12%;max-width:390px}
+.sinking-phone{background:#6b7768;border:2px solid #424f43;box-shadow:2px 3px 0 #153c4040;padding:5px;border-radius:11px;right:27%;bottom:9%}
+.phone-glass{background:#8eafa3;border:1px solid #ccd0ab;border-radius:7px;color:#f5ebcf}.phone-glass:after{display:none}
+.phone-notification{background:#e3ddbc;border:0;border-radius:2px;color:#365a51}.phone-speaker{background:#455c50}.phone-home{background:#d9d8b5}
+.scene-evening .night-set-photo{height:auto!important;aspect-ratio:1672/941;object-fit:contain}
+.scene-evening .night-window{top:12%;right:6%;width:33%;padding:6px;box-shadow:3px 5px 0 #143c3d33;transform:rotate(.6deg)}
+.scene-evening .periscope-view{top:12%;right:6%;width:43%;box-shadow:3px 6px 0 #143c3d33}
+.periscope-view img{height:auto;aspect-ratio:1672/941;object-fit:contain}
+.periscope-view a{font:11px Georgia,serif}
+.scene-evening .shade-control{left:6%;bottom:17%}.scene-evening .light-switch{right:7%;bottom:17%}
+.scene .pool-floor-note{display:none}.scene-caption>span{background:#143c3d77}
+.pool-project-route{bottom:calc(var(--controls) + 12px);left:auto;right:20px}
+.feature-backline,.photographic-topline{flex-wrap:wrap}.photographic-topline a{min-height:44px;display:inline-flex;align-items:center}.album-dive+.album-dive{margin-left:26px}
+html:not([data-route=pool]) .journey *,html.world-paused .journey *,html.world-paused .launch *{animation-play-state:paused!important}
+@keyframes painted-drift{from{translate:0 0;rotate:-1deg}to{translate:0 -5px;rotate:1deg}}
+@media(max-width:720px){
+ .world-options{gap:10px}.world-options nav{margin:0}.world-options>button{margin-top:0}.world-vessel{left:62%;top:74%;width:17%}
+ .launch-stage .vessel-carriage{width:97vw;left:50%;top:44%}.launch-rig{height:47%;left:5%;right:5%}.launch-plaque{bottom:8%;width:186px;padding:10px 12px;gap:6px}.launch-plaque strong{font-size:28px}
+ .launch[data-phase=boarding] .vessel-carriage{transform:translate(-65%,-45%) scale(3.2)}
+ .scene:not(.scene-exit){background-size:auto 100%}.scene-shallow{--bay:21%}.scene-exit{background-position:52% center}
+ .scene .scene-copy,.scene-shallow .scene-copy{top:10%;left:5%;width:90%;max-width:none;padding:18px 20px}
+ .scene .scene-copy h1,.scene .scene-copy h2{font-size:31px;letter-spacing:-1px}
+ .scene-shallow .scene-copy{top:9%;width:85%}.scene-shallow .scene-copy>p:last-of-type{font-size:11px}
+ .observation-invitation{font-size:12px;margin-top:8px}.observation-note{font-size:6px;letter-spacing:.25px}
+ .scene-dog .scene-copy{top:auto;bottom:27%;width:85%;padding:16px 18px}.scene-dog .scene-copy>p:last-of-type{display:none}.scene-dog .story-controls{width:65%}
+ .scene-dog .diving-dog{width:65%;right:5%;top:19%}.scene-dog .tennis-ball{right:7%;top:27%;width:20px;height:20px}
+ .scene-dog .dog-surface-film{top:27%;width:65%;right:5%}.scene-dog .splash-plume{right:8%;top:24%;width:57%;height:28%}.scene-dog .splash-rings{right:3%;top:27%;width:70%;height:6%}
+ .scene-phone .scene-copy{top:10%;width:66%}.scene-phone .scene-copy h2{font-size:28px}.scene-phone .scene-copy>p:last-of-type{display:none}
+ .scene-phone .story-controls{width:52%;bottom:15%}.scene-phone .sinking-phone{right:12%;bottom:8%}
+ .scene-evening .scene-copy{top:9%;width:88%;padding:16px 18px}.scene-evening .scene-copy h2{font-size:29px}
+ .scene-evening .night-window{top:45%;right:6%;width:55%}.scene-evening .night-window>small{display:none}
+ .scene-evening .periscope-view{top:43%;right:5%;width:90%;border-width:5px}.scene-evening .periscope-view img{height:auto;aspect-ratio:1672/941}.periscope-view figcaption{padding:7px;font-size:7px}.periscope-view a{padding:5px 10px;min-height:36px}
+ .scene-evening .shade-control{left:5%;bottom:9%;font-size:8px;padding:10px}.scene-evening .light-switch{right:5%;bottom:9%;font-size:8px;padding:10px;gap:7px}
+ .scene-exit .scene-copy{top:12%;width:85%}.scene-exit .scene-copy>p:last-of-type{max-width:245px}.scene-exit .scene-copy .exit-button{margin-top:12px}
+ .illustrated-return{font-size:11px;padding-top:15px}.pool-project-route{bottom:calc(var(--controls) + 9px);right:10px;font-size:9px;padding:8px 10px;min-height:40px}
+ .feature-backline{justify-content:flex-start;gap:2px 18px}.photographic-topline{gap:5px 18px;font-size:8px}.album-dive+.album-dive{margin-left:0;display:flex;width:fit-content}
+}
+@media(max-height:560px) and (min-width:721px){
+ .launch-stage .vessel-carriage{width:min(37vw,470px);left:54%;top:53%}.launch-plaque{width:136px;top:19%;bottom:auto;padding:10px}.launch-title{display:none}
+ .scene .scene-copy,.scene-shallow .scene-copy{top:8%;left:5%;width:39%;max-width:410px;padding:12px 17px}.scene .scene-copy h1,.scene .scene-copy h2{font-size:27px;margin-bottom:8px}
+ .scene .scene-copy>p:last-of-type{font-size:10px}.observation-invitation{margin-top:4px;font-size:11px}.observation-note{display:none}
+ .scene-dog .diving-dog{width:30%;right:15%;top:13%}.scene-dog.story-settled .diving-dog{transform:rotate(-3deg)}
+ .scene-dog .story-controls,.scene-phone .story-controls{bottom:10%;width:40%}.story-controls p{font-size:8px}
+ .scene-evening .night-window{top:8%;width:25%}.scene-evening .periscope-view{top:6%;width:32%;right:6%}.periscope-view figcaption{padding:5px}.periscope-view a{padding:5px;min-height:32px;font-size:10px}
+ .scene-evening .shade-control{bottom:10%}.scene-evening .light-switch{bottom:10%}
+ .scene-exit .scene-copy>p:last-of-type{display:none}.scene-exit .scene-copy .exit-button{margin-top:5px;min-height:40px}.illustrated-return{padding-top:10px;font-size:10px}
+ .pool-project-route{min-height:36px;font-size:9px;bottom:calc(var(--controls) + 7px)}
+}
+.calm .world-vessel{animation:none!important}.calm .illustrated-return{transition:none}
+@media(prefers-reduced-motion:reduce){.world-vessel{animation:none!important}.scene:after{transition:none}}
+
+.photographic-album>.album-feature-return{margin:18px 5.5% 20px}
+
+.pool.periscope-open[data-stop="3"] .submarine{opacity:0}
+
+.reveal-layer #reveal-vessel{position:absolute;left:0;top:0;width:1536px;height:1024px;transform-origin:0 0;will-change:transform}
+.reveal-layer #reveal-vessel>img:first-child{position:static;width:100%!important;height:100%!important;filter:none}
+.reveal-layer #reveal-vessel>.hull-nameplate{left:30%;top:76%;width:22%!important;height:6%!important;transform:none;filter:none}
+
+.pool[data-stop="3"] .evening-toggle{visibility:hidden}
+@media(max-height:560px) and (min-width:721px){.scene-evening .light-switch{left:46%;right:auto;bottom:10%}}
+
+/* Stable navigation keeps the same destinations throughout the illustrated journey. */
+@media(max-width:720px){.main-nav a{min-height:44px}.main-nav{gap:8px}}

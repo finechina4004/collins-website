@@ -1,0 +1,1559 @@
+{
+  "schemaVersion": 1,
+  "revision": "photos-2026-11-03-umpire-strikes-back",
+  "projects": [
+    {
+      "id": "collins-001",
+      "slug": "a-minor-key",
+      "title": "a Minor Key",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "Quiet water. Warm cedar. A good reason to let the evening run long.",
+      "services": [],
+      "coverId": "a-minor-key-ddc8e9db9f666ae7",
+      "photos": [
+        {
+          "id": "a-minor-key-1cf1fc2862773c09",
+          "src": "assets/projects/a-minor-key/1cf1fc2862773c09.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The pool and house from above",
+          "alt": "The pool and house from above.",
+          "sourceFile": "Collins_09_01_Sunny_Backyard_Pool_Aerial.jpg",
+          "sourceSha256": "1cf1fc2862773c09c2addf04e097314ace0034bc767e1a69b27a8eb655a9ec18"
+        },
+        {
+          "id": "a-minor-key-a06d04803e6e6b67",
+          "src": "assets/projects/a-minor-key/a06d04803e6e6b67.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A ledge, two loungers, a little shade",
+          "alt": "A ledge, two loungers, a little shade.",
+          "sourceFile": "Collins_09_02_Pool_Ledge_and_Umbrellas.jpg",
+          "sourceSha256": "a06d04803e6e6b67e111922db09b2c5e55a16799de8f51f09b1fb495b3c1bcf1"
+        },
+        {
+          "id": "a-minor-key-e5d4f06c136281e2",
+          "src": "assets/projects/a-minor-key/e5d4f06c136281e2.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Daylight at the pool house",
+          "alt": "Daylight at the pool house.",
+          "sourceFile": "Collins_09_03_Daylight_Pool_and_Pool_House.jpg",
+          "sourceSha256": "e5d4f06c136281e28861386846bcd6689e2e4b25dd69cfdb065f9833337e01c3"
+        },
+        {
+          "id": "a-minor-key-ddc8e9db9f666ae7",
+          "src": "assets/projects/a-minor-key/ddc8e9db9f666ae7.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "Waterfalls along the pool",
+          "alt": "Waterfalls along the pool.",
+          "sourceFile": "Collins_09_04_Daylight_Pool_and_Waterfalls.jpg",
+          "sourceSha256": "ddc8e9db9f666ae7f150a6ea33152b37829fe3fc2d375e775100f7547fbd8fcb"
+        },
+        {
+          "id": "a-minor-key-fb0daa55b47d2949",
+          "src": "assets/projects/a-minor-key/fb0daa55b47d2949.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The fire wall at twilight",
+          "alt": "The fire wall at twilight.",
+          "sourceFile": "Collins_09_05_Twilight_Pool_and_Fire_Wall.jpg",
+          "sourceSha256": "fb0daa55b47d2949c636d1c6547431d6461cefb757e45bc17deb9b87e3d28ca5"
+        },
+        {
+          "id": "a-minor-key-1dbb3c509bc2b86d",
+          "src": "assets/projects/a-minor-key/1dbb3c509bc2b86d.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "An evening at the spa and bar",
+          "alt": "An evening at the spa and bar.",
+          "sourceFile": "Collins_09_06_Evening_Spa_and_Outdoor_Bar.jpg",
+          "sourceSha256": "1dbb3c509bc2b86da977da6fd489a1b177cf3b2641e1e7f7e9b81f426785508c"
+        },
+        {
+          "id": "a-minor-key-da772ad0df34c5d5",
+          "src": "assets/projects/a-minor-key/da772ad0df34c5d5.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Firelight across the shallow ledge",
+          "alt": "Firelight across the shallow ledge.",
+          "sourceFile": "Collins_09_07_Twilight_Fire_Wall_and_Pool_Ledge.jpg",
+          "sourceSha256": "da772ad0df34c5d5df61dc0e8aa30bc6b0edef2e5baf3cdf5b265c9c5df0d21b"
+        },
+        {
+          "id": "a-minor-key-9dcef3295b2e4e89",
+          "src": "assets/projects/a-minor-key/9dcef3295b2e4e89.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "Pool lights, waterfalls and fire after dark",
+          "alt": "Pool lights, waterfalls and fire after dark.",
+          "sourceFile": "Collins_09_08_Night_Pool_Fire_Wall_and_Waterfalls.jpg",
+          "sourceSha256": "9dcef3295b2e4e893e0ce5434763855f2c265d51ec42867d74e7f77728df5fdc"
+        },
+        {
+          "id": "a-minor-key-4344e12d5fb72856",
+          "src": "assets/projects/a-minor-key/4344e12d5fb72856.webp",
+          "width": 720,
+          "height": 471,
+          "caption": "A spa beneath the cedar ceiling",
+          "alt": "A spa beneath the cedar ceiling.",
+          "sourceFile": "Collins_09_09_Covered_Spa_and_Cedar_Ceiling.jpg",
+          "sourceSha256": "4344e12d5fb72856658f06c7fc498fb6bc77ceba0cca53b8de7e4c22083d0869"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "sequenceLabel": "DAYLIGHT INTO FIRELIGHT",
+        "heroId": "a-minor-key-ddc8e9db9f666ae7",
+        "chapters": [
+          {
+            "label": "THE QUIET PART",
+            "navigation": "The pool",
+            "title": "Nothing on the agenda.",
+            "description": "Loungers at the water\u2019s edge. Umbrellas overhead. A whole afternoon to fill\u2014or leave empty.",
+            "blocks": [
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "a-minor-key-a06d04803e6e6b67",
+                  "a-minor-key-e5d4f06c136281e2"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "UNDER COVER",
+            "navigation": "Under cover",
+            "title": "Somewhere to settle in.",
+            "description": "Cedar overhead, a spa beneath it, and a seat at the bar.",
+            "blocks": [
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "a-minor-key-1dbb3c509bc2b86d",
+                  "a-minor-key-4344e12d5fb72856"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "AFTER THE SUN",
+            "navigation": "Firelight",
+            "title": "One more minute becomes an hour.",
+            "description": "The fire wall glows. Color moves through the water. The evening can take its time.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "a-minor-key-9dcef3295b2e4e89"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "a-minor-key-fb0daa55b47d2949",
+                  "a-minor-key-da772ad0df34c5d5"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "Owner-supplied project photographs. Location, date, construction scope and builder attribution have not been supplied."
+    },
+    {
+      "id": "collins-002",
+      "slug": "black-tie-barefoot",
+      "title": "Black Tie, Barefoot",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "A pool at the treeline. A porch for the slow part of the day.",
+      "services": [],
+      "coverId": "black-tie-08",
+      "photos": [
+        {
+          "id": "black-tie-01",
+          "src": "assets/projects/black-tie-barefoot/01.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Poolside seating, facing the woodland",
+          "alt": "Black poolside loungers beside a rectangular pool, with woods beyond the deck"
+        },
+        {
+          "id": "black-tie-02",
+          "src": "assets/projects/black-tie-barefoot/02.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The covered porch and pool",
+          "alt": "View from the covered porch toward the pool and surrounding woodland"
+        },
+        {
+          "id": "black-tie-03",
+          "src": "assets/projects/black-tie-barefoot/03.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "Daylight on the deck",
+          "alt": "Rectangular turquoise pool set into a broad gray deck beneath the covered porch"
+        },
+        {
+          "id": "black-tie-04",
+          "src": "assets/projects/black-tie-barefoot/04.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A seat at the treeline",
+          "alt": "Poolside loungers and a gray deck alongside the wooded edge of the property"
+        },
+        {
+          "id": "black-tie-05",
+          "src": "assets/projects/black-tie-barefoot/05.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "After dark, from above",
+          "alt": "Evening aerial view of the illuminated pool, poolside seating and circular fire-pit area"
+        },
+        {
+          "id": "black-tie-06",
+          "src": "assets/projects/black-tie-barefoot/06.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "The whole arrangement",
+          "alt": "Daylight aerial view showing the pool deck, covered porch and a separate hot tub"
+        },
+        {
+          "id": "black-tie-07",
+          "src": "assets/projects/black-tie-barefoot/07.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The last of the light",
+          "alt": "Sunset view across the pool and gray deck toward trees beneath a dramatic sky"
+        },
+        {
+          "id": "black-tie-08",
+          "src": "assets/projects/black-tie-barefoot/08.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "The porch lights come on",
+          "alt": "Sunset poolside view with black loungers, glowing pool water and the warmly lit porch"
+        },
+        {
+          "id": "black-tie-09",
+          "src": "assets/projects/black-tie-barefoot/09.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The deck from above",
+          "alt": "Daylight aerial view of the deck, pool, loungers and surrounding woods"
+        },
+        {
+          "id": "black-tie-10",
+          "src": "assets/projects/black-tie-barefoot/10.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A longer kind of evening",
+          "alt": "Sunset view along the pool deck toward the warmly lit cabin and covered porch"
+        },
+        {
+          "id": "black-tie-11",
+          "src": "assets/projects/black-tie-barefoot/11.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A little farther back",
+          "alt": "Wide sunset aerial view of the cabin, pool deck, lit windows and surrounding woodland"
+        },
+        {
+          "id": "black-tie-12",
+          "src": "assets/projects/black-tie-barefoot/12.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "At the treeline",
+          "alt": "Overhead view of the cabin, covered porch, separate hot tub and pool deck among trees"
+        },
+        {
+          "id": "black-tie-13",
+          "src": "assets/projects/black-tie-barefoot/13.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Evening settles in",
+          "alt": "Ground-level evening view of the cabin and deck, with lit windows and a fire-pit area in front"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "heroId": "black-tie-08",
+        "sequenceLabel": "DAYLIGHT INTO EVENING",
+        "chapters": [
+          {
+            "label": "THE DAY",
+            "navigation": "Daylight",
+            "title": "A very good place to do nothing.",
+            "description": "A few chairs. A long stretch of deck. The woods just beyond the water.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "black-tie-03"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "black-tie-01",
+                  "black-tie-04"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "THE VIEW",
+            "navigation": "From above",
+            "title": "A little perspective.",
+            "description": "The pool, the porch, the places around them. A different view of the same afternoon.",
+            "blocks": [
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "black-tie-06",
+                  "black-tie-12"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "THE EVENING",
+            "navigation": "Evening",
+            "title": "Nobody said you had to go inside.",
+            "description": "The porch lights come on. The water glows. There\u2019s still time for one more conversation.",
+            "blocks": [
+              {
+                "layout": "feature",
+                "photoIds": [
+                  "black-tie-05"
+                ],
+                "note": {
+                  "label": "AFTER HOURS",
+                  "text": "Good shoes optional."
+                }
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "black-tie-10",
+                  "black-tie-11"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "Photographs supplied by the owner in Black Tie, Barefoot.zip. Location, date, construction scope and builder attribution not supplied."
+    },
+    {
+      "id": "collins-003",
+      "slug": "dallas-with-feeling",
+      "title": "Dallas, With Feeling",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "A little city. A little celebration. A backyard that knows how to host.",
+      "services": [],
+      "coverId": "dallas-with-feeling-1be9be01746f74d2",
+      "photos": [
+        {
+          "id": "dallas-with-feeling-1be9be01746f74d2",
+          "src": "assets/projects/dallas-with-feeling/1be9be01746f74d2.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "Fire at the water\u2019s edge",
+          "alt": "Fire at the water\u2019s edge.",
+          "sourceFile": "Dallas_With_Feeling_01_Fire_Feature_and_Pool_at_Dusk.jpg",
+          "sourceSha256": "1be9be01746f74d22adf4c55b3c5a089fb83f036b0831c803e28fc6519d9833b"
+        },
+        {
+          "id": "dallas-with-feeling-f14f8da1e4d72258",
+          "src": "assets/projects/dallas-with-feeling/f14f8da1e4d72258.webp",
+          "width": 1200,
+          "height": 899,
+          "caption": "Blue hour at the waterfall wall",
+          "alt": "Blue hour at the waterfall wall.",
+          "sourceFile": "Dallas_With_Feeling_02_Blue_Hour_Pool_and_Waterfalls.jpg",
+          "sourceSha256": "f14f8da1e4d7225832333085b27c8c9cd6fd3f3f0b04e0737de2c0cab19444a2"
+        },
+        {
+          "id": "dallas-with-feeling-31bf49d3ef852318",
+          "src": "assets/projects/dallas-with-feeling/31bf49d3ef852318.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The house and fire feature after dark",
+          "alt": "The house and fire feature after dark.",
+          "sourceFile": "Dallas_With_Feeling_03_Night_Fire_Feature_and_House.jpg",
+          "sourceSha256": "31bf49d3ef8523186de321ac75a5fd9989c9dc70b0c3e7801365f8c9a6ada977"
+        },
+        {
+          "id": "dallas-with-feeling-085d9abba0503459",
+          "src": "assets/projects/dallas-with-feeling/085d9abba0503459.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The pool and spa from above",
+          "alt": "The pool and spa from above.",
+          "sourceFile": "Dallas_With_Feeling_04_Overhead_Pool_and_Spa.jpg",
+          "sourceSha256": "085d9abba050345944530176b8f429ad4b6e20abacf74476732fd0ac32c93213"
+        },
+        {
+          "id": "dallas-with-feeling-fda304655ea34472",
+          "src": "assets/projects/dallas-with-feeling/fda304655ea34472.webp",
+          "width": 720,
+          "height": 534,
+          "caption": "Evening along the pool",
+          "alt": "Evening along the pool.",
+          "sourceFile": "Dallas_With_Feeling_05_Evening_Pool_and_Waterfalls.jpg",
+          "sourceSha256": "fda304655ea34472a0204a7930c937cc65e964a4a0c77d360627c5e4b191b23c"
+        },
+        {
+          "id": "dallas-with-feeling-2a8d7a0f1c6ebe73",
+          "src": "assets/projects/dallas-with-feeling/2a8d7a0f1c6ebe73.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Pool, spa and bar at blue hour",
+          "alt": "Pool, spa and bar at blue hour.",
+          "sourceFile": "Dallas_With_Feeling_06_Blue_Hour_Pool_Spa_and_Bar.jpg",
+          "sourceSha256": "2a8d7a0f1c6ebe733efa4f073c76a0bee38c1c6b988336f5294675439e6ecdf4"
+        },
+        {
+          "id": "dallas-with-feeling-5a0bff402a892c47",
+          "src": "assets/projects/dallas-with-feeling/5a0bff402a892c47.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The view from the covered patio",
+          "alt": "The view from the covered patio.",
+          "sourceFile": "Dallas_With_Feeling_07_Pool_and_Grateful_Blessed_Patio.jpg",
+          "sourceSha256": "5a0bff402a892c47cedb8d73941db6366cc0453a1b5e11487a89e94ddbc593a4"
+        },
+        {
+          "id": "dallas-with-feeling-76712c0d04a93912",
+          "src": "assets/projects/dallas-with-feeling/76712c0d04a93912.webp",
+          "width": 1200,
+          "height": 801,
+          "caption": "The Pool Party bar, up close",
+          "alt": "The Pool Party bar, up close.",
+          "sourceFile": "Dallas_With_Feeling_08_Pool_Party_Bar_Detail.jpg",
+          "sourceSha256": "76712c0d04a939124d9011029f0157e5782d196a693282e92f02ad2d90cd71b0"
+        },
+        {
+          "id": "dallas-with-feeling-9ba2d50468aec28c",
+          "src": "assets/projects/dallas-with-feeling/9ba2d50468aec28c.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A poolside seat at the bar",
+          "alt": "A poolside seat at the bar.",
+          "sourceFile": "Dallas_With_Feeling_09_Pool_View_from_the_Bar.jpg",
+          "sourceSha256": "9ba2d50468aec28cbdf789f867cc7a989b9b140bae1478a2d2f2482a4915e71e"
+        },
+        {
+          "id": "dallas-with-feeling-b46be76b8ccf18d8",
+          "src": "assets/projects/dallas-with-feeling/b46be76b8ccf18d8.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Evening beneath the covered patio",
+          "alt": "Evening beneath the covered patio.",
+          "sourceFile": "Dallas_With_Feeling_10_Evening_Pool_and_Covered_Patio.jpg",
+          "sourceSha256": "b46be76b8ccf18d8179cc9e1160dd15c4a9443a6cfaf5a6d55d7e83deaa584c9"
+        },
+        {
+          "id": "dallas-with-feeling-f6441690bb54a3ed",
+          "src": "assets/projects/dallas-with-feeling/f6441690bb54a3ed.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The backyard bar after dark",
+          "alt": "The backyard bar after dark.",
+          "sourceFile": "Dallas_With_Feeling_11_Pool_Party_Backyard_Bar.jpg",
+          "sourceSha256": "f6441690bb54a3eda9e5cc1bf37c26feeda8f9d1ff4227cb9178cc76b8c9e034"
+        },
+        {
+          "id": "dallas-with-feeling-8c6f3d32f5daa7f9",
+          "src": "assets/projects/dallas-with-feeling/8c6f3d32f5daa7f9.webp",
+          "width": 1200,
+          "height": 801,
+          "caption": "Firelight, pool light and the house",
+          "alt": "Firelight, pool light and the house.",
+          "sourceFile": "Dallas_With_Feeling_12_Fire_Feature_Pool_and_House.jpg",
+          "sourceSha256": "8c6f3d32f5daa7f9bd9680526cbfc5809338e6e9318e8afe090f1e28fb7bea6e"
+        },
+        {
+          "id": "dallas-with-feeling-5c6a65a5b0c6ffab",
+          "src": "assets/projects/dallas-with-feeling/5c6a65a5b0c6ffab.webp",
+          "width": 1200,
+          "height": 801,
+          "caption": "The pool and house in daylight",
+          "alt": "The pool and house in daylight.",
+          "sourceFile": "Dallas_With_Feeling_13_Daylight_Pool_and_House.jpg",
+          "sourceSha256": "5c6a65a5b0c6ffabdef040cc4bd16ae7a05bb803b64951e3f3daceee69bbe514"
+        },
+        {
+          "id": "dallas-with-feeling-c5056ba381c57c23",
+          "src": "assets/projects/dallas-with-feeling/c5056ba381c57c23.webp",
+          "width": 720,
+          "height": 1080,
+          "caption": "Blue tile and the outdoor shower",
+          "alt": "Blue tile and the outdoor shower.",
+          "sourceFile": "Dallas_With_Feeling_14_Outdoor_Shower_and_Blue_Tile.jpg",
+          "sourceSha256": "c5056ba381c57c23980fdecbe1bb30fe36f50c8529d004dda32c560f8f0baa23"
+        },
+        {
+          "id": "dallas-with-feeling-25354cbadc2a4e31",
+          "src": "assets/projects/dallas-with-feeling/25354cbadc2a4e31.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A daytime view from the bar",
+          "alt": "A daytime view from the bar.",
+          "sourceFile": "Dallas_With_Feeling_15_Daylight_Pool_from_the_Bar.jpg",
+          "sourceSha256": "25354cbadc2a4e316362fdbe1a781eef8020a39d25627505475227794d4ea487"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "sequenceLabel": "POOLSIDE INTO AFTER HOURS",
+        "heroId": "dallas-with-feeling-1be9be01746f74d2",
+        "chapters": [
+          {
+            "label": "THE ARRANGEMENT",
+            "navigation": "The pool",
+            "title": "Room for company.",
+            "description": "Clear water, white loungers, a spa, and a different view from every seat.",
+            "blocks": [
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "dallas-with-feeling-5c6a65a5b0c6ffab",
+                  "dallas-with-feeling-085d9abba0503459"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "BEHIND THE BAR",
+            "navigation": "The bar",
+            "title": "The sign says it all.",
+            "description": "A tiled backdrop. Warm pendant lights. Two words: pool party.",
+            "blocks": [
+              {
+                "layout": "feature",
+                "photoIds": [
+                  "dallas-with-feeling-76712c0d04a93912"
+                ],
+                "note": {
+                  "label": "HOUSE RULE",
+                  "text": "Stay for another."
+                }
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "dallas-with-feeling-25354cbadc2a4e31",
+                  "dallas-with-feeling-9ba2d50468aec28c"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "BLUE HOUR",
+            "navigation": "After hours",
+            "title": "The city can wait.",
+            "description": "Fire along the water. Blue tile after dark. The whole backyard takes on a different mood.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "dallas-with-feeling-8c6f3d32f5daa7f9"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "dallas-with-feeling-f14f8da1e4d72258",
+                  "dallas-with-feeling-2a8d7a0f1c6ebe73"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "Owner-supplied project photographs. Location, date, construction scope and builder attribution have not been supplied."
+    },
+    {
+      "id": "collins-004",
+      "slug": "lower-form-of-leisure",
+      "title": "Lower Form of Leisure",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "A lower seat. A slower afternoon. Plenty of reasons to stay.",
+      "services": [],
+      "coverId": "lower-form-of-leisure-6cf4d340e442f1fc",
+      "photos": [
+        {
+          "id": "lower-form-of-leisure-33fd92cee2fa8510",
+          "src": "assets/projects/lower-form-of-leisure/33fd92cee2fa8510.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Pool lights and floating lanterns at dusk.",
+          "alt": "Pool lights and floating lanterns at dusk.",
+          "sourceFile": "16906830-f761-4a45-976c-b1bf4e770641.jpg",
+          "sourceSha256": "33fd92cee2fa8510a233e969ce6a0fa5ee575cde78dadcaa701c336491af9df2"
+        },
+        {
+          "id": "lower-form-of-leisure-6cc0d821177d99af",
+          "src": "assets/projects/lower-form-of-leisure/6cc0d821177d99af.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The pool and paver path in evening light.",
+          "alt": "The pool and paver path in evening light.",
+          "sourceFile": "1be83266-476a-4505-868c-010597f37b92(1).jpg",
+          "sourceSha256": "6cc0d821177d99af5447aa8987fc1f231e2adacf7e4edb179a5ee88686c61808"
+        },
+        {
+          "id": "lower-form-of-leisure-c8754f2360f9d105",
+          "src": "assets/projects/lower-form-of-leisure/c8754f2360f9d105.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Pool, lawn and covered patio in daylight.",
+          "alt": "Pool, lawn and covered patio in daylight.",
+          "sourceFile": "1bf9a302-1b1a-4ddb-b01d-469f76f5ff6a.jpg",
+          "sourceSha256": "c8754f2360f9d105c20e10924b983f38d934985a156b46a3d48978a5caca2ae3"
+        },
+        {
+          "id": "lower-form-of-leisure-ec6df443aae9a460",
+          "src": "assets/projects/lower-form-of-leisure/ec6df443aae9a460.webp",
+          "width": 720,
+          "height": 1008,
+          "caption": "Brick fireplace and two chairs.",
+          "alt": "Brick fireplace and two chairs.",
+          "sourceFile": "1dbea6be-2fcd-4509-b8bc-c646032d0df9.jpg",
+          "sourceSha256": "ec6df443aae9a4608ae10aacba0ed85d5f0e85fe0bbc85008e7009d369b36561"
+        },
+        {
+          "id": "lower-form-of-leisure-2b6ddd9e362f736f",
+          "src": "assets/projects/lower-form-of-leisure/2b6ddd9e362f736f.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Paver paths beside the sunken seating area and putting green.",
+          "alt": "Paver paths beside the sunken seating area and putting green.",
+          "sourceFile": "4c5ddee2-cd27-419b-98b5-5440f0b7fdcb.jpg",
+          "sourceSha256": "2b6ddd9e362f736f38d15fc053ccd9f0d21cc43b9267161dab773b4d7981ed12"
+        },
+        {
+          "id": "lower-form-of-leisure-b506f80735307999",
+          "src": "assets/projects/lower-form-of-leisure/b506f80735307999.webp",
+          "width": 720,
+          "height": 1079,
+          "caption": "The sunken conversation pit after dark.",
+          "alt": "The sunken conversation pit after dark.",
+          "sourceFile": "57265ea2-4514-49ea-8e8d-d2a8be4e2f1e.jpg",
+          "sourceSha256": "b506f80735307999fee6085bc41d7b21f7d39aed7a9d2ff7947ca73d7725fb4f"
+        },
+        {
+          "id": "lower-form-of-leisure-3d8686a364480d8d",
+          "src": "assets/projects/lower-form-of-leisure/3d8686a364480d8d.webp",
+          "width": 1200,
+          "height": 801,
+          "caption": "Built-in seating beside the pool.",
+          "alt": "Built-in seating beside the pool.",
+          "sourceFile": "581bcc49-d4a2-494c-b7f8-dec5e5ed5948.jpg",
+          "sourceSha256": "3d8686a364480d8d3e6c7a5c4dde6f1cfddf1205fd21a65b037ec189f80bac4e"
+        },
+        {
+          "id": "lower-form-of-leisure-9996e579c7ef98ef",
+          "src": "assets/projects/lower-form-of-leisure/9996e579c7ef98ef.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The pool and sunken lounge in daylight.",
+          "alt": "The pool and sunken lounge in daylight.",
+          "sourceFile": "5ce4f8e7-b776-4fe2-b5c3-2e76a047aa83.jpg",
+          "sourceSha256": "9996e579c7ef98ef72cf1559f37819e00dad4488f835478b3313830cddd571ce"
+        },
+        {
+          "id": "lower-form-of-leisure-6cf4d340e442f1fc",
+          "src": "assets/projects/lower-form-of-leisure/6cf4d340e442f1fc.webp",
+          "width": 1200,
+          "height": 801,
+          "caption": "The pool, loungers and lit patio at blue hour.",
+          "alt": "The pool, loungers and lit patio at blue hour.",
+          "sourceFile": "79c3fb54-3518-43aa-9f35-aeeec14d2ad4.jpg",
+          "sourceSha256": "6cf4d340e442f1fc05c438c8957375ce7703efe470dc22d0177d665d0cc72b6d"
+        },
+        {
+          "id": "lower-form-of-leisure-ae7923b702c3be34",
+          "src": "assets/projects/lower-form-of-leisure/ae7923b702c3be34.webp",
+          "width": 720,
+          "height": 539,
+          "caption": "An overhead view of the pool and backyard.",
+          "alt": "An overhead view of the pool and backyard.",
+          "sourceFile": "899ad8a9-6502-4495-85bf-e8a1d3d520ac.jpg",
+          "sourceSha256": "ae7923b702c3be34c82befe0e67d21353a3cbedaa5b9ab8551ab4aa33da395dd"
+        },
+        {
+          "id": "lower-form-of-leisure-686a6c5d22c61f96",
+          "src": "assets/projects/lower-form-of-leisure/686a6c5d22c61f96.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Fire table and cushions in the sunken lounge.",
+          "alt": "Fire table and cushions in the sunken lounge.",
+          "sourceFile": "caf45249-f734-47ff-a2b6-2cc2b9b32431.jpg",
+          "sourceSha256": "686a6c5d22c61f96f1eaa5f37d6085e4d21be35f49c5d8b513870eb4f0b90d1c"
+        },
+        {
+          "id": "lower-form-of-leisure-efda52bb7a5b3318",
+          "src": "assets/projects/lower-form-of-leisure/efda52bb7a5b3318.webp",
+          "width": 1200,
+          "height": 801,
+          "caption": "A view along the covered patio toward the pool.",
+          "alt": "A view along the covered patio toward the pool.",
+          "sourceFile": "d7e125f6-6df7-4ef3-bd24-4eb1ae11d7ac.jpg",
+          "sourceSha256": "efda52bb7a5b3318f1523237ef3d98a4dd28c88d7a73b09a408f25a011613fd3"
+        },
+        {
+          "id": "lower-form-of-leisure-ae4dd8a665d4e550",
+          "src": "assets/projects/lower-form-of-leisure/ae4dd8a665d4e550.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Loungers facing the pool and scalloped umbrella.",
+          "alt": "Loungers facing the pool and scalloped umbrella.",
+          "sourceFile": "dddd70cf-728b-4862-aaae-9b287ed082ed.jpg",
+          "sourceSha256": "ae4dd8a665d4e5502e58b1fd4f042b7a36382284b216099e95d483ac78de40d0"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "sequenceLabel": "WATER / THE LOWER SEAT / AFTER HOURS",
+        "chapters": [
+          {
+            "label": "THE AFTERNOON",
+            "navigation": "The pool",
+            "title": "A good place to do very little.",
+            "description": "A scalloped umbrella, a path of pavers, and a rectangle of blue.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "lower-form-of-leisure-efda52bb7a5b3318"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "lower-form-of-leisure-ae4dd8a665d4e550",
+                  "lower-form-of-leisure-ae7923b702c3be34"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "A LOWER FORM OF LEISURE",
+            "navigation": "The lower seat",
+            "title": "Take the lower seat.",
+            "description": "A few steps down. A different place to settle in.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "lower-form-of-leisure-3d8686a364480d8d"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "lower-form-of-leisure-9996e579c7ef98ef",
+                  "lower-form-of-leisure-b506f80735307999"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "AFTER HOURS",
+            "navigation": "Evening",
+            "title": "Nobody\u2019s in a hurry.",
+            "description": "The lanterns come on. The conversation has somewhere to go.",
+            "blocks": [
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "lower-form-of-leisure-33fd92cee2fa8510",
+                  "lower-form-of-leisure-6cc0d821177d99af"
+                ]
+              },
+              {
+                "layout": "feature",
+                "photoIds": [
+                  "lower-form-of-leisure-ec6df443aae9a460"
+                ],
+                "note": {
+                  "label": "ONE MORE PLACE TO LAND",
+                  "text": "A pair of chairs. A small table. The fire doing its thing."
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "13 unique photographs supplied by the owner for Lower Form of Leisure. One duplicate fireplace portrait omitted. Location, date, scope and builder attribution not supplied."
+    },
+    {
+      "id": "collins-005",
+      "slug": "mr-bears-residence",
+      "title": "Mr. Bears, Residence",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "Straight lines. Soft skies. A pavilion worth staying for.",
+      "services": [],
+      "coverId": "mr-bears-residence-e5050074673f3ad9",
+      "photos": [
+        {
+          "id": "mr-bears-residence-7cdf1d68c185fd46",
+          "src": "assets/projects/mr-bears-residence/7cdf1d68c185fd46.webp",
+          "width": 720,
+          "height": 404,
+          "caption": "An overhead view of the pool, spa and loungers.",
+          "alt": "Overhead photograph of a rectangular pool with entry steps, a separate square spa and loungers beside the pavilion.",
+          "sourceFile": "941ba523-276b-4ed4-8384-cc3fe199356c.webp",
+          "sourceSha256": "7cdf1d68c185fd46ef64d3462d38e3f7644888734ac7759f3bf39f44569c4740"
+        },
+        {
+          "id": "mr-bears-residence-21e4401e86ff9a72",
+          "src": "assets/projects/mr-bears-residence/21e4401e86ff9a72.webp",
+          "width": 720,
+          "height": 405,
+          "caption": "The pool and spa from above.",
+          "alt": "Aerial view of the rectangular pool, square spa, paired loungers and pavilion framed by lawn and mature trees.",
+          "sourceFile": "94c7dcfd-065c-4c62-9389-fad8479467d5.jpg",
+          "sourceSha256": "21e4401e86ff9a72d89818d3867f9f5f529a46515bf8561af5bd97224375255f"
+        },
+        {
+          "id": "mr-bears-residence-e5050074673f3ad9",
+          "src": "assets/projects/mr-bears-residence/e5050074673f3ad9.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The pavilion lights come on at dusk.",
+          "alt": "Rectangular pool leading toward a warmly lit pavilion beneath a pink and blue evening sky.",
+          "sourceFile": "998ab366-acb1-4a6d-ad05-5726e71d41db.jpg",
+          "sourceSha256": "e5050074673f3ad9e7af9752c19cf4b61d0ec3eb7ee22fb0d0288f3b534e05b0"
+        },
+        {
+          "id": "mr-bears-residence-ae8b7a426742be8b",
+          "src": "assets/projects/mr-bears-residence/ae8b7a426742be8b.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The spa, pool and house at sunset.",
+          "alt": "Square spa in the foreground, with the pool and illuminated house beyond beneath a pink sunset.",
+          "sourceFile": "b03026a6-b71e-4ca6-b67f-82bfc347d16b.jpg",
+          "sourceSha256": "ae8b7a426742be8b94da9355b75f32cefe9d1c294e7a66bc2bb28187ddf4387e"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "sequenceLabel": "FROM ABOVE / AFTER THE SUN",
+        "chapters": [
+          {
+            "label": "THE LAY OF THE LAND",
+            "navigation": "From above",
+            "title": "Everything in its place.",
+            "description": "A rectangle of water. A square of bubbles. Two ways to spend the afternoon.",
+            "blocks": [
+              {
+                "photoIds": [
+                  "mr-bears-residence-7cdf1d68c185fd46",
+                  "mr-bears-residence-21e4401e86ff9a72"
+                ],
+                "layout": "pair"
+              }
+            ]
+          },
+          {
+            "label": "EVENING AT THE RESIDENCE",
+            "navigation": "After the sun",
+            "title": "The lights have other plans.",
+            "description": "The sky takes its turn. The pavilion keeps the evening open.",
+            "blocks": [
+              {
+                "photoIds": [
+                  "mr-bears-residence-ae8b7a426742be8b"
+                ],
+                "layout": "wide"
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "Four owner-supplied photographs. Location, date, construction scope and completed-work approval have not been supplied."
+    },
+    {
+      "id": "collins-006",
+      "slug": "strictly-striped-affair",
+      "title": "Strictly Striped Affair",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "Four striped seats. Several friendly competitions. No fixed departure time.",
+      "services": [],
+      "coverId": "strictly-striped-affair-cc51b565d1d7f3e5",
+      "photos": [
+        {
+          "id": "strictly-striped-affair-c0d13e2c766d7d2e",
+          "src": "assets/projects/strictly-striped-affair/c0d13e2c766d7d2e.webp",
+          "width": 1200,
+          "height": 899,
+          "caption": "The whole backyard, from above.",
+          "alt": "Overhead view of the pool, striped loungers, lawn games, covered dining area and rooftop seating.",
+          "sourceFile": "20e8e034-37cc-47d2-8750-93a24f4347d6 - Copy.jpg",
+          "sourceSha256": "c0d13e2c766d7d2e20a48bcae70bc6d7b13e02d9ed7bd9a1aec3664ac7e5ef75"
+        },
+        {
+          "id": "strictly-striped-affair-d12025f874e49421",
+          "src": "assets/projects/strictly-striped-affair/d12025f874e49421.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "The striped seats have the best view.",
+          "alt": "Rectangular pool facing four blue-and-white striped loungers, with dark chairs and lawn games along the sides.",
+          "sourceFile": "34720bcf-af8a-468f-997f-92190b4b069c - Copy.jpg",
+          "sourceSha256": "d12025f874e494216e04a17c31b7fc358e57600d9ff17153ad068d9f059c9f64"
+        },
+        {
+          "id": "strictly-striped-affair-ea9f2ecc77b7b0fb",
+          "src": "assets/projects/strictly-striped-affair/ea9f2ecc77b7b0fb.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Blue hour beside the pool.",
+          "alt": "Pool reflecting the blue evening sky, with striped loungers and illuminated windows beyond.",
+          "sourceFile": "4fe41417-6bf3-4c22-a035-493b97417d21 - Copy.jpg",
+          "sourceSha256": "ea9f2ecc77b7b0fbf5f06dd2fec4aca58b73485de4ecfa7bcf4da65f6da7efe7"
+        },
+        {
+          "id": "strictly-striped-affair-7e831fc53fd52843",
+          "src": "assets/projects/strictly-striped-affair/7e831fc53fd52843.webp",
+          "width": 720,
+          "height": 519,
+          "caption": "A little more daylight left.",
+          "alt": "Elevated view along the pool toward striped loungers beneath an orange sunset.",
+          "sourceFile": "573fdc4d-746d-4c5e-84a1-403d5efac57f - Copy.jpg",
+          "sourceSha256": "7e831fc53fd52843c7f89d8cd0d39b9116c2d2bd0a86eca46eeb66ff01ba6f23"
+        },
+        {
+          "id": "strictly-striped-affair-03ad3d101234d617",
+          "src": "assets/projects/strictly-striped-affair/03ad3d101234d617.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A seat by the fire table.",
+          "alt": "Pale blue outdoor sofa and chairs around a long rectangular fire table beside orange loungers.",
+          "sourceFile": "60d10f4c-35e1-4dc5-8044-a5e3aed58a18 - Copy.jpg",
+          "sourceSha256": "03ad3d101234d61785e2a61e3429eca41131953ce67b529799bc525207bd6232"
+        },
+        {
+          "id": "strictly-striped-affair-1f0f0c90b8e78724",
+          "src": "assets/projects/strictly-striped-affair/1f0f0c90b8e78724.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The house lights come on.",
+          "alt": "Pool facing the lit white house at dusk, with dark chairs and striped loungers beside the water.",
+          "sourceFile": "6570138e-93d4-4886-9aa1-3b97f77992eb - Copy.jpg",
+          "sourceSha256": "1f0f0c90b8e7872420f036cb8d23db8b52c269674ce3e1b595fdd3935b94f41a"
+        },
+        {
+          "id": "strictly-striped-affair-41ff784058feeb1e",
+          "src": "assets/projects/strictly-striped-affair/41ff784058feeb1e.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "Poolside, with games within reach.",
+          "alt": "Daylight view of the pool, dark chairs, striped loungers, cornhole boards and a blue bowling lane.",
+          "sourceFile": "75b13c67-3270-4fb1-b8eb-4855fcdaacee - Copy.jpg",
+          "sourceSha256": "41ff784058feeb1efdb9cfd2fd091ed2e6907659e823d4cd477d35c7f10d6129"
+        },
+        {
+          "id": "strictly-striped-affair-cc51b565d1d7f3e5",
+          "src": "assets/projects/strictly-striped-affair/cc51b565d1d7f3e5.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "Stripes, sunset and no particular hurry.",
+          "alt": "Orange loungers with blue-and-white striped cushions beside the pool beneath pink evening clouds.",
+          "sourceFile": "7b422bbe-5a84-425f-a5c5-a4f5f0011569 - Copy.jpg",
+          "sourceSha256": "cc51b565d1d7f3e5ed0abcef103aad2ad49acec42004c9c6372f716bfefc7687"
+        },
+        {
+          "id": "strictly-striped-affair-580e194d772175fd",
+          "src": "assets/projects/strictly-striped-affair/580e194d772175fd.webp",
+          "width": 720,
+          "height": 539,
+          "caption": "A pool with good company.",
+          "alt": "Overhead view of the rectangular pool surrounded by striped loungers, dark chairs and backyard games.",
+          "sourceFile": "94d07a0b-c76f-4aae-ada3-fcd9c34b4202 - Copy.jpg",
+          "sourceSha256": "580e194d772175fd91d794ae17be81a225e5060230eaafdaceeca0fa2c24e977"
+        },
+        {
+          "id": "strictly-striped-affair-154507a2b75b5982",
+          "src": "assets/projects/strictly-striped-affair/154507a2b75b5982.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "A table under the shade structure.",
+          "alt": "Outdoor dining table under a metal shade structure beside a blue sofa and the white house.",
+          "sourceFile": "98364f46-cdb0-4f0c-9fd4-09add1dad6b1 - Copy.jpg",
+          "sourceSha256": "154507a2b75b59820864e423956d5b7ed60c17f47f2041d40f1d251fc9b0becc"
+        },
+        {
+          "id": "strictly-striped-affair-42d9d4bc9a6e11b6",
+          "src": "assets/projects/strictly-striped-affair/42d9d4bc9a6e11b6.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "An afternoon at the pool.",
+          "alt": "Daylight view along the rectangular pool toward striped loungers and outdoor games.",
+          "sourceFile": "a2de7a69-e260-43ef-84e7-1976ff386e0c - Copy.jpg",
+          "sourceSha256": "42d9d4bc9a6e11b6c8ceedfbaba2edcd232f1ef5510edfe83526c7230a2a4516"
+        },
+        {
+          "id": "strictly-striped-affair-0f7a917c3870672e",
+          "src": "assets/projects/strictly-striped-affair/0f7a917c3870672e.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The side yard has a short game.",
+          "alt": "Narrow putting green alongside the house with flags, pool equipment and a dining area beyond.",
+          "sourceFile": "b4fdcdf5-85dc-4994-8756-10c048583eaf - Copy.jpg",
+          "sourceSha256": "0f7a917c3870672ea9698f06efdafea7ecf02ca9d327277e1601d466c5961125"
+        },
+        {
+          "id": "strictly-striped-affair-3329ccbadce04019",
+          "src": "assets/projects/strictly-striped-affair/3329ccbadce04019.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Room for another round.",
+          "alt": "Poolside cornhole boards, oversized four-in-a-row game and bowling lane in bright daylight.",
+          "sourceFile": "c6b49c9b-c9e7-43ca-bdcc-4612ba1c5f9d - Copy.jpg",
+          "sourceSha256": "3329ccbadce0401993d5221e4de2605b386e58616d56e2eb58ae21fdbab4ebb6"
+        },
+        {
+          "id": "strictly-striped-affair-19576c0fa80d7c81",
+          "src": "assets/projects/strictly-striped-affair/19576c0fa80d7c81.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "The grill, the table and somewhere to settle.",
+          "alt": "Outdoor grill counter beside a sofa, chairs, fire table and covered dining area.",
+          "sourceFile": "db0855d1-779a-42e5-a837-e9004dca3a9c - Copy.jpg",
+          "sourceSha256": "19576c0fa80d7c81923bae2a1e7907d0305f1638efef8e67896f546b7c28924f"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "sequenceLabel": "TAKE A SEAT / ONE MORE ROUND / AFTER HOURS",
+        "chapters": [
+          {
+            "label": "TAKE A SEAT",
+            "navigation": "Poolside",
+            "title": "An orderly arrangement of doing nothing.",
+            "description": "Blue-and-white stripes, orange frames, and a pool at the center of it all.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "strictly-striped-affair-580e194d772175fd"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "strictly-striped-affair-d12025f874e49421",
+                  "strictly-striped-affair-41ff784058feeb1e"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "ONE MORE ROUND",
+            "navigation": "Out back",
+            "title": "The afternoon has options.",
+            "description": "A game on the lawn. Something on the grill. A table waiting under the shade.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "strictly-striped-affair-19576c0fa80d7c81"
+                ]
+              },
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "strictly-striped-affair-03ad3d101234d617",
+                  "strictly-striped-affair-154507a2b75b5982"
+                ]
+              },
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "strictly-striped-affair-3329ccbadce04019"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "AFTER HOURS",
+            "navigation": "Evening",
+            "title": "Nobody called time.",
+            "description": "The games can wait. The sky has a few things to say.",
+            "blocks": [
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "strictly-striped-affair-ea9f2ecc77b7b0fb",
+                  "strictly-striped-affair-1f0f0c90b8e78724"
+                ]
+              },
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "strictly-striped-affair-7e831fc53fd52843"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "Fourteen owner-supplied photographs. Originals preserved; location, date, construction scope and completed-work approval have not been supplied."
+    },
+    {
+      "id": "collins-007",
+      "slug": "the-sun-stayed-for-supper",
+      "title": "The Sun Stayed for Supper",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "A long swim. A shaded table. Very little reason to head inside.",
+      "services": [],
+      "coverId": "the-sun-stayed-for-supper-7015ed67131d404e",
+      "photos": [
+        {
+          "id": "the-sun-stayed-for-supper-461e31a7bb97f3dc",
+          "src": "assets/projects/the-sun-stayed-for-supper/461e31a7bb97f3dc.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "A quiet corner of the pool and spa.",
+          "alt": "Square tiled spa beside the pool, with gray coping, stepping stones and wood seating beyond.",
+          "sourceFile": "273a63f5-2a3f-439d-9085-419658ea2eae.jpg",
+          "sourceSha256": "461e31a7bb97f3dc50cd17a813b35b2b98da2cee23ecac263380fc2f6c8765bf"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-ca9dc81c4e070427",
+          "src": "assets/projects/the-sun-stayed-for-supper/ca9dc81c4e070427.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Water along the stepped wall.",
+          "alt": "Long rectangular pool below a stepped gray wall, with wood seating and a broad lawn in front.",
+          "sourceFile": "3d9b54ec-ff42-4e1e-b5b7-fbfcd552b178.jpg",
+          "sourceSha256": "ca9dc81c4e070427238058c758f0e6570e358e7ed26c72a0764c4da09075c896"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-fe5a1f186c6cd3b6",
+          "src": "assets/projects/the-sun-stayed-for-supper/fe5a1f186c6cd3b6.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "A long view across the water.",
+          "alt": "View along the rectangular pool toward the spa and house, with trees reflected in the water.",
+          "sourceFile": "5e3f18ba-c692-4f82-b84b-694b9050df23.jpg",
+          "sourceSha256": "fe5a1f186c6cd3b63fe59aea73b7f172f3a91ce3d3293174a9e62d0bb47fc117"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-aaeed8c6ddbbeba0",
+          "src": "assets/projects/the-sun-stayed-for-supper/aaeed8c6ddbbeba0.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "The view from the covered patio.",
+          "alt": "Outdoor sofa facing a built-in fireplace on the covered patio, with the lawn and pool beyond.",
+          "sourceFile": "728930b1-9a37-4df3-8422-932b0d904294.jpg",
+          "sourceSha256": "aaeed8c6ddbbeba0467ec020b41ca9d2fa36aa45f72ed8f2942563536a500715"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-259dc24008424140",
+          "src": "assets/projects/the-sun-stayed-for-supper/259dc24008424140.webp",
+          "width": 720,
+          "height": 540,
+          "caption": "The pool and picnic table from above.",
+          "alt": "Elevated view of the pool, spa, lawn, pergola, grill and wood picnic table.",
+          "sourceFile": "79fd9ebb-cd0c-4624-aa61-367194c05209.jpg",
+          "sourceSha256": "259dc24008424140afbb44116fe2244b25eebc9d2a4e5bd3ec454d4d31561102"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-2818b9071c28cf9d",
+          "src": "assets/projects/the-sun-stayed-for-supper/2818b9071c28cf9d.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The path around the house.",
+          "alt": "Gravel path around the gray house, passing wood gates and planting beds toward backyard steps.",
+          "sourceFile": "7ecf487d-b400-4910-b219-f80a9bea55ca.jpg",
+          "sourceSha256": "2818b9071c28cf9d1c1e3214478b9811a487d8283dbef167b7586876c181343c"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-350d699af84be8e5",
+          "src": "assets/projects/the-sun-stayed-for-supper/350d699af84be8e5.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The grill and table under the pergola.",
+          "alt": "Outdoor grill and wood picnic table beneath a pergola beside the lawn.",
+          "sourceFile": "9995c049-ff10-46cd-9277-2019440ecd3c.jpg",
+          "sourceSha256": "350d699af84be8e5731792c183ccea9bf1c8a7148b5f845c7c0496e69c5aa50a"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-db899880222ffbf4",
+          "src": "assets/projects/the-sun-stayed-for-supper/db899880222ffbf4.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "A lawn between the house and water.",
+          "alt": "Gray house facing the lawn and pool, with rectangular stepping stones along the windows.",
+          "sourceFile": "b8af38d1-b09f-49c9-91e1-88d548bb6aec.jpg",
+          "sourceSha256": "db899880222ffbf4b3028b89b0d42f9f7f5ce985a1ad9982c66fdc21ca0a73f9"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-dd13fdb48c66ee6f",
+          "src": "assets/projects/the-sun-stayed-for-supper/dd13fdb48c66ee6f.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "A small wood sauna among the trees.",
+          "alt": "Freestanding wood sauna with glass door and windows, surrounded by trees beside a concrete path.",
+          "sourceFile": "bfc93066-9f29-4938-9bc4-52e236298b0b.jpg",
+          "sourceSha256": "dd13fdb48c66ee6f11b4d979baffc3f3ec30327580d86c1a9ef588074f50706f"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-ee799962b9bafb55",
+          "src": "assets/projects/the-sun-stayed-for-supper/ee799962b9bafb55.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "The backyard in afternoon light.",
+          "alt": "Wide view of the lawn, gray house and pool, bordered by stepped walls and a wood fence.",
+          "sourceFile": "c7e9dcf8-b9ed-4e17-9c8e-8e5c41d76f9b.jpg",
+          "sourceSha256": "ee799962b9bafb55e729abc004e0457de8efdd8cc626f0d3b59e3ed58ed32688"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-b14a08ab1029e97e",
+          "src": "assets/projects/the-sun-stayed-for-supper/b14a08ab1029e97e.webp",
+          "width": 720,
+          "height": 480,
+          "caption": "Steps back toward the table.",
+          "alt": "Wood steps with dark handrails leading up to the pergola and grill, with a trampoline beside the lower path.",
+          "sourceFile": "cf814fd9-e700-4b64-b8aa-8af37ed46e3a.jpg",
+          "sourceSha256": "b14a08ab1029e97e63b7e19313cfb4cf29f3120f5442899d128629ba8c973570"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-929dbfed556cf1de",
+          "src": "assets/projects/the-sun-stayed-for-supper/929dbfed556cf1de.webp",
+          "width": 1200,
+          "height": 900,
+          "caption": "The whole backyard from above.",
+          "alt": "Aerial view of the house, lawn, covered patio, rectangular pool and square spa.",
+          "sourceFile": "e4814e7e-49f3-4542-9ccd-a543393c25e1.jpg",
+          "sourceSha256": "929dbfed556cf1debac7ba87a1bcd9cc86c433bd71c84231f639cb995125fb54"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-7015ed67131d404e",
+          "src": "assets/projects/the-sun-stayed-for-supper/7015ed67131d404e.webp",
+          "width": 1200,
+          "height": 800,
+          "caption": "A table with room for the afternoon.",
+          "alt": "Wood picnic table and grill beneath a slatted pergola casting long striped shadows across the patio.",
+          "sourceFile": "e794e2a5-2686-489a-880c-2ae6c579d2fb.jpg",
+          "sourceSha256": "7015ed67131d404e8f05950c7abb7c4eb77bd41d454d94ee4a04e177b41c8242"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-7c3f6b4ee4b0d259",
+          "src": "assets/projects/the-sun-stayed-for-supper/7c3f6b4ee4b0d259.webp",
+          "width": 1200,
+          "height": 799,
+          "caption": "Pool, spa and a place to sit.",
+          "alt": "Rectangular pool and square spa framed by gray coping, stepping stones and wood benches.",
+          "sourceFile": "ee800ed3-4c38-450c-bea6-200fe25a262c.jpg",
+          "sourceSha256": "7c3f6b4ee4b0d259a4be812d2c7bf1ba93c7c6f01c33a945847cee494b95bf9c"
+        },
+        {
+          "id": "the-sun-stayed-for-supper-ea48bf48ad73f7ab",
+          "src": "assets/projects/the-sun-stayed-for-supper/ea48bf48ad73f7ab.webp",
+          "width": 720,
+          "height": 540,
+          "caption": "The backyard plan, seen from above.",
+          "alt": "Overhead photograph of the rectangular pool and spa beside the lawn, house and pergola.",
+          "sourceFile": "feab9f17-1353-4305-ac52-fd35d71aa27c.jpg",
+          "sourceSha256": "ea48bf48ad73f7abee7afc80a71deb8f19b79f43a5b522bf698d6413902c2bfd"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "sequenceLabel": "THE WATER / THE TABLE / THE QUIET CORNERS",
+        "chapters": [
+          {
+            "label": "THE WATER",
+            "navigation": "The pool",
+            "title": "The long way to lunch.",
+            "description": "A length of water, a square spa, and somewhere to sit along the edge.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "the-sun-stayed-for-supper-7c3f6b4ee4b0d259"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "the-sun-stayed-for-supper-fe5a1f186c6cd3b6",
+                  "the-sun-stayed-for-supper-461e31a7bb97f3dc"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "THE TABLE",
+            "navigation": "Stay for supper",
+            "title": "The table can wait. So can everything else.",
+            "description": "A grill under the slats. A sofa in the shade. The afternoon has places to settle.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "the-sun-stayed-for-supper-aaeed8c6ddbbeba0"
+                ]
+              },
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "the-sun-stayed-for-supper-350d699af84be8e5",
+                  "the-sun-stayed-for-supper-259dc24008424140"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "THE QUIET CORNERS",
+            "navigation": "Around the corner",
+            "title": "A few more reasons to linger.",
+            "description": "Follow the steps. Take the side path. There is more to the yard than the view from the water.",
+            "blocks": [
+              {
+                "layout": "feature",
+                "photoIds": [
+                  "the-sun-stayed-for-supper-dd13fdb48c66ee6f"
+                ],
+                "note": {
+                  "label": "ANOTHER PACE ENTIRELY",
+                  "text": "A small wood sauna, tucked beside the path."
+                }
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "the-sun-stayed-for-supper-b14a08ab1029e97e",
+                  "the-sun-stayed-for-supper-2818b9071c28cf9d"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "Fifteen owner-supplied photographs. Originals preserved; location, date, construction scope and completed-work approval have not been supplied."
+    },
+    {
+      "id": "collins-008",
+      "slug": "umpire-strikes-back",
+      "title": "Umpire Strikes Back",
+      "status": "draft",
+      "approved": false,
+      "town": "",
+      "year": "",
+      "summary": "A few laps. A few innings. A very long afternoon.",
+      "services": [],
+      "coverId": "umpire-strikes-back-f83032688c09eb36",
+      "photos": [
+        {
+          "id": "umpire-strikes-back-26e14d0bcb7ea618",
+          "src": "assets/projects/umpire-strikes-back/26e14d0bcb7ea618.webp",
+          "width": 1200,
+          "height": 805,
+          "caption": "The pool, with room for the whole afternoon.",
+          "alt": "Curved pool with an inset round seating area, rock waterfall, blue loungers and striped umbrellas beside the house.",
+          "sourceFile": "0d05cd09-bad2-448c-9c12-131fde548d4e - Copy.jpg",
+          "sourceSha256": "26e14d0bcb7ea618272b54290101c90bf00999fdc98c0be5741fdbc23018385b"
+        },
+        {
+          "id": "umpire-strikes-back-409dee22579bfda7",
+          "src": "assets/projects/umpire-strikes-back/409dee22579bfda7.webp",
+          "width": 720,
+          "height": 483,
+          "caption": "A short game along the fence.",
+          "alt": "Putting green with checkered flags and a basket of golf balls beside the wood fence and rock waterfall.",
+          "sourceFile": "366834a9-ce6c-4f75-b7e6-518649e3eb8b - Copy.jpg",
+          "sourceSha256": "409dee22579bfda7ad5d39c63074559cad4bcd67c929f22ee437cc59737bbe20"
+        },
+        {
+          "id": "umpire-strikes-back-8c09430029ecd73c",
+          "src": "assets/projects/umpire-strikes-back/8c09430029ecd73c.webp",
+          "width": 720,
+          "height": 483,
+          "caption": "Red chairs, string lights and a fire.",
+          "alt": "Red Adirondack chairs around a round fire pit beneath string lights, with the pool and pavilion beyond at dusk.",
+          "sourceFile": "75392036-8ac9-4ba0-8ef0-32480443a379 - Copy.jpg",
+          "sourceSha256": "8c09430029ecd73cea925620548c3a0827e00a7ba1c7ed083f4b9c4d3b3548ed"
+        },
+        {
+          "id": "umpire-strikes-back-8b553df39a7d3a63",
+          "src": "assets/projects/umpire-strikes-back/8b553df39a7d3a63.webp",
+          "width": 1600,
+          "height": 1059,
+          "caption": "The pavilion stays open after sunset.",
+          "alt": "Illuminated pavilion and wood playset beneath a golden evening sky, with orange lounge seats on the lawn.",
+          "sourceFile": "86f559ba-525f-49d8-b5fa-b1776df306bc - Copy.jpg",
+          "sourceSha256": "8b553df39a7d3a63096f27c95f2473a11473267a0a685397ed7f0b38fd52d8fa"
+        },
+        {
+          "id": "umpire-strikes-back-0c3a0e36c0d43e7a",
+          "src": "assets/projects/umpire-strikes-back/0c3a0e36c0d43e7a.webp",
+          "width": 720,
+          "height": 402,
+          "caption": "A place to play beside the pavilion.",
+          "alt": "Wood playset with swings and slides beside a pavilion with tables and a screen in daylight.",
+          "sourceFile": "8e11bc47-0675-405b-9dc7-3900e700727a - Copy.jpg",
+          "sourceSha256": "0c3a0e36c0d43e7a116f6fee652dd275f4dc97b2605fc9c12e6b4b7c1721f063"
+        },
+        {
+          "id": "umpire-strikes-back-134f6b4f6e1e5379",
+          "src": "assets/projects/umpire-strikes-back/134f6b4f6e1e5379.webp",
+          "width": 720,
+          "height": 402,
+          "caption": "Pool and court, side by side.",
+          "alt": "Overhead view of the curved pool, loungers, striped umbrellas and blue, orange and green sports court.",
+          "sourceFile": "a21f8411-3896-4ba3-a82d-e9e97cb8fb6c.jpg",
+          "sourceSha256": "134f6b4f6e1e537919f2bcc77539bf21a0bade14e96eba1bb193b29156f4836a"
+        },
+        {
+          "id": "umpire-strikes-back-028221f29e3ba1c1",
+          "src": "assets/projects/umpire-strikes-back/028221f29e3ba1c1.webp",
+          "width": 1200,
+          "height": 795,
+          "caption": "The water gets its evening colors.",
+          "alt": "Blue-lit curved pool and purple-lit round seating area beside the rock waterfall at dusk.",
+          "sourceFile": "afa50612-39d1-42d0-b0e9-129910b6c8b7 - Copy.jpg",
+          "sourceSha256": "028221f29e3ba1c15b85c0c3ee4fca14227c31787fab0cf85afa6248d484ec32"
+        },
+        {
+          "id": "umpire-strikes-back-47ab0d72904db5f9",
+          "src": "assets/projects/umpire-strikes-back/47ab0d72904db5f9.webp",
+          "width": 1200,
+          "height": 805,
+          "caption": "One more game before dark.",
+          "alt": "Blue, orange and green court with a low net and basketball hoop beneath a pink evening sky.",
+          "sourceFile": "cdad88e6-75ba-434a-9ec2-581e2e227d13 - Copy.jpg",
+          "sourceSha256": "47ab0d72904db5f93adefe6dfc1b66d6ab453f7de5379ad33612a3a6adb3cac5"
+        },
+        {
+          "id": "umpire-strikes-back-f46fa0d0e1d39ec7",
+          "src": "assets/projects/umpire-strikes-back/f46fa0d0e1d39ec7.webp",
+          "width": 720,
+          "height": 483,
+          "caption": "The backyard has a home plate.",
+          "alt": "Red baseball infield with white baselines, batter boxes, bats and a ball beneath a pink sunset.",
+          "sourceFile": "d998d3f1-8b37-4eb7-b4ae-731755a1749f - Copy.jpg",
+          "sourceSha256": "f46fa0d0e1d39ec7fd6fc6ac568de268c91cfd47101bb43e4956bfb12676681c"
+        },
+        {
+          "id": "umpire-strikes-back-f83032688c09eb36",
+          "src": "assets/projects/umpire-strikes-back/f83032688c09eb36.webp",
+          "width": 1600,
+          "height": 1066,
+          "caption": "The whole evening, seen from above.",
+          "alt": "Evening aerial view of the pool, court, pavilion, playset and illuminated house beneath a warm sunset.",
+          "sourceFile": "fa4c1434-2beb-4134-9837-d7e0f08d55f0 - Copy.jpg",
+          "sourceSha256": "f83032688c09eb36e5d23f4220b965ddacd827cd78bd367d515f78fc915744b5"
+        },
+        {
+          "id": "umpire-strikes-back-e678b5466d76eeae",
+          "src": "assets/projects/umpire-strikes-back/e678b5466d76eeae.webp",
+          "width": 1200,
+          "height": 670,
+          "caption": "A backyard with several ways to play.",
+          "alt": "Overhead photograph of the pool, sports court, baseball field, putting green, fire pit, pavilion and playset.",
+          "sourceFile": "ff61f022-88ac-4f7c-990f-405cd52629d5 (1).jpg",
+          "sourceSha256": "e678b5466d76eeaeae7101c621baf7b780a3438fa46a921901ebefe6b5783e6d"
+        }
+      ],
+      "editorial": {
+        "layout": "photographic",
+        "sequenceLabel": "THE WATER / THE NEXT GAME / UNDER THE LIGHTS",
+        "chapters": [
+          {
+            "label": "THE WATER",
+            "navigation": "The pool",
+            "title": "The swimming division.",
+            "description": "Curves of blue, a rock waterfall, and a row of seats for anyone taking a break.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "umpire-strikes-back-26e14d0bcb7ea618"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "umpire-strikes-back-134f6b4f6e1e5379",
+                  "umpire-strikes-back-028221f29e3ba1c1"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "THE NEXT GAME",
+            "navigation": "Play ball",
+            "title": "The yard has a home team.",
+            "description": "A home plate. A hoop. A few putting flags. Picking a game might take a minute.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "umpire-strikes-back-f46fa0d0e1d39ec7"
+                ]
+              },
+              {
+                "layout": "pair",
+                "photoIds": [
+                  "umpire-strikes-back-47ab0d72904db5f9",
+                  "umpire-strikes-back-409dee22579bfda7"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "UNDER THE LIGHTS",
+            "navigation": "After the game",
+            "title": "Extra innings, by the fire.",
+            "description": "The pavilion lights come on. The red chairs are still available.",
+            "blocks": [
+              {
+                "layout": "wide",
+                "photoIds": [
+                  "umpire-strikes-back-8b553df39a7d3a63"
+                ]
+              },
+              {
+                "layout": "pair-offset",
+                "photoIds": [
+                  "umpire-strikes-back-0c3a0e36c0d43e7a",
+                  "umpire-strikes-back-8c09430029ecd73c"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "sourceNote": "Eleven owner-supplied photographs. Originals preserved; location, date, construction scope and completed-work approval have not been supplied."
+    }
+  ]
+}
