@@ -2,6 +2,7 @@
 (() => {
  'use strict';
  const links = [...document.querySelectorAll('[data-photo]')];
+ const photosByNumber = new Map(links.map((link, index) => [Number(link.dataset.photo), index]));
  const dialog = document.querySelector('#photo-viewer');
  if (!links.length || !dialog || typeof dialog.showModal !== 'function') return;
  const image = dialog.querySelector('img');
@@ -17,7 +18,7 @@
   image.alt = link.querySelector('img')?.alt || link.dataset.caption;
   caption.textContent = link.dataset.caption;
   count.textContent = `${index + 1} / ${links.length}`;
-  if (updateHistory && dialog.open) history.replaceState(history.state, '', `#photo-${index + 1}`);
+  if (updateHistory && dialog.open) history.replaceState(history.state, '', `#photo-${link.dataset.photo}`);
  }
  function open(i) {
   show(i, false);
@@ -35,8 +36,10 @@
  }
  function restore() {
   const match = /^#photo-(\d+)$/.exec(location.hash);
-  const photo = match ? Number(match[1]) - 1 : -1;
-  if (photo >= 0 && photo < links.length) {
+  const photo = match ? photosByNumber.get(Number(match[1])) : undefined;
+  if (photo !== undefined) {
+   const more = links[photo].closest('details');
+   if (more) more.open = true;
    if (!opener) opener = links[photo];
    open(photo);
   } else if (dialog.open) dialog.close();
@@ -44,7 +47,7 @@
  links.forEach((link, i) => link.addEventListener('click', event => {
   if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
   event.preventDefault(); opener = link;
-  history.pushState({...history.state, collinsPhotoViewer:true}, '', `#photo-${i + 1}`);
+  history.pushState({...history.state, collinsPhotoViewer:true}, '', `#photo-${link.dataset.photo}`);
   open(i);
  }));
  dialog.querySelector('[data-close]').addEventListener('click', close);

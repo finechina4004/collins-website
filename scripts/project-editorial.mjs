@@ -1,0 +1,58 @@
+export const editorial = {
+  'black-tie-barefoot': {
+    color: 'pine',
+    summary: 'A pool and hot tub at the edge of the woods, with a covered porch overlooking the deck.',
+    features: ['Rectangular pool', 'Separate hot tub', 'Covered porch', 'Fire pit'],
+    sequence: ['black-tie-02', 'black-tie-01', 'black-tie-06', 'black-tie-08', 'black-tie-13'],
+    related: 'mr-bears-residence',
+  },
+  'the-sun-stayed-for-supper': {
+    color: 'tobacco',
+    summary: 'A long pool and square spa below the pergola, with a grill and picnic table up top and a wood sauna tucked off the path.',
+    features: ['Pool and spa', 'Pergola and grill', 'Covered patio', 'Freestanding sauna'],
+    sequence: ['7015ed67131d404e', 'fe5a1f186c6cd3b6', '259dc24008424140', 'aaeed8c6ddbbeba0', 'dd13fdb48c66ee6f'],
+    related: 'strictly-striped-affair',
+  },
+  'umpire-strikes-back': {
+    color: 'rust',
+    summary: 'A pool, a sports court and an actual baseball diamond, with a pavilion and a fire pit for when the game wraps up.',
+    features: ['Pool and rock waterfall', 'Baseball diamond', 'Sports court', 'Putting green', 'Pavilion and fire pit'],
+    sequence: ['e678b5466d76eeae', '26e14d0bcb7ea618', '47ab0d72904db5f9', 'f46fa0d0e1d39ec7', '8c09430029ecd73c', 'f83032688c09eb36'],
+    related: 'strictly-striped-affair',
+  },
+  'a-minor-key': {
+    color: 'rust',
+    summary: 'A shallow ledge for the loungers, waterfalls along the pool, and a spa under a cedar ceiling. The fire wall comes into its own at dusk.',
+    features: ['Tanning ledge', 'Waterfalls', 'Fire wall', 'Covered spa'],
+    sequence: ['fb0daa55b47d2949', 'a06d04803e6e6b67', 'ddc8e9db9f666ae7', '4344e12d5fb72856', '9dcef3295b2e4e89'],
+    related: 'dallas-with-feeling',
+  },
+  'dallas-with-feeling': {
+    color: 'slate',
+    summary: 'The bar looks straight across the pool to a waterfall wall. There’s a covered patio for dinner and a blue-tile shower around the corner.',
+    features: ['Pool and spa', 'Waterfall wall', 'Poolside bar', 'Covered patio', 'Outdoor shower'],
+    sequence: ['2a8d7a0f1c6ebe73', '5c6a65a5b0c6ffab', '9ba2d50468aec28c', 'c5056ba381c57c23', 'b46be76b8ccf18d8'],
+    related: 'a-minor-key',
+  },
+  'lower-form-of-leisure': {
+    color: 'tobacco',
+    summary: 'A sunken lounge sits right beside the water. There’s a putting green a few steps away and a brick fireplace under the covered patio.',
+    features: ['Pool', 'Sunken lounge', 'Putting green', 'Outdoor fireplace'],
+    sequence: ['b506f80735307999', '9996e579c7ef98ef', '2b6ddd9e362f736f', 'ec6df443aae9a460', 'ae7923b702c3be34'],
+    related: 'the-sun-stayed-for-supper',
+  },
+  'mr-bears-residence': {
+    color: 'pine',
+    summary: 'A straight run of water leads toward the pavilion, with a separate square spa and a pair of loungers between the two.',
+    features: ['Rectangular pool', 'Separate square spa', 'Pavilion'],
+    sequence: ['e5050074673f3ad9', '7cdf1d68c185fd46', '21e4401e86ff9a72', 'ae8b7a426742be8b'],
+    related: 'black-tie-barefoot',
+  },
+  'strictly-striped-affair': {
+    color: 'slate',
+    summary: 'Striped loungers along the pool, cornhole and a bowling lane close by, and a grill next to the table under the shade.',
+    features: ['Rectangular pool', 'Outdoor grill', 'Covered dining', 'Lawn games', 'Putting green'],
+    sequence: ['d12025f874e49421', '41ff784058feeb1e', '19576c0fa80d7c81', '154507a2b75b5982', '0f7a917c3870672e', '1f0f0c90b8e78724'],
+    related: 'umpire-strikes-back',
+  },
+};

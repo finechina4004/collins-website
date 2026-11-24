@@ -1,6 +1,6 @@
 # Collins Custom Pools & Backyards
 
-The site keeps a simple scrolling page and ordinary photo albums, with the original villa artwork, Collins typography, individual photographic album jackets, a painted services spread, and correspondence-style contact. Repository: `finechina4004/collins-website`. Worker: `collins-website`.
+The site presents Collins’ pool and backyard portfolio, services, family introduction, and call/text contact information. The homepage opens with typography and a CSS emblem. Repository: `finechina4004/collins-website`. Worker: `collins-website`.
 
 ## Saved full website
 
@@ -10,12 +10,11 @@ Current browser audit: `docs/BROWSER_LAUNCH_AUDIT_2026-11-06.md`. Earlier launch
 
 ## Customer experience
 
-- One scrolling homepage: artwork → projects (`#work`) → services (`#build`) → contact (`#contact`). Artwork quick links and a sticky menu.
-- Eight ordinary HTML album pages in `public/albums/`, with every original photo, optional full-size viewer, next-album links and all-project return links. Home and albums work without JavaScript.
-- Browser Back closes an enlarged photograph before leaving its album. Forward and shared `#photo-N` links reopen the selected photograph; Close and Escape restore thumbnail focus. Canonical album URLs match Cloudflare's extensionless public URLs.
-- Original artwork, outlined purchased brand lettering, catalog and 94 photo files unchanged. No landscaping service or invented project facts.
-- Optional homepage submarine toy. No automatic scene changes, sound, lighting controls or separate journey.
-- Old `#work/<slug>` links redirect to real album pages. `#project` and `#about` lead to contact. Old journey hashes lead home; feature routes lead to the projects. Unknown hashes safely recover home.
+- The homepage introduces Collins, features three projects, and links to Work, Services, About, and Contact.
+- Work lists all eight albums. Each album has an individually selected lead photo, project features, and a photo sequence. Additional photos open in a native disclosure.
+- Browser Back closes the photo viewer. Forward and shared `#photo-N` links reopen the selected photograph. Existing photo numbers still point to the original image.
+- Old `#work/<slug>` links open the corresponding album. Other old homepage section links still lead to the relevant section.
+- Pages and photo links work without JavaScript. The viewer, old hashtag redirects, and copy-number button use JavaScript.
 
 ## Contact
 
@@ -23,13 +22,13 @@ Confirmed call/text number: **469-500-7713**, from `public/site-config.js`. Dire
 
 ## Editing and publishing
 
-`public/content/projects.json` remains the album source. Edit shared structure/copy in `scripts/render-landing.mjs`, and styles in `public/landing.css` plus `public/art-direction.css`. Original Canyon Rim and Parkly Soft web-font subsets live in `public/assets/fonts/`. Historical runtime files stay in source but are not loaded by the landing page.
+`public/content/projects.json` remains the album source. Edit page structure and copy in `scripts/render-landing.mjs`, album descriptions and photo selections in `scripts/project-editorial.mjs`, and styles in `public/hill-country.css`. Historical artwork and runtime files remain available in source.
 
 1. Install missing dependencies with `npm ci --ignore-scripts`.
-2. Run `npm run build:assets`. It fingerprints `public/site.css` and regenerates home, eight albums, 404 and sitemap. Commit generated output alongside source.
+2. Run `npm run build:assets`. It fingerprints `public/site.css` and regenerates the homepage, supporting pages, eight albums, 404, and sitemap. Commit generated output alongside source.
 3. Run `npm run check:deploy` for output freshness and Wrangler packaging checks. `npm run build:site` prepares `dist/` if needed.
 4. Use the existing GitHub main → Cloudflare integration, deploying committed `public/` with `npx wrangler deploy`.
-5. Confirm the successful build and live `version.json` marker `collins-public-domain-01`; check public home, an album and contact.
+5. Confirm the successful build and live `version.json` marker `collins-hill-country-01`; check public home, an album and contact.
 
 ## Public domain
 

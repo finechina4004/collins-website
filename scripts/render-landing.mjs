@@ -1,62 +1,309 @@
-import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
-import {createHash} from 'node:crypto';
-const root=new URL('../public/',import.meta.url);
-const projects=JSON.parse(readFileSync(new URL('content/projects.json',root),'utf8')).projects;
-const config=readFileSync(new URL('site-config.js',root),'utf8');
-const phone=config.match(/phone:\s*'([^']+)'/)[1],phoneLabel=config.match(/phoneLabel:\s*'([^']+)'/)[1];
-const cssHash=createHash('sha256').update(readFileSync(new URL('site.css',root))).digest('hex').slice(0,12);
-const base='https://collinscustompools.com/';
-const assetVersion=name=>createHash('sha256').update(readFileSync(new URL(name,root))).digest('hex').slice(0,12);
-const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const cover=p=>p.photos.find(photo=>photo.id===p.coverId)||p.photos[0];
-const total=projects.reduce((n,p)=>n+p.photos.length,0);
-const jacketTitles={
- 'a-minor-key':['a Minor','Key'],
- 'black-tie-barefoot':['Black Tie,','Barefoot'],
- 'dallas-with-feeling':['Dallas,','With Feeling'],
- 'lower-form-of-leisure':['Lower Form','of Leisure'],
- 'mr-bears-residence':['Mr. Bears,','Residence'],
- 'strictly-striped-affair':['Strictly Striped','Affair'],
- 'the-sun-stayed-for-supper':['The Sun Stayed','for Supper'],
- 'umpire-strikes-back':['Umpire','Strikes Back']
-};
-const jacketTitle=p=>jacketTitles[p.slug]?`<span>${escape(jacketTitles[p.slug][0])}</span> <em>${escape(jacketTitles[p.slug][1])}</em>`:escape(p.title);
+import { readFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { editorial } from './project-editorial.mjs';
 
-const img=(photo,prefix='',eager=false)=>`<img src="${prefix+escape(photo.src)}" alt="${escape(photo.alt||photo.caption)}" width="${photo.width}" height="${photo.height}" loading="${eager?'eager':'lazy'}" decoding="async"${eager?' fetchpriority="high"':''}>`;
-function head(title,description,path='',album=false,interactive=true){
- const prefix=album?'../':'';
- path=path.replace(/\.html$/, '');
- const project=album?projects.find(p=>path.includes(p.slug)):null;
- return `<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f8f1e5"><meta name="robots" content="index,follow"><title>${escape(title)}</title><meta name="description" content="${escape(description)}"><link rel="canonical" href="${base+path}"><link rel="icon" type="image/svg+xml" href="${prefix}assets/collins-favicon.svg"><meta property="og:type" content="website"><meta property="og:title" content="${escape(title)}"><meta property="og:description" content="${escape(description)}"><meta property="og:url" content="${base+path}"><meta property="og:image" content="${base+(project?cover(project).src:'assets/collins-cover.webp')}"><meta property="og:image:alt" content="${project?'A real Collins backyard project.':'The painted Collins Italian villa and pool.'}"><meta name="twitter:card" content="summary_large_image"><link rel="preload" as="font" type="font/woff" href="${prefix}assets/fonts/canyon-rim.woff" crossorigin><link rel="preload" as="font" type="font/woff" href="${prefix}assets/fonts/parkly-soft.woff" crossorigin><link href="${prefix}site.css?v=${cssHash}" rel="stylesheet"/>${!interactive?'':album?`<script src="../gallery.js?v=${assetVersion('gallery.js')}" defer></script>`:`<link rel="preload" as="image" href="assets/collins-cover.webp"><script src="landing.js?v=${assetVersion('landing.js')}" defer></script><script src="toy.js?v=${assetVersion('toy.js')}" defer></script>`}</head>`;
-}
-function nav(album=false){
- const home=album?'../':'';
- return `<div class="site-nav"><a class="nav-home" href="${home}#backyard" aria-label="Collins home"><img src="${home}assets/collins-wordmark.svg" alt="Collins Custom Pools &amp; Backyards" width="560" height="150"></a><nav aria-label="Main navigation"><a href="${home}#work">Projects</a><a href="${home}#build">Services</a><a class="nav-contact" href="${home}#contact">Contact</a></nav><a class="nav-phone" href="tel:${phone}" aria-label="Call Collins at ${phoneLabel}"><span class="phone-full">${phoneLabel}</span><span class="phone-short">Call</span></a></div>`;
-}
-function footer(album=false){
- const home=album?'../':'';
- return `<footer class="site-footer"><a class="footer-logo" href="${home}#backyard" aria-label="Collins home"><img src="${home}assets/collins-wordmark.svg" width="560" height="150" alt="Collins Custom Pools &amp; Backyards" loading="lazy"></a><p>Family owned. Aubrey, Texas.<br>Painted scenes are illustrative. Project photos show real work.</p><a href="${home}#backyard">Back to the top</a></footer>`;
-}
-const cards=projects.map((p,i)=>`<a class="project-card" data-palette="${escape(p.slug)}" href="albums/${escape(p.slug)}.html" data-album-slug="${escape(p.slug)}" aria-label="View ${escape(p.title)}, ${p.photos.length} photographs"><div class="card-topline" aria-hidden="true"><span class="card-number">No. ${String(i+1).padStart(2,'0')}</span><span class="cover-mark"></span></div><div class="project-meta"><h3>${jacketTitle(p)}</h3></div><div class="project-image">${img(cover(p))}</div><div class="jacket-footer"><span>Open album</span><span>${p.photos.length} photographs</span></div></a>`).join('\n');
-const index=`${head('Collins Custom Pools & Backyards | North Texas','Family-owned custom pool and complete backyard builder in Aubrey, serving Denton County and North Texas. Explore our real project albums and call or text Collins.')}<body>
-<a class="skip-link" href="#work">Skip to our projects</a>
-<header class="cover" id="backyard"><h1 class="sr-only">Collins Custom Pools &amp; Backyards</h1><div class="cover-scene"><div class="cover-painting"><img class="cover-art" src="assets/collins-cover.webp" width="1536" height="1024" alt="A vintage painted Italian villa with vineyard hills, a turquoise swimming pool, fireplace and outdoor kitchen." fetchpriority="high"><div class="world-vessel" id="submarine-toy" tabindex="0" role="group" aria-label="Toy submarine" aria-describedby="toy-instructions"><img src="assets/vessel-illustrated.webp" width="1536" height="1024" alt="" draggable="false"><img class="hull-nameplate" src="assets/hull-nameplate.svg" width="480" height="100" alt="" draggable="false"><span class="toy-hint" aria-hidden="true">Drag me</span></div><p id="toy-instructions" class="sr-only">An optional toy: drag the submarine around the pool, or focus it and use the arrow keys. Home resets its position.</p></div><div class="cover-brand"><img src="assets/collins-wordmark-printed.svg" width="560" height="140" alt="Collins Custom Pools &amp; Backyards"><p class="cover-promise">Custom pools &amp; complete backyards</p><p class="cover-area">Aubrey, Texas · Serving North Texas</p><nav class="cover-links" aria-label="Quick links"><a href="#work">Projects</a><a href="#build">Services</a><a href="#contact">Call or text</a></nav></div></div></header>
-${nav()}
-<main>
-<div class="portfolio-wrap"><section class="section work" id="work" aria-labelledby="work-title"><div class="section-heading"><div class="collection-heading"><p class="eyebrow">A collection by Collins</p><h2 id="work-title">The backyard<br>albums.</h2></div></div><div class="project-grid">${cards}</div><div class="collection-note"><a href="tel:${phone}">Give your boys at Collins a call today</a><a href="#contact">Got a yard in mind?</a></div></section></div>
-<div class="services-wrap"><section class="section services" id="build" aria-labelledby="build-title"><div class="services-heading"><p class="eyebrow">What we build</p><h2 id="build-title">Built for life<br><em>out back.</em></h2><figure class="service-illustration"><img src="assets/collins-cover.webp" alt="" width="1536" height="1024" loading="lazy"><figcaption>Custom pools &amp; complete backyards.</figcaption></figure></div><div class="service-list-art"><article class="service"><span class="service-number" aria-hidden="true">01</span><h3>New custom pools</h3><p>Pools and spas designed around your yard and how you want to use it.</p></article><article class="service"><span class="service-number" aria-hidden="true">02</span><h3>Complete backyards</h3><p>Patios, pergolas, shade structures, outdoor kitchens, turf and fire features. Room for a little of everything.</p></article><article class="service"><span class="service-number" aria-hidden="true">03</span><h3>Spas &amp; pool remodels</h3><p>A spa, a fresh finish, or a new plan for the pool you already have.</p></article><a class="text-link" href="#contact">Talk with Collins</a></div></section></div>
-<div class="contact-wrap"><section class="section contact" id="contact" aria-labelledby="contact-title"><div><p class="eyebrow">A little correspondence</p><h2 id="contact-title">Let’s talk<br><em>backyards.</em></h2><p class="contact-intro">Have a project in mind? Call or text us. Happy to kick around ideas.</p><p class="contact-from">COLLINS CUSTOM POOLS &amp; BACKYARDS<br>FAMILY OWNED / AUBREY, TEXAS</p></div><div class="contact-details"><div class="contact-postage" aria-hidden="true"><span>COLLINS<br>AUBREY<br>TEXAS</span><img src="assets/pool-club-mark.svg" width="120" height="120" alt="" loading="lazy"></div><p class="contact-label">Call or text Collins</p><a class="contact-number" href="tel:${phone}">${phoneLabel}</a><div class="contact-buttons"><a class="button" href="tel:${phone}">Call Collins</a><a class="button secondary" href="sms:${phone}">Text us</a><button class="button copy-number" type="button" data-copy-phone="${phoneLabel}" hidden>Copy number</button></div><p class="contact-copy-status" role="status" aria-live="polite"></p><p class="contact-area">Serving Denton County &amp; North Texas.<br>Aubrey · Denton · Little Elm · Prosper<br>Celina · Frisco &amp; surrounding communities.</p></div></section></div>
-</main>${footer()}</body></html>\n`;
-const pages=new Map([['index.html',index]]);
-pages.set('404.html',`${head('Page not found | Collins Custom Pools & Backyards','Find the Collins project albums, services and contact information.','',false,false).replace('content="index,follow"','content="noindex,follow"').replace('href="site.css','href="/site.css').replaceAll('href="assets/','href="/assets/')}<body>${nav().replaceAll('href="#','href="/#').replaceAll('src="assets/','src="/assets/')}<main class="section not-found"><p class="eyebrow">Collins / Page not found</p><h1>Back to<br>the backyard.</h1><p>This page isn’t here, but the projects are.</p><a class="text-link" href="/#work">View our projects</a></main>${footer().replaceAll('href="#','href="/#').replaceAll('src="assets/','src="/assets/')}</body></html>\n`);
-projects.forEach((p,i)=>{
- const photos=[cover(p),...p.photos.filter(photo=>photo.id!==p.coverId)];
- const gallery=photos.map((photo,n)=>`<figure style="--photo-width:${photo.width}px"><a class="photo-open" href="../${escape(photo.src)}" data-photo data-caption="${escape(photo.caption||photo.alt||p.title)}" aria-label="Enlarge photograph ${n+1}: ${escape(photo.caption||p.title)}">${img(photo,'../',n===0)}<span aria-hidden="true">View full size</span></a><figcaption><span>${escape(photo.caption||p.title)}</span><span class="photo-number">${String(n+1).padStart(2,'0')}</span></figcaption></figure>`).join('\n');
- const next=projects[(i+1)%projects.length];
- pages.set(`albums/${p.slug}.html`,`${head(`${p.title} | Collins Custom Pools & Backyards`,`Explore ${p.title}: ${p.photos.length} real project photographs from Collins Custom Pools & Backyards.`,`albums/${p.slug}.html`,true)}<body class="album-page" data-palette="${escape(p.slug)}"><a class="skip-link" href="#photographs">Skip to project photos</a>${nav(true)}<main><header class="album-cover-heading"><a class="album-back" href="../#work">All projects</a><p class="album-imprint">COLLINS / BACKYARD ALBUM ${String(i+1).padStart(2,'0')}</p><span class="cover-mark album-mark" aria-hidden="true"></span><h1>${escape(p.title)}</h1><p class="album-subtitle">${p.photos.length} photographs. One backyard.<br>Tap a photo for a closer look.</p></header><section class="section album-photos" id="photographs" aria-label="${escape(p.title)} project photographs"><div class="photo-grid">${gallery}</div><nav class="album-end" aria-label="Continue browsing"><a href="../#work">All projects</a><a class="album-next" href="${next.slug}.html"><small>Next backyard</small>${escape(next.title)}</a></nav><a class="text-link" href="../#contact">Let’s talk about your backyard</a></section></main>${footer(true)}<dialog class="photo-viewer" id="photo-viewer" aria-label="${escape(p.title)} full-size photographs"><div class="viewer-header"><p>${escape(p.title)}</p><button type="button" data-close aria-label="Close full-size photograph">Close</button></div><div class="viewer-stage"><img alt=""><p class="viewer-error" role="status" hidden>This photo could not load. Try the next photograph or close this viewer.</p></div><div class="viewer-footer"><div><p class="viewer-caption"></p><span class="viewer-count" role="status" aria-live="polite"></span></div><div class="viewer-controls"><button type="button" data-previous aria-label="Previous photograph">Previous</button><button type="button" data-next aria-label="Next photograph">Next</button></div></div></dialog></body></html>\n`);
+const root = new URL('../public/', import.meta.url);
+const read = path => readFileSync(new URL(path, root), 'utf8');
+const assetVersion = path => createHash('sha256').update(read(path)).digest('hex').slice(0, 12);
+const config = read('site-config.js');
+const phone = config.match(/phone:\s*'([^']+)'/)[1];
+const phoneLabel = config.match(/phoneLabel:\s*'([^']+)'/)[1];
+const base = 'https://collinscustompools.com/';
+const brand = 'Collins Custom Pools & Backyards';
+const pages = new Map();
+const navigation = [['Work', '/work'], ['Services', '/services'], ['About', '/about'], ['Contact', '/contact']];
+
+const escape = value => String(value).replace(/[&<>"']/g, character => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+}[character]));
+
+const source = JSON.parse(read('content/projects.json')).projects;
+const projects = Object.entries(editorial).map(([slug, details]) => {
+  const project = source.find(item => item.slug === slug);
+  if (!project) throw new Error(`Unknown project: ${slug}`);
+  const previousCover = project.photos.find(photo => photo.id === project.coverId) ?? project.photos[0];
+  const originalOrder = [previousCover, ...project.photos.filter(photo => photo !== previousCover)];
+  const selected = details.sequence.map(id => {
+    const photo = project.photos.find(item => item.id.endsWith(id));
+    if (!photo) throw new Error(`Unknown photograph: ${slug}/${id}`);
+    return photo;
+  });
+  return { ...project, ...details, cover: selected[0], selected, originalOrder };
 });
-pages.set('sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${base}</loc></url>${projects.map(p=>`<url><loc>${base}albums/${p.slug}</loc></url>`).join('')}</urlset>\n`);
-mkdirSync(new URL('albums/',root),{recursive:true});
-for(const [path,content] of pages){const url=new URL(path,root);if(process.argv.includes('--check')){if(readFileSync(url,'utf8')!==content)throw Error(`Output is stale: ${path}. Run npm run build:assets.`);}else writeFileSync(url,content);}
-console.log(`${process.argv.includes('--check')?'Verified':'Rendered'} Collins landing page and ${projects.length} albums (${total} original photographs).`);
+if (projects.length !== source.length) throw new Error('Every project needs an editorial entry.');
+const [woodland, supper, ballfield] = projects;
+const projectUrl = project => `/albums/${project.slug}`;
+const shareImage = woodland.photos.find(photo => photo.id === 'black-tie-08');
+
+function picture(photo, priority = false) {
+  return `<img src="/${escape(photo.src)}" alt="${escape(photo.alt || photo.caption)}" width="${photo.width}" height="${photo.height}" loading="${priority ? 'eager' : 'lazy'}" decoding="async"${priority ? ' fetchpriority="high"' : ''}>`;
+}
+
+function head(title, description, path, { image = shareImage, scripts = [], missing = false } = {}) {
+  const url = new URL(path, base).href;
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#24332a">
+  <meta name="robots" content="${missing ? 'noindex,follow' : 'index,follow'}">
+  <title>${escape(title)}</title>
+  <meta name="description" content="${escape(description)}">
+  ${missing ? '' : `<link rel="canonical" href="${url}">`}
+  <link rel="icon" type="image/svg+xml" href="/assets/collins-favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="${escape(title)}">
+  <meta property="og:description" content="${escape(description)}">
+  <meta property="og:url" content="${url}">
+  <meta property="og:image" content="${new URL(image.src, base).href}">
+  <meta property="og:image:alt" content="${escape(image.alt || image.caption)}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="/site.css?v=${assetVersion('site.css')}" rel="stylesheet"/>
+  ${scripts.map(script => `<script src="/${script}?v=${assetVersion(script)}" defer></script>`).join('\n  ')}
+</head>`;
+}
+
+function header(active) {
+  return `<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="wordmark" href="/" aria-label="Collins home">
+      <img src="/assets/collins-wordmark.svg" alt="${escape(brand)}" width="560" height="150">
+    </a>
+    <nav aria-label="Main navigation">
+      ${navigation.map(([label, href]) => `<a href="${href}"${active === href ? ' aria-current="page"' : ''}>${label}</a>`).join('\n      ')}
+    </nav>
+    <a class="header-phone" href="tel:${phone}" aria-label="Call Collins at ${phoneLabel}"><span>${phoneLabel}</span><b>Call</b></a>
+  </div>
+</header>`;
+}
+
+function footer() {
+  return `<footer class="site-footer">
+  <div class="shell footer-inner">
+    <div><a class="footer-name" href="/">Collins</a><p>Family-owned in Aubrey, Texas.</p></div>
+    <nav aria-label="Footer navigation">${navigation.map(([label, href]) => `<a href="${href}">${label}</a>`).join('')}</nav>
+    <a class="footer-phone" href="tel:${phone}">${phoneLabel}</a>
+  </div>
+</footer>`;
+}
+
+function page(path, title, description, content, options = {}) {
+  const output = path === '/' ? 'index.html' : `${path.slice(1)}.html`;
+  pages.set(output, `${head(title, description, path, options)}
+<body>
+${header(options.active ?? path)}
+<main id="main">${content}</main>
+${footer()}
+${options.dialog ?? ''}
+</body>
+</html>
+`.replace(/^ +$/gm, ''));
+}
+
+const textChase = (className = 'button') => `<a class="${className}" href="sms:${phone}">Text Chase</a>`;
+const callCollins = (className = 'button button-quiet') => `<a class="${className}" href="tel:${phone}">Call Collins</a>`;
+
+function projectCard(project, { lead = false, priority = false } = {}) {
+  return `<article class="project-card ${lead ? 'project-card-lead' : ''}" data-color="${project.color}">
+  <a href="${projectUrl(project)}" data-album-slug="${project.slug}"${lead ? ` aria-describedby="summary-${project.slug}"` : ''}>
+    <div class="project-image">${picture(project.cover, priority)}</div>
+    <div class="project-text">
+      <h3>${escape(project.title)}</h3>
+      <p id="summary-${project.slug}">${escape(project.summary)}</p>
+      <span class="project-link" aria-hidden="true">View project</span>
+    </div>
+  </a>
+</article>`;
+}
+
+function contactBand() {
+  return `<section class="contact-band" id="contact">
+  <div class="shell contact-band-inner">
+    <div><h2>Let’s talk about your yard.</h2><p>Send me your town and what you’ve got in mind. A picture of the yard helps.</p></div>
+    <div class="actions">${textChase('button button-light')} ${callCollins('button button-outline')}</div>
+  </div>
+</section>`;
+}
+
+const builds = [
+  { id: 'custom-pools', title: 'New custom pools', text: 'We’ll walk the yard with you and figure out where the pool should sit, where you’ll get in, and how much deck you’ll want around it.', project: woodland },
+  { id: 'complete-backyards', title: 'Complete backyards', text: 'Plan the pool, patio and the rest of the yard together. We build outdoor kitchens, pergolas and shade structures, turf, fire features, saunas, and backyard courts.', project: supper },
+  { id: 'spas-and-remodels', title: 'Spas & pool remodels', text: 'Add a spa, update the finish or tile, or talk through a bigger change to the pool you already have.', project: projects.find(project => project.slug === 'mr-bears-residence') },
+];
+
+page('/', `${brand} | Aubrey & North DFW`,
+  'Family-owned custom pool and backyard builder in Aubrey, Texas. See our work across North DFW and call or text Collins to talk about your yard.',
+  `
+<section class="home-intro" id="backyard">
+  <div class="shell hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Aubrey, Texas <span></span> Serving North DFW</p>
+      <h1>Custom pools.<br><em>Complete backyards.</em></h1>
+      <p class="hero-description">We’re a family out of Aubrey. We build the pool, the patio, and the places everybody ends up on a Saturday.</p>
+      <div class="actions"><a class="button button-light" href="/work">See our work</a>${textChase('button button-outline')}</div>
+    </div>
+    <div class="hero-emblem" aria-hidden="true">
+      <div class="emblem-face">
+        <span class="emblem-state">AUBREY <i></i> TEXAS</span>
+        <span class="emblem-name">Collins</span>
+        <span class="emblem-rules"></span>
+        <span class="emblem-trade">POOLS &amp; BACKYARDS</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="shell section" id="work" aria-labelledby="work-title">
+  <div class="section-heading"><h2 id="work-title">A few yards we’ve built.</h2><a class="text-link" href="/work">All projects</a></div>
+  <div class="project-grid featured">
+    ${projectCard(woodland, { lead: true })}
+    ${projectCard(supper)}
+    ${projectCard(ballfield)}
+  </div>
+</section>
+<section class="build-strip" id="build">
+  <div class="shell section">
+    <div class="section-heading"><h2>What we build.</h2><a class="text-link" href="/services">See services</a></div>
+    <div class="build-index">
+      ${builds.map(build => `<article><h3><a href="/services#${build.id}">${escape(build.title)}</a></h3><p>${escape(build.text)}</p></article>`).join('')}
+    </div>
+  </div>
+</section>
+<section class="shell section family-strip" id="about">
+  <h2>Family-owned.<br><em>Right here in Aubrey.</em></h2>
+  <div><p>I’m Chase. I’ll be the one you talk to about your yard. My stepdad runs the builds. He’s been building pools for decades, and we’ll walk through the project with you before we get going.</p><a class="text-link" href="/about">About Collins</a></div>
+</section>
+${contactBand()}
+<template data-legacy-albums>${projects.map(project => `<a href="${projectUrl(project)}" data-album-slug="${project.slug}"></a>`).join('')}</template>
+`, { scripts: ['landing.js'] });
+
+page('/work', `Our Work | ${brand}`,
+  'See eight completed pools and backyards from Collins, including wooded retreats, outdoor kitchens and backyard sports courts.',
+  `
+<div class="shell section">
+  <header class="page-intro"><h1>Our work.</h1><p>Eight backyards, from a pool tucked into the woods to one with its own baseball diamond.</p></header>
+  <div class="project-grid">${projects.map((project, index) => projectCard(project, { lead: index === 0, priority: index === 0 })).join('\n')}</div>
+</div>
+${contactBand()}
+`);
+
+page('/services', `Pool & Backyard Services | ${brand}`,
+  'Collins builds new custom pools, complete backyards, spas and pool remodels in Aubrey and across North DFW.',
+  `
+<div class="shell section">
+  <header class="page-intro"><h1>What we build.</h1><p>Start with a pool, or talk through what you want to do with the whole backyard.</p></header>
+  <div class="service-list">
+    ${builds.map(build => `<section class="service-row" id="${build.id}">
+      <div><h2>${escape(build.title)}</h2><p>${escape(build.text)}</p><a class="text-link" href="${projectUrl(build.project)}">${escape(build.project.title)}</a></div>
+      <a class="service-image" href="${projectUrl(build.project)}" aria-label="View ${escape(build.project.title)}">${picture(build.project.cover)}</a>
+    </section>`).join('\n')}
+  </div>
+</div>
+<section class="build-strip"><div class="shell section">
+  <div class="section-heading"><h2>From yard walk to first swim.</h2></div>
+  <ol class="process-list" role="list">
+    <li><h3>Walk the yard</h3><p>We look at the space with you, talk through what you want, and get a sense of access and layout.</p></li>
+    <li><h3>Draw up the plan</h3><p>We work through the design, scope, and price with you, then line up the permits and inspections the job calls for.</p></li>
+    <li><h3>Build and start it up</h3><p>We go from excavation and shell to decking and finishes, then get the pool running and walk you through it.</p></li>
+  </ol>
+</div></section>
+${contactBand()}
+`);
+
+page('/about', `About Collins | ${brand}`,
+  'Meet Chase and the family behind Collins Custom Pools & Backyards, a family-owned pool and backyard builder in Aubrey, Texas.',
+  `
+<div class="shell section about-spread">
+  <header class="page-intro"><p class="eyebrow">Aubrey, Texas</p><h1>Meet the family behind Collins.</h1></header>
+  <div class="about-letter">
+    <p>Howdy, I’m Chase. I graduated from Gunter, and my family and I run Collins Custom Pools &amp; Backyards out of Aubrey.</p>
+    <p>I’m the one you’ll talk to about what you want to do with the yard. My stepdad runs the builds and has been building pools for decades. When we walk a yard together, we talk about the pool and the stuff you’ll use around it. Where you want shade, how you’ll get out to the grill, and where everybody’ll sit when you have people over.</p>
+    <p>If you’ve been kicking around an idea for your yard, give me a call. We can start there.</p>
+    <p class="signature">Chase</p>
+    <a class="text-link" href="/work">See the yards we’ve built</a>
+  </div>
+</div>
+${contactBand()}
+`);
+
+page('/contact', `Call or Text Collins | ${brand}`,
+  'Call or text Collins at 469-500-7713 to discuss a custom pool or backyard project in Aubrey, Denton County or North DFW.',
+  `
+<div class="shell section contact-page">
+  <header class="page-intro"><h1>Let’s talk<br>backyards.</h1><p>Tell me what town you’re in and what you’re thinking. Send a photo if you’ve got one.</p></header>
+  <section class="contact-card" aria-labelledby="contact-card-title">
+    <h2 id="contact-card-title">Call or text Chase</h2>
+    <a class="contact-number" href="tel:${phone}">${phoneLabel}</a>
+    <div class="actions">${textChase()} ${callCollins()}</div>
+    <button class="copy-link" type="button" data-copy-phone="${phoneLabel}" hidden>Copy number</button>
+    <p class="contact-copy-status" role="status"></p>
+  </section>
+  <section class="service-area"><h2>Where we build</h2><p>We’re based in Aubrey and work around Denton County and North DFW, including Denton, Little Elm, Prosper, Celina, and Frisco.</p></section>
+</div>
+`, { scripts: ['landing.js'] });
+
+function galleryLink(project, photo, priority = false) {
+  const originalNumber = project.originalOrder.indexOf(photo) + 1;
+  return `<a class="photo-open" href="/${escape(photo.src)}" data-photo="${originalNumber}" data-caption="${escape(photo.caption || project.title)}" aria-label="Enlarge photo: ${escape(photo.caption || photo.alt || project.title)}">${picture(photo, priority)}</a>`;
+}
+
+function photoViewer(project) {
+  return `<dialog class="photo-viewer" id="photo-viewer" aria-label="${escape(project.title)} photos">
+  <div class="viewer-header"><p>${escape(project.title)}</p><button type="button" data-close aria-label="Close full-size photograph">Close</button></div>
+  <div class="viewer-stage"><img alt=""><p class="viewer-error" role="status" hidden>This photo could not load. Try the next photograph or close this viewer.</p></div>
+  <div class="viewer-footer">
+    <div><p class="viewer-caption"></p><span class="viewer-count" role="status"></span></div>
+    <div class="viewer-controls"><button type="button" data-previous aria-label="Previous photograph">Previous</button><button type="button" data-next aria-label="Next photograph">Next</button></div>
+  </div>
+</dialog>`;
+}
+
+for (const project of projects) {
+  const related = projects.find(item => item.slug === project.related);
+  const remaining = project.photos.filter(photo => !project.selected.includes(photo));
+  page(projectUrl(project), `${project.title} | ${brand}`, project.summary, `
+<div class="shell section album-page" data-color="${project.color}">
+  <a class="text-link album-back" href="/work">All projects</a>
+  <header class="album-intro">
+    <div><h1>${escape(project.title)}</h1><p>${escape(project.summary)}</p></div>
+    <ul aria-label="Project features">${project.features.map(feature => `<li>${escape(feature)}</li>`).join('')}</ul>
+  </header>
+  <div class="album-lead" style="--lead-width:${project.cover.width}px">${galleryLink(project, project.cover, true)}</div>
+  <section id="photographs" aria-labelledby="photos-title">
+    <h2 class="sr-only" id="photos-title">Project photos</h2>
+    <div class="album-spread">${project.selected.slice(1).map(photo => `<figure>${galleryLink(project, photo)}<figcaption>${escape(photo.caption)}</figcaption></figure>`).join('')}</div>
+    ${remaining.length ? `<details class="more-photos"><summary>More photos from this yard <span>(${remaining.length})</span></summary>
+      <div class="album-spread">${remaining.map(photo => `<figure>${galleryLink(project, photo)}<figcaption>${escape(photo.caption)}</figcaption></figure>`).join('')}</div>
+    </details>` : ''}
+  </section>
+</div>
+<section class="related-strip"><div class="shell section">
+  <div class="section-heading"><h2>Another backyard.</h2><a class="text-link" href="/work">All projects</a></div>
+  ${projectCard(related, { lead: true })}
+</div></section>
+${contactBand()}
+`, { image: project.cover, scripts: ['gallery.js'], dialog: photoViewer(project) });
+}
+
+page('/404', `Page not found | ${brand}`, 'Find Collins projects, services and contact information.', `
+<div class="shell section"><header class="page-intro"><h1>Page not found.</h1><p>You can get back to Collins from here.</p><a class="button" href="/">Back to Collins</a></header></div>
+`, { missing: true });
+
+const urls = ['/', ...navigation.map(([, path]) => path), ...projects.map(projectUrl)];
+pages.set('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map(path => `  <url><loc>${new URL(path, base).href}</loc></url>`).join('\n')}
+</urlset>
+`);
+
+const checking = process.argv.includes('--check');
+for (const [path, content] of pages) {
+  if (checking) {
+    if (read(path) !== content) throw new Error(`Output is stale: ${path}. Run npm run build:assets.`);
+  } else {
+    writeFileSync(new URL(path, root), content);
+  }
+}
+const photoCount = projects.reduce((total, project) => total + project.photos.length, 0);
+console.log(`${checking ? 'Verified' : 'Rendered'} ${urls.length} Collins pages with ${photoCount} original project photographs.`);
