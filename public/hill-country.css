@@ -98,36 +98,6 @@ em { font-weight: inherit; }
   text-underline-offset: .33em;
 }
 .text-link:hover, .copy-link:hover { color: #8a462a; }
-.hero-emblem {
-  width: 100%;
-  max-width: 21rem;
-  justify-self: end;
-  rotate: -7deg;
-  padding: .42rem;
-  border-radius: 50% / 42%;
-  background: linear-gradient(155deg, #e8d7b6, #8b8169 29%, #f7ecd8 42%, #776a56 72%, #decdb0 86%);
-  box-shadow: .4rem .9rem 2rem #11191085;
-}
-.emblem-face {
-  aspect-ratio: 1.45;
-  border-radius: inherit;
-  border: 1px solid #e2bd86;
-  outline: 2px solid #252c20;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(ellipse at 45% 30%, #ab7149, #663b29);
-  color: #fff1d6;
-  box-shadow: inset 0 0 0 .34rem #562f2090;
-  white-space: nowrap;
-}
-.emblem-state, .emblem-trade { font: clamp(.55rem, .94vw, .85rem)/1.2 var(--label); letter-spacing: .12em; }
-.emblem-trade { max-width: 70%; font-size: clamp(.42rem, .75vw, .67rem); letter-spacing: .08em; text-align: center; }
-.emblem-state i { display: inline-block; width: .32rem; aspect-ratio: 1; rotate: 45deg; border: 1px solid currentColor; margin: 0 .42em .14em; }
-.emblem-name { font: italic clamp(2rem, 4.6vw, 4.45rem)/.95 var(--serif); letter-spacing: -.09em; margin: .05em .1em .12em 0; text-shadow: 1px 2px #502719; }
-.emblem-rules { display: block; width: 53%; height: .42rem; margin-bottom: .28rem; border-block: 1px solid #edc292; }
-
 .section-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .75rem 1.5rem; margin-bottom: 1.9rem; }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
 .project-card { --project-tone: #374738; background: var(--project-tone); color: #fff4df; }
@@ -241,8 +211,6 @@ em { font-weight: inherit; }
   .hero-copy h1 { font-size: clamp(2.65rem, 9vw, 4.75rem); }
   .hero-copy .eyebrow { font-size: .87rem; }
   .hero-description { margin-top: 1rem; }
-  .hero-emblem { width: 8.5rem; justify-self: end; margin-right: .25rem; }
-  .emblem-name { font-size: 2.02rem; }
   .project-grid, .project-card-lead a, .build-index, .process-list, .service-row, .family-strip, .about-spread, .contact-page, .album-intro { grid-template-columns: 1fr; }
   .contact-band-inner { align-items: start; flex-direction: column; }
   .contact-band .actions { flex-shrink: 1; }
@@ -255,5 +223,5 @@ em { font-weight: inherit; }
 }
 
 @media (forced-colors: active) {
-  .button, .project-card, .hero-emblem { border: 1px solid currentColor; }
+  .button, .project-card { border: 1px solid currentColor; }
 }

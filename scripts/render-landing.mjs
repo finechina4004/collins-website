@@ -140,17 +140,16 @@ page('/', `${brand} | Aubrey & North DFW`,
   <div class="shell hero-inner">
     <div class="hero-copy">
       <p class="eyebrow">Aubrey, Texas <span></span> Serving North DFW</p>
-      <h1>Custom pools.<br><em>Complete backyards.</em></h1>
+      <h1>Custom pools.<br><em>Complete<br class="cover-break"> backyards.</em></h1>
       <p class="hero-description">We’re a family-owned pool builder in Aubrey. We build the whole backyard, too, from the patio and grill to a court for the kids.</p>
       <div class="actions"><a class="button button-light" href="/work">See our work</a>${textChase('button button-outline')}</div>
     </div>
-    <div class="hero-emblem" aria-hidden="true">
-      <div class="emblem-face">
-        <span class="emblem-state">AUBREY <i></i> TEXAS</span>
-        <span class="emblem-name">Collins</span>
-        <span class="emblem-rules"></span>
-        <span class="emblem-trade">POOLS &amp; BACKYARDS</span>
+    <div class="cover-graphic" aria-hidden="true">
+      <div class="cover-pool">
+        <div class="cover-water"><i></i><i></i><i></i><i></i></div>
+        <div class="cover-steps"></div>
       </div>
+      <div class="cover-shadow"></div>
     </div>
   </div>
 </section>
