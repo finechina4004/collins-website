@@ -128,8 +128,8 @@ function contactBand() {
 }
 
 const builds = [
-  { id: 'custom-pools', title: 'New custom pools', text: 'We’ll walk the yard with you and figure out where the pool should sit, where you’ll get in, and how much deck you’ll want around it.', project: woodland },
-  { id: 'complete-backyards', title: 'Complete backyards', text: 'Plan the pool, patio and the rest of the yard together. We build outdoor kitchens, pergolas and shade structures, turf, fire features, saunas, and backyard courts.', project: supper },
+  { id: 'custom-pools', title: 'New custom pools', text: 'We’ll walk the yard with you and talk through where the pool fits, where the steps go, and how much room you want around the water.', project: woodland },
+  { id: 'complete-backyards', title: 'Complete backyards', text: 'If you want a patio and a place to cook, we’ll lay them out with the pool from the start. We also build pergolas and shade structures, turf, fire features, saunas, and backyard courts.', project: supper },
   { id: 'spas-and-remodels', title: 'Spas & pool remodels', text: 'Add a spa, update the finish or tile, or talk through a bigger change to the pool you already have.', project: projects.find(project => project.slug === 'mr-bears-residence') },
 ];
 
@@ -141,7 +141,7 @@ page('/', `${brand} | Aubrey & North DFW`,
     <div class="hero-copy">
       <p class="eyebrow">Aubrey, Texas <span></span> Serving North DFW</p>
       <h1>Custom pools.<br><em>Complete backyards.</em></h1>
-      <p class="hero-description">We’re a family out of Aubrey. We build the pool, the patio, and the places everybody ends up on a Saturday.</p>
+      <p class="hero-description">We’re a family-owned pool builder in Aubrey. We build the whole backyard, too, from the patio and grill to a court for the kids.</p>
       <div class="actions"><a class="button button-light" href="/work">See our work</a>${textChase('button button-outline')}</div>
     </div>
     <div class="hero-emblem" aria-hidden="true">
@@ -172,7 +172,7 @@ page('/', `${brand} | Aubrey & North DFW`,
 </section>
 <section class="shell section family-strip" id="about">
   <h2>Family-owned.<br><em>Right here in Aubrey.</em></h2>
-  <div><p>I’m Chase. I’ll be the one you talk to about your yard. My stepdad runs the builds. He’s been building pools for decades, and we’ll walk through the project with you before we get going.</p><a class="text-link" href="/about">About Collins</a></div>
+  <div><p>I’m Chase. When you call Collins, you’ll talk to me. My stepdad has been building pools for decades and runs the work on site. We start by walking the yard with you.</p><a class="text-link" href="/about">About Collins</a></div>
 </section>
 ${contactBand()}
 <template data-legacy-albums>${projects.map(project => `<a href="${projectUrl(project)}" data-album-slug="${project.slug}"></a>`).join('')}</template>
@@ -192,7 +192,7 @@ page('/services', `Pool & Backyard Services | ${brand}`,
   'Collins builds new custom pools, complete backyards, spas and pool remodels in Aubrey and across North DFW.',
   `
 <div class="shell section">
-  <header class="page-intro"><h1>What we build.</h1><p>Start with a pool, or talk through what you want to do with the whole backyard.</p></header>
+  <header class="page-intro"><h1>What we build.</h1><p>Some yards need a pool and a little deck. Others need room for a grill, a covered table, and somewhere for the kids to play. We can walk through either with you.</p></header>
   <div class="service-list">
     ${builds.map(build => `<section class="service-row" id="${build.id}">
       <div><h2>${escape(build.title)}</h2><p>${escape(build.text)}</p><a class="text-link" href="${projectUrl(build.project)}">${escape(build.project.title)}</a></div>
@@ -203,7 +203,7 @@ page('/services', `Pool & Backyard Services | ${brand}`,
 <section class="build-strip"><div class="shell section">
   <div class="section-heading"><h2>From yard walk to first swim.</h2></div>
   <ol class="process-list" role="list">
-    <li><h3>Walk the yard</h3><p>We look at the space with you, talk through what you want, and get a sense of access and layout.</p></li>
+    <li><h3>Walk the yard</h3><p>We’ll look at where the pool could sit, how equipment can get into the yard, and what you want to keep.</p></li>
     <li><h3>Draw up the plan</h3><p>We work through the design, scope, and price with you, then line up the permits and inspections the job calls for.</p></li>
     <li><h3>Build and start it up</h3><p>We go from excavation and shell to decking and finishes, then get the pool running and walk you through it.</p></li>
   </ol>
@@ -218,7 +218,7 @@ page('/about', `About Collins | ${brand}`,
   <header class="page-intro"><p class="eyebrow">Aubrey, Texas</p><h1>Meet the family behind Collins.</h1></header>
   <div class="about-letter">
     <p>Howdy, I’m Chase. I graduated from Gunter, and my family and I run Collins Custom Pools &amp; Backyards out of Aubrey.</p>
-    <p>I’m the one you’ll talk to about what you want to do with the yard. My stepdad runs the builds and has been building pools for decades. When we walk a yard together, we talk about the pool and the stuff you’ll use around it. Where you want shade, how you’ll get out to the grill, and where everybody’ll sit when you have people over.</p>
+    <p>I’ll help you figure out what makes sense for your yard. My stepdad has been building pools for decades and runs the work on site. On the first walk we’ll look at things like where the afternoon shade falls, how far the grill is from the back door, and where you’d put a table.</p>
     <p>If you’ve been kicking around an idea for your yard, give me a call. We can start there.</p>
     <p class="signature">Chase</p>
     <a class="text-link" href="/work">See the yards we’ve built</a>
@@ -231,7 +231,7 @@ page('/contact', `Call or Text Collins | ${brand}`,
   'Call or text Collins at 469-500-7713 to discuss a custom pool or backyard project in Aubrey, Denton County or North DFW.',
   `
 <div class="shell section contact-page">
-  <header class="page-intro"><h1>Let’s talk<br>backyards.</h1><p>Tell me what town you’re in and what you’re thinking. Send a photo if you’ve got one.</p></header>
+  <header class="page-intro"><h1>Let’s talk<br>backyards.</h1><p>Text me your town and what you’re thinking about for the yard. If you have a photo from the back door, send that too.</p></header>
   <section class="contact-card" aria-labelledby="contact-card-title">
     <h2 id="contact-card-title">Call or text Chase</h2>
     <a class="contact-number" href="tel:${phone}">${phoneLabel}</a>
