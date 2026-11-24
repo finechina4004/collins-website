@@ -15,14 +15,14 @@ export const editorial = {
   },
   'umpire-strikes-back': {
     color: 'rust',
-    summary: 'A pool, a sports court and an actual baseball diamond, with a pavilion and a fire pit for when the game wraps up.',
+    summary: 'The pool and sports court sit side by side. There’s a baseball diamond beyond them and a fire pit by the pavilion.',
     features: ['Pool and rock waterfall', 'Baseball diamond', 'Sports court', 'Putting green', 'Pavilion and fire pit'],
     sequence: ['e678b5466d76eeae', '26e14d0bcb7ea618', '47ab0d72904db5f9', 'f46fa0d0e1d39ec7', '8c09430029ecd73c', 'f83032688c09eb36'],
     related: 'strictly-striped-affair',
   },
   'a-minor-key': {
     color: 'rust',
-    summary: 'A shallow ledge for the loungers, waterfalls along the pool, and a spa under a cedar ceiling. The fire wall comes into its own at dusk.',
+    summary: 'A shallow ledge for the loungers, waterfalls along the pool, and a spa under a cedar ceiling. At dusk, you can see the fire wall reflected in the pool.',
     features: ['Tanning ledge', 'Waterfalls', 'Fire wall', 'Covered spa'],
     sequence: ['fb0daa55b47d2949', 'a06d04803e6e6b67', 'ddc8e9db9f666ae7', '4344e12d5fb72856', '9dcef3295b2e4e89'],
     related: 'dallas-with-feeling',
