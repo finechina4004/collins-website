@@ -46,7 +46,7 @@ function head(title, description, path, { image = shareImage, scripts = [], miss
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#24332a">
+  <meta name="theme-color" content="#263a2b">
   <meta name="robots" content="${missing ? 'noindex,follow' : 'index,follow'}">
   <title>${escape(title)}</title>
   <meta name="description" content="${escape(description)}">
@@ -139,22 +139,16 @@ page('/', `${brand} | Aubrey & North DFW`,
 <section class="home-intro" id="backyard">
   <div class="shell hero-inner">
     <div class="hero-copy">
-      <p class="eyebrow">Aubrey, Texas <span></span> Serving North DFW</p>
-      <h1>Custom pools.<br><em>Complete<br class="cover-break"> backyards.</em></h1>
-      <p class="hero-description">We’re a family-owned pool builder in Aubrey. We build the whole backyard, too, from the patio and grill to a court for the kids.</p>
+      <p class="cover-location">Aubrey, Texas · Serving North DFW</p>
+      <h1>Custom pools &amp;<br>complete backyards.</h1>
+      <p class="hero-description">Family-owned. We build pools, patios, outdoor kitchens, and backyard courts.</p>
       <div class="actions"><a class="button button-light" href="/work">See our work</a>${textChase('button button-outline')}</div>
     </div>
-    <div class="cover-graphic" aria-hidden="true">
-      <div class="cover-pool">
-        <div class="cover-water"><i></i><i></i><i></i><i></i></div>
-        <div class="cover-steps"></div>
-      </div>
-      <div class="cover-shadow"></div>
-    </div>
+
   </div>
 </section>
 <section class="shell section" id="work" aria-labelledby="work-title">
-  <div class="section-heading"><h2 id="work-title">A few yards we’ve built.</h2><a class="text-link" href="/work">All projects</a></div>
+  <div class="section-heading"><h2 id="work-title">Recent work</h2><a class="text-link" href="/work">All projects</a></div>
   <div class="project-grid featured">
     ${projectCard(woodland, { lead: true })}
     ${projectCard(supper)}
