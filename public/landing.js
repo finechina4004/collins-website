@@ -1,14 +1,15 @@
-/* Keep previously shared Collins links useful on the simple landing page. */
+/* Preserve older homepage links and the contact page’s copy-number action. */
 (() => {
  'use strict';
- const aliases = {'#home':'#backyard','#launch':'#backyard','#pool':'#backyard','#project':'#contact','#about':'#contact','#services':'#build','#projects':'#work'};
+ const aliases = {'#home':'#backyard','#launch':'#backyard','#pool':'#backyard','#project':'#contact','#services':'#build','#projects':'#work'};
  function recover() {
+  if (!document.getElementById('backyard')) return;
   const hash = location.hash;
   if (hash.startsWith('#work/')) {
    const slug = hash.slice(6);
-   const link = [...document.querySelectorAll('[data-album-slug]')].find(a => a.dataset.albumSlug === slug);
-   if (link) { location.replace(link.href); return; }
-   location.replace('#work'); return;
+   const catalog = document.querySelector('[data-legacy-albums]');
+   const link = [...catalog.content.querySelectorAll('a')].find(a => a.dataset.albumSlug === slug);
+   location.replace(link?.getAttribute('href') || '#work'); return;
   }
   const target = aliases[hash] || (hash.startsWith('#experience/') ? '#work' : null);
   if (target) { location.replace(target); return; }

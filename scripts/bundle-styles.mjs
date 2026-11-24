@@ -4,7 +4,7 @@ const root=new URL('../public/',import.meta.url);
 const files=JSON.parse(readFileSync(new URL('./style-sources.json',import.meta.url),'utf8'));
 const css=files.map(name=>`/* Collins source: ${name} */\n${readFileSync(new URL(name,root),'utf8').trim()}\n`).join('\n');
 const hash=createHash('sha256').update(css).digest('hex').slice(0,12);
-const link=`<link href="site.css?v=${hash}" rel="stylesheet"/>`;
+const link=`<link href="/site.css?v=${hash}" rel="stylesheet"/>`;
 const indexURL=new URL('index.html',root),bundleURL=new URL('site.css',root),html=readFileSync(indexURL,'utf8');
 const links=html.match(/<link\b[^>]*\brel="stylesheet"[^>]*\/?\s*>/g)||[];
 if(process.argv.includes('--check')){
