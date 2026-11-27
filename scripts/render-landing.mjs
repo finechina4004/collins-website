@@ -1,3 +1,4 @@
+import { applyVintage } from './vintage-pages.mjs';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { editorial } from './project-editorial.mjs';
@@ -277,6 +278,7 @@ ${urls.map(path => `  <url><loc>${new URL(path, base).href}</loc></url>`).join('
 </urlset>
 `);
 
+applyVintage(pages);
 const checking = process.argv.includes('--check');
 for (const [path, content] of pages) {
   if (checking) {

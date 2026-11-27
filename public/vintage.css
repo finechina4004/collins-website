@@ -1,0 +1,26 @@
+/* Collins: photographic entrances. Original home photo and original brand assets remain intact. */
+@font-face{font-family:CollinsCanyon;src:url('/assets/fonts/canyon-rim.woff') format('woff');font-display:swap}
+@font-face{font-family:CollinsParkly;src:url('/assets/fonts/parkly-soft.woff') format('woff');font-display:swap}
+.collins-mast{position:relative;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,34px);padding:20px clamp(22px,3vw,62px);color:#fff9e9;background:#203326;font-family:CollinsParkly,Arial,sans-serif;line-height:1.2;box-sizing:border-box}
+.collins-mast.collins-overlay{position:absolute;inset:0 0 auto;background:transparent;padding-top:max(20px,env(safe-area-inset-top));text-shadow:0 1px 9px #1119}
+.collins-overlay::before{content:'';position:absolute;inset:0 0 -48px;z-index:-1;background:linear-gradient(#101b19a6,#101b1930 60%,transparent);pointer-events:none}
+.collins-brand{display:flex;align-items:center;flex:0 0 clamp(120px,13vw,190px);min-height:44px;color:inherit;text-decoration:none}
+.collins-brand img{width:100%;height:auto;display:block;filter:brightness(0) invert(1)}
+.collins-desktop{display:flex;align-items:center;justify-content:flex-end;gap:clamp(9px,1.35vw,26px);flex:1;white-space:nowrap}
+.collins-mast a{color:inherit;text-decoration:none;font-weight:400;min-height:44px;display:inline-flex;align-items:center}
+.collins-desktop a{font-size:clamp(10px,.94vw,15px);letter-spacing:.045em}
+.collins-mast a:hover,.collins-mast a[aria-current=page]{text-decoration:underline;text-underline-offset:6px}
+.collins-mast .collins-number{font-variant-numeric:tabular-nums;letter-spacing:0}
+.collins-mast .collins-talk{padding:0 15px;border:1px solid #fff9e9c9;min-height:42px;font-size:13px;white-space:nowrap;letter-spacing:.025em}
+.collins-mast .collins-talk:hover{background:#fff9e9;color:#203326;text-decoration:none;text-shadow:none}
+.collins-mobile{display:none}.collins-mast :focus-visible{outline:2px solid #fff9e9;outline-offset:4px}
+.collins-home main{padding-top:clamp(118px,13vw,182px)}
+.collins-home main .yard{filter:none}
+.collins-wallpaper{position:relative;isolation:isolate;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;padding:clamp(24px,5vw,76px);overflow:hidden;background:#34484a;color:#fff9e9}
+.collins-wallpaper>img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 50%;z-index:-2;filter:var(--film, saturate(.80) contrast(.94) sepia(.09))}
+.collins-wallpaper::after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(0deg,#15221f82,transparent 32%)}
+.wall-big-tex{--film:none}.wall-big-tex>img{object-position:50% 40%}.wall-stockyards{--film:saturate(.79) contrast(.95) sepia(.04)}.wall-stockyards>img{object-position:57% 48%}.wall-stadium{--film:saturate(.71) contrast(.93) sepia(.07)}.wall-stadium>img{object-position:50% 51%}.wall-bridge{--film:saturate(.66) contrast(.91) sepia(.07)}.wall-bridge>img{object-position:42% 48%}.wall-reunion{--film:none}.wall-reunion>img{object-position:50% 35%}.wall-six-flags{--film:none}.wall-six-flags>img{object-position:50% 50%}
+.collins-caption h1{margin:0;font-family:CollinsCanyon,Georgia,serif;font-size:clamp(3rem,7vw,8rem);line-height:.95;letter-spacing:-.035em;font-weight:400;text-shadow:0 2px 16px #14201c66;text-transform:uppercase}
+.collins-interior .collins-existing .page-intro h2{font-size:clamp(2.2rem,5vw,5.3rem)}
+@media(max-width:1100px){.collins-desktop{display:none}.collins-mobile{display:block;margin-left:auto}.collins-mobile summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;gap:13px;font-size:15px}.collins-mobile summary::-webkit-details-marker{display:none}.collins-mobile[open] summary span{transform:rotate(45deg)}.collins-mobile nav{position:absolute;top:100%;left:0;right:0;background:#203326;color:#fff9e9;display:grid;gap:4px;padding:12px 24px 24px;text-shadow:none;max-height:calc(100svh - 82px);overflow:auto}.collins-mobile nav a{padding:4px 0;border-bottom:1px solid #fff9e92b}.collins-mobile nav .collins-talk{padding:0 15px;justify-self:start;margin-top:8px}.collins-brand{flex-basis:150px}.collins-home main{padding-top:122px}}
+@media(max-width:620px){.collins-mast{padding:14px 20px}.collins-brand{flex-basis:132px}.collins-home main{padding-top:116px}.wall-big-tex>img{object-position:49% center}.wall-stockyards>img{object-position:63% center}.wall-stadium>img{object-position:50% center}.wall-bridge>img{object-position:31% center}.wall-reunion>img{object-position:46% center}.wall-six-flags>img{object-position:47% center}.collins-wallpaper{padding-bottom:max(32px,env(safe-area-inset-bottom))}.collins-caption h1{font-size:clamp(2.6rem,12vw,5rem)}}
