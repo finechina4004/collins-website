@@ -133,43 +133,30 @@ const builds = [
   { id: 'spas-and-remodels', title: 'Spas & pool remodels', text: 'Add a spa, update the finish or tile, or talk through a bigger change to the pool you already have.', project: projects.find(project => project.slug === 'mr-bears-residence') },
 ];
 
-page('/', `${brand} | Aubrey & North DFW`,
-  'Family-owned custom pool and backyard builder in Aubrey, Texas. See our work across North DFW and call or text Collins to talk about your yard.',
-  `
-<section class="home-intro" id="backyard">
-  <div class="shell hero-inner">
-    <div class="hero-copy">
-      <p class="cover-location">Aubrey, Texas · Serving North DFW</p>
-      <h1>Custom pools &amp;<br>complete backyards.</h1>
-      <p class="hero-description">Family-owned. We build pools, patios, outdoor kitchens, and backyard courts.</p>
-      <div class="actions"><a class="button button-light" href="/work">See our work</a>${textChase('button button-outline')}</div>
-    </div>
-
-  </div>
-</section>
-<section class="shell section" id="work" aria-labelledby="work-title">
-  <div class="section-heading"><h2 id="work-title">Recent work</h2><a class="text-link" href="/work">All projects</a></div>
-  <div class="project-grid featured">
-    ${projectCard(woodland, { lead: true })}
-    ${projectCard(supper)}
-    ${projectCard(ballfield)}
-  </div>
-</section>
-<section class="build-strip" id="build">
-  <div class="shell section">
-    <div class="section-heading"><h2>What we build.</h2><a class="text-link" href="/services">See services</a></div>
-    <div class="build-index">
-      ${builds.map(build => `<article><h3><a href="/services#${build.id}">${escape(build.title)}</a></h3><p>${escape(build.text)}</p></article>`).join('')}
-    </div>
-  </div>
-</section>
-<section class="shell section family-strip" id="about">
-  <h2>Family-owned.<br><em>Right here in Aubrey.</em></h2>
-  <div><p>I’m Chase. When you call Collins, you’ll talk to me. My stepdad has been building pools for decades and runs the work on site. We start by walking the yard with you.</p><a class="text-link" href="/about">About Collins</a></div>
-</section>
-${contactBand()}
-<template data-legacy-albums>${projects.map(project => `<a href="${projectUrl(project)}" data-album-slug="${project.slug}"></a>`).join('')}</template>
-`, { scripts: ['landing.js'] });
+pages.set('index.html', `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#203326">
+  <title>Collins Custom Pools &amp; Backyards | North DFW</title>
+  <meta name="description" content="Custom pools and backyards in North DFW. Call or text Chase at 469-500-7713 to talk about your yard.">
+  <link rel="icon" href="/assets/collins-favicon.svg">
+  <link rel="stylesheet" href="/pool-home.css">
+  <link rel="canonical" href="https://collinscustompools.com/">
+</head>
+<body>
+  <main>
+    <img class="yard" src="/assets/dallas-pool.webp" fetchpriority="high" alt="Backyard pool beneath mature trees with the Dallas skyline in the distance.">
+    <h1><span class="name">COLLINS</span><span class="trade">Custom Pools &amp; Backyards</span></h1>
+    <address aria-label="Contact Collins">
+      <div class="phone"><a href="tel:+14695007713" aria-label="Call Chase at 469-500-7713">469-500-7713</a><a class="text" href="sms:+14695007713">Text Chase</a></div>
+      <a class="email" href="mailto:info@collinscustompools.com">info@collinscustompools.com</a>
+    </address>
+  </main>
+</body>
+</html>
+`);
 
 page('/work', `Our Work | ${brand}`,
   'See eight completed pools and backyards from Collins, including wooded retreats, outdoor kitchens and backyard sports courts.',
