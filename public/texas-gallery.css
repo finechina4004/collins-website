@@ -92,3 +92,12 @@ body.collins-gallery{position:relative;--masthead-space:6.5rem}
 }
 @media(max-width:700px){body.collins-gallery{--masthead-space:5.2rem}.collins-gallery>.site-header::before{height:calc(100% + 3.5rem)}}
 @media(max-height:519px){.collins-gallery>#main{min-height:calc(23rem + var(--masthead-space))}}
+
+/* Consistent masthead lockup: center descriptor beneath wordmark, with independent nav alignment. */
+.collins-gallery>.site-header .header-inner{width:min(94%,100rem);min-height:5.5rem;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:1.4rem}
+.collins-gallery>.site-header .wordmark{display:inline-flex;flex-direction:column;align-items:center;justify-self:start;width:max-content;max-width:100%;margin:0;text-align:center;gap:.34rem}
+.collins-gallery>.site-header .wordmark strong{font-size:clamp(1.85rem,2.3vw,2.6rem);line-height:1;letter-spacing:0}
+.collins-gallery>.site-header .wordmark small{width:100%;text-align:center;font-size:clamp(.46rem,.64vw,.68rem);letter-spacing:.075em;line-height:1.2;margin:0;white-space:nowrap}
+.collins-gallery>.site-header .header-phone{margin:0;justify-self:end}
+@media(max-width:1120px){.collins-gallery>.site-header .header-inner{grid-template-columns:minmax(0,1fr) auto auto;gap:1rem;min-height:4.8rem}.collins-gallery>.site-header .wordmark strong{font-size:1.8rem}.collins-gallery>.site-header .wordmark small{font-size:.49rem}}
+@media(max-width:660px){.collins-gallery>.site-header .header-inner{width:calc(100% - 2rem);min-height:4.5rem;gap:.75rem}.collins-gallery>.site-header .wordmark strong{font-size:1.55rem}.collins-gallery>.site-header .wordmark small{font-size:.42rem;letter-spacing:.04em}}
