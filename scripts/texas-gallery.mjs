@@ -10,6 +10,8 @@ const wallpaperStyles = readFileSync(new URL('../public/dfw-wallpapers.css', imp
 const wallpaperVersion = createHash('sha256').update(wallpaperStyles).digest('hex').slice(0, 12);
 const designStyles = readFileSync(new URL('../public/texas-design.css', import.meta.url));
 const designVersion = createHash('sha256').update(designStyles).digest('hex').slice(0, 12);
+const portfolioStyles = readFileSync(new URL('../public/portfolio-wallpaper.css', import.meta.url));
+const portfolioVersion = createHash('sha256').update(portfolioStyles).digest('hex').slice(0, 12);
 
 export function applyGalleryEdition(pages){
  const e=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -59,7 +61,16 @@ export function applyGalleryEdition(pages){
   return {url:m[1],src,alt,name};
  });
  if(cards.length!==8)throw Error("Expected all eight album covers");
- const index=`<section class="gallery-frame gallery-detail album-index" id="albums" tabindex="-1"><div class="album-index-inner"><div class="album-index-header"><h1>Our work.</h1>${back()}</div><div class="album-index-grid">${cards.map(c=>`<a href="${c.url}"><img src="${c.src}" alt="${c.alt}" loading="lazy" decoding="async"><span>${c.name}</span></a>`).join("")}</div></div></section>`;
+ // 1908 postcard scan, U.S. public domain:
+ // https://commons.wikimedia.org/wiki/File:Chute_the_Chutes_Oak_Cliff_Dallas_Texas_(Postcard_-_Lake_Cliff_Park).jpg
+ const index=`<section class="gallery-frame gallery-detail album-index" id="albums" tabindex="-1">
+   <picture class="wallpaper"><img src="${d}lake-cliff-water-chute-1908.webp" alt="" loading="lazy" decoding="async"></picture>
+   <div class="album-index-inner">
+    <div class="album-index-header"><h1>Our work.</h1>${back()}</div>
+    <div class="album-index-grid">${cards.map(c=>`<a href="${c.url}"><img src="${c.src}" alt="${c.alt}" loading="lazy" decoding="async"><span>${c.name}</span></a>`).join("")}</div>
+    <p class="album-index-credit">Lake Cliff Park · Oak Cliff, Dallas · 1908</p>
+   </div>
+  </section>`;
  const service=(id,src,alt,title,sub,url)=>frame(project(src,alt),title,sub,[link("View project",url),link("Contact","/contact")],{id,detail:true,backLink:"#main"});
  const steps=`<ol class="gallery-process"><li><strong>Meet.</strong><p>Walk the yard.</p></li><li><strong>Design.</strong><p>Scope, price and permits.</p></li><li><strong>Build.</strong><p>Excavation through finishes.</p></li><li><strong>Swim.</strong><p>Startup and walkthrough.</p></li></ol>`;
  const home=pages.get("index.html");
@@ -98,6 +109,9 @@ export function applyGalleryEdition(pages){
      ? `/texas-design.css?v=${designVersion}`
      : `/dfw-wallpapers.css?v=${wallpaperVersion}`;
    html = html.replace('</head>', `  <link rel="stylesheet" href="${stylesheet}">\n</head>`);
+  }
+  if (file === 'work.html') {
+   html = html.replace('</head>', `  <link rel="stylesheet" href="/portfolio-wallpaper.css?v=${portfolioVersion}">\n</head>`);
   }
   pages.set(file,html);
  }
