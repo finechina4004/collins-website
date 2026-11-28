@@ -32,17 +32,17 @@
   background: linear-gradient(0deg, #142217ee, #14221778 19%, transparent 45%);
 }
 
-.dfw-wallpaper.gillin-pool {
+.dfw-wallpaper.rooftop-pool {
   --wallpaper-background: #182820;
 }
 
-.gillin-pool > .wallpaper {
+.rooftop-pool > .wallpaper {
   inset-inline-start: auto;
   width: min(78%, 154svh);
   mask-image: linear-gradient(90deg, transparent, #000 24%);
 }
 
-.dfw-wallpaper.gillin-pool::after {
+.dfw-wallpaper.rooftop-pool::after {
   background: linear-gradient(0deg, #182820ed, #1828205e 14%, transparent 34%);
 }
 
@@ -103,11 +103,11 @@
     height: min(94vw, 52svh);
   }
 
-  .dfw-wallpaper.gillin-pool > .wallpaper {
+  .dfw-wallpaper.rooftop-pool > .wallpaper {
     height: min(67vw, 56svh);
   }
 
-  .dfw-wallpaper.gillin-pool .wallpaper img {
+  .dfw-wallpaper.rooftop-pool .wallpaper img {
     object-fit: contain;
   }
 
@@ -129,5 +129,33 @@
 
   .dfw-wallpaper .gallery-copy .gallery-caption {
     text-align: left;
+  }
+}
+
+/* Keep the original cyanotype's paper edges in frame. */
+.dfw-wallpaper.rooftop-pool {
+  --wallpaper-background: #142537;
+}
+.dfw-wallpaper.rooftop-pool::after {
+  background: linear-gradient(0deg, #142537ab, transparent 31%);
+}
+.rooftop-pool > .wallpaper {
+  mask-image: none;
+}
+.rooftop-pool > .wallpaper img {
+  object-fit: contain;
+}
+@media (width > 700px) and (aspect-ratio > 3/4) {
+  .rooftop-pool > .wallpaper {
+    inset: var(--masthead-space) 3% 3% auto;
+    width: min(65%, 117svh);
+  }
+}
+@media (max-width: 700px), (max-aspect-ratio: 3/4) {
+  .dfw-wallpaper.rooftop-pool > .wallpaper {
+    height: min(78vw, 56svh);
+  }
+  .dfw-wallpaper.rooftop-pool > .wallpaper::after {
+    display: none;
   }
 }
