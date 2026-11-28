@@ -65,3 +65,30 @@ body.collins-gallery{margin:0;display:flex;flex-direction:column;min-height:100v
 @media(max-height:519px){.collins-gallery>#main{min-height:23rem}.gallery-frame .gallery-copy{padding-block:1rem}.gallery-copy h1{font-size:clamp(2rem,6vw,4rem)}.album-picture{min-height:15rem}}
 @media(max-width:380px) and (max-height:700px){body.collins-gallery{height:auto}.collins-gallery>#main{min-height:calc(100svh - 4.5rem)}.album-picture{min-height:47svh}}
 @media(prefers-reduced-motion:no-preference){.gallery-home,.gallery-detail:target,.album-photo:target{animation:gallery-reveal .24s ease-out}@keyframes gallery-reveal{from{opacity:.75}to{opacity:1}}}
+
+/* Full-bleed photographic masthead. The photo continues behind the logo and nav. */
+body.collins-gallery{position:relative;--masthead-space:6.5rem}
+.collins-gallery>.site-header{position:absolute;inset:0 0 auto;z-index:10;isolation:isolate;background:transparent;border:0;box-shadow:none;color:#fff7e8}
+.collins-gallery>.site-header::before{content:"";position:absolute;inset:0 0 auto;height:calc(100% + 4.5rem);z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(20,32,27,.80) 0%,rgba(20,32,27,.67) 36%,rgba(20,32,27,.28) 65%,transparent 100%)}
+.collins-gallery>.site-header .header-inner{position:relative}
+.collins-gallery>.site-header .wordmark,.collins-gallery>.site-header nav a,.collins-gallery>.site-header .header-phone,.collins-gallery>.site-header .tx-menu summary{color:inherit;text-shadow:0 1px 3px #16221b80}
+.collins-gallery>.site-header nav a[aria-current="page"]{color:#fff7e8;text-decoration:underline;text-underline-offset:.4em}
+.collins-gallery>.site-header .header-phone{border-bottom-color:#fff7e870}
+.collins-gallery>.site-header a:focus-visible,.collins-gallery>.site-header summary:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.collins-gallery .skip-link:focus{z-index:12}
+.collins-gallery .gallery-frame .gallery-copy{padding-top:var(--masthead-space)}
+/* The project index is intentionally a paper contact sheet, not a wallpaper. */
+.collins-gallery:has(.album-index:target)>.site-header{color:var(--ink)}
+.collins-gallery:has(.album-index:target)>.site-header::before{display:none}
+.collins-gallery:has(.album-index:target)>.site-header .wordmark,.collins-gallery:has(.album-index:target)>.site-header nav a,.collins-gallery:has(.album-index:target)>.site-header .header-phone,.collins-gallery:has(.album-index:target)>.site-header .tx-menu summary{text-shadow:none}
+.collins-gallery:has(.album-index:target)>.site-header nav a[aria-current="page"]{color:var(--copper)}
+.collins-gallery:has(.album-index:target)>.site-header .header-phone{border-bottom-color:var(--line)}
+.collins-gallery .album-index{padding-top:var(--masthead-space)}
+@media(max-width:1120px){
+ body.collins-gallery{--masthead-space:5.8rem}
+ .collins-gallery>.site-header .tx-menu nav{background:#26392e;color:#fff7e8;border-color:#fff7e845;top:100%;max-height:74svh;overflow:auto}
+ .collins-gallery>.site-header .tx-menu nav a{color:inherit;border-color:#fff7e845;text-shadow:none}
+ .collins-gallery:has(.album-index:target)>.site-header .tx-menu nav a[aria-current="page"]{color:#fff7e8}
+}
+@media(max-width:700px){body.collins-gallery{--masthead-space:5.2rem}.collins-gallery>.site-header::before{height:calc(100% + 3.5rem)}}
+@media(max-height:519px){.collins-gallery>#main{min-height:calc(23rem + var(--masthead-space))}}
