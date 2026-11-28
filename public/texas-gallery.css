@@ -102,17 +102,20 @@ body.collins-gallery{position:relative;--masthead-space:6.5rem}
 @media(max-width:1120px){.collins-gallery>.site-header .header-inner{grid-template-columns:minmax(0,1fr) auto auto;gap:1rem;min-height:4.8rem}.collins-gallery>.site-header .wordmark strong{font-size:1.8rem}.collins-gallery>.site-header .wordmark small{font-size:.49rem}}
 @media(max-width:660px){.collins-gallery>.site-header .header-inner{width:calc(100% - 2rem);min-height:4.5rem;gap:.75rem}.collins-gallery>.site-header .wordmark strong{font-size:1.55rem}.collins-gallery>.site-header .wordmark small{font-size:.42rem;letter-spacing:.04em}}
 
-/* Full-width photographic chapters: let the photograph determine the height rather than cutting it into a viewport-shaped window. */
-body.collins-gallery:has(.gallery-home > .wallpaper){height:auto;min-height:100svh}
-.collins-gallery .gallery-home:has(>.wallpaper){display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(100svh,auto);overflow:hidden}
-.collins-gallery .gallery-home>.wallpaper{position:relative;inset:auto;grid-area:1/1;width:100%;height:auto;min-height:100svh;align-self:stretch;object-fit:cover;object-position:center center;z-index:-2}
-.collins-gallery .gallery-home>.gallery-copy{grid-area:1/1;align-self:end;z-index:0}
-.collins-gallery #main:has(>.gallery-detail:target)>.gallery-home{display:none}
-.collins-gallery .gallery-detail:target{min-height:100svh}
-/* On tall, narrow screens retain the whole composition for the near-square archival photographs; their text remains below the photo on the same dark canvas. */
-@media(max-width:700px){
- .collins-gallery .gallery-home:has(>.wallpaper[src*="/dfw/"]){grid-template-rows:auto minmax(0,1fr);min-height:100svh;align-content:start}
- .collins-gallery .gallery-home>.wallpaper[src*="/dfw/"]{height:auto;min-height:0;object-fit:contain;align-self:start}
- .collins-gallery .gallery-home:has(>.wallpaper[src*="/dfw/"])>.gallery-copy{grid-area:2/1;align-self:start;padding-top:1.4rem}
- .collins-gallery .gallery-home:has(>.wallpaper[src*="/dfw/"]):after{display:none}
+
+/* Fixed, single-screen wallpaper. */
+html:has(body.collins-gallery .gallery-home):not(:has(.gallery-detail:target)){height:100%;overflow:hidden}
+body.collins-gallery:has(.gallery-home):not(:has(.gallery-detail:target)){height:100vh;height:100dvh;min-height:0;overflow:hidden}
+.collins-gallery:has(.gallery-home):not(:has(.gallery-detail:target))>#main{flex:1 1 0;min-height:0;overflow:hidden}
+.collins-gallery .gallery-home{flex:1 1 0;min-height:0;overflow:hidden}
+.collins-gallery .gallery-home>.wallpaper{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--position,50% 50%)}
+.collins-gallery .gallery-home>.gallery-copy{padding-top:0;padding-bottom:clamp(1rem,3vh,3rem)}
+.gallery-home:has(>.wallpaper[src*="rangers-fireworks"]){--photo:url('/assets/dfw/rangers-fireworks.png')}
+.gallery-home:has(>.wallpaper[src*="boot-pool"]){--photo:url('/assets/dfw/boot-pool.png')}
+@media(min-aspect-ratio:5/4){
+.gallery-home:has(>.wallpaper[src*="rangers-fireworks"],>.wallpaper[src*="boot-pool"])::before{content:"";position:absolute;inset:-10%;z-index:-3;background:var(--photo) center/cover;filter:blur(38px) brightness(.7)}
+.collins-gallery .gallery-home>.wallpaper:is([src*="rangers-fireworks"],[src*="boot-pool"]){left:50%;right:auto;width:auto;height:100%;max-width:100%;transform:translateX(-50%);object-fit:contain;object-position:center;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.gallery-home:has(>.wallpaper[src*="rangers-fireworks"],>.wallpaper[src*="boot-pool"]):after{background:linear-gradient(0deg,#15231c99,transparent 25%)}
+.gallery-home:has(>.wallpaper[src*="rangers-fireworks"],>.wallpaper[src*="boot-pool"]) .gallery-copy h1{font-size:clamp(2rem,4vw,4.4rem)}
 }
+@media(max-width:700px){.collins-gallery .gallery-home>.wallpaper{object-position:var(--mobile-position,50% 50%)}}
