@@ -55,7 +55,7 @@ export function applyGalleryEdition(pages){
   service("custom-pools","/assets/projects/black-tie-barefoot/02.webp","Pool and covered porch overlooking woodland","Custom pools.","Designed for your home and the way you live.","/albums/black-tie-barefoot")+
   service("complete-backyards","/assets/projects/the-sun-stayed-for-supper/7015ed67131d404e.webp","Outdoor kitchen and pergola","Complete backyards.","Patios, kitchens, pergolas, turf, fire features, saunas and courts.","/albums/the-sun-stayed-for-supper")+
   service("spas-and-remodels","/assets/projects/mr-bears-residence/e5050074673f3ad9.webp","Pool and pavilion at dusk","Spas & remodels.","A new finish, an added spa or a whole new look.","/albums/mr-bears-residence"),
-  "pool-design.html":frame(artworks.pool,"Imagine.","Your backyard, designed around you.",[link("Start designing","/contact"),link("Find inspiration","/work#albums")]),
+  "design.html":frame(artworks.pool,"Design","Your backyard, designed around you.",[link("Start designing","/contact"),link("Find inspiration","/work#albums")]),
   "process.html":frame(artworks.tex,"Good honest work.","",[link("Our process","#chapter-content")])+frame(artworks.tex,"From dirt to water.","",[link("Start a project","/contact")],{id:"chapter-content",detail:true,extra:steps,backLink:"#main",credit:""}),
   "work.html":frame(artworks.southfork,"Life out back.","",[link("Explore projects","#albums")])+index,
   "financing.html":frame(artworks.sixflags,"Summer awaits.","Let's talk budget. Financing provider not yet announced.",[link("Contact us","/contact")]),
@@ -63,7 +63,7 @@ export function applyGalleryEdition(pages){
  };
  const wallpapers = {
   'about.html': artworks.pegasus,
-  'pool-design.html': artworks.pool,
+  'design.html': artworks.pool,
   'work.html': artworks.southfork,
  };
  function page(file,body){
