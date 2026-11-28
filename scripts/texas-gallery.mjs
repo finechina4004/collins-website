@@ -8,7 +8,7 @@ export function applyGalleryEdition(pages){
  const d="/assets/dfw/";
  const artworks={
   dallas:{src:"/assets/collins-home-sunset.png",alt:"Backyard pool design inspiration with the Dallas skyline",credit:"Dallas skyline · Design inspiration",pos:"58% center",mobile:"64% center",grade:"none"},
-  pegasus:{src:d+"pegasus.webp",alt:"Magnolia Pegasus at sunset in Dallas",credit:"Magnolia Pegasus · Dallas",pos:"50% 30%",mobile:"43% 28%",grade:"saturate(.65) contrast(.92) brightness(1.06) sepia(.10)"},
+  pegasus:{src:d+"pegasus.webp",alt:"Magnolia Pegasus at sunset in Dallas",credit:"Magnolia Pegasus · Dallas",pos:"50% 42%",mobile:"43% 50%",grade:"none"},
   stadium:{src:d+"rangers-fireworks.png",alt:"Vintage Texas Rangers stadium sign beneath fireworks",credit:"Texas Rangers",pos:"50% 85%",mobile:"50% center",grade:"none"},
   pool:{src:d+"texas-pool.webp",alt:"Historic aerial photograph of the Texas-shaped swimming pool in Plano",credit:"The Texas Pool · Plano",pos:"50% 50%",mobile:"50% center",grade:"none"},
   tex:{src:d+"big-tex.webp",alt:"Vintage Big Tex at the State Fair of Texas",credit:"Big Tex · State Fair of Texas",pos:"50% 25%",mobile:"49% 30%",grade:"saturate(.96) contrast(.98) sepia(.04)"},
@@ -46,7 +46,7 @@ export function applyGalleryEdition(pages){
  function page(file,body){
   let html=pages.get(file);
   if(!html||!html.includes('<main id="main">'))throw Error("Missing main "+file);
-  html=html.replace(/<body(?:\s[^>]*)?>/,'<body class="collins-gallery">').replace(/<main id="main">[\s\S]*?<\/main>/,()=>`<main id="main">${body}</main>`).replace(/<footer class="site-footer">[\s\S]*?<\/footer>/,"").replace(/<dialog class="photo-viewer"[\s\S]*?<\/dialog>/,"").replace(/<script src="\/gallery\.js[^"]*"[^>]*><\/script>/,"").replace("</head>",'  <link rel="stylesheet" href="/texas-gallery.css?v=3">\n</head>');
+  html=html.replace(/<body(?:\s[^>]*)?>/,'<body class="collins-gallery">').replace(/<main id="main">[\s\S]*?<\/main>/,()=>`<main id="main">${body}</main>`).replace(/<footer class="site-footer">[\s\S]*?<\/footer>/,"").replace(/<dialog class="photo-viewer"[\s\S]*?<\/dialog>/,"").replace(/<script src="\/gallery\.js[^"]*"[^>]*><\/script>/,"").replace("</head>",'  <link rel="stylesheet" href="/texas-gallery.css?v=4">\n</head>');
   if(file==='index.html')html=html.replace(/(<meta property="og:image" content=")[^"]+"/,'$1https://collinscustompools.com/assets/collins-home-sunset.png"').replace(/(<meta property="og:image:alt" content=")[^"]+"/,'$1Backyard pool design inspiration with the Dallas skyline at sunset"');
   pages.set(file,html);
  }

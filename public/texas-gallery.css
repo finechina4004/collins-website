@@ -119,3 +119,11 @@ body.collins-gallery:has(.gallery-home):not(:has(.gallery-detail:target)){height
 .gallery-home:has(>.wallpaper[src*="rangers-fireworks"],>.wallpaper[src*="boot-pool"]) .gallery-copy h1{font-size:clamp(2rem,4vw,4.4rem)}
 }
 @media(max-width:700px){.collins-gallery .gallery-home>.wallpaper{object-position:var(--mobile-position,50% 50%)}}
+
+/* Keep the original neon color and leave the lower-left Pegasus silhouette free of copy. */
+@media(min-width:701px){
+ .gallery-home:has(>.wallpaper[src*="/pegasus.webp"]) .gallery-copy{grid-template-columns:minmax(0,1fr);justify-items:end;text-align:right;gap:.5rem}
+ .gallery-home:has(>.wallpaper[src*="/pegasus.webp"]) .gallery-copy>div{max-width:28rem}
+ .gallery-home:has(>.wallpaper[src*="/pegasus.webp"]) .gallery-actions{justify-content:flex-end}
+ .gallery-home:has(>.wallpaper[src*="/pegasus.webp"]):after{background:linear-gradient(0deg,#15231c80,transparent 28%)}
+}
