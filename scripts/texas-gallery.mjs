@@ -15,7 +15,7 @@ export function applyGalleryEdition(pages){
  const artworks={
   dallas:{src:"/assets/collins-home-sunset.png",alt:"Backyard pool design inspiration with the Dallas skyline",credit:"Dallas skyline · Design inspiration",pos:"58% center",mobile:"64% center",grade:"none"},
   pegasus:{src:d+"pegasus.webp",alt:"Magnolia Pegasus at sunset in Dallas",credit:"Magnolia Pegasus · Dallas",pos:"50% 42%",mobile:"43% 50%",grade:"none",layout:"pegasus portrait-print"},
-  stadium:{src:d+"rangers-fireworks.png",alt:"Texas Rangers stadium sign beneath fireworks",credit:"Texas Rangers",pos:"50% 85%",mobile:"50% center",grade:"none",layout:"stadium portrait-print"},
+  stadium:{src:d+"arlington-stadium-1977.webp",alt:"A packed Arlington Stadium during a 1977 Texas Rangers game against the Chicago White Sox",credit:"Arlington Stadium · 1977",pos:"50% 39%",mobile:"center",grade:"none",layout:"portrait-print"},
   pool:{src:d+"texas-pool.webp",alt:"Historic aerial photograph of the Texas-shaped swimming pool in Plano",credit:"The Texas Pool · Plano",pos:"50% 50%",mobile:"50% center",grade:"none",layout:"portrait-print"},
   tex:{src:d+"big-tex.webp",mobileSrc:d+"big-tex-approved-mobile.webp",alt:"Vintage Big Tex at the State Fair of Texas",credit:"Big Tex · State Fair of Texas",pos:"50% 25%",mobile:"center",grade:"none",layout:"portrait-print"},
   southfork:{src:d+"southfork.webp",wideSrc:d+"southfork-approved-desktop.webp",alt:"Vintage view of the Southfork Ranch entrance and estate in Parker",credit:"Southfork Ranch · Parker",pos:"center",mobile:"center",grade:"none",layout:"portrait-print"},

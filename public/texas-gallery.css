@@ -117,14 +117,6 @@ body.collins-gallery:has(.gallery-home):not(:has(.gallery-detail:target)){height
 .collins-gallery .gallery-home{flex:1 1 0;min-height:0;overflow:hidden}
 .collins-gallery .gallery-home>.gallery-copy{padding-top:0;padding-bottom:clamp(1rem,3vh,3rem)}
 
-/* Keep the whole sign and fireworks in the square original on a wide screen. */
-@media(min-aspect-ratio:5/4){
- .gallery-home.stadium{background:#18251f}
- .stadium .wallpaper img{object-fit:contain;object-position:right center}
- .stadium:after{background:linear-gradient(0deg,#15231cb0,transparent 35%)}
- .stadium .gallery-copy h1{font-size:clamp(2rem,4vw,4.4rem)}
-}
-
 /* Leave the lower-left Pegasus silhouette free of copy on wider screens. */
 @media(min-width:701px) and (min-aspect-ratio:3/4){
  .pegasus .gallery-copy{grid-template-columns:minmax(0,1fr);justify-items:end;text-align:right;gap:.5rem}
