@@ -1,3 +1,4 @@
+import { applyPostcards } from './texas-postcards.mjs';
 /* Original selected archive photographs. Keep paths and generated output synchronized. */
 const assets = [
   [
@@ -80,4 +81,5 @@ export function applyVintageWallpaper(pages, collection = assets){
  }
  home=home.replace("</head>",`  ${link}\n</head>`);
  pages.set("index.html",home);
+ applyPostcards(pages);
 }

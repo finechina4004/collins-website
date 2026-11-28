@@ -26,8 +26,45 @@ body{font-family:var(--sans);font-synthesis:none}h1,h2,h3{font-family:var(--seri
 @media(max-width:660px){.header-inner{width:calc(100% - 2rem);gap:.65rem;min-height:4rem}.wordmark{margin:0}.wordmark strong{font-size:1.55rem}.wordmark small{font-size:.49rem}.header-phone{font-size:.78rem;margin:0}.header-phone span{display:none}.header-phone b{display:inline}.tx-cover{min-height:clamp(510px,78svh,780px)}.tx-cover>img{object-position:64% center}.tx-cover:before{background:linear-gradient(0deg,#10251df5 0%,#10251d90 52%,transparent 90%)}.tx-cover h1{font-size:clamp(2.9rem,11vw,4.7rem)}.tx-cover-inner{padding-block:2.5rem}.tx-intro,.tx-chapter{grid-template-columns:1fr;gap:1.5rem}.tx-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tx-grid a{min-height:8.5rem}.tx-chapter h1{font-size:clamp(2.5rem,9vw,4.3rem)}.tx-steps{grid-template-columns:1fr}.tx-body{font-size:1rem}.site-footer nav{gap:.6rem 1rem}.tx-next{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important}}</style>
   <link rel="stylesheet" href="/texas-wallpaper.css?v=1">
+<style>
+body.tx-postcard{display:flex;flex-direction:column;min-height:100vh;min-height:100svh;margin:0;background:var(--ink);font-family:var(--sans)}
+.tx-postcard>.site-header{flex:none;z-index:5}
+.tx-postcard #main{display:flex;flex-direction:column;flex:1;min-height:0}
+.tx-postcard .postcard{position:relative;isolation:isolate;display:flex;flex:1;align-items:flex-end;min-height:0;color:var(--cream);background:var(--ink);overflow:hidden}
+.postcard-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--photo-position,50% 50%);z-index:-2}
+.postcard:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(16,37,29,.94) 0%,rgba(16,37,29,.62) 25%,rgba(16,37,29,.12) 60%,transparent 80%);pointer-events:none}
+.postcard-inner{width:min(89%,88rem);margin-inline:auto;padding-block:clamp(2rem,5vh,4.5rem);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem 2.2rem;align-items:end}
+.postcard h1{color:inherit;font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,6.2vw,6.7rem);line-height:1.01;letter-spacing:-.035em;margin:0;max-width:21ch;text-wrap:balance}
+.postcard p{font:400 clamp(.98rem,1.4vw,1.18rem)/1.55 var(--sans);max-width:49ch;margin:.7rem 0 0;color:inherit}
+.postcard-actions{display:flex;flex-wrap:wrap;gap:.15rem 1.7rem;margin-top:1rem}
+.postcard-action{appearance:none;background:transparent;border:0;padding:.35rem 0;min-height:44px;display:inline-flex;align-items:center;gap:.35em;color:inherit;font:400 .93rem/1.4 var(--sans);text-decoration:underline;text-underline-offset:.4em;cursor:pointer;max-width:100%;overflow-wrap:anywhere}
+.postcard-action:hover{color:#f0d5a6}
+.postcard-action:focus-visible,.postcard-dialog a:focus-visible,.postcard-close:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.postcard-credit{color:var(--cream);font:400 .68rem/1.5 var(--sans);text-align:right;max-width:18rem;opacity:.94}
+.postcard-credit span{display:block;letter-spacing:.08em;margin-bottom:.25rem}
+.postcard-dialog{box-sizing:border-box;background:var(--paper);color:var(--ink);border:1px solid var(--line);margin:auto;padding:clamp(1.2rem,3vw,2.5rem);width:min(92vw,38rem);max-height:88svh;overflow:auto;overscroll-behavior:contain;box-shadow:0 16px 70px #0005}
+.postcard-dialog:not([open]):not(:target){display:none}
+.postcard-dialog:target:not([open]){display:block;position:fixed;inset:0;z-index:20}
+.postcard-dialog::backdrop{background:rgba(18,34,29,.67)}
+.postcard-dialog h2{font:400 clamp(1.7rem,4vw,2.7rem)/1.1 var(--serif);margin:.25rem 0 1rem;max-width:22ch}
+.postcard-dialog p{font:400 1rem/1.55 var(--sans);margin:.7rem 0}
+.postcard-dialog .postcard-action{color:var(--ink)}
+.postcard-dialog .postcard-action:hover{color:var(--copper)}
+.postcard-close{display:flex;align-items:center;justify-content:flex-end;min-height:44px;color:var(--ink);font:400 .85rem/1.3 var(--sans);text-underline-offset:.35em}
+.postcard-links{display:grid;grid-template-columns:1fr 1fr;gap:0 1.2rem;margin:.6rem 0 0}
+.postcard-links a{min-height:44px;display:flex;align-items:center;padding:.5rem 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.postcard-links a:hover{text-decoration:underline}
+.postcard-steps{list-style:none;padding:0;margin:0}
+.postcard-steps li{padding:.6rem 0;border-top:1px solid var(--line)}
+.postcard-steps strong{display:block;font-weight:400;color:var(--copper)}
+.postcard-steps p{margin:.2rem 0}
+@media(min-width:701px) and (min-height:530px){body.tx-postcard{height:100vh;height:100svh}.postcard-inner{max-height:100%;overflow:auto}}
+@media(max-width:700px){body.tx-postcard{min-height:100svh}.tx-postcard #main{min-height:calc(100svh - 4.5rem)}.postcard-inner{grid-template-columns:1fr;gap:1rem;padding-block:1.5rem;width:calc(100% - 2rem)}.postcard h1{font-size:clamp(2.2rem,9vw,3.7rem);max-width:17ch}.postcard-photo{object-position:var(--mobile-position,var(--photo-position,50% 50%))}.postcard:after{background:linear-gradient(0deg,#10251df5,#10251d9c 30%,transparent 70%)}.postcard-credit{text-align:left;font-size:.63rem;max-width:none}.postcard-credit span{display:inline;margin-right:.5rem}.postcard-actions{gap:0 1.2rem;margin-top:.65rem}.postcard-links{grid-template-columns:1fr}}
+@media(max-height:529px) and (min-width:701px){.tx-postcard #main{min-height:24rem}.postcard-inner{padding-block:1.2rem}.postcard h1{font-size:clamp(2.2rem,5vw,4rem)}}
+@media(prefers-reduced-motion:reduce){.tx-postcard *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
 </head>
-<body>
+<body class="tx-postcard">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="shell header-inner">
@@ -38,17 +75,9 @@ body{font-family:var(--sans);font-synthesis:none}h1,h2,h3{font-family:var(--seri
     <a class="header-phone" href="tel:+14695007713" aria-label="Call Collins at 469-500-7713"><span>469-500-7713</span><b>Call</b></a>
   </div>
 </header>
-<main id="main"><section class="tx-cover" id="backyard"><img src="/assets/dallas-pool.webp" alt="Design inspiration showing a backyard pool beneath trees with the Dallas skyline" fetchpriority="high" decoding="async"><div class="shell tx-cover-inner"><p class="tx-kicker">Aubrey, Texas / Serving North DFW</p><h1>For the place we call home.</h1><p class="tx-sub">Custom pools &amp; complete backyards. Built for life in Texas.</p><div class="actions"><a class="button button-light" href="/work">See our work</a><a class="button button-outline" href="sms:+14695007713">Text Chase</a></div><p class="tx-caption">Dallas skyline · Design inspiration, not a completed project.</p></div></section>
-<section class="shell section tx-intro"><div><p class="tx-kicker">A love letter to Texas</p><h2>For the people.<br>For the place.<br>For what comes next.</h2></div><div><p>From the Panhandle to the Gulf, the Hill Country to the cities and little towns in between, Texas is home. To the people who built it, the ones who have been here all their lives, and the ones planting roots today: here’s to the memories still to be made.</p><p style="margin-top:1rem">We’re a family-owned pool and backyard builder based in Aubrey. North DFW is our little corner of Texas, and we’re proud to build a small part of its next chapter.</p></div></section>
-<section class="shell section tx-index" id="build"><p class="tx-kicker">The Collins edition</p><h2>Every good summer has a story.</h2><div class="tx-grid"><a href="/about"><img class="tx-grid-photo" src="/assets/dfw/pegasus.webp" alt="" loading="lazy" decoding="async" style="--vintage-position:50% 18%"><div class="tx-grid-copy"><span>02 / About</span><strong>Rooted right here.</strong><small>Meet the family. →</small></div></a><a href="/services"><img class="tx-grid-photo" src="/assets/dfw/arlington-stadium.webp" alt="" loading="lazy" decoding="async" style="--vintage-position:50% 50%"><div class="tx-grid-copy"><span>03 / Services</span><strong>Room for more.</strong><small>Pools and complete backyards. →</small></div></a><a href="/pool-design"><img class="tx-grid-photo" src="/assets/dfw/texas-pool.webp" alt="" loading="lazy" decoding="async" style="--vintage-position:50% 50%"><div class="tx-grid-copy"><span>04 / Pool Design</span><strong>Make it yours.</strong><small>A plan for your life. →</small></div></a><a href="/process"><img class="tx-grid-photo" src="/assets/dfw/big-tex.webp" alt="" loading="lazy" decoding="async" style="--vintage-position:50% 22%"><div class="tx-grid-copy"><span>05 / Process</span><strong>Good work takes good people.</strong><small>From the first visit to the first swim. →</small></div></a><a href="/work"><img class="tx-grid-photo" src="/assets/dfw/southfork.webp" alt="" loading="lazy" decoding="async" style="--vintage-position:50% 48%"><div class="tx-grid-copy"><span>06 / Portfolio</span><strong>Life out back.</strong><small>Explore eight project albums. →</small></div></a><a href="/financing"><img class="tx-grid-photo" src="/assets/dfw/six-flags.webp" alt="" loading="lazy" decoding="async" style="--vintage-position:50% 53%"><div class="tx-grid-copy"><span>07 / Financing</span><strong>Here’s to the next good summer.</strong><small>Talk through your budget. →</small></div></a></div></section>
-<section class="contact-band" id="contact"><div class="shell contact-band-inner"><div><h2>Let’s talk backyards.</h2><p>Tell us your town and what you have in mind.</p></div><div class="actions"><a class="button button-light" href="sms:+14695007713">Text Chase</a><a class="button button-outline" href="tel:+14695007713">Call Collins</a></div></div></section><script>(()=>{const m={'#home':'#backyard','#launch':'#backyard','#pool':'#backyard','#services':'/services','#about':'/about','#process':'/process','#pool-design':'/pool-design','#portfolio':'/work','#work':'/work','#projects':'/work','#areas-we-serve':'/financing','#financing':'/financing','#project':'#contact'};function restore(){let h=location.hash;if(/^#work\/[a-z0-9-]+$/.test(h)){location.replace('/albums/'+h.slice(6));return}if(m[h])location.replace(m[h]);}addEventListener('hashchange',restore);restore()})()</script></main>
-<footer class="site-footer">
-  <div class="shell footer-inner">
-    <div><a class="footer-name" href="/">Collins</a><p>Family-owned in Aubrey, Texas.</p></div>
-    <nav aria-label="Footer navigation"><a href="/about">About</a><a href="/services">Services</a><a href="/pool-design">Pool Design</a><a href="/process">Process</a><a href="/work">Portfolio</a><a href="/financing">Financing</a><a href="/contact">Contact</a></nav>
-    <div><a class="footer-phone" href="tel:+14695007713">469-500-7713</a><a class="tx-email" href="mailto:info@collinscustompools.com">info@collinscustompools.com</a></div>
-  </div>
-</footer>
+<main id="main"><section class="postcard" id="backyard" style="--photo-position:55% center"><img class="postcard-photo" src="/assets/dallas-pool.webp" alt="Backyard pool design inspiration with the Dallas skyline" fetchpriority="high" decoding="async"><div class="postcard-inner"><div><h1>For the place we call home.</h1><p>Custom pools &amp; complete backyards. Built for life in Texas. Based in Aubrey, serving North DFW.</p><div class="postcard-actions"><a class="postcard-action" href="/work">See our work <span aria-hidden="true">→</span></a><a class="postcard-action" href="/contact">Get in touch <span aria-hidden="true">→</span></a></div></div><div class="postcard-credit"><span>A love letter to Texas</span>Dallas skyline · Design inspiration</div></div></section><script>(()=>{const m={'#home':'#backyard','#launch':'#backyard','#pool':'#backyard','#services':'/services','#about':'/about','#process':'/process','#pool-design':'/pool-design','#portfolio':'/work','#work':'/work','#projects':'/work','#areas-we-serve':'/financing','#financing':'/financing','#project':'/contact'};function restore(){let h=location.hash;if(/^#work\/[a-z0-9-]+$/.test(h)){location.replace('/albums/'+h.slice(6));return}if(m[h])location.replace(m[h]);}addEventListener('hashchange',restore);restore()})()</script></main>
 
+
+<script>(()=>{const dialogs=[...document.querySelectorAll('.postcard-dialog')];if(!dialogs.length||typeof HTMLDialogElement==='undefined'||!HTMLDialogElement.prototype.showModal)return;let opener;function restore(){const id=location.hash.slice(1),d=dialogs.find(x=>x.id===id);for(const item of dialogs)if(item!==d&&item.open)item.close();if(d&&!d.open)d.showModal();}function dismiss(){if(history.state?.collinsPostcard)history.back();else{history.replaceState(history.state,'',location.pathname+location.search);restore();}if(opener?.isConnected)opener.focus({preventScroll:true});}document.querySelectorAll('[data-postcard-open]').forEach(a=>a.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();opener=a;history.pushState({...history.state,collinsPostcard:true},'',a.getAttribute('href'));restore();}));dialogs.forEach(d=>{d.querySelector('.postcard-close').addEventListener('click',e=>{e.preventDefault();dismiss();});d.addEventListener('cancel',e=>{e.preventDefault();dismiss();});});addEventListener('popstate',restore);addEventListener('hashchange',restore);restore();})()</script>
 </body>
 </html>
