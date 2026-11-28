@@ -3,7 +3,7 @@ body.collins-gallery{margin:0;display:flex;flex-direction:column;min-height:100v
 .collins-gallery>.site-header{flex:none;z-index:5}
 .collins-gallery>#main{flex:1;display:flex;flex-direction:column;min-height:0}
 .collins-gallery .gallery-frame{position:relative;isolation:isolate;flex:1;display:flex;flex-direction:column;justify-content:flex-end;min-height:0;color:var(--cream);background:var(--ink)}
-.gallery-frame>.wallpaper{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--position,50% 50%);filter:var(--grade,none);z-index:-2}
+.gallery-frame>.wallpaper{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;filter:var(--grade,none);z-index:-2}
 .gallery-frame:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(0deg,rgba(21,35,28,.92),rgba(21,35,28,.61) 17%,rgba(21,35,28,.14) 44%,transparent 66%)}
 .gallery-frame .gallery-copy{width:min(89%,88rem);margin-inline:auto;padding-block:clamp(1.6rem,4.5vh,3.8rem);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.25rem;align-items:end;min-width:0}
 .gallery-copy h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.9rem,6.3vw,6.5rem);line-height:.99;letter-spacing:-.035em;max-width:20ch;margin:0;color:inherit;text-wrap:balance}
@@ -31,7 +31,7 @@ body.collins-gallery{margin:0;display:flex;flex-direction:column;min-height:100v
 .album-index h1{font:400 clamp(1.8rem,4vw,3rem)/1.1 var(--serif);margin:0}
 .album-index-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(.65rem,1.6vw,1.3rem)}
 .album-index-grid a{display:block;text-decoration:none;min-width:0}
-.album-index-grid img{display:block;width:100%;height:clamp(90px,20vh,225px);object-fit:cover;background:var(--paper-dark)}
+.album-index-grid img{display:block;width:100%;height:clamp(90px,20vh,225px);object-fit:contain;background:var(--paper-dark)}
 .album-index-grid span{display:block;padding:.4rem 0;font:400 clamp(.78rem,1.1vw,.96rem)/1.35 var(--sans)}
 .album-index-grid a:hover span{text-decoration:underline;text-underline-offset:.3em}
 .collins-gallery .album-photo{display:none;flex:1;min-height:0;flex-direction:column;background:var(--ink);color:var(--cream)}
@@ -48,7 +48,7 @@ body.collins-gallery{margin:0;display:flex;flex-direction:column;min-height:100v
 .gallery-controls .gallery-back{font-size:.8rem;margin-right:.7rem}
 @media(min-height:520px){body.collins-gallery{height:100vh;height:100svh}}
 @media(max-width:700px){
- .collins-gallery .gallery-frame>.wallpaper{object-position:var(--mobile-position,var(--position,50% 50%))}
+ .collins-gallery .gallery-frame>.wallpaper{object-position:center}
  .gallery-frame .gallery-copy{grid-template-columns:1fr;gap:.7rem;width:calc(100% - 2rem);padding-block:1.5rem}
  .gallery-copy h1{font-size:clamp(2.5rem,10vw,4rem);max-width:17ch}
  .gallery-copy p{font-size:1rem}
