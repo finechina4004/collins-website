@@ -1,4 +1,5 @@
-/* Shared editorial design: a love letter to Texas. Historic photo rights pending; approved project photography only. */
+/* Shared editorial design: a love letter to Texas. Owner-approved historical photography is included locally. */
+import { applyVintageWallpaper } from './texas-wallpaper.mjs';
 export function applyTexasEdition(pages){
  const origin="https://collinscustompools.com",brand="Collins Custom Pools & Backyards";
  const nav=[["About","/about"],["Services","/services"],["Pool Design","/pool-design"],["Process","/process"],["Portfolio","/work"],["Financing","/financing"],["Contact","/contact"]];
@@ -56,4 +57,5 @@ body{font-family:var(--sans);font-synthesis:none}h1,h2,h3{font-family:var(--seri
  let sitemap=pages.get("sitemap.xml");
  for(const p of ["/pool-design","/process","/financing"])if(!sitemap.includes(`${origin}${p}</loc>`))sitemap=sitemap.replace("</urlset>",`  <url><loc>${origin}${p}</loc></url>\n</urlset>`);
  pages.set("sitemap.xml",sitemap);
+ applyVintageWallpaper(pages);
 }

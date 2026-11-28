@@ -1,0 +1,21 @@
+/* Texas photo edition — original photographs, original color, no external image requests. */
+.tx-vintage{position:relative;isolation:isolate;display:grid;align-items:end;min-height:clamp(460px,calc(100svh - 5rem),850px);overflow:hidden;background:#26392e;color:#fff7e8}
+.tx-vintage-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--vintage-position,50% 50%);z-index:-2}
+.tx-vintage::after{position:absolute;inset:0;content:"";z-index:-1;background:linear-gradient(0deg,rgba(13,27,23,.96),rgba(13,27,23,.72) 24%,rgba(13,27,23,.15) 53%,transparent 73%);pointer-events:none}
+.tx-vintage-copy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,15rem);gap:1.5rem;align-items:end;padding-block:clamp(2rem,5vw,4.5rem)}
+.tx-vintage-copy .tx-kicker{color:#fff7e8;letter-spacing:.12em}
+.tx-vintage h1{font-size:clamp(3rem,6.2vw,6.8rem);line-height:.96;max-width:16ch;text-wrap:balance;color:inherit}
+.tx-vintage .tx-sub{max-width:47ch;line-height:1.5;margin-top:1rem;font-size:clamp(1rem,1.6vw,1.25rem)}
+.tx-vintage-caption{font-size:.82rem;line-height:1.55;text-align:right;margin:0}
+.tx-vintage-caption span{display:block;text-transform:uppercase;letter-spacing:.1em;font-size:.68rem;margin-bottom:.35rem}
+.tx-vintage-link{display:inline-flex;align-items:center;min-height:44px;margin-top:1.1rem;text-underline-offset:.4em;color:inherit}
+.tx-vintage-link:focus-visible{outline:2px solid #fff7e8;outline-offset:5px}
+.tx-vintage-body{scroll-margin-top:6rem}
+.tx-vintage-note{font-size:.88rem;color:var(--muted);margin-bottom:clamp(1.5rem,4vw,3rem);max-width:65ch;border-bottom:1px solid var(--line);padding-bottom:1rem}
+.tx-grid a{padding:0;gap:0;min-height:0}
+.tx-grid .tx-grid-photo{display:block;width:100%;aspect-ratio:1.65;object-fit:cover;object-position:var(--vintage-position,50% 50%);background:var(--paper-dark)}
+.tx-grid .tx-grid-copy{display:flex;flex-direction:column;align-items:flex-start;flex:1;width:100%;gap:.6rem;padding:clamp(.8rem,2vw,1.55rem)}
+.tx-grid .tx-grid-copy>small{margin-top:auto;padding-top:.45rem}
+.tx-grid .tx-grid-copy>span{color:var(--copper)}
+@media(max-width:700px){.tx-vintage{display:block;min-height:0}.tx-vintage-photo{position:relative;inset:auto;width:100%;height:auto;display:block;object-fit:contain}.tx-vintage::after{display:none}.tx-vintage-copy{display:block;padding-block:1.6rem 2rem}.tx-vintage h1{font-size:clamp(2.65rem,9.5vw,4rem);max-width:18ch}.tx-vintage-caption{margin-top:1rem;text-align:left;font-size:.75rem;border-top:1px solid #fff7e84d;padding-top:.7rem}.tx-vintage-caption span{display:inline;margin-right:.4rem}.tx-grid .tx-grid-copy{gap:.35rem}.tx-grid strong{font-size:clamp(1.2rem,4.6vw,2rem)}.tx-grid small{font-size:.78rem}}
+@media(prefers-reduced-motion:reduce){.tx-vintage *{scroll-behavior:auto!important}}

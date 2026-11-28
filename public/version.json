@@ -1,6 +1,6 @@
 {
-  "build": "collins-love-letter-to-texas-01",
-  "sourceCheckpoint": "ce067a6",
+  "build": "collins-love-letter-to-texas-02",
+  "sourceCheckpoint": "c72569e",
   "destination": "Cloudflare collins-website",
   "release": true
 }
