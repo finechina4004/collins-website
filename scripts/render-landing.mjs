@@ -1,3 +1,4 @@
+import { applyDfwChapters } from './dfw-chapters.mjs';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { editorial } from './project-editorial.mjs';
@@ -281,6 +282,7 @@ ${urls.map(path => `  <url><loc>${new URL(path, base).href}</loc></url>`).join('
 </urlset>
 `);
 
+applyDfwChapters(pages);
 const checking = process.argv.includes('--check');
 for (const [path, content] of pages) {
   if (checking) {
