@@ -4,6 +4,8 @@ import { readFileSync } from 'node:fs';
 
 const galleryStyles = readFileSync(new URL('../public/texas-gallery.css', import.meta.url));
 const galleryVersion = createHash('sha256').update(galleryStyles).digest('hex').slice(0, 12);
+const contactStyles = readFileSync(new URL('../public/texas-contact.css', import.meta.url));
+const contactVersion = createHash('sha256').update(contactStyles).digest('hex').slice(0, 12);
 
 export function applyGalleryEdition(pages){
  const e=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -20,7 +22,8 @@ export function applyGalleryEdition(pages){
   tex:{src:d+"big-tex.webp",mobileSrc:d+"big-tex-approved-mobile.webp",alt:"Vintage Big Tex at the State Fair of Texas",credit:"Big Tex · State Fair of Texas",pos:"50% 25%",mobile:"center",grade:"none",layout:"portrait-print"},
   southfork:{src:d+"southfork.webp",wideSrc:d+"southfork-approved-desktop.webp",alt:"Vintage view of the Southfork Ranch entrance and estate in Parker",credit:"Southfork Ranch · Parker",pos:"center",mobile:"center",grade:"none",layout:"portrait-print"},
   sixflags:{src:d+"six-flags-desktop.svg",mobileSrc:d+"six-flags-mobile.svg",alt:"Original Six Flags Over Texas entrance in black and white",credit:"Six Flags Over Texas",pos:"50% 50%",mobile:"50% 50%",grade:"none"},
-  contact:{src:"/assets/projects/strictly-striped-affair/d12025f874e49421.webp",alt:"Pool and striped loungers in the Collins project collection",credit:"A Strictly Striped Affair",pos:"50% center",mobile:"50% center",grade:"none"}
+  // Denton Chamber of Commerce Collection: https://texashistory.unt.edu/ark:/67531/metadc1996991/
+  contact:{src:d+"campus-theatre-dusk.webp",alt:"Campus Theatre's red and green neon marquee and lit ticket booth at dusk in Denton",credit:"Campus Theatre · Denton, Texas",pos:"30% 75%",mobile:"38% 65%",grade:"none",layout:"campus-contact"}
  };
  const project=(src,alt)=>({src,alt,credit:"",pos:"50% center",mobile:"50% center",grade:"none"});
  const picture = (art, detail) => {
@@ -54,13 +57,19 @@ export function applyGalleryEdition(pages){
   "process.html":frame(artworks.tex,"Good honest work.","",[link("Our process","#chapter-content")])+frame(artworks.tex,"From dirt to water.","",[link("Start a project","/contact")],{id:"chapter-content",detail:true,extra:steps,backLink:"#main",credit:""}),
   "work.html":frame(artworks.southfork,"Life out back.","",[link("Explore projects","#albums")])+index,
   "financing.html":frame(artworks.sixflags,"Summer awaits.","Let's talk budget. Financing provider not yet announced.",[link("Contact us","/contact")]),
-  "contact.html":frame(artworks.contact,"Howdy.","Aubrey, Texas · North DFW",[link("469-500-7713","tel:+14695007713"),link("Text us","sms:+14695007713"),link("info@collinscustompools.com","mailto:info@collinscustompools.com")])
+  "contact.html":frame(artworks.contact,"Howdy.","Aubrey, Texas · Denton County",[link("469-500-7713","tel:+14695007713"),link("Text us","sms:+14695007713"),link("info@collinscustompools.com","mailto:info@collinscustompools.com")])
  };
  function page(file,body){
   let html=pages.get(file);
   if(!html||!html.includes('<main id="main">'))throw Error("Missing main "+file);
   html=html.replace(/<body(?:\s[^>]*)?>/,'<body class="collins-gallery">').replace(/<main id="main">[\s\S]*?<\/main>/,()=>`<main id="main" tabindex="-1">${body}</main>`).replace(/<footer class="site-footer">[\s\S]*?<\/footer>/,"").replace(/<dialog class="photo-viewer"[\s\S]*?<\/dialog>/,"").replace(/<script src="\/gallery\.js[^"]*"[^>]*><\/script>/,"").replace("</head>",`  <link rel="stylesheet" href="/texas-gallery.css?v=${galleryVersion}">\n</head>`);
   if(file==='index.html')html=html.replace(/(<meta property="og:image" content=")[^"]+"/,'$1https://collinscustompools.com/assets/collins-home-sunset.png"').replace(/(<meta property="og:image:alt" content=")[^"]+"/,'$1Backyard pool design inspiration with the Dallas skyline at sunset"');
+  if (file === 'contact.html') {
+   html = html
+    .replace(/(<meta property="og:image" content=")[^"]+"/, `$1https://collinscustompools.com${e(artworks.contact.src)}"`)
+    .replace(/(<meta property="og:image:alt" content=")[^"]+"/, `$1${e(artworks.contact.alt)}"`)
+    .replace('</head>', `  <link rel="stylesheet" href="/texas-contact.css?v=${contactVersion}">\n</head>`);
+  }
   pages.set(file,html);
  }
  for(const [file,body] of Object.entries(definitions))page(file,body);

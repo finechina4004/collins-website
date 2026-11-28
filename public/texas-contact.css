@@ -1,0 +1,90 @@
+/* Leave the theatre's tall neon sign and ticket booth clear of the contact links. */
+html:has(#main .campus-contact) {
+  height: auto;
+  overflow: visible;
+}
+
+body.collins-gallery:has(#main .campus-contact) {
+  height: auto;
+  min-height: 100svh;
+  overflow: visible;
+}
+
+body.collins-gallery:has(#main .campus-contact) > #main {
+  flex: 1 0 auto;
+  overflow: visible;
+}
+
+.collins-gallery .gallery-home.campus-contact {
+  --night: #0c101a;
+  min-height: max(100svh, 24rem);
+  padding-top: var(--masthead-space);
+  background: var(--night);
+}
+
+.campus-contact > .wallpaper {
+  inset: 0 0 0 auto;
+  width: min(76%, 155svh);
+}
+
+.campus-contact > .wallpaper::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background: linear-gradient(90deg, var(--night), transparent 24%);
+}
+
+.campus-contact.gallery-frame::after {
+  background: linear-gradient(0deg, #0c101a9e, transparent 18%);
+}
+
+.campus-contact .gallery-actions a[href^="tel:"] {
+  padding-inline: .85rem;
+  background: var(--cream);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.campus-contact .gallery-actions a[href^="tel:"]:hover {
+  background: #e7c69a;
+}
+
+.campus-contact .gallery-actions a[href^="tel:"]:focus-visible {
+  outline-color: var(--cream);
+}
+
+@media (max-width: 700px), (max-aspect-ratio: 3/4) {
+  .collins-gallery .gallery-home.campus-contact {
+    justify-content: flex-start;
+  }
+
+  .campus-contact > .wallpaper {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: clamp(12rem, 45svh, 30rem);
+    z-index: auto;
+  }
+
+  .campus-contact .wallpaper img {
+    object-position: var(--mobile-position);
+  }
+
+  .campus-contact > .wallpaper::after {
+    background: linear-gradient(0deg, var(--night), transparent 12%);
+  }
+
+  .campus-contact.gallery-frame::after {
+    display: none;
+  }
+
+  .collins-gallery .gallery-home.campus-contact > .gallery-copy {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .65rem;
+    padding-top: .75rem;
+  }
+
+  .campus-contact .gallery-copy .gallery-caption {
+    text-align: left;
+  }
+}
