@@ -3,7 +3,8 @@ body.collins-gallery{margin:0;display:flex;flex-direction:column;min-height:100v
 .collins-gallery>.site-header{flex:none;z-index:5}
 .collins-gallery>#main{flex:1;display:flex;flex-direction:column;min-height:0}
 .collins-gallery .gallery-frame{position:relative;isolation:isolate;flex:1;display:flex;flex-direction:column;justify-content:flex-end;min-height:0;color:var(--cream);background:var(--ink)}
-.gallery-frame>.wallpaper{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--position,50% 50%);filter:var(--grade,none);z-index:-2}
+.gallery-frame>.wallpaper{position:absolute;inset:0;filter:var(--grade,none);z-index:-2;min-height:0}
+.wallpaper img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--position,center)}
 .gallery-frame:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(0deg,rgba(21,35,28,.92),rgba(21,35,28,.61) 17%,rgba(21,35,28,.14) 44%,transparent 66%)}
 .gallery-frame .gallery-copy{width:min(89%,88rem);margin-inline:auto;padding-block:clamp(1.6rem,4.5vh,3.8rem);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.25rem;align-items:end;min-width:0}
 .gallery-copy h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.9rem,6.3vw,6.5rem);line-height:.99;letter-spacing:-.035em;max-width:20ch;margin:0;color:inherit;text-wrap:balance}
@@ -14,7 +15,8 @@ body.collins-gallery{margin:0;display:flex;flex-direction:column;min-height:100v
 .gallery-actions a:hover,.gallery-controls a:hover{color:#e7c69a}
 .collins-gallery a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
 .collins-gallery .gallery-detail{display:none}
-.collins-gallery .gallery-detail:target{display:flex}
+.collins-gallery .gallery-detail:target{display:flex;flex:1 0 auto}
+.collins-gallery>#main:has(>.gallery-detail:target){flex:1 0 auto}
 .collins-gallery #main:has(>.gallery-detail:target)>.gallery-home{display:none}
 .gallery-detail .gallery-copy h1{font-size:clamp(2.4rem,5.5vw,5.5rem)}
 .gallery-detail .gallery-copy{grid-template-columns:minmax(0,1fr)}
@@ -34,7 +36,7 @@ body.collins-gallery{margin:0;display:flex;flex-direction:column;min-height:100v
 .album-index-grid img{display:block;width:100%;height:clamp(90px,20vh,225px);object-fit:cover;background:var(--paper-dark)}
 .album-index-grid span{display:block;padding:.4rem 0;font:400 clamp(.78rem,1.1vw,.96rem)/1.35 var(--sans)}
 .album-index-grid a:hover span{text-decoration:underline;text-underline-offset:.3em}
-.collins-gallery .album-photo{display:none;flex:1;min-height:0;flex-direction:column;background:var(--ink);color:var(--cream)}
+.collins-gallery .album-photo{display:none;flex:1;min-height:0;flex-direction:column;padding-top:var(--masthead-space);background:var(--ink);color:var(--cream)}
 .collins-gallery .album-photo.album-first,.collins-gallery .album-photo:target{display:flex}
 .collins-gallery #main:has(>.album-photo:target)>.album-photo:not(:target){display:none}
 .album-picture{flex:1;min-height:0;position:relative;display:grid;place-items:center;overflow:hidden}
@@ -48,7 +50,7 @@ body.collins-gallery{margin:0;display:flex;flex-direction:column;min-height:100v
 .gallery-controls .gallery-back{font-size:.8rem;margin-right:.7rem}
 @media(min-height:520px){body.collins-gallery{height:100vh;height:100svh}}
 @media(max-width:700px){
- .collins-gallery .gallery-frame>.wallpaper{object-position:var(--mobile-position,var(--position,50% 50%))}
+ .wallpaper img{object-position:var(--mobile-position,var(--position,center))}
  .gallery-frame .gallery-copy{grid-template-columns:1fr;gap:.7rem;width:calc(100% - 2rem);padding-block:1.5rem}
  .gallery-copy h1{font-size:clamp(2.5rem,10vw,4rem);max-width:17ch}
  .gallery-copy p{font-size:1rem}
@@ -86,7 +88,7 @@ body.collins-gallery{position:relative;--masthead-space:6.5rem}
 .collins-gallery .album-index{padding-top:var(--masthead-space)}
 @media(max-width:1120px){
  body.collins-gallery{--masthead-space:5.8rem}
- .collins-gallery>.site-header .tx-menu nav{background:#26392e;color:#fff7e8;border-color:#fff7e845;top:100%;max-height:74svh;overflow:auto}
+ .collins-gallery>.site-header .tx-menu nav{background:#26392e;color:#fff7e8;border-color:#fff7e845;top:100%;max-height:calc(100dvh - var(--masthead-space));overflow:auto}
  .collins-gallery>.site-header .tx-menu nav a{color:inherit;border-color:#fff7e845;text-shadow:none}
  .collins-gallery:has(.album-index:target)>.site-header .tx-menu nav a[aria-current="page"]{color:#fff7e8}
 }
@@ -99,8 +101,13 @@ body.collins-gallery{position:relative;--masthead-space:6.5rem}
 .collins-gallery>.site-header .wordmark strong{font-size:clamp(1.85rem,2.3vw,2.6rem);line-height:1;letter-spacing:0}
 .collins-gallery>.site-header .wordmark small{width:100%;text-align:center;font-size:clamp(.46rem,.64vw,.68rem);letter-spacing:.075em;line-height:1.2;margin:0;white-space:nowrap}
 .collins-gallery>.site-header .header-phone{margin:0;justify-self:end}
-@media(max-width:1120px){.collins-gallery>.site-header .header-inner{grid-template-columns:minmax(0,1fr) auto auto;gap:1rem;min-height:4.8rem}.collins-gallery>.site-header .wordmark strong{font-size:1.8rem}.collins-gallery>.site-header .wordmark small{font-size:.49rem}}
-@media(max-width:660px){.collins-gallery>.site-header .header-inner{width:calc(100% - 2rem);min-height:4.5rem;gap:.75rem}.collins-gallery>.site-header .wordmark strong{font-size:1.55rem}.collins-gallery>.site-header .wordmark small{font-size:.42rem;letter-spacing:.04em}}
+@media(max-width:1120px){.collins-gallery>.site-header .header-inner{grid-template-columns:minmax(0,1fr) auto auto;gap:1rem;min-height:4.8rem}.collins-gallery>.site-header .wordmark strong{font-size:1.8rem}.collins-gallery>.site-header .wordmark small{font-size:.59rem}}
+@media(max-width:660px){
+ .collins-gallery>.site-header .header-inner{width:calc(100% - 2rem);min-height:4.5rem;gap:.6rem}
+ .collins-gallery>.site-header .wordmark strong{font-size:1.55rem}
+ .collins-gallery>.site-header .wordmark small{font-size:.54rem;letter-spacing:.04em}
+ .collins-gallery>.site-header .header-phone{display:grid;place-items:center;min-width:44px;min-height:44px;border:0;text-decoration:underline;text-underline-offset:.4em}
+}
 
 
 /* Fixed, single-screen wallpaper. */
@@ -108,22 +115,43 @@ html:has(body.collins-gallery .gallery-home):not(:has(.gallery-detail:target)){h
 body.collins-gallery:has(.gallery-home):not(:has(.gallery-detail:target)){height:100vh;height:100dvh;min-height:0;overflow:hidden}
 .collins-gallery:has(.gallery-home):not(:has(.gallery-detail:target))>#main{flex:1 1 0;min-height:0;overflow:hidden}
 .collins-gallery .gallery-home{flex:1 1 0;min-height:0;overflow:hidden}
-.collins-gallery .gallery-home>.wallpaper{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--position,50% 50%)}
 .collins-gallery .gallery-home>.gallery-copy{padding-top:0;padding-bottom:clamp(1rem,3vh,3rem)}
-.gallery-home:has(>.wallpaper[src*="rangers-fireworks"]){--photo:url('/assets/dfw/rangers-fireworks.png')}
-.gallery-home:has(>.wallpaper[src*="boot-pool"]){--photo:url('/assets/dfw/boot-pool.png')}
-@media(min-aspect-ratio:5/4){
-.gallery-home:has(>.wallpaper[src*="rangers-fireworks"],>.wallpaper[src*="boot-pool"])::before{content:"";position:absolute;inset:-10%;z-index:-3;background:var(--photo) center/cover;filter:blur(38px) brightness(.7)}
-.collins-gallery .gallery-home>.wallpaper:is([src*="rangers-fireworks"],[src*="boot-pool"]){left:50%;right:auto;width:auto;height:100%;max-width:100%;transform:translateX(-50%);object-fit:contain;object-position:center;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.gallery-home:has(>.wallpaper[src*="rangers-fireworks"],>.wallpaper[src*="boot-pool"]):after{background:linear-gradient(0deg,#15231c99,transparent 25%)}
-.gallery-home:has(>.wallpaper[src*="rangers-fireworks"],>.wallpaper[src*="boot-pool"]) .gallery-copy h1{font-size:clamp(2rem,4vw,4.4rem)}
-}
-@media(max-width:700px){.collins-gallery .gallery-home>.wallpaper{object-position:var(--mobile-position,50% 50%)}}
 
-/* Keep the original neon color and leave the lower-left Pegasus silhouette free of copy. */
-@media(min-width:701px){
- .gallery-home:has(>.wallpaper[src*="/pegasus.webp"]) .gallery-copy{grid-template-columns:minmax(0,1fr);justify-items:end;text-align:right;gap:.5rem}
- .gallery-home:has(>.wallpaper[src*="/pegasus.webp"]) .gallery-copy>div{max-width:28rem}
- .gallery-home:has(>.wallpaper[src*="/pegasus.webp"]) .gallery-actions{justify-content:flex-end}
- .gallery-home:has(>.wallpaper[src*="/pegasus.webp"]):after{background:linear-gradient(0deg,#15231c80,transparent 28%)}
+/* Keep the whole sign and fireworks in the square original on a wide screen. */
+@media(min-aspect-ratio:5/4){
+ .gallery-home.stadium{background:#18251f}
+ .stadium .wallpaper img{object-fit:contain;object-position:right center}
+ .stadium:after{background:linear-gradient(0deg,#15231cb0,transparent 35%)}
+ .stadium .gallery-copy h1{font-size:clamp(2rem,4vw,4.4rem)}
+}
+
+/* Leave the lower-left Pegasus silhouette free of copy on wider screens. */
+@media(min-width:701px) and (min-aspect-ratio:3/4){
+ .pegasus .gallery-copy{grid-template-columns:minmax(0,1fr);justify-items:end;text-align:right;gap:.5rem}
+ .pegasus .gallery-copy>div{max-width:28rem}
+ .pegasus .gallery-actions{justify-content:flex-end}
+ .pegasus:after{background:linear-gradient(0deg,#15231c80,transparent 28%)}
+}
+
+/* These subjects span the original width or height. Give the full print a place above the copy. */
+@media(max-aspect-ratio:3/4) {
+ .collins-gallery .gallery-home.portrait-print {
+  display:grid;
+  grid-template-rows:minmax(0,1fr) auto;
+  justify-content:stretch;
+  background:#18251f;
+ }
+ .portrait-print>.wallpaper {
+  position:relative;
+  padding-top:var(--masthead-space);
+ }
+ .portrait-print>.wallpaper img{object-fit:contain;object-position:center}
+ .portrait-print.gallery-home::after{display:none}
+ .gallery-home.portrait-print>.gallery-copy{padding-top:.65rem}
+}
+
+@media(max-height:520px) and (orientation:landscape){
+ .gallery-home .gallery-copy h1{font-size:clamp(2rem,5vw,3.2rem)}
+ .gallery-home .gallery-copy p:not(.gallery-caption){font-size:.95rem}
+ .gallery-home .gallery-actions{margin-top:.35rem}
 }
