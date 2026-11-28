@@ -1,8 +1,17 @@
 /* Collins source: hill-country.css */
 @font-face {
-  font-family: Canyon Rim;
+  font-family: "Canyon Rim";
   src: url('/assets/fonts/canyon-rim.woff') format('woff');
-  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+@font-face {
+  font-family: "Parkly Soft Sans";
+  src: url('/assets/fonts/parkly-soft.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
 }
 
 :root {
@@ -14,25 +23,25 @@
   --muted: #56574b;
   --line: #c0b7a1;
   --cream: #f6eddb;
-  --serif: Georgia, 'Times New Roman', serif;
-  --sans: system-ui, sans-serif;
-  --label: 'Canyon Rim', 'Arial Narrow', var(--sans);
+  --display: "Canyon Rim";
+  --body: "Parkly Soft Sans";
+  --label: var(--body);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-padding-top: 6rem; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.55; }
+html { scroll-padding-top: 6rem; font-family: var(--body); font-synthesis: none; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); line-height: 1.55; }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
-button { font: inherit; }
+button, input, select, textarea, summary, ::file-selector-button { font: inherit; }
 [hidden] { display: none !important; }
 :focus-visible { outline: 3px solid #a65934; outline-offset: 4px; }
 .home-intro :focus-visible, .contact-band :focus-visible, .site-footer :focus-visible, .photo-viewer :focus-visible { outline-color: #f5cc86; }
 h1, h2, h3, p, figure { margin: 0; }
-h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.03; text-wrap: balance; }
-h1 { font-size: clamp(3.2rem, 7.6vw, 7.8rem); letter-spacing: -.065em; }
-h2 { font-size: clamp(2.15rem, 4.4vw, 4.55rem); letter-spacing: -.055em; }
-h3 { font-size: clamp(1.55rem, 2.9vw, 2.8rem); letter-spacing: -.035em; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.03; text-wrap: balance; }
+h1 { font-size: clamp(2.2rem, 5.6vw, 5.8rem); letter-spacing: -.035em; overflow-wrap: anywhere; }
+h2 { font-size: clamp(1.7rem, 3.5vw, 3.6rem); letter-spacing: -.025em; overflow-wrap: anywhere; }
+h3 { font-size: clamp(1.25rem, 2.3vw, 2.4rem); letter-spacing: -.025em; overflow-wrap: anywhere; }
 p { max-width: 62ch; }
 em { font-weight: inherit; }
 .shell { width: min(100% - 7.5vw, 84rem); margin-inline: auto; }
@@ -45,9 +54,9 @@ em { font-weight: inherit; }
 .header-inner { min-height: 4.9rem; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; }
 .wordmark { width: clamp(7rem, 12vw, 10rem); }
 .site-header nav, .site-footer nav { display: flex; align-items: center; gap: clamp(.75rem, 2.6vw, 2.6rem); }
-.site-header nav a, .site-footer nav a { text-decoration: none; font-size: .9rem; font-weight: 650; }
+.site-header nav a, .site-footer nav a { text-decoration: none; font-size: .9rem; font-weight: 400; }
 .site-header nav a:hover, .site-header nav a[aria-current], .site-footer nav a:hover { text-decoration: underline; text-underline-offset: .4em; }
-.header-phone { justify-self: end; text-decoration: none; font-weight: 700; font-size: .9rem; }
+.header-phone { justify-self: end; text-decoration: none; font-weight: 400; font-size: .9rem; }
 .header-phone:hover { text-decoration: underline; }
 .header-phone b { display: none; }
 .home-intro {
@@ -84,7 +93,7 @@ em { font-weight: inherit; }
   color: var(--button-color);
   text-decoration: none;
   font-size: .9rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 .button:hover { text-decoration: underline; text-underline-offset: .25em; }
 .button-light { --button-bg: var(--cream); --button-color: var(--olive); }
@@ -94,7 +103,7 @@ em { font-weight: inherit; }
   display: inline-block;
   width: fit-content;
   font-size: .92rem;
-  font-weight: 680;
+  font-weight: 400;
   text-decoration-thickness: 1px;
   text-underline-offset: .33em;
 }
@@ -114,7 +123,7 @@ em { font-weight: inherit; }
 .project-image img, .service-image img { width: 100%; height: 100%; object-fit: cover; }
 .project-text { display: flex; flex-direction: column; justify-content: center; padding: clamp(1.15rem, 3vw, 2.75rem); }
 .project-text p { margin-top: .6rem; }
-.project-link { display: inline-block; margin-top: 1.1rem; font-weight: 700; font-size: .85rem; }
+.project-link { display: inline-block; margin-top: 1.1rem; font-weight: 400; font-size: .85rem; }
 
 .build-strip, .related-strip { background: var(--paper-dark); border-block: 1px solid var(--line); }
 .build-index, .process-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.6rem; }
@@ -123,7 +132,7 @@ em { font-weight: inherit; }
 .build-index h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
 .build-index p, .process-list p { margin-top: .75rem; }
 .process-list { padding-left: 0; margin: 0; counter-reset: stage; list-style: none; }
-.process-list li::before { counter-increment: stage; content: counter(stage) '.'; display: block; margin-bottom: .55rem; font-weight: 700; }
+.process-list li::before { counter-increment: stage; content: counter(stage) '.'; display: block; margin-bottom: .55rem; font-weight: 400; }
 .family-strip, .about-spread, .contact-page { display: grid; grid-template-columns: 1fr .9fr; gap: 2rem 7%; align-items: start; }
 .family-strip p { font-size: 1.1rem; margin-bottom: 1.05rem; }
 .family-strip em { color: #6b4f37; }
@@ -134,9 +143,9 @@ em { font-weight: inherit; }
 .contact-band .actions { flex-shrink: 0; }
 .site-footer { border-top: 1px solid #72816d; }
 .footer-inner { display: grid; grid-template-columns: 1fr auto auto; gap: 1.5rem 3rem; align-items: center; padding-block: 2.3rem; }
-.footer-name { font: italic 2rem/1 var(--serif); text-decoration: none; }
+.footer-name { font: 400 2rem/1 var(--display); text-decoration: none; }
 .site-footer p { margin-top: .38rem; font-size: .88rem; }
-.footer-phone { font-size: .9rem; font-weight: 700; white-space: nowrap; text-underline-offset: .3em; }
+.footer-phone { font-size: .9rem; font-weight: 400; white-space: nowrap; text-underline-offset: .3em; }
 
 .page-intro { margin-bottom: 2.8rem; }
 .page-intro p:not(.eyebrow) { margin-top: 1rem; font-size: clamp(1.05rem, 2vw, 1.3rem); }
@@ -148,10 +157,10 @@ em { font-weight: inherit; }
 .service-image { aspect-ratio: 2; overflow: hidden; }
 .about-letter { border-top: 1px solid var(--line); padding-top: 1.2rem; font-size: clamp(1.1rem, 1.75vw, 1.25rem); }
 .about-letter p + p { margin-top: 1rem; }
-.about-letter .signature { font: italic 2.5rem var(--serif); color: #77452e; margin-bottom: 1.2rem; }
+.about-letter .signature { font: 400 2.5rem var(--display); color: #77452e; margin-bottom: 1.2rem; }
 .contact-card { padding: clamp(1.2rem, 3vw, 2.25rem); background: var(--paper-dark); border: 1px solid var(--line); }
 .contact-card h2, .service-area h2 { font-size: clamp(1.55rem, 3vw, 2.3rem); }
-.contact-number { display: block; width: fit-content; margin-block: .4rem .85rem; font: clamp(1.5rem, 4.2vw, 3.8rem)/1.3 var(--serif); text-underline-offset: .15em; text-decoration-thickness: 1px; white-space: nowrap; }
+.contact-number { display: block; width: fit-content; margin-block: .4rem .85rem; font: clamp(1.5rem, 3.25vw, 3rem)/1.3 var(--body); text-underline-offset: .15em; text-decoration-thickness: 1px; white-space: nowrap; }
 .copy-link { margin-top: 1.15rem; border: 0; padding: .25rem 0; color: inherit; background: none; cursor: pointer; text-decoration: underline; }
 .contact-copy-status:not(:empty), .service-area p { margin-top: .6rem; }
 .service-area { grid-column: 1 / -1; padding-top: 1.2rem; border-top: 1px solid var(--line); }
@@ -159,7 +168,7 @@ em { font-weight: inherit; }
 .album-page { padding-top: clamp(2rem, 5vw, 4.25rem); }
 .album-back { margin-bottom: 1.35rem; }
 .album-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(10rem, 17rem); gap: 1.4rem 5%; align-items: end; margin-bottom: 2rem; }
-.album-intro h1 { font-size: clamp(2.75rem, 7vw, 7.15rem); }
+.album-intro h1 { font-size: clamp(2rem, 5vw, 5.1rem); }
 .album-intro p { margin-top: .85rem; font-size: clamp(1rem, 1.7vw, 1.22rem); }
 .album-intro ul { margin: 0; padding: 0 0 0 1rem; border-left: 3px solid var(--project-tone); list-style: none; }
 .album-intro li { padding-block: .12rem; font-size: .95rem; }
@@ -172,7 +181,7 @@ em { font-weight: inherit; }
 .album-spread img { width: 100%; }
 .album-spread figcaption { margin-top: .38rem; color: var(--muted); font-size: .9rem; }
 .more-photos { margin-top: 2rem; border-block: 1px solid var(--line); }
-.more-photos summary { width: fit-content; padding-block: .85rem; cursor: pointer; font-weight: 670; }
+.more-photos summary { width: fit-content; padding-block: .85rem; cursor: pointer; font-weight: 400; }
 .more-photos summary span { font-weight: 400; }
 .more-photos .album-spread { padding-bottom: 1.4rem; }
 .viewer-open { overflow: hidden; }
@@ -181,7 +190,7 @@ em { font-weight: inherit; }
 .viewer-header, .viewer-footer { display: flex; align-items: center; justify-content: space-between; gap: .65rem; padding: .8rem clamp(.75rem, 2vw, 1.5rem); }
 .viewer-header { border-bottom: 1px solid #677364; }
 .viewer-footer { border-top: 1px solid #677364; }
-.viewer-header p { font-family: var(--serif); font-size: 1.25rem; }
+.viewer-header p { font-family: var(--display); font-size: 1.25rem; }
 .viewer-stage { position: relative; display: grid; min-width: 0; place-items: center; overflow: hidden; touch-action: pan-y; }
 .viewer-stage img { max-width: 100%; max-height: 100%; min-height: 0; object-fit: contain; }
 .viewer-error { position: absolute; background: var(--cream); color: var(--ink); padding: .5rem; }
@@ -227,6 +236,9 @@ em { font-weight: inherit; }
   .button, .project-card { border: 1px solid currentColor; }
 }
 
+/* Preserve the two purchased regular font faces; use spacing and color for hierarchy. */
+.contact-number { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+
 /* Collins source: collins-editorial.css */
 /* Limestone, painted timber and ochre accents across the site. */
 :root {
@@ -259,7 +271,7 @@ em { font-weight: inherit; }
   margin-bottom: 1.1rem;
   border-bottom: 1px solid #a8844c;
   color: var(--ochre);
-  font: 700 .8rem/1.4 var(--sans);
+  font: 400 .8rem/1.4 var(--body);
   letter-spacing: .12em;
   text-transform: uppercase;
 }
@@ -276,10 +288,10 @@ em { font-weight: inherit; }
 .home-intro :focus-visible { outline-color: var(--ochre); }
 #work { padding-top: clamp(1.8rem, 3.6vw, 3.25rem); }
 #work .section-heading { padding-bottom: .65rem; margin-bottom: 1rem; }
-#work .section-heading h2 { font: 700 1rem/1.3 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+#work .section-heading h2 { font: 400 1rem/1.3 var(--body); letter-spacing: .08em; text-transform: uppercase; }
 
 .section-heading { padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
-.section-heading h2 { font-size: clamp(2.3rem, 4.2vw, 4.4rem); }
+.section-heading h2 { font-size: clamp(1.7rem, 3.5vw, 3.6rem); }
 .project-grid { gap: clamp(1rem, 2.3vw, 2.2rem); }
 .project-card { background: transparent; color: var(--ink); border-bottom: 1px solid var(--line); }
 .project-card-lead a { grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); }

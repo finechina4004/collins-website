@@ -29,7 +29,7 @@
   margin-bottom: 1.1rem;
   border-bottom: 1px solid #a8844c;
   color: var(--ochre);
-  font: 700 .8rem/1.4 var(--sans);
+  font: 400 .8rem/1.4 var(--body);
   letter-spacing: .12em;
   text-transform: uppercase;
 }
@@ -46,10 +46,10 @@
 .home-intro :focus-visible { outline-color: var(--ochre); }
 #work { padding-top: clamp(1.8rem, 3.6vw, 3.25rem); }
 #work .section-heading { padding-bottom: .65rem; margin-bottom: 1rem; }
-#work .section-heading h2 { font: 700 1rem/1.3 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+#work .section-heading h2 { font: 400 1rem/1.3 var(--body); letter-spacing: .08em; text-transform: uppercase; }
 
 .section-heading { padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
-.section-heading h2 { font-size: clamp(2.3rem, 4.2vw, 4.4rem); }
+.section-heading h2 { font-size: clamp(1.7rem, 3.5vw, 3.6rem); }
 .project-grid { gap: clamp(1rem, 2.3vw, 2.2rem); }
 .project-card { background: transparent; color: var(--ink); border-bottom: 1px solid var(--line); }
 .project-card-lead a { grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); }

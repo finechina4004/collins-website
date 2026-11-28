@@ -59,6 +59,8 @@ function head(title, description, path, { image = shareImage, scripts = [], miss
   <meta property="og:image" content="${new URL(image.src, base).href}">
   <meta property="og:image:alt" content="${escape(image.alt || image.caption)}">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/canyon-rim.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/assets/fonts/parkly-soft.woff" as="font" type="font/woff" crossorigin>
   <link href="/site.css?v=${assetVersion('site.css')}" rel="stylesheet"/>
   ${scripts.map(script => `<script src="/${script}?v=${assetVersion(script)}" defer></script>`).join('\n  ')}
 </head>`;
@@ -142,7 +144,9 @@ pages.set('index.html', `<!doctype html>
   <title>Collins Custom Pools &amp; Backyards | North DFW</title>
   <meta name="description" content="Custom pools and backyards in North DFW. Call or text Chase at 469-500-7713 to talk about your yard.">
   <link rel="icon" href="/assets/collins-favicon.svg">
-  <link rel="stylesheet" href="/pool-home.css">
+  <link rel="preload" href="/assets/fonts/canyon-rim.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/assets/fonts/parkly-soft.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="/pool-home.css?v=${assetVersion('pool-home.css')}">
   <link rel="canonical" href="https://collinscustompools.com/">
 </head>
 <body>
