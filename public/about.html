@@ -27,44 +27,48 @@ body{font-family:var(--sans);font-synthesis:none}h1,h2,h3{font-family:var(--seri
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important}}</style>
   <link rel="stylesheet" href="/texas-wallpaper.css?v=1">
 <style>
-body.tx-postcard{display:flex;flex-direction:column;min-height:100vh;min-height:100svh;margin:0;background:var(--ink);font-family:var(--sans)}
-.tx-postcard>.site-header{flex:none;z-index:5}
-.tx-postcard #main{display:flex;flex-direction:column;flex:1;min-height:0}
-.tx-postcard .postcard{position:relative;isolation:isolate;display:flex;flex:1;align-items:flex-end;min-height:0;color:var(--cream);background:var(--ink);overflow:hidden}
-.postcard-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--photo-position,50% 50%);z-index:-2}
-.postcard:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(16,37,29,.94) 0%,rgba(16,37,29,.62) 25%,rgba(16,37,29,.12) 60%,transparent 80%);pointer-events:none}
-.postcard-inner{width:min(89%,88rem);margin-inline:auto;padding-block:clamp(2rem,5vh,4.5rem);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem 2.2rem;align-items:end}
-.postcard h1{color:inherit;font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,6.2vw,6.7rem);line-height:1.01;letter-spacing:-.035em;margin:0;max-width:21ch;text-wrap:balance}
-.postcard p{font:400 clamp(.98rem,1.4vw,1.18rem)/1.55 var(--sans);max-width:49ch;margin:.7rem 0 0;color:inherit}
-.postcard-actions{display:flex;flex-wrap:wrap;gap:.15rem 1.7rem;margin-top:1rem}
-.postcard-action{appearance:none;background:transparent;border:0;padding:.35rem 0;min-height:44px;display:inline-flex;align-items:center;gap:.35em;color:inherit;font:400 .93rem/1.4 var(--sans);text-decoration:underline;text-underline-offset:.4em;cursor:pointer;max-width:100%;overflow-wrap:anywhere}
-.postcard-action:hover{color:#f0d5a6}
-.postcard-action:focus-visible,.postcard-dialog a:focus-visible,.postcard-close:focus-visible{outline:2px solid currentColor;outline-offset:4px}
-.postcard-credit{color:var(--cream);font:400 .68rem/1.5 var(--sans);text-align:right;max-width:18rem;opacity:.94}
-.postcard-credit span{display:block;letter-spacing:.08em;margin-bottom:.25rem}
-.postcard-dialog{box-sizing:border-box;background:var(--paper);color:var(--ink);border:1px solid var(--line);margin:auto;padding:clamp(1.2rem,3vw,2.5rem);width:min(92vw,38rem);max-height:88svh;overflow:auto;overscroll-behavior:contain;box-shadow:0 16px 70px #0005}
-.postcard-dialog:not([open]):not(:target){display:none}
-.postcard-dialog:target:not([open]){display:block;position:fixed;inset:0;z-index:20}
-.postcard-dialog::backdrop{background:rgba(18,34,29,.67)}
-.postcard-dialog h2{font:400 clamp(1.7rem,4vw,2.7rem)/1.1 var(--serif);margin:.25rem 0 1rem;max-width:22ch}
-.postcard-dialog p{font:400 1rem/1.55 var(--sans);margin:.7rem 0}
-.postcard-dialog .postcard-action{color:var(--ink)}
-.postcard-dialog .postcard-action:hover{color:var(--copper)}
-.postcard-close{display:flex;align-items:center;justify-content:flex-end;min-height:44px;color:var(--ink);font:400 .85rem/1.3 var(--sans);text-underline-offset:.35em}
-.postcard-links{display:grid;grid-template-columns:1fr 1fr;gap:0 1.2rem;margin:.6rem 0 0}
-.postcard-links a{min-height:44px;display:flex;align-items:center;padding:.5rem 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
-.postcard-links a:hover{text-decoration:underline}
-.postcard-steps{list-style:none;padding:0;margin:0}
-.postcard-steps li{padding:.6rem 0;border-top:1px solid var(--line)}
-.postcard-steps strong{display:block;font-weight:400;color:var(--copper)}
-.postcard-steps p{margin:.2rem 0}
-@media(min-width:701px) and (min-height:530px){body.tx-postcard{height:100vh;height:100svh}.postcard-inner{max-height:100%;overflow:auto}}
-@media(max-width:700px){body.tx-postcard{min-height:100svh}.tx-postcard #main{min-height:calc(100svh - 4.5rem)}.postcard-inner{grid-template-columns:1fr;gap:1rem;padding-block:1.5rem;width:calc(100% - 2rem)}.postcard h1{font-size:clamp(2.2rem,9vw,3.7rem);max-width:17ch}.postcard-photo{object-position:var(--mobile-position,var(--photo-position,50% 50%))}.postcard:after{background:linear-gradient(0deg,#10251df5,#10251d9c 30%,transparent 70%)}.postcard-credit{text-align:left;font-size:.63rem;max-width:none}.postcard-credit span{display:inline;margin-right:.5rem}.postcard-actions{gap:0 1.2rem;margin-top:.65rem}.postcard-links{grid-template-columns:1fr}}
-@media(max-height:529px) and (min-width:701px){.tx-postcard #main{min-height:24rem}.postcard-inner{padding-block:1.2rem}.postcard h1{font-size:clamp(2.2rem,5vw,4rem)}}
-@media(prefers-reduced-motion:reduce){.tx-postcard *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+body.tx-gallery-wall{display:flex;flex-direction:column;min-height:100vh;min-height:100svh;margin:0;background:var(--ink)}
+.tx-gallery-wall>.site-header{flex:none}
+.tx-gallery-wall>#main{display:flex;flex-direction:column;flex:1;min-height:0}
+.tx-gallery-wall .tx-vintage,.tx-gallery-wall .tx-cover{flex:1;min-height:0}
+.tx-gallery-wall .tx-vintage-copy{grid-template-columns:minmax(0,1fr) minmax(0,15rem)}
+.tx-gallery-wall .tx-vintage-copy>div{min-width:0}
+.tx-gallery-wall .tx-vintage .tx-kicker{display:none}
+.tx-gallery-wall .tx-vintage-caption{font-size:.7rem}
+.tx-gallery-wall .tx-vintage-caption span{font-size:.65rem}
+.tx-gallery-wall .tx-vintage-link{margin-top:0;min-height:44px;padding:.2rem 0;gap:.3rem;text-decoration:underline;text-underline-offset:.35em}
+.tx-gallery-wall .tx-wall-links{display:flex;flex-wrap:wrap;align-items:center;gap:0 1.8rem;margin-top:.9rem}
+.tx-gallery-wall .tx-wall-links a{font-family:var(--sans);font-weight:400}
+.tx-gallery-wall .tx-wall-detail{display:none}
+.tx-gallery-wall .tx-wall-detail:target{display:grid}
+.tx-gallery-wall #main:has(>.tx-wall-detail:target)>.tx-wall-hero{display:none}
+.tx-gallery-wall .tx-wall-detail .tx-vintage-copy{grid-template-columns:minmax(0,1fr)}
+.tx-gallery-wall .tx-wall-detail h1{font-size:clamp(2.3rem,5.4vw,5.5rem)}
+.tx-gallery-wall .tx-wall-detail .tx-sub{max-width:53ch}
+.tx-gallery-wall .tx-wall-detail .tx-vintage-photo{object-position:center}
+.tx-gallery-wall .tx-wall-detail:after{background:linear-gradient(0deg,#10251df5,#10251d90 38%,#10251d20 76%,transparent)}
+.tx-gallery-wall .tx-wall-albums{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:42rem;column-gap:1.6rem;margin-top:.6rem}
+.tx-gallery-wall .tx-wall-albums a{min-height:44px;padding:.35rem 0;display:flex;align-items:center;color:inherit;text-decoration:underline;text-underline-offset:.3em}
+.tx-gallery-wall a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+@media(min-width:701px) and (min-height:530px){body.tx-gallery-wall{height:100vh;height:100svh}.tx-gallery-wall .tx-vintage-copy,.tx-gallery-wall .tx-cover-inner{max-height:100%;overflow:auto}}
+@media(max-width:700px){
+ .tx-gallery-wall #main{min-height:calc(100svh - 4.5rem)}
+ .tx-gallery-wall .tx-vintage{display:grid;align-items:end;position:relative;isolation:isolate;overflow:hidden}
+ .tx-gallery-wall .tx-vintage-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+ .tx-gallery-wall .tx-vintage::after{display:block;background:linear-gradient(0deg,#10251df5,#10251d90 37%,transparent 82%)}
+ .tx-gallery-wall .tx-vintage-copy{display:block;padding-block:1.5rem 2rem}
+ .tx-gallery-wall .tx-vintage-caption{border:0;margin-top:.5rem;padding:0}
+ .tx-gallery-wall .tx-vintage h1{font-size:clamp(2.5rem,9.5vw,4rem)}
+ .tx-gallery-wall .tx-wall-links{gap:0 1.1rem}
+ .tx-gallery-wall .tx-wall-detail{display:none}
+ .tx-gallery-wall .tx-wall-detail:target{display:grid}
+ .tx-gallery-wall .tx-wall-albums{grid-template-columns:1fr 1fr;gap:0 1rem;font-size:.88rem}
+}
+@media(max-height:529px) and (min-width:701px){.tx-gallery-wall #main{min-height:22rem}.tx-gallery-wall .tx-vintage-copy,.tx-gallery-wall .tx-cover-inner{padding-block:1.3rem}.tx-gallery-wall .tx-vintage h1,.tx-gallery-wall .tx-cover h1{font-size:clamp(2.4rem,5.5vw,4rem)}}
+@media(prefers-reduced-motion:reduce){.tx-gallery-wall *{scroll-behavior:auto!important}}
 </style>
 </head>
-<body class="tx-postcard">
+<body class="tx-gallery-wall">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="shell header-inner">
@@ -75,9 +79,8 @@ body.tx-postcard{display:flex;flex-direction:column;min-height:100vh;min-height:
     <a class="header-phone" href="tel:+14695007713" aria-label="Call Collins at 469-500-7713"><span>469-500-7713</span><b>Call</b></a>
   </div>
 </header>
-<main id="main"><section class="postcard" id="backyard" style="--photo-position:50% 18%"><img class="postcard-photo" src="/assets/dfw/pegasus.webp" alt="Magnolia Pegasus at sunset, Dallas" fetchpriority="high" decoding="async"><div class="postcard-inner"><div><h1>Rooted right here.</h1><p>For the people who made Texas what it is, and the families making it what comes next.</p><div class="postcard-actions"><a class="postcard-action" href="#our-story" data-postcard-open>Our story <span aria-hidden="true">→</span></a></div></div><div class="postcard-credit"><span>A love letter to Texas</span>Magnolia Pegasus, Dallas</div></div></section><dialog class="postcard-dialog" id="our-story" aria-labelledby="our-story-title"><a class="postcard-close" href="#main" aria-label="Close Our story">Close ×</a><h2 id="our-story-title">Our story</h2><p>Howdy, I’m Chase. I graduated from Gunter, and my family and I run Collins Custom Pools &amp; Backyards out of Aubrey, Texas.</p><p>My stepdad has been building pools for decades. We’ll walk your yard together and work out what makes sense for your family.</p><a class="postcard-action" href="/contact">Meet us <span aria-hidden="true">→</span></a></dialog></main>
+<main id="main"><header class="tx-vintage tx-wall-hero" style="--vintage-position:50% 18%"><img class="tx-vintage-photo" src="/assets/dfw/pegasus.webp" alt="Magnolia Pegasus at sunset, Dallas" fetchpriority="high" decoding="async"><div class="shell tx-vintage-copy"><div><h1>Rooted right here.</h1><p class="tx-sub">For the people who made Texas what it is, and the families making it what comes next.</p><div class="tx-wall-links"><a class="tx-vintage-link" href="#chapter-content">Our story <span aria-hidden="true">→</span></a></div></div><p class="tx-vintage-caption"><span>A love letter to Texas</span>Magnolia Pegasus at sunset, Dallas</p></div></header><section class="tx-vintage tx-wall-detail" id="chapter-content" tabindex="-1"><img class="tx-vintage-photo" src="/assets/dfw/pegasus.webp" alt="Magnolia Pegasus, Dallas" loading="lazy" decoding="async"><div class="shell tx-vintage-copy"><div><h1>Our story</h1><p class="tx-sub">Family-owned in Aubrey, Texas. We’ll help you design your backyard. Our family brings decades of pool-building experience to the work.</p><div class="tx-wall-links"><a class="tx-vintage-link" href="#main">← Back <span aria-hidden="true">→</span></a><a class="tx-vintage-link" href="/contact">Meet us <span aria-hidden="true">→</span></a></div></div></div></section></main>
 
 
-<script>(()=>{const dialogs=[...document.querySelectorAll('.postcard-dialog')];if(!dialogs.length||typeof HTMLDialogElement==='undefined'||!HTMLDialogElement.prototype.showModal)return;let opener;function restore(){const id=location.hash.slice(1),d=dialogs.find(x=>x.id===id);for(const item of dialogs)if(item!==d&&item.open)item.close();if(d&&!d.open)d.showModal();}function dismiss(){if(history.state?.collinsPostcard)history.back();else{history.replaceState(history.state,'',location.pathname+location.search);restore();}if(opener?.isConnected)opener.focus({preventScroll:true});}document.querySelectorAll('[data-postcard-open]').forEach(a=>a.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();opener=a;history.pushState({...history.state,collinsPostcard:true},'',a.getAttribute('href'));restore();}));dialogs.forEach(d=>{d.querySelector('.postcard-close').addEventListener('click',e=>{e.preventDefault();dismiss();});d.addEventListener('cancel',e=>{e.preventDefault();dismiss();});});addEventListener('popstate',restore);addEventListener('hashchange',restore);restore();})()</script>
 </body>
 </html>
