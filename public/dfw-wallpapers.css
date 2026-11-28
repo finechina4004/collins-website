@@ -1,0 +1,122 @@
+/* Frame each landmark around the feature that makes it recognizable. */
+.collins-gallery .gallery-home.dfw-wallpaper {
+  background: var(--wallpaper-background);
+}
+
+.dfw-wallpaper > .wallpaper {
+  overflow: hidden;
+}
+
+.dfw-wallpaper.pegasus {
+  --wallpaper-background: #111;
+}
+
+.dfw-wallpaper.pegasus::after {
+  background: linear-gradient(0deg, #080808f0, #0808088c 22%, transparent 51%);
+}
+
+.dfw-wallpaper.southfork {
+  --wallpaper-background: #1d2d20;
+}
+
+.southfork > .wallpaper {
+  inset-inline-start: auto;
+  width: min(100%, 204svh);
+}
+
+.southfork > .wallpaper img {
+  transform: scale(1.045); /* Trim the paper edge of the scan. */
+}
+
+.dfw-wallpaper.southfork::after {
+  background: linear-gradient(0deg, #142217ee, #14221778 19%, transparent 45%);
+}
+
+.dfw-wallpaper.texas-pool {
+  --wallpaper-background: #182820;
+}
+
+.texas-pool > .wallpaper {
+  inset-inline-start: auto;
+  width: min(78%, 107svh);
+  mask-image: linear-gradient(90deg, transparent, #000 12%);
+}
+
+.dfw-wallpaper.texas-pool::after {
+  background: linear-gradient(0deg, #182820ed, #1828205e 14%, transparent 34%);
+}
+
+@media (min-aspect-ratio: 204/100) {
+  .southfork > .wallpaper {
+    mask-image: linear-gradient(90deg, transparent, #000 19%);
+  }
+}
+
+@media (max-width: 700px), (max-aspect-ratio: 3/4) {
+  html:has(#main .dfw-wallpaper):not(:has(.gallery-detail:target)),
+  body.collins-gallery:has(#main .dfw-wallpaper):not(:has(.gallery-detail:target)) {
+    height: auto;
+    overflow: visible;
+  }
+
+  body.collins-gallery:has(#main .dfw-wallpaper):not(:has(.gallery-detail:target)) > #main {
+    flex: 1 0 auto;
+    overflow: visible;
+  }
+
+  .collins-gallery .gallery-home.dfw-wallpaper {
+    min-height: 100svh;
+    padding-top: var(--masthead-space);
+    justify-content: flex-start;
+  }
+
+  .dfw-wallpaper > .wallpaper {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    flex: none;
+    height: min(84vw, 52svh);
+    mask-image: none;
+    z-index: auto;
+  }
+
+  .dfw-wallpaper > .wallpaper::after {
+    position: absolute;
+    inset: 0;
+    content: '';
+    background: linear-gradient(0deg, var(--wallpaper-background), transparent 15%);
+    pointer-events: none;
+  }
+
+  .dfw-wallpaper.pegasus > .wallpaper {
+    height: min(94vw, 52svh);
+  }
+
+  .dfw-wallpaper.texas-pool > .wallpaper {
+    height: min(100vw, 60svh);
+  }
+
+  .dfw-wallpaper.texas-pool .wallpaper img {
+    object-fit: contain;
+  }
+
+  .collins-gallery .gallery-home.dfw-wallpaper::after {
+    display: none;
+  }
+
+  .collins-gallery .gallery-home.dfw-wallpaper > .gallery-copy {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: start;
+    gap: .55rem;
+    padding-top: .8rem;
+    text-align: left;
+  }
+
+  .dfw-wallpaper.pegasus .gallery-actions {
+    justify-content: flex-start;
+  }
+
+  .dfw-wallpaper .gallery-copy .gallery-caption {
+    text-align: left;
+  }
+}

@@ -6,6 +6,8 @@ const galleryStyles = readFileSync(new URL('../public/texas-gallery.css', import
 const galleryVersion = createHash('sha256').update(galleryStyles).digest('hex').slice(0, 12);
 const contactStyles = readFileSync(new URL('../public/texas-contact.css', import.meta.url));
 const contactVersion = createHash('sha256').update(contactStyles).digest('hex').slice(0, 12);
+const wallpaperStyles = readFileSync(new URL('../public/dfw-wallpapers.css', import.meta.url));
+const wallpaperVersion = createHash('sha256').update(wallpaperStyles).digest('hex').slice(0, 12);
 
 export function applyGalleryEdition(pages){
  const e=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -16,11 +18,11 @@ export function applyGalleryEdition(pages){
  const d="/assets/dfw/";
  const artworks={
   dallas:{src:"/assets/collins-home-sunset.png",alt:"Backyard pool design inspiration with the Dallas skyline",credit:"Dallas skyline · Design inspiration",pos:"58% center",mobile:"64% center",grade:"none"},
-  pegasus:{src:d+"pegasus.webp",alt:"Magnolia Pegasus at sunset in Dallas",credit:"Magnolia Pegasus · Dallas",pos:"50% 42%",mobile:"43% 50%",grade:"none",layout:"pegasus portrait-print"},
+  pegasus:{src:d+"magnolia-pegasus-dallas-at-night.webp",alt:"The illuminated Magnolia Pegasus above the Dallas skyline in a black-and-white photograph",credit:"Magnolia Pegasus · Dallas",pos:"51% top",mobile:"51% top",grade:"none",layout:"dfw-wallpaper pegasus"},
   stadium:{src:d+"arlington-stadium-1977.webp",alt:"A packed Arlington Stadium during a 1977 Texas Rangers game against the Chicago White Sox",credit:"Arlington Stadium · 1977",pos:"50% 39%",mobile:"center",grade:"none",layout:"portrait-print"},
-  pool:{src:d+"texas-pool.webp",alt:"Historic aerial photograph of the Texas-shaped swimming pool in Plano",credit:"The Texas Pool · Plano",pos:"50% 50%",mobile:"50% center",grade:"none",layout:"portrait-print"},
+  pool:{src:d+"texas-pool-overhead.webp",alt:"Overhead photograph of the Texas-shaped swimming pool in Plano",credit:"The Texas Pool · Plano",pos:"center",mobile:"center",grade:"none",layout:"dfw-wallpaper texas-pool"},
   tex:{src:d+"big-tex.webp",mobileSrc:d+"big-tex-approved-mobile.webp",alt:"Vintage Big Tex at the State Fair of Texas",credit:"Big Tex · State Fair of Texas",pos:"50% 25%",mobile:"center",grade:"none",layout:"portrait-print"},
-  southfork:{src:d+"southfork.webp",wideSrc:d+"southfork-approved-desktop.webp",alt:"Vintage view of the Southfork Ranch entrance and estate in Parker",credit:"Southfork Ranch · Parker",pos:"center",mobile:"center",grade:"none",layout:"portrait-print"},
+  southfork:{src:d+"southfork-ranch-postcard.webp",alt:"Vintage color postcard showing the Southfork Ranch entrance and house in Parker",credit:"Southfork Ranch · Parker",pos:"53% 58%",mobile:"53% 54%",grade:"none",layout:"dfw-wallpaper southfork"},
   sixflags:{src:d+"six-flags-desktop.svg",mobileSrc:d+"six-flags-mobile.svg",alt:"Original Six Flags Over Texas entrance in black and white",credit:"Six Flags Over Texas",pos:"50% 50%",mobile:"50% 50%",grade:"none"},
   // Denton Chamber of Commerce Collection: https://texashistory.unt.edu/ark:/67531/metadc1996991/
   contact:{src:d+"campus-theatre-dusk.webp",alt:"Campus Theatre's red and green neon marquee and lit ticket booth at dusk in Denton",credit:"Campus Theatre · Denton, Texas",pos:"30% 75%",mobile:"38% 65%",grade:"none",layout:"campus-contact"}
@@ -59,16 +61,25 @@ export function applyGalleryEdition(pages){
   "financing.html":frame(artworks.sixflags,"Summer awaits.","Let's talk budget. Financing provider not yet announced.",[link("Contact us","/contact")]),
   "contact.html":frame(artworks.contact,"Howdy.","Aubrey, Texas · Denton County",[link("469-500-7713","tel:+14695007713"),link("Text us","sms:+14695007713"),link("info@collinscustompools.com","mailto:info@collinscustompools.com")])
  };
+ const wallpapers = {
+  'about.html': artworks.pegasus,
+  'pool-design.html': artworks.pool,
+  'work.html': artworks.southfork,
+ };
  function page(file,body){
   let html=pages.get(file);
   if(!html||!html.includes('<main id="main">'))throw Error("Missing main "+file);
   html=html.replace(/<body(?:\s[^>]*)?>/,'<body class="collins-gallery">').replace(/<main id="main">[\s\S]*?<\/main>/,()=>`<main id="main" tabindex="-1">${body}</main>`).replace(/<footer class="site-footer">[\s\S]*?<\/footer>/,"").replace(/<dialog class="photo-viewer"[\s\S]*?<\/dialog>/,"").replace(/<script src="\/gallery\.js[^"]*"[^>]*><\/script>/,"").replace("</head>",`  <link rel="stylesheet" href="/texas-gallery.css?v=${galleryVersion}">\n</head>`);
   if(file==='index.html')html=html.replace(/(<meta property="og:image" content=")[^"]+"/,'$1https://collinscustompools.com/assets/collins-home-sunset.png"').replace(/(<meta property="og:image:alt" content=")[^"]+"/,'$1Backyard pool design inspiration with the Dallas skyline at sunset"');
-  if (file === 'contact.html') {
+  const featuredPhoto = file === 'contact.html' ? artworks.contact : wallpapers[file];
+  if (featuredPhoto) {
    html = html
-    .replace(/(<meta property="og:image" content=")[^"]+"/, `$1https://collinscustompools.com${e(artworks.contact.src)}"`)
-    .replace(/(<meta property="og:image:alt" content=")[^"]+"/, `$1${e(artworks.contact.alt)}"`)
-    .replace('</head>', `  <link rel="stylesheet" href="/texas-contact.css?v=${contactVersion}">\n</head>`);
+    .replace(/(<meta property="og:image" content=")[^"]+"/, `$1https://collinscustompools.com${e(featuredPhoto.src)}"`)
+    .replace(/(<meta property="og:image:alt" content=")[^"]+"/, `$1${e(featuredPhoto.alt)}"`);
+   const stylesheet = file === 'contact.html'
+    ? `/texas-contact.css?v=${contactVersion}`
+    : `/dfw-wallpapers.css?v=${wallpaperVersion}`;
+   html = html.replace('</head>', `  <link rel="stylesheet" href="${stylesheet}">\n</head>`);
   }
   pages.set(file,html);
  }
