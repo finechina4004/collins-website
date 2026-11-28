@@ -26,49 +26,9 @@ body{font-family:var(--sans);font-synthesis:none}h1,h2,h3{font-family:var(--seri
 @media(max-width:660px){.header-inner{width:calc(100% - 2rem);gap:.65rem;min-height:4rem}.wordmark{margin:0}.wordmark strong{font-size:1.55rem}.wordmark small{font-size:.49rem}.header-phone{font-size:.78rem;margin:0}.header-phone span{display:none}.header-phone b{display:inline}.tx-cover{min-height:clamp(510px,78svh,780px)}.tx-cover>img{object-position:64% center}.tx-cover:before{background:linear-gradient(0deg,#10251df5 0%,#10251d90 52%,transparent 90%)}.tx-cover h1{font-size:clamp(2.9rem,11vw,4.7rem)}.tx-cover-inner{padding-block:2.5rem}.tx-intro,.tx-chapter{grid-template-columns:1fr;gap:1.5rem}.tx-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tx-grid a{min-height:8.5rem}.tx-chapter h1{font-size:clamp(2.5rem,9vw,4.3rem)}.tx-steps{grid-template-columns:1fr}.tx-body{font-size:1rem}.site-footer nav{gap:.6rem 1rem}.tx-next{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important}}</style>
   <link rel="stylesheet" href="/texas-wallpaper.css?v=1">
-<style>
-body.tx-gallery-wall{display:flex;flex-direction:column;min-height:100vh;min-height:100svh;margin:0;background:var(--ink)}
-.tx-gallery-wall>.site-header{flex:none}
-.tx-gallery-wall>#main{display:flex;flex-direction:column;flex:1;min-height:0}
-.tx-gallery-wall .tx-vintage,.tx-gallery-wall .tx-cover{flex:1;min-height:0}
-.tx-gallery-wall .tx-vintage-copy{grid-template-columns:minmax(0,1fr) minmax(0,15rem)}
-.tx-gallery-wall .tx-vintage-copy>div{min-width:0}
-.tx-gallery-wall .tx-vintage .tx-kicker{display:none}
-.tx-gallery-wall .tx-vintage-caption{font-size:.7rem}
-.tx-gallery-wall .tx-vintage-caption span{font-size:.65rem}
-.tx-gallery-wall .tx-vintage-link{margin-top:0;min-height:44px;padding:.2rem 0;gap:.3rem;text-decoration:underline;text-underline-offset:.35em}
-.tx-gallery-wall .tx-wall-links{display:flex;flex-wrap:wrap;align-items:center;gap:0 1.8rem;margin-top:.9rem}
-.tx-gallery-wall .tx-wall-links a{font-family:var(--sans);font-weight:400}
-.tx-gallery-wall .tx-wall-detail{display:none}
-.tx-gallery-wall .tx-wall-detail:target{display:grid}
-.tx-gallery-wall #main:has(>.tx-wall-detail:target)>.tx-wall-hero{display:none}
-.tx-gallery-wall .tx-wall-detail .tx-vintage-copy{grid-template-columns:minmax(0,1fr)}
-.tx-gallery-wall .tx-wall-detail h1{font-size:clamp(2.3rem,5.4vw,5.5rem)}
-.tx-gallery-wall .tx-wall-detail .tx-sub{max-width:53ch}
-.tx-gallery-wall .tx-wall-detail .tx-vintage-photo{object-position:center}
-.tx-gallery-wall .tx-wall-detail:after{background:linear-gradient(0deg,#10251df5,#10251d90 38%,#10251d20 76%,transparent)}
-.tx-gallery-wall .tx-wall-albums{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:42rem;column-gap:1.6rem;margin-top:.6rem}
-.tx-gallery-wall .tx-wall-albums a{min-height:44px;padding:.35rem 0;display:flex;align-items:center;color:inherit;text-decoration:underline;text-underline-offset:.3em}
-.tx-gallery-wall a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
-@media(min-width:701px) and (min-height:530px){body.tx-gallery-wall{height:100vh;height:100svh}.tx-gallery-wall .tx-vintage-copy,.tx-gallery-wall .tx-cover-inner{max-height:100%;overflow:auto}}
-@media(max-width:700px){
- .tx-gallery-wall #main{min-height:calc(100svh - 4.5rem)}
- .tx-gallery-wall .tx-vintage{display:grid;align-items:end;position:relative;isolation:isolate;overflow:hidden}
- .tx-gallery-wall .tx-vintage-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
- .tx-gallery-wall .tx-vintage::after{display:block;background:linear-gradient(0deg,#10251df5,#10251d90 37%,transparent 82%)}
- .tx-gallery-wall .tx-vintage-copy{display:block;padding-block:1.5rem 2rem}
- .tx-gallery-wall .tx-vintage-caption{border:0;margin-top:.5rem;padding:0}
- .tx-gallery-wall .tx-vintage h1{font-size:clamp(2.5rem,9.5vw,4rem)}
- .tx-gallery-wall .tx-wall-links{gap:0 1.1rem}
- .tx-gallery-wall .tx-wall-detail{display:none}
- .tx-gallery-wall .tx-wall-detail:target{display:grid}
- .tx-gallery-wall .tx-wall-albums{grid-template-columns:1fr 1fr;gap:0 1rem;font-size:.88rem}
-}
-@media(max-height:529px) and (min-width:701px){.tx-gallery-wall #main{min-height:22rem}.tx-gallery-wall .tx-vintage-copy,.tx-gallery-wall .tx-cover-inner{padding-block:1.3rem}.tx-gallery-wall .tx-vintage h1,.tx-gallery-wall .tx-cover h1{font-size:clamp(2.4rem,5.5vw,4rem)}}
-@media(prefers-reduced-motion:reduce){.tx-gallery-wall *{scroll-behavior:auto!important}}
-</style>
+  <link rel="stylesheet" href="/texas-gallery.css?v=1">
 </head>
-<body class="tx-gallery-wall">
+<body class="collins-gallery">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="shell header-inner">
@@ -79,7 +39,7 @@ body.tx-gallery-wall{display:flex;flex-direction:column;min-height:100vh;min-hei
     <a class="header-phone" href="tel:+14695007713" aria-label="Call Collins at 469-500-7713"><span>469-500-7713</span><b>Call</b></a>
   </div>
 </header>
-<main id="main"><header class="tx-vintage tx-wall-hero" style="--vintage-position:50% 50%"><img class="tx-vintage-photo" src="/assets/dfw/arlington-stadium.webp" alt="Historic aerial of Arlington Stadium" fetchpriority="high" decoding="async"><div class="shell tx-vintage-copy"><div><h1>Room for more.</h1><p class="tx-sub">Long afternoons, good company and days you wish would never end.</p><div class="tx-wall-links"><a class="tx-vintage-link" href="#custom-pools">Custom pools <span aria-hidden="true">→</span></a><a class="tx-vintage-link" href="#complete-backyards">Complete backyards <span aria-hidden="true">→</span></a><a class="tx-vintage-link" href="#spas-and-remodels">Spas &amp; remodels <span aria-hidden="true">→</span></a></div></div><p class="tx-vintage-caption"><span>A love letter to Texas</span>Historic aerial of Arlington Stadium</p></div></header><section class="tx-vintage tx-wall-detail" id="custom-pools" tabindex="-1"><img class="tx-vintage-photo" src="/assets/projects/black-tie-barefoot/02.webp" alt="Collins pool overlooking the woods" loading="lazy" decoding="async"><div class="shell tx-vintage-copy"><div><h1>Custom pools.</h1><p class="tx-sub">Built around your home and how you want to spend your summers.</p><div class="tx-wall-links"><a class="tx-vintage-link" href="#main">← Back <span aria-hidden="true">→</span></a><a class="tx-vintage-link" href="/albums/black-tie-barefoot">View project <span aria-hidden="true">→</span></a><a class="tx-vintage-link" href="/contact">Let’s talk <span aria-hidden="true">→</span></a></div></div></div></section><section class="tx-vintage tx-wall-detail" id="complete-backyards" tabindex="-1"><img class="tx-vintage-photo" src="/assets/projects/the-sun-stayed-for-supper/7015ed67131d404e.webp" alt="Collins outdoor dining and pergola" loading="lazy" decoding="async"><div class="shell tx-vintage-copy"><div><h1>Complete backyards.</h1><p class="tx-sub">Patios, outdoor kitchens, pergolas, turf, fire features, saunas and backyard courts.</p><div class="tx-wall-links"><a class="tx-vintage-link" href="#main">← Back <span aria-hidden="true">→</span></a><a class="tx-vintage-link" href="/albums/the-sun-stayed-for-supper">View project <span aria-hidden="true">→</span></a><a class="tx-vintage-link" href="/contact">Let’s talk <span aria-hidden="true">→</span></a></div></div></div></section><section class="tx-vintage tx-wall-detail" id="spas-and-remodels" tabindex="-1"><img class="tx-vintage-photo" src="/assets/projects/mr-bears-residence/e5050074673f3ad9.webp" alt="Collins pool and pavilion at dusk" loading="lazy" decoding="async"><div class="shell tx-vintage-copy"><div><h1>Spas &amp; remodels.</h1><p class="tx-sub">Update your pool, add a spa or reimagine the whole backyard.</p><div class="tx-wall-links"><a class="tx-vintage-link" href="#main">← Back <span aria-hidden="true">→</span></a><a class="tx-vintage-link" href="/albums/mr-bears-residence">View project <span aria-hidden="true">→</span></a><a class="tx-vintage-link" href="/contact">Let’s talk <span aria-hidden="true">→</span></a></div></div></div></section></main>
+<main id="main"><section class="gallery-frame gallery-home" style="--position:50% 48%;--mobile-position:51% center;--grade:saturate(.85) contrast(.94) sepia(.12)"><img class="wallpaper" src="/assets/dfw/arlington-stadium.webp" alt="Historic aerial photograph of Arlington Stadium" fetchpriority="high" decoding="async"><div class="gallery-copy"><div><h1>Room for more.</h1><div class="gallery-actions"><a href="#custom-pools">Custom pools</a><a href="#complete-backyards">Complete backyards</a><a href="#spas-and-remodels">Spas &amp; remodels</a></div></div><p class="gallery-caption">Arlington Stadium</p></div></section><section id="custom-pools" tabindex="-1" class="gallery-frame gallery-detail" style="--position:50% center;--mobile-position:50% center;--grade:none"><img class="wallpaper" src="/assets/projects/black-tie-barefoot/02.webp" alt="Pool and covered porch overlooking woodland" loading="lazy" decoding="async"><div class="gallery-copy"><div><a class="gallery-back" href="#main">← Back</a><h1>Custom pools.</h1><p>Designed for your home and the way you live.</p><div class="gallery-actions"><a href="/albums/black-tie-barefoot">View project</a><a href="/contact">Contact</a></div></div></div></section><section id="complete-backyards" tabindex="-1" class="gallery-frame gallery-detail" style="--position:50% center;--mobile-position:50% center;--grade:none"><img class="wallpaper" src="/assets/projects/the-sun-stayed-for-supper/7015ed67131d404e.webp" alt="Outdoor kitchen and pergola" loading="lazy" decoding="async"><div class="gallery-copy"><div><a class="gallery-back" href="#main">← Back</a><h1>Complete backyards.</h1><p>Patios, kitchens, pergolas, turf, fire features, saunas and courts.</p><div class="gallery-actions"><a href="/albums/the-sun-stayed-for-supper">View project</a><a href="/contact">Contact</a></div></div></div></section><section id="spas-and-remodels" tabindex="-1" class="gallery-frame gallery-detail" style="--position:50% center;--mobile-position:50% center;--grade:none"><img class="wallpaper" src="/assets/projects/mr-bears-residence/e5050074673f3ad9.webp" alt="Pool and pavilion at dusk" loading="lazy" decoding="async"><div class="gallery-copy"><div><a class="gallery-back" href="#main">← Back</a><h1>Spas &amp; remodels.</h1><p>A new finish, an added spa or a whole new look.</p><div class="gallery-actions"><a href="/albums/mr-bears-residence">View project</a><a href="/contact">Contact</a></div></div></div></section></main>
 
 
 </body>

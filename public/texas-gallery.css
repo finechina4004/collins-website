@@ -1,0 +1,67 @@
+/* The Texas gallery. Original photographs, individually graded in the browser. */
+body.collins-gallery{margin:0;display:flex;flex-direction:column;min-height:100vh;min-height:100svh;background:#26392e;color:var(--ink);font-family:var(--sans)}
+.collins-gallery>.site-header{flex:none;z-index:5}
+.collins-gallery>#main{flex:1;display:flex;flex-direction:column;min-height:0}
+.collins-gallery .gallery-frame{position:relative;isolation:isolate;flex:1;display:flex;flex-direction:column;justify-content:flex-end;min-height:0;color:var(--cream);background:var(--ink)}
+.gallery-frame>.wallpaper{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--position,50% 50%);filter:var(--grade,none);z-index:-2}
+.gallery-frame:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(0deg,rgba(21,35,28,.92),rgba(21,35,28,.61) 17%,rgba(21,35,28,.14) 44%,transparent 66%)}
+.gallery-frame .gallery-copy{width:min(89%,88rem);margin-inline:auto;padding-block:clamp(1.6rem,4.5vh,3.8rem);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.25rem;align-items:end;min-width:0}
+.gallery-copy h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.9rem,6.3vw,6.5rem);line-height:.99;letter-spacing:-.035em;max-width:20ch;margin:0;color:inherit;text-wrap:balance}
+.gallery-copy p{font:400 clamp(.96rem,1.35vw,1.14rem)/1.55 var(--sans);color:inherit;max-width:51ch;margin:.7rem 0 0}
+.gallery-copy .gallery-caption{font:400 .67rem/1.5 var(--sans);text-align:right;max-width:16rem;margin:0;opacity:.96}
+.gallery-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.15rem 1.65rem;margin-top:.8rem}
+.gallery-actions a,.gallery-controls a{display:inline-flex;align-items:center;min-height:44px;padding:.3rem 0;color:inherit;font:400 .93rem/1.35 var(--sans);text-decoration:underline;text-underline-offset:.34em;overflow-wrap:anywhere}
+.gallery-actions a:hover,.gallery-controls a:hover{color:#e7c69a}
+.collins-gallery a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.collins-gallery .gallery-detail{display:none}
+.collins-gallery .gallery-detail:target{display:flex}
+.collins-gallery #main:has(>.gallery-detail:target)>.gallery-home{display:none}
+.gallery-detail .gallery-copy h1{font-size:clamp(2.4rem,5.5vw,5.5rem)}
+.gallery-detail .gallery-copy{grid-template-columns:minmax(0,1fr)}
+.gallery-detail .gallery-copy .gallery-back{margin-bottom:.6rem}
+.gallery-back{font:400 .83rem/1.4 var(--sans);color:inherit;display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:.35em}
+.gallery-process{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;max-width:67rem}
+.gallery-process li{padding:.55rem 0;border-top:1px solid #fff7e890;min-width:0}
+.gallery-process strong{font:400 1.05rem/1.3 var(--serif);display:block}
+.gallery-process p{font-size:.92rem;margin:.25rem 0 0}
+.collins-gallery .album-index{background:var(--paper);color:var(--ink);justify-content:center;padding:clamp(1rem,3vh,2rem) max(4vw,1rem)}
+.album-index:after{display:none}
+.album-index-inner{width:min(100%,79rem);margin:auto;min-width:0}
+.album-index-header{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.8rem}
+.album-index h1{font:400 clamp(1.8rem,4vw,3rem)/1.1 var(--serif);margin:0}
+.album-index-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(.65rem,1.6vw,1.3rem)}
+.album-index-grid a{display:block;text-decoration:none;min-width:0}
+.album-index-grid img{display:block;width:100%;height:clamp(90px,20vh,225px);object-fit:cover;background:var(--paper-dark)}
+.album-index-grid span{display:block;padding:.4rem 0;font:400 clamp(.78rem,1.1vw,.96rem)/1.35 var(--sans)}
+.album-index-grid a:hover span{text-decoration:underline;text-underline-offset:.3em}
+.collins-gallery .album-photo{display:none;flex:1;min-height:0;flex-direction:column;background:var(--ink);color:var(--cream)}
+.collins-gallery .album-photo.album-first,.collins-gallery .album-photo:target{display:flex}
+.collins-gallery #main:has(>.album-photo:target)>.album-photo:not(:target){display:none}
+.album-picture{flex:1;min-height:0;position:relative;display:grid;place-items:center;overflow:hidden}
+.album-picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;margin:auto}
+.gallery-controls{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:.4rem 1rem;padding:.55rem max(3.5vw,1rem);border-top:1px solid #fff7e83d}
+.gallery-controls h1{font:400 clamp(1rem,2vw,1.5rem)/1.25 var(--serif);color:inherit;margin:0}
+.gallery-controls .photo-description{font:400 .8rem/1.3 var(--sans);margin:.2rem 0;opacity:.9}
+.album-navigation{display:flex;align-items:center;gap:clamp(.55rem,2vw,1.4rem);flex-wrap:wrap}
+.album-navigation span{font:400 .84rem/1.3 var(--sans)}
+.album-navigation a{white-space:nowrap}
+.gallery-controls .gallery-back{font-size:.8rem;margin-right:.7rem}
+@media(min-height:520px){body.collins-gallery{height:100vh;height:100svh}}
+@media(max-width:700px){
+ .collins-gallery .gallery-frame>.wallpaper{object-position:var(--mobile-position,var(--position,50% 50%))}
+ .gallery-frame .gallery-copy{grid-template-columns:1fr;gap:.7rem;width:calc(100% - 2rem);padding-block:1.5rem}
+ .gallery-copy h1{font-size:clamp(2.5rem,10vw,4rem);max-width:17ch}
+ .gallery-copy p{font-size:1rem}
+ .gallery-copy .gallery-caption{text-align:left;font-size:.65rem;max-width:none}
+ .gallery-actions{gap:0 1rem;margin-top:.65rem}
+ .gallery-frame:after{background:linear-gradient(0deg,#15231cf5,#15231c95 28%,#15231c15 59%,transparent 77%)}
+ .gallery-detail .gallery-copy h1{font-size:clamp(2rem,9vw,3.3rem)}
+ .gallery-process{grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem 1rem}
+ .album-index-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem .8rem}
+ .album-index-grid img{height:clamp(65px,12vh,120px)}
+ .gallery-controls{grid-template-columns:1fr;gap:0;padding:.55rem 1rem}
+ .album-navigation{justify-content:space-between;gap:.4rem}
+}
+@media(max-height:519px){.collins-gallery>#main{min-height:23rem}.gallery-frame .gallery-copy{padding-block:1rem}.gallery-copy h1{font-size:clamp(2rem,6vw,4rem)}.album-picture{min-height:15rem}}
+@media(max-width:380px) and (max-height:700px){body.collins-gallery{height:auto}.collins-gallery>#main{min-height:calc(100svh - 4.5rem)}.album-picture{min-height:47svh}}
+@media(prefers-reduced-motion:no-preference){.gallery-home,.gallery-detail:target,.album-photo:target{animation:gallery-reveal .24s ease-out}@keyframes gallery-reveal{from{opacity:.75}to{opacity:1}}}
