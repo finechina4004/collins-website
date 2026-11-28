@@ -18,7 +18,7 @@ const assets = [
     "Services"
   ],
   [
-    "pool-design",
+    "design",
     "texas-pool.webp",
     "",
     "Early aerial photograph of the Texas-shaped pool in Plano",

@@ -1,0 +1,95 @@
+body.collins-gallery.design-page {
+  min-height: 100svh;
+  height: auto;
+  background: #eee6d1;
+}
+
+.collins-gallery.design-page > .site-header {
+  position: relative;
+  background: var(--paper);
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+
+.design-page > .site-header::before { display: none; }
+.design-page > .site-header .header-inner :is(a, summary) { text-shadow: none; }
+.collins-gallery.design-page > .site-header .tx-nav a[aria-current="page"] {
+  color: inherit;
+}
+
+.design-hero {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(.75rem, 2.6vh, 1.6rem);
+  padding: clamp(.85rem, 2vw, 1.8rem);
+}
+
+.design-plan {
+  position: relative;
+  width: min(100%, 93rem, max(38rem, calc((100svh - 13rem) * 1.503)));
+  overflow: hidden;
+  container-type: inline-size;
+  box-shadow: 0 1px 12px #4236161f;
+}
+
+.design-plan img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.design-plan h1 {
+  position: absolute;
+  top: 29.5%;
+  left: 31.7%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: var(--ink);
+  font: 400 clamp(1.85rem, 7cqi, 6.5rem)/1 var(--serif);
+}
+
+.design-copy {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: .5rem 1.5rem;
+  width: min(100%, 93rem, max(38rem, calc((100svh - 13rem) * 1.503)));
+  color: var(--ink);
+}
+
+.design-copy p { margin: 0; }
+.design-copy .gallery-actions { margin-top: .2rem; }
+.design-copy a:hover { color: var(--copper); }
+
+.design-credit {
+  min-height: 44px;
+  padding-block: .25rem;
+  text-align: right;
+  color: inherit;
+  font: 400 .76rem/1.45 var(--sans);
+  text-decoration: underline;
+  text-underline-offset: .22em;
+}
+
+@media (max-width: 600px) {
+  .design-plan img {
+    width: 153%;
+    max-width: none;
+  }
+
+  .design-plan h1 {
+    left: 48.5%;
+    font-size: clamp(1.85rem, 11cqi, 3.5rem);
+  }
+
+  .design-copy {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .design-credit { text-align: left; }
+}

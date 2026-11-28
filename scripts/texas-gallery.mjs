@@ -8,6 +8,8 @@ const contactStyles = readFileSync(new URL('../public/texas-contact.css', import
 const contactVersion = createHash('sha256').update(contactStyles).digest('hex').slice(0, 12);
 const wallpaperStyles = readFileSync(new URL('../public/dfw-wallpapers.css', import.meta.url));
 const wallpaperVersion = createHash('sha256').update(wallpaperStyles).digest('hex').slice(0, 12);
+const designStyles = readFileSync(new URL('../public/texas-design.css', import.meta.url));
+const designVersion = createHash('sha256').update(designStyles).digest('hex').slice(0, 12);
 
 export function applyGalleryEdition(pages){
  const e=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -20,7 +22,6 @@ export function applyGalleryEdition(pages){
   dallas:{src:"/assets/collins-home-sunset.png",alt:"Backyard pool design inspiration with the Dallas skyline",credit:"Dallas skyline · Design inspiration",pos:"58% center",mobile:"64% center",grade:"none"},
   pegasus:{src:d+"magnolia-pegasus-dallas-at-night.webp",alt:"The illuminated Magnolia Pegasus above the Dallas skyline in a black-and-white photograph",credit:"Magnolia Pegasus · Dallas",pos:"51% top",mobile:"51% top",grade:"none",layout:"dfw-wallpaper pegasus"},
   stadium:{src:d+"arlington-stadium-1977.webp",alt:"A packed Arlington Stadium during a 1977 Texas Rangers game against the Chicago White Sox",credit:"Arlington Stadium · 1977",pos:"50% 39%",mobile:"center",grade:"none",layout:"portrait-print"},
-  pool:{src:d+"dallas-rooftop-pool-cyanotype.webp",alt:"Blue cyanotype print of a Dallas rooftop swimming pool framed by downtown towers",credit:"Dallas rooftop pool · Byrd Williams IV / UNT Libraries Special Collections",pos:"center 65%",mobile:"60% center",grade:"none"},
   tex:{src:d+"big-tex.webp",mobileSrc:d+"big-tex-approved-mobile.webp",alt:"Vintage Big Tex at the State Fair of Texas",credit:"Big Tex · State Fair of Texas",pos:"50% 25%",mobile:"center",grade:"none",layout:"portrait-print"},
   southfork:{src:d+"southfork-ranch-postcard.webp",alt:"Vintage color postcard showing the Southfork Ranch entrance and house in Parker",credit:"Southfork Ranch · Parker",pos:"53% 58%",mobile:"53% 54%",grade:"none",layout:"dfw-wallpaper southfork"},
   sixflags:{src:d+"six-flags-desktop.svg",mobileSrc:d+"six-flags-mobile.svg",alt:"Original Six Flags Over Texas entrance in black and white",credit:"Six Flags Over Texas",pos:"50% 50%",mobile:"50% 50%",grade:"none"},
@@ -36,6 +37,21 @@ export function applyGalleryEdition(pages){
  };
  const frame = (art, title, sub, links, {id="", detail=false, extra="", credit=art.credit, backLink=""} = {}) =>
   `<section${id ? ` id="${e(id)}" tabindex="-1"` : ""} class="gallery-frame ${detail ? "gallery-detail" : "gallery-home"}${art.layout ? " " + art.layout : ""}" style="--position:${art.pos};--mobile-position:${art.mobile};--grade:${art.grade}">${picture(art, detail)}<div class="gallery-copy"><div>${backLink ? back(backLink) : ""}<h1>${e(title)}</h1>${sub ? `<p>${e(sub)}</p>` : ""}${extra}${actions(...links)}</div>${credit ? `<p class="gallery-caption">${e(credit)}</p>` : ""}</div></section>`;
+ const poolPlan = {
+  src: d + "hereford-pool-plan-1935.webp",
+  alt: "1935 Hereford State Park swimming pool plan showing clipped corners, the deep-end cutaway, and wall details",
+  source: "https://www.flickr.com/photos/texasstatearchives/9137982170/"
+ };
+ const design = `<section class="design-hero" aria-labelledby="design-title">
+  <div class="design-plan">
+    <img src="${e(poolPlan.src)}" alt="${e(poolPlan.alt)}" width="1800" height="1198" fetchpriority="high" decoding="async">
+    <h1 id="design-title">Design</h1>
+  </div>
+  <div class="design-copy">
+    <div><p>Your backyard, designed around you.</p>${actions(link("Start designing","/contact"),link("Find inspiration","/work#albums"))}</div>
+    <a class="design-credit" href="${e(poolPlan.source)}">Hereford, Texas · 1935<br>Texas State Archives</a>
+  </div>
+ </section>`;
  const work=pages.get("work.html");
  const cards=[...work.matchAll(/<a href="(\/albums\/[^"]+)"[^>]*data-album-slug="[^"]+"[^>]*>([\s\S]*?)<\/a>/g)].map(m=>{
   const src=m[2].match(/<img src="([^"]+)"/)?.[1],alt=m[2].match(/<img[^>]*alt="([^"]*)"/)?.[1],name=m[2].match(/<h3>([\s\S]*?)<\/h3>/)?.[1];
@@ -55,7 +71,7 @@ export function applyGalleryEdition(pages){
   service("custom-pools","/assets/projects/black-tie-barefoot/02.webp","Pool and covered porch overlooking woodland","Custom pools.","Designed for your home and the way you live.","/albums/black-tie-barefoot")+
   service("complete-backyards","/assets/projects/the-sun-stayed-for-supper/7015ed67131d404e.webp","Outdoor kitchen and pergola","Complete backyards.","Patios, kitchens, pergolas, turf, fire features, saunas and courts.","/albums/the-sun-stayed-for-supper")+
   service("spas-and-remodels","/assets/projects/mr-bears-residence/e5050074673f3ad9.webp","Pool and pavilion at dusk","Spas & remodels.","A new finish, an added spa or a whole new look.","/albums/mr-bears-residence"),
-  "pool-design.html":frame(artworks.pool,"Imagine.","Your backyard, designed around you.",[link("Start designing","/contact"),link("Find inspiration","/work#albums")]),
+  "design.html":design,
   "process.html":frame(artworks.tex,"Right this way.","",[link("Our process","#chapter-content")])+frame(artworks.tex,"From dirt to water.","",[link("Start a project","/contact")],{id:"chapter-content",detail:true,extra:steps,backLink:"#main",credit:""}),
   "work.html":frame(artworks.southfork,"Life out back.","",[link("Explore projects","#albums")])+index,
   "financing.html":frame(artworks.sixflags,"Plan for summer.","Let's talk budget. Financing provider not yet announced.",[link("Contact us","/contact")]),
@@ -63,7 +79,6 @@ export function applyGalleryEdition(pages){
  };
  const wallpapers = {
   'about.html': artworks.pegasus,
-  'pool-design.html': artworks.pool,
   'work.html': artworks.southfork,
  };
  function page(file,body){
@@ -71,14 +86,17 @@ export function applyGalleryEdition(pages){
   if(!html||!html.includes('<main id="main">'))throw Error("Missing main "+file);
   html=html.replace(/<body(?:\s[^>]*)?>/,'<body class="collins-gallery">').replace(/<main id="main">[\s\S]*?<\/main>/,()=>`<main id="main" tabindex="-1">${body}</main>`).replace(/<footer class="site-footer">[\s\S]*?<\/footer>/,"").replace(/<dialog class="photo-viewer"[\s\S]*?<\/dialog>/,"").replace(/<script src="\/gallery\.js[^"]*"[^>]*><\/script>/,"").replace("</head>",`  <link rel="stylesheet" href="/texas-gallery.css?v=${galleryVersion}">\n</head>`);
   if(file==='index.html')html=html.replace(/(<meta property="og:image" content=")[^"]+"/,'$1https://collinscustompools.com/assets/collins-home-sunset.png"').replace(/(<meta property="og:image:alt" content=")[^"]+"/,'$1Backyard pool design inspiration with the Dallas skyline at sunset"');
-  const featuredPhoto = file === 'contact.html' ? artworks.contact : wallpapers[file];
+  if (file === 'design.html') html = html.replace('class="collins-gallery"', 'class="collins-gallery design-page"');
+  const featuredPhoto = file === 'contact.html' ? artworks.contact : file === 'design.html' ? poolPlan : wallpapers[file];
   if (featuredPhoto) {
    html = html
     .replace(/(<meta property="og:image" content=")[^"]+"/, `$1https://collinscustompools.com${e(featuredPhoto.src)}"`)
     .replace(/(<meta property="og:image:alt" content=")[^"]+"/, `$1${e(featuredPhoto.alt)}"`);
    const stylesheet = file === 'contact.html'
     ? `/texas-contact.css?v=${contactVersion}`
-    : `/dfw-wallpapers.css?v=${wallpaperVersion}`;
+    : file === 'design.html'
+     ? `/texas-design.css?v=${designVersion}`
+     : `/dfw-wallpapers.css?v=${wallpaperVersion}`;
    html = html.replace('</head>', `  <link rel="stylesheet" href="${stylesheet}">\n</head>`);
   }
   pages.set(file,html);
