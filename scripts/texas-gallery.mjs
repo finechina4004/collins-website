@@ -51,7 +51,7 @@ export function applyGalleryEdition(pages){
  const definitions={
   "index.html":frame(artworks.dallas,"For the place we call home.","Custom pools & complete backyards. North DFW.",[link("Our work","/work#albums"),link("Start a project","/contact")],{id:"backyard"})+legacy,
   "about.html":frame(artworks.pegasus,"Texas raised.","Family-owned in Aubrey. Decades of pool-building experience.",[link("Meet us","/contact"),link("Our work","/work#albums")]),
-  "services.html":frame(artworks.stadium,"Room for more.","",[link("Custom pools","#custom-pools"),link("Complete backyards","#complete-backyards"),link("Spas & remodels","#spas-and-remodels")])+
+  "services.html":frame(artworks.stadium,"Home field. Every season.","",[link("Custom pools","#custom-pools"),link("Complete backyards","#complete-backyards"),link("Spas & remodels","#spas-and-remodels")])+
   service("custom-pools","/assets/projects/black-tie-barefoot/02.webp","Pool and covered porch overlooking woodland","Custom pools.","Designed for your home and the way you live.","/albums/black-tie-barefoot")+
   service("complete-backyards","/assets/projects/the-sun-stayed-for-supper/7015ed67131d404e.webp","Outdoor kitchen and pergola","Complete backyards.","Patios, kitchens, pergolas, turf, fire features, saunas and courts.","/albums/the-sun-stayed-for-supper")+
   service("spas-and-remodels","/assets/projects/mr-bears-residence/e5050074673f3ad9.webp","Pool and pavilion at dusk","Spas & remodels.","A new finish, an added spa or a whole new look.","/albums/mr-bears-residence"),
