@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { editorial } from './project-editorial.mjs';
+import { applyTexasEdition } from './texas-edition.mjs';
 
 const root = new URL('../public/', import.meta.url);
 const read = path => readFileSync(new URL(path, root), 'utf8');
@@ -277,6 +278,7 @@ ${urls.map(path => `  <url><loc>${new URL(path, base).href}</loc></url>`).join('
 </urlset>
 `);
 
+applyTexasEdition(pages);
 const checking = process.argv.includes('--check');
 for (const [path, content] of pages) {
   if (checking) {
@@ -286,4 +288,4 @@ for (const [path, content] of pages) {
   }
 }
 const photoCount = projects.reduce((total, project) => total + project.photos.length, 0);
-console.log(`${checking ? 'Verified' : 'Rendered'} ${urls.length} Collins pages with ${photoCount} original project photographs.`);
+console.log(`${checking ? 'Verified' : 'Rendered'} ${urls.length + 3} Collins pages with ${photoCount} original project photographs.`);
