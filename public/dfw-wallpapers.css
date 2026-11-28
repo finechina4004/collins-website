@@ -32,17 +32,17 @@
   background: linear-gradient(0deg, #142217ee, #14221778 19%, transparent 45%);
 }
 
-.dfw-wallpaper.texas-pool {
+.dfw-wallpaper.gillin-pool {
   --wallpaper-background: #182820;
 }
 
-.texas-pool > .wallpaper {
+.gillin-pool > .wallpaper {
   inset-inline-start: auto;
-  width: min(78%, 107svh);
-  mask-image: linear-gradient(90deg, transparent, #000 12%);
+  width: min(78%, 154svh);
+  mask-image: linear-gradient(90deg, transparent, #000 24%);
 }
 
-.dfw-wallpaper.texas-pool::after {
+.dfw-wallpaper.gillin-pool::after {
   background: linear-gradient(0deg, #182820ed, #1828205e 14%, transparent 34%);
 }
 
@@ -103,11 +103,11 @@
     height: min(94vw, 52svh);
   }
 
-  .dfw-wallpaper.texas-pool > .wallpaper {
-    height: min(100vw, 60svh);
+  .dfw-wallpaper.gillin-pool > .wallpaper {
+    height: min(67vw, 56svh);
   }
 
-  .dfw-wallpaper.texas-pool .wallpaper img {
+  .dfw-wallpaper.gillin-pool .wallpaper img {
     object-fit: contain;
   }
 
