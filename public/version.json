@@ -1,6 +1,6 @@
 {
-  "build": "collins-texas-gallery-03",
-  "sourceCheckpoint": "e2efb6c",
+  "build": "collins-texas-gallery-04",
+  "sourceCheckpoint": "9556bab",
   "destination": "Cloudflare collins-website",
   "release": true
 }

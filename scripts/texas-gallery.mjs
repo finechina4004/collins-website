@@ -9,8 +9,8 @@ export function applyGalleryEdition(pages){
  const artworks={
   dallas:{src:"/assets/collins-home-sunset.png",alt:"Backyard pool design inspiration with the Dallas skyline",credit:"Dallas skyline · Design inspiration",pos:"58% center",mobile:"64% center",grade:"none"},
   pegasus:{src:d+"pegasus.webp",alt:"Magnolia Pegasus at sunset in Dallas",credit:"Magnolia Pegasus · Dallas",pos:"50% 30%",mobile:"43% 28%",grade:"saturate(.65) contrast(.92) brightness(1.06) sepia(.10)"},
-  stadium:{src:d+"arlington-stadium.webp",alt:"Historic aerial photograph of Arlington Stadium",credit:"Arlington Stadium",pos:"50% 48%",mobile:"51% center",grade:"saturate(.85) contrast(.94) sepia(.12)"},
-  pool:{src:d+"texas-pool.webp",alt:"Early aerial photograph of the Texas-shaped pool in Plano",credit:"The Texas Pool · Plano",pos:"50% 48%",mobile:"48% center",grade:"saturate(.92) contrast(.94) brightness(1.12) sepia(.04)"},
+  stadium:{src:d+"rangers-fireworks.png",alt:"Vintage Texas Rangers stadium sign beneath fireworks",credit:"Texas Rangers",pos:"50% 85%",mobile:"50% center",grade:"none"},
+  pool:{src:d+"boot-pool.png",alt:"Aerial photograph of a cowboy-boot-shaped swimming pool",credit:"The boot pool",pos:"50% 57%",mobile:"50% center",grade:"none"},
   tex:{src:d+"big-tex.webp",alt:"Vintage Big Tex at the State Fair of Texas",credit:"Big Tex · State Fair of Texas",pos:"50% 25%",mobile:"49% 30%",grade:"saturate(.96) contrast(.98) sepia(.04)"},
   southfork:{src:d+"southfork.webp",alt:"Vintage postcard of the Southfork Ranch entrance in Parker",credit:"Southfork Ranch · Parker",pos:"50% 49%",mobile:"61% center",grade:"saturate(.74) contrast(.90) brightness(1.05) sepia(.10)"},
   sixflags:{src:d+"six-flags.webp",alt:"Original Six Flags Over Texas entrance in black and white",credit:"Six Flags Over Texas",pos:"50% 58%",mobile:"62% 54%",grade:"grayscale(1) sepia(.13) contrast(.94)"},
