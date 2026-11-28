@@ -25,7 +25,7 @@ export function applyGalleryEdition(pages){
   southfork:{src:d+"southfork-ranch-postcard.webp",alt:"Vintage color postcard showing the Southfork Ranch entrance and house in Parker",credit:"Southfork Ranch · Parker",pos:"53% 58%",mobile:"53% 54%",grade:"none",layout:"dfw-wallpaper southfork"},
   sixflags:{src:d+"six-flags-desktop.svg",mobileSrc:d+"six-flags-mobile.svg",alt:"Original Six Flags Over Texas entrance in black and white",credit:"Six Flags Over Texas",pos:"50% 50%",mobile:"50% 50%",grade:"none"},
   // Denton Chamber of Commerce Collection: https://texashistory.unt.edu/ark:/67531/metadc1996991/
-  contact:{src:d+"campus-theatre-dusk.webp",alt:"Campus Theatre's red and green neon marquee and lit ticket booth at dusk in Denton",credit:"Campus Theatre · Denton, Texas",pos:"30% 75%",mobile:"38% 65%",grade:"none",layout:"campus-contact"}
+  contact:{src:d+"campus-theatre-collins.webp",alt:"Denton's Campus Theatre at dusk with its vertical green neon sign edited to read Collins",credit:"Campus Theatre · Denton, Texas",pos:"30% 75%",mobile:"38% 65%",grade:"none",layout:"campus-contact"}
  };
  const project=(src,alt)=>({src,alt,credit:"",pos:"50% center",mobile:"50% center",grade:"none"});
  const picture = (art, detail) => {
