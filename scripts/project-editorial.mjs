@@ -1,5 +1,6 @@
 export const editorial = {
   'black-tie-barefoot': {
+    coverLine: 'Swim where the woods begin.',
     color: 'pine',
     summary: 'A pool and hot tub at the edge of the woods, with a covered porch overlooking the deck.',
     features: ['Rectangular pool', 'Separate hot tub', 'Covered porch', 'Fire pit'],
@@ -7,6 +8,7 @@ export const editorial = {
     related: 'mr-bears-residence',
   },
   'the-sun-stayed-for-supper': {
+    coverLine: 'Pull up a bench.',
     color: 'tobacco',
     summary: 'A long pool and square spa below the pergola, with a grill and picnic table up top and a wood sauna tucked off the path.',
     features: ['Pool and spa', 'Pergola and grill', 'Covered patio', 'Freestanding sauna'],
@@ -14,6 +16,7 @@ export const editorial = {
     related: 'strictly-striped-affair',
   },
   'umpire-strikes-back': {
+    coverLine: 'Ballgame, then a swim.',
     color: 'rust',
     summary: 'The pool and sports court sit side by side. There’s a baseball diamond beyond them and a fire pit by the pavilion.',
     features: ['Pool and rock waterfall', 'Baseball diamond', 'Sports court', 'Putting green', 'Pavilion and fire pit'],
@@ -21,6 +24,7 @@ export const editorial = {
     related: 'strictly-striped-affair',
   },
   'a-minor-key': {
+    coverLine: 'Just enough firelight.',
     color: 'rust',
     summary: 'A shallow ledge for the loungers, waterfalls along the pool, and a spa under a cedar ceiling. At dusk, you can see the fire wall reflected in the pool.',
     features: ['Tanning ledge', 'Waterfalls', 'Fire wall', 'Covered spa'],
@@ -28,6 +32,7 @@ export const editorial = {
     related: 'dallas-with-feeling',
   },
   'dallas-with-feeling': {
+    coverLine: 'Night swim. Drinks after.',
     color: 'slate',
     summary: 'The bar looks straight across the pool to a waterfall wall. There’s a covered patio for dinner and a blue-tile shower around the corner.',
     features: ['Pool and spa', 'Waterfall wall', 'Poolside bar', 'Covered patio', 'Outdoor shower'],
@@ -35,6 +40,7 @@ export const editorial = {
     related: 'a-minor-key',
   },
   'lower-form-of-leisure': {
+    coverLine: 'One more story.',
     color: 'tobacco',
     summary: 'A sunken lounge sits right beside the water. There’s a putting green a few steps away and a brick fireplace under the covered patio.',
     features: ['Pool', 'Sunken lounge', 'Putting green', 'Outdoor fireplace'],
@@ -42,6 +48,7 @@ export const editorial = {
     related: 'the-sun-stayed-for-supper',
   },
   'mr-bears-residence': {
+    coverLine: 'Meet me at the pavilion.',
     color: 'pine',
     summary: 'A straight run of water leads toward the pavilion, with a separate square spa and a pair of loungers between the two.',
     features: ['Rectangular pool', 'Separate square spa', 'Pavilion'],
@@ -49,6 +56,7 @@ export const editorial = {
     related: 'black-tie-barefoot',
   },
   'strictly-striped-affair': {
+    coverLine: 'Four seats in the sun.',
     color: 'slate',
     summary: 'Striped loungers along the pool, cornhole and a bowling lane close by, and a grill next to the table under the shade.',
     features: ['Rectangular pool', 'Outdoor grill', 'Covered dining', 'Lawn games', 'Putting green'],

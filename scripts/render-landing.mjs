@@ -226,7 +226,8 @@ page('/contact', `Call or Text Collins | ${brand}`,
 
 function galleryLink(project, photo, priority = false) {
   const originalNumber = project.originalOrder.indexOf(photo) + 1;
-  return `<a class="photo-open" href="/${escape(photo.src)}" data-photo="${originalNumber}" data-caption="${escape(photo.caption || project.title)}" aria-label="Enlarge photo: ${escape(photo.caption || photo.alt || project.title)}">${picture(photo, priority)}</a>`;
+  const caption = photo === project.cover ? project.coverLine : photo.caption;
+  return `<a class="photo-open" href="/${escape(photo.src)}" data-photo="${originalNumber}" data-caption="${escape(caption || project.title)}" aria-label="Enlarge photo: ${escape(photo.caption || photo.alt || project.title)}">${picture(photo, priority)}</a>`;
 }
 
 function photoViewer(project) {

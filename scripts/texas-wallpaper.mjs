@@ -23,7 +23,7 @@ const assets = [
     "",
     "Early aerial photograph of the Texas-shaped pool in Plano",
     "50% 50%",
-    "Pool Design"
+    "Design"
   ],
   [
     "process",

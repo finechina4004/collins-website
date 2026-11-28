@@ -49,16 +49,16 @@ export function applyGalleryEdition(pages){
  const home=pages.get("index.html");
  const legacy=home.match(/<script>\(\(\)=>\{const m=\{[\s\S]*?<\/script>/)?.[0]?.replace("'#project':'#contact'","'#project':'/contact'").replace("'#work':'/work'","'#work':'/work'")||"";
  const definitions={
-  "index.html":frame(artworks.dallas,"For the place we call home.","Custom pools & complete backyards. North DFW.",[link("Our work","/work#albums"),link("Start a project","/contact")],{id:"backyard"})+legacy,
+  "index.html":frame(artworks.dallas,"Stay out past sunset.","Custom pools & complete backyards. North DFW.",[link("Our work","/work#albums"),link("Start a project","/contact")],{id:"backyard"})+legacy,
   "about.html":frame(artworks.pegasus,"Texas raised.","Family-owned in Aubrey. Decades of pool-building experience.",[link("Meet us","/contact"),link("Our work","/work#albums")]),
   "services.html":frame(artworks.stadium,"Home field. Every season.","",[link("Custom pools","#custom-pools"),link("Complete backyards","#complete-backyards"),link("Spas & remodels","#spas-and-remodels")])+
   service("custom-pools","/assets/projects/black-tie-barefoot/02.webp","Pool and covered porch overlooking woodland","Custom pools.","Designed for your home and the way you live.","/albums/black-tie-barefoot")+
   service("complete-backyards","/assets/projects/the-sun-stayed-for-supper/7015ed67131d404e.webp","Outdoor kitchen and pergola","Complete backyards.","Patios, kitchens, pergolas, turf, fire features, saunas and courts.","/albums/the-sun-stayed-for-supper")+
   service("spas-and-remodels","/assets/projects/mr-bears-residence/e5050074673f3ad9.webp","Pool and pavilion at dusk","Spas & remodels.","A new finish, an added spa or a whole new look.","/albums/mr-bears-residence"),
   "pool-design.html":frame(artworks.pool,"Imagine.","Your backyard, designed around you.",[link("Start designing","/contact"),link("Find inspiration","/work#albums")]),
-  "process.html":frame(artworks.tex,"Good honest work.","",[link("Our process","#chapter-content")])+frame(artworks.tex,"From dirt to water.","",[link("Start a project","/contact")],{id:"chapter-content",detail:true,extra:steps,backLink:"#main",credit:""}),
+  "process.html":frame(artworks.tex,"Right this way.","",[link("Our process","#chapter-content")])+frame(artworks.tex,"From dirt to water.","",[link("Start a project","/contact")],{id:"chapter-content",detail:true,extra:steps,backLink:"#main",credit:""}),
   "work.html":frame(artworks.southfork,"Life out back.","",[link("Explore projects","#albums")])+index,
-  "financing.html":frame(artworks.sixflags,"Summer awaits.","Let's talk budget. Financing provider not yet announced.",[link("Contact us","/contact")]),
+  "financing.html":frame(artworks.sixflags,"Plan for summer.","Let's talk budget. Financing provider not yet announced.",[link("Contact us","/contact")]),
   "contact.html":frame(artworks.contact,"Howdy.","Aubrey, Texas · Denton County",[link("469-500-7713","tel:+14695007713"),link("Text us","sms:+14695007713"),link("info@collinscustompools.com","mailto:info@collinscustompools.com")])
  };
  const wallpapers = {
