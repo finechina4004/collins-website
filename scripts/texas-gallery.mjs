@@ -1,4 +1,10 @@
 /* Minimal Texas gallery. One screen at a time; accessible links; original photographs. */
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
+
+const galleryStyles = readFileSync(new URL('../public/texas-gallery.css', import.meta.url));
+const galleryVersion = createHash('sha256').update(galleryStyles).digest('hex').slice(0, 12);
+
 export function applyGalleryEdition(pages){
  const e=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
  const decode=s=>s.replace(/&amp;/g,"&").replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&lt;/g,"<").replace(/&gt;/g,">");
@@ -8,16 +14,23 @@ export function applyGalleryEdition(pages){
  const d="/assets/dfw/";
  const artworks={
   dallas:{src:"/assets/collins-home-sunset.png",alt:"Backyard pool design inspiration with the Dallas skyline",credit:"Dallas skyline · Design inspiration",pos:"58% center",mobile:"64% center",grade:"none"},
-  pegasus:{src:d+"pegasus.webp",alt:"Magnolia Pegasus at sunset in Dallas",credit:"Magnolia Pegasus · Dallas",pos:"50% 42%",mobile:"43% 50%",grade:"none"},
-  stadium:{src:d+"rangers-fireworks.png",alt:"Vintage Texas Rangers stadium sign beneath fireworks",credit:"Texas Rangers",pos:"50% 85%",mobile:"50% center",grade:"none"},
-  pool:{src:d+"texas-pool.webp",alt:"Historic aerial photograph of the Texas-shaped swimming pool in Plano",credit:"The Texas Pool · Plano",pos:"50% 50%",mobile:"50% center",grade:"none"},
-  tex:{src:d+"big-tex.webp",alt:"Vintage Big Tex at the State Fair of Texas",credit:"Big Tex · State Fair of Texas",pos:"50% 25%",mobile:"49% 30%",grade:"saturate(.96) contrast(.98) sepia(.04)"},
-  southfork:{src:d+"southfork.webp",alt:"Vintage postcard of the Southfork Ranch entrance in Parker",credit:"Southfork Ranch · Parker",pos:"50% 49%",mobile:"61% center",grade:"saturate(.74) contrast(.90) brightness(1.05) sepia(.10)"},
+  pegasus:{src:d+"pegasus.webp",alt:"Magnolia Pegasus at sunset in Dallas",credit:"Magnolia Pegasus · Dallas",pos:"50% 42%",mobile:"43% 50%",grade:"none",layout:"pegasus portrait-print"},
+  stadium:{src:d+"arlington-stadium-1977.webp",alt:"A packed Arlington Stadium during a 1977 Texas Rangers game against the Chicago White Sox",credit:"Arlington Stadium · 1977",pos:"50% 39%",mobile:"center",grade:"none",layout:"portrait-print"},
+  pool:{src:d+"texas-pool.webp",alt:"Historic aerial photograph of the Texas-shaped swimming pool in Plano",credit:"The Texas Pool · Plano",pos:"50% 50%",mobile:"50% center",grade:"none",layout:"portrait-print"},
+  tex:{src:d+"big-tex.webp",mobileSrc:d+"big-tex-approved-mobile.webp",alt:"Vintage Big Tex at the State Fair of Texas",credit:"Big Tex · State Fair of Texas",pos:"50% 25%",mobile:"center",grade:"none",layout:"portrait-print"},
+  southfork:{src:d+"southfork.webp",wideSrc:d+"southfork-approved-desktop.webp",alt:"Vintage view of the Southfork Ranch entrance and estate in Parker",credit:"Southfork Ranch · Parker",pos:"center",mobile:"center",grade:"none",layout:"portrait-print"},
   sixflags:{src:d+"six-flags-desktop.svg",mobileSrc:d+"six-flags-mobile.svg",alt:"Original Six Flags Over Texas entrance in black and white",credit:"Six Flags Over Texas",pos:"50% 50%",mobile:"50% 50%",grade:"none"},
   contact:{src:"/assets/projects/strictly-striped-affair/d12025f874e49421.webp",alt:"Pool and striped loungers in the Collins project collection",credit:"A Strictly Striped Affair",pos:"50% center",mobile:"50% center",grade:"none"}
  };
  const project=(src,alt)=>({src,alt,credit:"",pos:"50% center",mobile:"50% center",grade:"none"});
- const frame=(art,title,sub,links,{id="",detail=false,extra="",credit=art.credit,backLink=""}={})=>`<section${id?` id="${e(id)}" tabindex="-1"`:""} class="gallery-frame ${detail?"gallery-detail":"gallery-home"}" style="--position:${art.pos};--mobile-position:${art.mobile};--grade:${art.grade}">${art.mobileSrc?`<picture class="wallpaper"><source media="(orientation: portrait)" srcset="${e(art.mobileSrc)}"><img src="${e(art.src)}" alt="${e(art.alt)}" ${detail?'loading="lazy"':'fetchpriority="high"'} decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"></picture>`:`<img class="wallpaper" src="${e(art.src)}" alt="${e(art.alt)}" ${detail?'loading="lazy"':'fetchpriority="high"'} decoding="async">`}<div class="gallery-copy"><div>${backLink?back(backLink):""}<h1>${e(title)}</h1>${sub?`<p>${e(sub)}</p>`:""}${extra}${actions(...links)}</div>${credit?`<p class="gallery-caption">${e(credit)}</p>`:""}</div></section>`;
+ const picture = (art, detail) => {
+  const image = `<img src="${e(art.src)}" alt="${e(art.alt)}" ${detail ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async">`;
+  const mobile = art.mobileSrc ? `<source media="(orientation: portrait)" srcset="${e(art.mobileSrc)}">` : "";
+  const wide = art.wideSrc ? `<source media="(min-aspect-ratio: 3/2)" srcset="${e(art.wideSrc)}">` : "";
+  return `<picture class="wallpaper">${mobile}${wide}${image}</picture>`;
+ };
+ const frame = (art, title, sub, links, {id="", detail=false, extra="", credit=art.credit, backLink=""} = {}) =>
+  `<section${id ? ` id="${e(id)}" tabindex="-1"` : ""} class="gallery-frame ${detail ? "gallery-detail" : "gallery-home"}${art.layout ? " " + art.layout : ""}" style="--position:${art.pos};--mobile-position:${art.mobile};--grade:${art.grade}">${picture(art, detail)}<div class="gallery-copy"><div>${backLink ? back(backLink) : ""}<h1>${e(title)}</h1>${sub ? `<p>${e(sub)}</p>` : ""}${extra}${actions(...links)}</div>${credit ? `<p class="gallery-caption">${e(credit)}</p>` : ""}</div></section>`;
  const work=pages.get("work.html");
  const cards=[...work.matchAll(/<a href="(\/albums\/[^"]+)"[^>]*data-album-slug="[^"]+"[^>]*>([\s\S]*?)<\/a>/g)].map(m=>{
   const src=m[2].match(/<img src="([^"]+)"/)?.[1],alt=m[2].match(/<img[^>]*alt="([^"]*)"/)?.[1],name=m[2].match(/<h3>([\s\S]*?)<\/h3>/)?.[1];
@@ -46,7 +59,7 @@ export function applyGalleryEdition(pages){
  function page(file,body){
   let html=pages.get(file);
   if(!html||!html.includes('<main id="main">'))throw Error("Missing main "+file);
-  html=html.replace(/<body(?:\s[^>]*)?>/,'<body class="collins-gallery">').replace(/<main id="main">[\s\S]*?<\/main>/,()=>`<main id="main">${body}</main>`).replace(/<footer class="site-footer">[\s\S]*?<\/footer>/,"").replace(/<dialog class="photo-viewer"[\s\S]*?<\/dialog>/,"").replace(/<script src="\/gallery\.js[^"]*"[^>]*><\/script>/,"").replace("</head>",'  <link rel="stylesheet" href="/texas-gallery.css?v=4">\n</head>');
+  html=html.replace(/<body(?:\s[^>]*)?>/,'<body class="collins-gallery">').replace(/<main id="main">[\s\S]*?<\/main>/,()=>`<main id="main" tabindex="-1">${body}</main>`).replace(/<footer class="site-footer">[\s\S]*?<\/footer>/,"").replace(/<dialog class="photo-viewer"[\s\S]*?<\/dialog>/,"").replace(/<script src="\/gallery\.js[^"]*"[^>]*><\/script>/,"").replace("</head>",`  <link rel="stylesheet" href="/texas-gallery.css?v=${galleryVersion}">\n</head>`);
   if(file==='index.html')html=html.replace(/(<meta property="og:image" content=")[^"]+"/,'$1https://collinscustompools.com/assets/collins-home-sunset.png"').replace(/(<meta property="og:image:alt" content=")[^"]+"/,'$1Backyard pool design inspiration with the Dallas skyline at sunset"');
   pages.set(file,html);
  }
